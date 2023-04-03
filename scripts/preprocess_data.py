@@ -266,7 +266,8 @@ if __name__ == '__main__':
 
         for split in ['trn', 'dev','tst']:
             df_agg = aggregate_sbic_annotations(split)
-            df_modified = turn_implied_statements_to_explanations(split, df_agg, False)
+            # df_modified = turn_implied_statements_to_explanations(split, df_agg, False)
+            df_modified = turn_implied_statements_to_explanations(split, df_agg) #I added this to match the predefined function
             df_modified.to_csv(f"{args.dataset_path}SBIC.v2.{split}.modified.csv")
     elif args.dataset == "sensemaking": 
         process_senmaking_data(args.dataset_path)
