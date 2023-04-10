@@ -262,11 +262,11 @@ def run_exp(args):
             # We run the commands on google cloud with N gpus allocated just for this project 
             if args.deepspeed:
                 # cmd_prefix = "PYTHONPATH=. deepspeed input_to_label_and_rationale.py "
-                cmd_prefix = "deepspeed input_to_label_and_rationale.py "
+                cmd_prefix = "deepspeed scripts/input_to_label_and_rationale.py "
                 cmd_batch_size = f" --per_device_train_batch_size 1 --per_device_eval_batch_size 1 --gradient_accumulation_steps {per_device_train_batch_size} "
             else:
                 # cmd_prefix = "PYTHONPATH=. python input_to_label_and_rationale.py "
-                cmd_prefix = "python input_to_label_and_rationale.py "
+                cmd_prefix = "python scripts/input_to_label_and_rationale.py "
                 cmd_batch_size = f" --per_device_train_batch_size {per_device_train_batch_size} --per_device_eval_batch_size 64 --gradient_accumulation_steps 1 "
 
             cmd = f'''{cmd_prefix} \
