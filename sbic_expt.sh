@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --partition=ILCC_GPU
 #SBATCH --gres=gpu:4
-#SBATCH --mem=14000  # memory in Mb
+#SBATCH --mem=32000  # memory in Mb
 #SBATCH --time=0-60:00:00
 
 export CUDA_HOME=/opt/cuda-9.0.176.1/
