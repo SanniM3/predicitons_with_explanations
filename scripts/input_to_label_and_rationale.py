@@ -513,7 +513,7 @@ def main():
         ###PEFT MODIFICATIONS###
         # creating model
         peft_config = LoraConfig(
-                        r=4,
+                        r=8,
                         lora_alpha=32,
                         target_modules=["q", "v"],
                         lora_dropout=0.1,
