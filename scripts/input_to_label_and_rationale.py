@@ -42,6 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -508,6 +509,16 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.EPOCH
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
+
+        ###PEFT MODIFICATIONS###
+        # creating model
+        peft_config = LoraConfig(
+                        r=1,
+                        lora_alpha=32,
+                        target_modules=["q", "v"],
+                        lora_dropout=0.1,
+                    )
+        model = get_peft_model(model, peft_config)
 
         trainer = Trainer(
             model=model,
