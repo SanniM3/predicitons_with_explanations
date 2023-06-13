@@ -391,7 +391,8 @@ def main():
             # print(os.getcwd())
             # print(data_args.data_path)
             # cwd, 'data', os.path.basename(data_args)
-            data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SBIC.v2.{split}.modified.csv")
+            # data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SBIC.v2.{split}.modified.csv")
+            data_path = os.path.join(os.getcwd(), data_args.data_path, f"SBIC.v2.{split}.modified.csv")
             # print(data_path)
             df = pd.read_csv(data_path)
 
