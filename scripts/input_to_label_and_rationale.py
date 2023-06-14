@@ -436,7 +436,7 @@ def main():
             data_splits[split_mapping[split]] = []
             if not training_args.do_train:
                 continue
-            data_path = os.path.join(os.getcwd(), data_args.data_path, f"SenMaking.{split}.csv")
+            data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SenMaking.{split}.csv")
             df = pd.read_csv(data_path)
 
             if data_args.n_shots > 0: # This condition could probably be removed; we used n_shots=0 to experiment with training with the entire train set
@@ -466,7 +466,7 @@ def main():
     elif data_args.task_name == 'ecqa': 
         for split in ["train", "validation"]: 
             ecqa_data_split = []
-            data_path = os.path.join(os.getcwd(), data_args.data_path, f"ecqa_{split}.jsonl")
+            data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"ecqa_{split}.jsonl")
             with jsonlines.open(data_path) as ecqa_split_reader:
                 for item in ecqa_split_reader: 
                     formatted_instance = format_instance(item,
