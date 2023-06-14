@@ -177,21 +177,21 @@ def run_exp(args):
                              ],
                     'ecqa': [
                              #'squad',
-                             #'record',
+                             'record',
                              #'t5_fewshot_infilling_more_natural', 
                              #'t5_fewshot_infilling_with_choices',
-                             'unifiedqa_matching'
+                             #'unifiedqa_matching'
                              ],
                    'sensemaking': [
                                    #'t5_fewshot_infilling',
                                    #'t5_fewshot_infilling_bool',  
-                                   #'copa_bool', 
+                                   'copa_bool', 
                                    #'copa_with_question',
                                    #'record',
                                    #'squad_yn',
                                    #'squad_what',
                                    #'unifiedqa_yn', 'unifiedqa_yn_with_choices', 
-                                   'unifiedqa_what',
+                                   #'unifiedqa_what',
                                    #'unifiedqa_what_with_choices',
                                    #'unifiedqa_what_no_tags',
                                    #'unifiedqa_yn_no_tags',
@@ -201,7 +201,7 @@ def run_exp(args):
                    'sbic': [#'t5_fewshot_infilling', 
                             #'t5_fewshot_infilling_bool',
                             #'t5_fewshot_infilling_more_natural',
-                            #'cola',
+                            'cola',
                             #'squad_yn',
                             #'squad_what',
                             #'unifiedqa_unifew', 
@@ -213,7 +213,7 @@ def run_exp(args):
                             #'squad_what_with_tags',
                             #'unified_qa_yn_with_tags',
                             #'unified_qa_yn_with_choices_and_tags',
-                            'unified_qa_what_with_tags', 
+                            # 'unified_qa_what_with_tags', 
                             #'unified_qa_what_with_choices_and_tags'
                             ]}
 

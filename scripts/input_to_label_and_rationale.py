@@ -144,7 +144,7 @@ def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
-    print("input_to_label_and_rationale main function")
+    #print("input_to_label_and_rationale main function")
     og_start_time = time.time()
 
     #parser = HfArgumentParser(
@@ -189,8 +189,7 @@ def main():
             raise Exception(
                 "if not training a model from scratch, must specify a trained model to load for evaluation"
             )
-        else:
-            print("Pretrained model file specified")
+        
 
     if training_args.do_train:
         # create a save directory and a logfile
@@ -200,7 +199,7 @@ def main():
         training_args.logging_dir = training_args.output_dir
         assert not os.path.exists(training_args.output_dir)
         os.makedirs(training_args.output_dir)
-        print("output directory created at", str(training_args.output_dir))
+        #print("output directory created at", str(training_args.output_dir))
         if (
                 os.path.exists(training_args.output_dir)
                 and os.listdir(training_args.output_dir)
@@ -215,7 +214,7 @@ def main():
             logging.StreamHandler(),
         ]
     else:
-        print("not in training mode, so existing logfile not overwritten")
+        #print("not in training mode, so existing logfile not overwritten")
         # don't overwrite existing logfile or create new directory
         training_args.output_dir = model_args.pretrained_model_file
         handlers = [logging.StreamHandler()]
@@ -238,7 +237,7 @@ def main():
     logger.info("Save path: %s" % training_args.output_dir)
 
     # get git hash and branch where deployed
-    print("get git hash and branch where deployed")
+    #print("get git hash and branch where deployed")
     repo = git.Repo(search_parent_directories=True)
     git_hash = repo.head.object.hexsha
     git_branch = repo.active_branch.name
@@ -247,7 +246,7 @@ def main():
 
     model_class = "t5"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
-    print("model class specified and task names asserted")
+    #print("model class specified and task names asserted")
     if training_args.do_train:
         # write command and args to file
         with open(
@@ -272,7 +271,7 @@ def main():
     logger.info("Loading pretrained tokenizer...")
 
     tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
-    print("tokenizer for model loaded successfully")
+    #print("tokenizer for model loaded successfully")
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
@@ -300,7 +299,7 @@ def main():
             model = model_name.from_config(config_name)
         model.resize_token_embeddings(len(tokenizer))
     else:
-        print('no model loaded')
+        #print('no model loaded')
         model = None
 
     data_splits = {'train': None, 'validation': None, 'test': None}
