@@ -1,8 +1,8 @@
 #!/bin/sh
 #SBATCH --partition=ILCC_GPU
-#SBATCH --gres=gpu:20
-#SBATCH --mem=128000  # memory in Mb
-#SBATCH --time=0-160:00:00
+#SBATCH --gres=gpu:4
+#SBATCH --mem=64000  # memory in Mb
+#SBATCH --time=0-200:00:00
 
 export CUDA_HOME=/opt/cuda-9.0.176.1/
 
@@ -35,6 +35,5 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # python train_evaluate_emnist_classification_system.py --filepath_to_arguments_json_file experiment_configs/emnist_tutorial_config.json
 # #!/usr/bin/env bash
 # conda activate feb
-# python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals esnli --n_gpus 4
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals ecqa,sensemaking,sbic,esnli --n_gpus 20
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals ecqa,sensemaking,sbic,esnli --n_gpus 4
 python scripts/exp.py --exp_root checkpoints --collect_results
