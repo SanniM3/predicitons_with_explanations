@@ -37,4 +37,4 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # conda activate feb
 # python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals esnli --n_gpus 4
 python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4
-# python scripts/exp.py --exp_root checkpoints --collect_results
+python scripts/exp.py --exp_root checkpoints --collect_results
