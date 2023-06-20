@@ -298,9 +298,19 @@ def main():
                 raise Exception("sure you want to train a model from scratch?")
             model = model_name.from_config(config_name)
         model.resize_token_embeddings(len(tokenizer))
+        ###PEFT MODIFICATIONS###
+        peft_config = LoraConfig(
+                        r=8,
+                        lora_alpha=32,
+                        target_modules=["q", "v"],
+                        lora_dropout=0.1,
+                    )
+        model = get_peft_model(model, peft_config)
     else:
         #print('no model loaded')
         model = None
+
+    
 
     data_splits = {'train': None, 'validation': None, 'test': None}
     original_data_splits = {'train': None, 'validation': None, 'test': None}  
@@ -517,15 +527,15 @@ def main():
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
 
-        ###PEFT MODIFICATIONS###
-        # creating model
-        peft_config = LoraConfig(
-                        r=8,
-                        lora_alpha=32,
-                        target_modules=["q", "v"],
-                        lora_dropout=0.1,
-                    )
-        model = get_peft_model(model, peft_config)
+        # ###PEFT MODIFICATIONS###
+        # # creating model
+        # peft_config = LoraConfig(
+        #                 r=8,
+        #                 lora_alpha=32,
+        #                 target_modules=["q", "v"],
+        #                 lora_dropout=0.1,
+        #             )
+        # model = get_peft_model(model, peft_config)
 
         trainer = Trainer(
             model=model,
