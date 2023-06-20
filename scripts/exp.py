@@ -13,17 +13,21 @@ def std(x):
 
 def collect_results(args):
     all_experiment_dirs = glob.glob(f'{args.exp_root}/*/*')
-
+    print('These are all the experiment directories')
+    print(all_experiment_dirs)
+    
     results = []
     for exp_dir in all_experiment_dirs:
         if 't5-3b' in exp_dir and 't5-base' in exp_dir:
+            print('Skipping this directory', str(exp_dir), ' because it has t5-3b or t5-base in it')
             continue
         if not os.path.isdir(exp_dir):
             continue
 
-        log_path = os.path.join(exp_dir, 'logger.log')
-        metrics = ['dev_acc', 'dev_bertscore_correct_normalized']
-        metrics_dict = {} 
+        log_path = os.path.join(exp_dir, 'logger.log') #path to log file
+        metrics = ['dev_acc', 'dev_bertscore_correct_normalized'] #metrics being monitored
+        metrics_dict = {} #stores the monitored metrics for each experiment
+        #check log file for the current experiment, and extract the monitored metrics
         with open(log_path) as f:
             for line in f:
                 for metric in metrics: 
@@ -31,8 +35,8 @@ def collect_results(args):
                         score = line.strip().split()[-1]
                         metrics_dict[metric] = float(score)
 
-        config_path = os.path.join(exp_dir, 'commandline_args.txt')
-        
+        config_path = os.path.join(exp_dir, 'commandline_args.txt') #path to file storing experiment configurations
+        #extract configs (to be used in dataframe) from config file
         with open(config_path) as f:
             lines = f.readlines()
             lines = [l for l in lines[5:]]
@@ -56,6 +60,8 @@ def collect_results(args):
             print(filtered_configs.values())
         else:
             results.append(filtered_configs)
+
+    print('The number of experiments that have metrics calculated is', str(len(results)), ' out of ', str(len(all_experiment_dirs)), 'experiments.')
     df = pd.DataFrame.from_records(results) 
     try:
         assert len(df) % len(seeds_fewshot) == 0 
@@ -71,7 +77,7 @@ def collect_results(args):
     
     print(df.to_csv('out/results_all.csv', index=True))
 
-    df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() 
+    df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
     print(df_avg_seed.to_csv('out/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
