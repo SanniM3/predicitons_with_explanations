@@ -42,6 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
+# from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -69,6 +70,7 @@ from copy import deepcopy
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
 import re
+
 def set_global_logging_level(level=logging.ERROR, prefices=[""]):
     """
     Override logging levels of different modules based on their name as a prefix.
@@ -142,7 +144,7 @@ def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
-
+    #print("input_to_label_and_rationale main function")
     og_start_time = time.time()
 
     #parser = HfArgumentParser(
@@ -187,6 +189,7 @@ def main():
             raise Exception(
                 "if not training a model from scratch, must specify a trained model to load for evaluation"
             )
+        
 
     if training_args.do_train:
         # create a save directory and a logfile
@@ -196,7 +199,7 @@ def main():
         training_args.logging_dir = training_args.output_dir
         assert not os.path.exists(training_args.output_dir)
         os.makedirs(training_args.output_dir)
-
+        #print("output directory created at", str(training_args.output_dir))
         if (
                 os.path.exists(training_args.output_dir)
                 and os.listdir(training_args.output_dir)
@@ -211,6 +214,7 @@ def main():
             logging.StreamHandler(),
         ]
     else:
+        #print("not in training mode, so existing logfile not overwritten")
         # don't overwrite existing logfile or create new directory
         training_args.output_dir = model_args.pretrained_model_file
         handlers = [logging.StreamHandler()]
@@ -233,6 +237,7 @@ def main():
     logger.info("Save path: %s" % training_args.output_dir)
 
     # get git hash and branch where deployed
+    #print("get git hash and branch where deployed")
     repo = git.Repo(search_parent_directories=True)
     git_hash = repo.head.object.hexsha
     git_branch = repo.active_branch.name
@@ -241,7 +246,7 @@ def main():
 
     model_class = "t5"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
-
+    #print("model class specified and task names asserted")
     if training_args.do_train:
         # write command and args to file
         with open(
@@ -266,6 +271,7 @@ def main():
     logger.info("Loading pretrained tokenizer...")
 
     tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
+    #print("tokenizer for model loaded successfully")
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
@@ -292,8 +298,19 @@ def main():
                 raise Exception("sure you want to train a model from scratch?")
             model = model_name.from_config(config_name)
         model.resize_token_embeddings(len(tokenizer))
+        # ###PEFT MODIFICATIONS###
+        # peft_config = LoraConfig(
+        #                 r=8,
+        #                 lora_alpha=32,
+        #                 target_modules=["q", "v"],
+        #                 lora_dropout=0.1,
+        #             )
+        # model = get_peft_model(model, peft_config)
     else:
+        #print('no model loaded')
         model = None
+
+    
 
     data_splits = {'train': None, 'validation': None, 'test': None}
     original_data_splits = {'train': None, 'validation': None, 'test': None}  
@@ -391,6 +408,7 @@ def main():
             # print(data_args.data_path)
             # cwd, 'data', os.path.basename(data_args)
             data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SBIC.v2.{split}.modified.csv")
+            # data_path = os.path.join(os.getcwd(), data_args.data_path, f"SBIC.v2.{split}.modified.csv")
             # print(data_path)
             df = pd.read_csv(data_path)
 
@@ -428,7 +446,7 @@ def main():
             data_splits[split_mapping[split]] = []
             if not training_args.do_train:
                 continue
-            data_path = os.path.join(os.getcwd(), data_args.data_path, f"SenMaking.{split}.csv")
+            data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SenMaking.{split}.csv")
             df = pd.read_csv(data_path)
 
             if data_args.n_shots > 0: # This condition could probably be removed; we used n_shots=0 to experiment with training with the entire train set
@@ -458,7 +476,7 @@ def main():
     elif data_args.task_name == 'ecqa': 
         for split in ["train", "validation"]: 
             ecqa_data_split = []
-            data_path = os.path.join(os.getcwd(), data_args.data_path, f"ecqa_{split}.jsonl")
+            data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"ecqa_{split}.jsonl")
             with jsonlines.open(data_path) as ecqa_split_reader:
                 for item in ecqa_split_reader: 
                     formatted_instance = format_instance(item,
@@ -508,6 +526,16 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.EPOCH
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
+
+        # ###PEFT MODIFICATIONS###
+        # # creating model
+        # peft_config = LoraConfig(
+        #                 r=8,
+        #                 lora_alpha=32,
+        #                 target_modules=["q", "v"],
+        #                 lora_dropout=0.1,
+        #             )
+        # model = get_peft_model(model, peft_config)
 
         trainer = Trainer(
             model=model,
