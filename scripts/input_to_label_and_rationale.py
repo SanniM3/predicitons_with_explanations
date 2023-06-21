@@ -529,13 +529,14 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        # peft_config = LoraConfig(
-        #                 r=8,
-        #                 lora_alpha=32,
-        #                 target_modules=["q", "v"],
-        #                 lora_dropout=0.1,
-        #             )
-        # model = get_peft_model(model, peft_config)
+        peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
+                        r=8,
+                        lora_alpha=32,
+                        target_modules=["q", "v"],
+                        lora_dropout=0.1,
+                    )
+        model = get_peft_model(model, peft_config)
+        logger.info(model.print_trainable_parameters())
 
         trainer = Trainer(
             model=model,
