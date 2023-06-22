@@ -37,7 +37,7 @@ def evaluate(
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
                 
                 out = model.generate(
-                    inpt_tensor,
+                    input_ids=inpt_tensor,
                     max_length=100,
                     pad_token_id=tokenizer.pad_token_id,
                     eos_token_id=tokenizer.eos_token_id,
