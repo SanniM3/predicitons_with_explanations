@@ -35,5 +35,7 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # python train_evaluate_emnist_classification_system.py --filepath_to_arguments_json_file experiment_configs/emnist_tutorial_config.json
 # #!/usr/bin/env bash
 # conda activate feb
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals ecqa,sensemaking,sbic,esnli --n_gpus 4
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4
 python scripts/exp.py --exp_root checkpoints --collect_results
+# send notification of completion
+echo "Your script has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
