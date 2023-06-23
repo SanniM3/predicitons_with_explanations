@@ -1,2 +1,3 @@
 task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized
-sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,67.910592808552,65.63828946272068
+esnli,t5-base,standard,16,72.72550165595169,66.4026665369391
+esnli,t5-large,standard,16,84.06432748538012,76.99599136452109
