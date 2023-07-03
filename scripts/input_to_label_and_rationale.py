@@ -530,9 +530,9 @@ def main():
         # ###PEFT MODIFICATIONS###
         # # creating model
         peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
-                                r=8,
+                                r=model_args.lora_rank,
                                 lora_alpha=32,
-                                target_modules=["q", "v"],
+                                target_modules=model_args.lora_target_modules,
                                 lora_dropout=0.1,
                             )
         model = get_peft_model(model, peft_config)
