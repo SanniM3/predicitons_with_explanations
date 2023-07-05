@@ -529,7 +529,7 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = peft_config = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=model_args.virtual_tokens)
+        peft_config = peft_config = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=20)
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 
