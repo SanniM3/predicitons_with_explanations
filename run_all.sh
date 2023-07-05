@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --partition=ILCC_GPU
+#SBATCH --partition=PGR-Standard
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:4
 #SBATCH --mem=64000  # memory in Mb
