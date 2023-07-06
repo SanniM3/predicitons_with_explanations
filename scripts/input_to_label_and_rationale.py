@@ -529,6 +529,9 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
+        print('in input_to_label_andrationale script')
+        print(model_args.lora_target_modules)
+        print(type(model_args.lora_target_modules))
         peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
                                 r=model_args.lora_rank,
                                 lora_alpha=32,

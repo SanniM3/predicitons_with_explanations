@@ -1,9 +1,9 @@
 #!/bin/sh
-#SBATCH --partition=ILCC_GPU
+#SBATCH --partition=PGR-Standard
 #SBATCH --gres=gpu:4
 #SBATCH --mem=64000  # memory in Mb
 #SBATCH --time=0-100:00:00
-#SBATCH --array=5-11
+#SBATCH --array=1-11
 
 
 # Define the parameter values
