@@ -29,6 +29,7 @@ import gpt3
 import logging
 import math
 import os
+import ast
 from typing import List, Dict, Any, NewType
 
 InputDataClass = NewType("InputDataClass", Any)
@@ -529,13 +530,11 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        print('in input_to_label_andrationale script')
-        print(model_args.lora_target_modules)
-        print(type(model_args.lora_target_modules))
+        
         peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
                                 r=model_args.lora_rank,
                                 lora_alpha=32,
-                                target_modules=model_args.lora_target_modules,
+                                target_modules=ast.literal_eval(model_args.lora_target_modules),
                                 lora_dropout=0.1,
                             )
         model = get_peft_model(model, peft_config)
