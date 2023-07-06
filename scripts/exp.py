@@ -290,7 +290,7 @@ def run_exp(args):
                     --n_shots {n_shots}  --fewshot_eval_size {fewshot_eval_size}   \
                     --learning_rate {learning_rate}  --warmup_steps {warmup_steps}  \
                     --io_format {format}  --explanation_sep {explanation_sep}  \
-                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps}'''
+                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps} --lora_rank {args.lora_rank} --lora_target_modules {args.lora_target_modules}'''
 
             if args.deepspeed:
                 cmd += " --deepspeed deepspeed_config.json"

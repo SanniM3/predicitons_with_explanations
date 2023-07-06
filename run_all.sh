@@ -20,38 +20,38 @@ current_module=""
 
 # Assign the parameter values based on the array index
 if [ $CURRENT_INDEX -eq 1 ]; then
-    current_rank=${ranks[0]}
-    current_module="[${modules[0]}]"
+    current_rank=4
+    current_module="['q']"
 elif [ $CURRENT_INDEX -eq 2 ]; then
-    current_rank=${ranks[0]}
-    current_module="[${modules[1]}]"
+    current_rank=4
+    current_module="['v']"
 elif [ $CURRENT_INDEX -eq 3 ]; then
-    current_rank=${ranks[0]}
-    current_module="[${modules[0]}, ${modules[1]}]"
+    current_rank=4
+    current_module="['q', 'v']"
 elif [ $CURRENT_INDEX -eq 4 ]; then
-    current_rank=${ranks[2]}
-    current_module="[${modules[0]}]"
+    current_rank=16
+    current_module="['q']"
 elif [ $CURRENT_INDEX -eq 5 ]; then
-    current_rank=${ranks[2]}
-    current_module="[${modules[1]}]"
+    current_rank=16
+    current_module="['v']"
 elif [ $CURRENT_INDEX -eq 6 ]; then
-    current_rank=${ranks[2]}
-    current_module="[${modules[0]}, ${modules[1]}]"
+    current_rank=16
+    current_module="['q', 'v']"
 elif [ $CURRENT_INDEX -eq 7 ]; then
-    current_rank=${ranks[3]}
-    current_module="[${modules[0]}]"
+    current_rank=32
+    current_module="['q']"
 elif [ $CURRENT_INDEX -eq 8 ]; then
-    current_rank=${ranks[3]}
-    current_module="[${modules[1]}]"
+    current_rank=32
+    current_module="['v']"
 elif [ $CURRENT_INDEX -eq 9 ]; then
-    current_rank=${ranks[3]}
-    current_module="[${modules[0]}, ${modules[1]}]"
+    current_rank=32
+    current_module="['q', 'v']"
 elif [ $CURRENT_INDEX -eq 10 ]; then
-    current_rank=${ranks[1]}
-    current_module="[${modules[0]}]"
+    current_rank=8
+    current_module="['q']"
 elif [ $CURRENT_INDEX -eq 11 ]; then
-    current_rank=${ranks[1]}
-    current_module="[${modules[1]}]"
+    current_rank=8
+    current_module="['v']"
 fi
 
 
