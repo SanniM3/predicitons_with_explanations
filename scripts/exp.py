@@ -338,7 +338,7 @@ if __name__ == '__main__':
                                                                        "sensemaking"
                                                                        "cos_e (don't recommend using it)") 
     parser.add_argument("--lora_rank", type=int, default=None, help='rank for low rank matrices')
-    parser.add_argument("--lora_target_modules", type=str, default=None, help='list of target modules to apply lora finetuning to') 
+    parser.add_argument("--lora_target_modules", nargs='+', default=None, help='list of target modules to apply lora finetuning to') 
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")
     parser.add_argument("--gpt3_max_eval_size", default=18, help="Number of evaluation samples per episode for gpt3")    
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
