@@ -344,9 +344,9 @@ if __name__ == '__main__':
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
     args = parser.parse_args()
 
-    
+    print(type(args.lora_target_modules))
     #modify the experiment root with lora details
-    args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(ast.literal_eval(args.lora_target_modules)))
+    args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
     
     if args.collect_results:
         collect_results(args)

@@ -18,40 +18,41 @@ FULL_JOB_ID="${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 current_rank=""
 current_module=""
 
+
 # Assign the parameter values based on the array index
 if [ $CURRENT_INDEX -eq 1 ]; then
     current_rank=4
-    current_module="['q']"
+    current_module=("q")
 elif [ $CURRENT_INDEX -eq 2 ]; then
     current_rank=4
-    current_module="['v']"
+    current_module=("v")
 elif [ $CURRENT_INDEX -eq 3 ]; then
     current_rank=4
-    current_module="['q', 'v']"
+    current_module=("q" "v")
 elif [ $CURRENT_INDEX -eq 4 ]; then
     current_rank=16
-    current_module="['q']"
+    current_module=("q")
 elif [ $CURRENT_INDEX -eq 5 ]; then
     current_rank=16
-    current_module="['v']"
+    current_module=("v")
 elif [ $CURRENT_INDEX -eq 6 ]; then
     current_rank=16
-    current_module="['q', 'v']"
+    current_module=("q" "v")
 elif [ $CURRENT_INDEX -eq 7 ]; then
     current_rank=32
-    current_module="['q']"
+    current_module=("q")
 elif [ $CURRENT_INDEX -eq 8 ]; then
     current_rank=32
-    current_module="['v']"
+    current_module=("v")
 elif [ $CURRENT_INDEX -eq 9 ]; then
     current_rank=32
-    current_module="['q', 'v']"
+    current_module=("q" "v")
 elif [ $CURRENT_INDEX -eq 10 ]; then
     current_rank=8
-    current_module="['q']"
+    current_module=("q")
 elif [ $CURRENT_INDEX -eq 11 ]; then
     current_rank=8
-    current_module="['v']"
+    current_module=("v")
 fi
 
 
@@ -87,8 +88,8 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # #!/usr/bin/env bash
 # conda activate feb
 echo "Your script for ${FULL_JOB_ID}th job has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4 --lora_rank $current_rank --lora_target_modules $current_module
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4 --lora_rank $current_rank --lora_target_modules $current_module
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}"
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}"
 python scripts/exp.py --exp_root checkpoints --collect_results
 # send notification of completion
 echo "Your script for ${FULL_JOB_ID}th job has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
