@@ -347,6 +347,8 @@ if __name__ == '__main__':
     print(type(args.lora_target_modules))
     #modify the experiment root with lora details
     args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
+    #change tgt module to string to allow HFParser function correctly
+    args.lora_target_modules = str(args.lora_target_modules)
     
     if args.collect_results:
         collect_results(args)

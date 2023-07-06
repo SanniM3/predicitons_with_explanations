@@ -88,7 +88,7 @@ class ModelArguments:
            "help": "Specify a rank for LoRA"
         },
     )
-    lora_target_modules: list = field(
+    lora_target_modules: str = field(
         default=None,
         metadata={
            "help": "list of target modules to apply lora to"
