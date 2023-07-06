@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:4
 #SBATCH --mem=64000  # memory in Mb
 #SBATCH --time=0-100:00:00
-#SBATCH --array=1-10
+#SBATCH --array=3-10
 
 
 # Get the current array index
