@@ -1,8 +1,8 @@
 #!/bin/sh
 #SBATCH --partition=PGR-Standard
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:4
-#SBATCH --mem=64000  # memory in Mb
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:8
+#SBATCH --mem=128000  # memory in Mb
 #SBATCH --time=0-100:00:00
 #SBATCH --array=1-10
 
