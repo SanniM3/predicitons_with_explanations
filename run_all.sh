@@ -48,8 +48,8 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # #!/usr/bin/env bash
 # conda activate feb
 echo "Your script for ${FULL_JOB_ID}th job has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4 --virtual_tokens $n_current_token
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4 --virtual_tokens $n_current_token
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 8 --virtual_tokens $n_current_token
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 8 --virtual_tokens $n_current_token
 python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens $n_current_token
 # send notification of completion
 echo "Your script for ${FULL_JOB_ID}th job has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
