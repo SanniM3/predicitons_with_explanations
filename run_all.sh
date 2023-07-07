@@ -2,7 +2,7 @@
 #SBATCH --partition=ILCC_GPU
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:8
-#SBATCH --mem=128000  # memory in Mb
+#SBATCH --mem=64000  # memory in Mb
 #SBATCH --time=0-100:00:00
 #SBATCH --array=1-11
 
