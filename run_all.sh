@@ -90,6 +90,6 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 echo "Your script for ${FULL_JOB_ID}th job has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
 python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}"
 python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}"
-python scripts/exp.py --exp_root checkpoints --collect_results
+python scripts/exp.py --exp_root checkpoints --collect_results --lora_rank $current_rank --lora_target_modules "${current_module[@]}"
 # send notification of completion
 echo "Your script for ${FULL_JOB_ID}th job has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
