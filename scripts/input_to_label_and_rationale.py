@@ -533,7 +533,7 @@ def main():
         print('in input script')
         print(model_args.lora_target_modules)
         print(type(model_args.lora_target_modules))
-        target_modules = ast.literal_eval(model_args.lora_target_modules)
+        target_modules = list(model_args.lora_target_modules)
         print(type(target_modules))
         print(target_modules)
         peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
