@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --partition=ILCC_GPU
+#SBATCH --partition=PGR-Standard
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32000  # memory in Mb
 #SBATCH --time=0-20:00:00
@@ -35,4 +35,4 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # python train_evaluate_emnist_classification_system.py --filepath_to_arguments_json_file experiment_configs/emnist_tutorial_config.json
 # #!/usr/bin/env bash
 # conda activate feb
-python scripts/exp.py --exp_root checkpoints --collect_results
+python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens 20
