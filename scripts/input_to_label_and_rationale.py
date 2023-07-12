@@ -529,7 +529,7 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=int(model_args.virtual_tokens))
+        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=20)
         model = get_peft_model(model, peft_config_1)
 
         ##1. Lora
