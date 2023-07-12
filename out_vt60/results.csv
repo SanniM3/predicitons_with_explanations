@@ -1,0 +1,4 @@
+task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,34.285714285714285,27.90175756386348
+ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,52.57142857142858,42.76338807174138
+esnli,t5-base,standard,16,75.57471264367817,62.91758320454893

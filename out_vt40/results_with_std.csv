@@ -1,0 +1,7 @@
+,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized
+,,,,mean,std,mean,std
+task_name,model_type,io_format,n_shots,,,,
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,39.35403726708074,2.3699050577269034,31.99151458651383,1.9190956829911474
+ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,56.3609022556391,1.6835390713091103,45.803164390693034,1.3847223895267102
+sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,0.0,0.0,0.0,0.0
+sensemaking,allenai/unifiedqa-t5-large,unifiedqa_what,24,0.9047619047619048,0.5323971374999499,0.7493609530585154,0.4413198679794859

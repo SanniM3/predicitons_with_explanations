@@ -1,0 +1,6 @@
+,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized
+,,,,mean,std,mean,std
+task_name,model_type,io_format,n_shots,,,,
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,34.285714285714285,0.0,27.90175756386348,0.0
+ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,52.57142857142858,7.105427357601002e-15,42.76338807174138,7.105427357601002e-15
+esnli,t5-base,standard,16,75.57471264367817,1.1494252873563298,62.91758320454893,0.9270549848161878

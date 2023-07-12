@@ -1,0 +1,10 @@
+,dev_acc,dev_bertscore_correct_normalized,model_type,task_name,seed,n_shots,io_format
+0,52.57142857142857,42.763388071741375,allenai/unifiedqa-t5-large,ecqa,3639,48,unifiedqa_matching
+1,52.57142857142857,42.763388071741375,allenai/unifiedqa-t5-large,ecqa,3639,48,unifiedqa_matching
+2,52.57142857142857,42.763388071741375,allenai/unifiedqa-t5-large,ecqa,3639,48,unifiedqa_matching
+3,34.285714285714285,27.90175756386348,allenai/unifiedqa-t5-base,ecqa,6290,48,unifiedqa_matching
+4,76.72413793103449,63.84463818936512,t5-base,esnli,3112,16,standard
+5,34.285714285714285,27.90175756386348,allenai/unifiedqa-t5-base,ecqa,6290,48,unifiedqa_matching
+6,76.72413793103449,63.84463818936512,t5-base,esnli,3112,16,standard
+7,74.42528735632183,61.990528219732745,t5-base,esnli,178,16,standard
+8,74.42528735632183,61.990528219732745,t5-base,esnli,178,16,standard
