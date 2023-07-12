@@ -3,7 +3,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:8
 #SBATCH --mem=128000  # memory in Mb
-#SBATCH --time=0-200:00:00
+#SBATCH --time=0-100:00:00
 
 export CUDA_HOME=/opt/cuda-9.0.176.1/
 
