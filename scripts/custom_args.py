@@ -82,12 +82,6 @@ class ModelArguments:
            "help": "Specify a dropout rate, if don't want to use default in transformers/configuration_t5.py"
         }
     )
-    virtual_tokens: int = field(
-        default=None,
-        metadata={
-           "help": "Number of virtual tokens for prefix tuning"
-        },
-    )
     use_gpt3: bool = field(
         default=False,
         metadata={

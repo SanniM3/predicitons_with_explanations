@@ -1,9 +1,9 @@
 #!/bin/sh
 #SBATCH --partition=PGR-Standard
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:4
-#SBATCH --mem=64000  # memory in Mb
-#SBATCH --time=0-100:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:8
+#SBATCH --mem=128000  # memory in Mb
+#SBATCH --time=0-200:00:00
 
 export CUDA_HOME=/opt/cuda-9.0.176.1/
 
@@ -37,6 +37,6 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # #!/usr/bin/env bash
 # conda activate feb
 # python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals esnli --n_gpus 4
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4 --virtual_tokens 20
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 8
 
-python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens 20
+python scripts/exp.py --exp_root checkpoints --collect_results

@@ -290,7 +290,7 @@ def run_exp(args):
                     --n_shots {n_shots}  --fewshot_eval_size {fewshot_eval_size}   \
                     --learning_rate {learning_rate}  --warmup_steps {warmup_steps}  \
                     --io_format {format}  --explanation_sep {explanation_sep}  \
-                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps} --virtual_tokens {args.virtual_tokens}'''
+                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps}'''
 
             if args.deepspeed:
                 cmd += " --deepspeed deepspeed_config.json"
@@ -344,7 +344,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #modify the experiment root with prefix tuning details
-    args.exp_root = args.exp_root + '_vt{}'.format(args.virtual_tokens)
+    args.exp_root = args.exp_root + '_prefix_lora20qv'
     
     if args.collect_results:
         collect_results(args)

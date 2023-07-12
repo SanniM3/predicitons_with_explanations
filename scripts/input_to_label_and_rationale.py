@@ -529,8 +529,17 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = peft_config = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=int(model_args.virtual_tokens))
-        model = get_peft_model(model, peft_config)
+        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=int(model_args.virtual_tokens))
+        model = get_peft_model(model, peft_config_1)
+
+        ##1. Lora
+        peft_config_2 = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
+                                    r=8,
+                                    lora_alpha=32,
+                                    target_modules=["q", "v"],
+                                    lora_dropout=0.1,
+                                )
+        model = get_peft_model(model, peft_config_2)
         model.print_trainable_parameters()
 
         trainer = Trainer(
