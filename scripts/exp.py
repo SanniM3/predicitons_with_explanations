@@ -344,6 +344,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #modify the experiment root with prefix tuning details
+    print(args.virtual_tokens)
     args.exp_root = args.exp_root + '_vt{}'.format(args.virtual_tokens)
     
     if args.collect_results:
