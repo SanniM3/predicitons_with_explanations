@@ -47,9 +47,9 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # python train_evaluate_emnist_classification_system.py --filepath_to_arguments_json_file experiment_configs/emnist_tutorial_config.json
 # #!/usr/bin/env bash
 # conda activate feb
-echo "Your script for ${FULL_JOB_ID}th job has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals sbic,sensemaking,ecqa --n_gpus 8 --virtual_tokens $10
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 8 --virtual_tokens $10
-python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens $10
+echo "Your script for $FULL_JOB_ID has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals sbic,sensemaking,ecqa --n_gpus 8 --virtual_tokens $1
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 8 --virtual_tokens $1
+python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens $1
 # send notification of completion
-echo "Your script for ${FULL_JOB_ID}th job has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
+echo "Your script for $FULL_JOB_ID has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
