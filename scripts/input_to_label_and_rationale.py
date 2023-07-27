@@ -528,8 +528,6 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
 
         # ###PEFT MODIFICATIONS###
-        # # creating model
-        print(model_args.virtual_tokens)
         peft_config = peft_config = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=int(model_args.virtual_tokens))
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()

@@ -1,4 +1,4 @@
-This is the individula vt10 run
+This was a mistake (0 tokens, so, basically tuned nothing?)
 
 The following seeds failed for model t5-large and format standard:
 [6290, 9428, 4273, 7632, 4199, 4823, 5358, 6227, 1181]
