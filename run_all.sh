@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --partition=PGR-Standard
 #SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:4
+#SBATCH --gres=gpu:8
 #SBATCH --mem=128000  # memory in Mb
 #SBATCH --time=0-100:00:00
 
@@ -48,9 +48,9 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # #!/usr/bin/env bash
 # conda activate feb
 echo "Your script for $FULL_JOB_ID has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
-# python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals sbic,sensemaking,ecqa --n_gpus 8 --virtual_tokens $1
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-large --dataset_vals sbic --n_gpus 4 --virtual_tokens $1
-# python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 8 --virtual_tokens $1
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals sbic,sensemaking,ecqa --n_gpus 8 --virtual_tokens $1
+# python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-large --dataset_vals sbic --n_gpus 4 --virtual_tokens $1
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 8 --virtual_tokens $1
 python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens $1
 # send notification of completion
 echo "Your script for $FULL_JOB_ID has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
