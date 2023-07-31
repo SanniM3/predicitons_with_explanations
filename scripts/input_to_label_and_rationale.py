@@ -42,7 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
-from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, AdaLoraConfig
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -529,12 +529,18 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
-                                r=model_args.lora_rank,
-                                lora_alpha=32,
-                                target_modules=model_args.lora_target_modules,
-                                lora_dropout=0.1,
-                            )
+        peft_config = AdaLoraConfig(
+                        init_r=12,
+                        target_r=8,
+                        beta1=0.85,
+                        beta2=0.85,
+                        tinit=200,
+                        tfinal=1000,
+                        deltaT=10,
+                        lora_alpha=32,
+                        lora_dropout=0.1,
+                        task_type=TaskType.SEQ_2_SEQ_LM
+                    )
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 
