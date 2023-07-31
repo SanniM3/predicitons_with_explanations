@@ -82,18 +82,6 @@ class ModelArguments:
            "help": "Specify a dropout rate, if don't want to use default in transformers/configuration_t5.py"
         }
     )
-    lora_rank: int = field(
-        default=None,
-        metadata={
-           "help": "Specify a rank for LoRA"
-        },
-    )
-    lora_target_modules: str = field(
-        default=None,
-        metadata={
-           "help": "list of target modules to apply lora to"
-        },
-    )
     use_gpt3: bool = field(
         default=False,
         metadata={

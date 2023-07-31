@@ -77,16 +77,16 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
+    output_file = 'out_default'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
-    print(df.to_csv('out{}{}/results_all.csv'.format(args.lora_rank, ''.join(args.lora_target_modules)), index=True))
+    print(df.to_csv('out_default/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out{}{}/results.csv'.format(args.lora_rank, ''.join(args.lora_target_modules)), index=True))
+    print(df_avg_seed.to_csv('out_default/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out{}{}/results_with_std.csv'.format(args.lora_rank, ''.join(args.lora_target_modules)), index=True))
+    print(df_avg_seed_with_std.to_csv('out_default/results_with_std.csv', index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
@@ -290,7 +290,7 @@ def run_exp(args):
                     --n_shots {n_shots}  --fewshot_eval_size {fewshot_eval_size}   \
                     --learning_rate {learning_rate}  --warmup_steps {warmup_steps}  \
                     --io_format {format}  --explanation_sep {explanation_sep}  \
-                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps} --lora_rank {args.lora_rank} --lora_target_modules {args.lora_target_modules}'''
+                    --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps}'''
 
             if args.deepspeed:
                 cmd += " --deepspeed deepspeed_config.json"
@@ -337,17 +337,15 @@ if __name__ == '__main__':
                                                                        "esnli"
                                                                        "sensemaking"
                                                                        "cos_e (don't recommend using it)") 
-    parser.add_argument("--lora_rank", type=int, default=None, help='rank for low rank matrices')
-    parser.add_argument("--lora_target_modules", type=str, default=None, help='list of target modules to apply lora finetuning to') 
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")
     parser.add_argument("--gpt3_max_eval_size", default=18, help="Number of evaluation samples per episode for gpt3")    
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
     args = parser.parse_args()
 
-    #change target modules to list as expected by peft
-    args.lora_target_modules = ast.literal_eval(args.lora_target_modules)
-    #modify the experiment root with lora details
-    args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
+    # #change target modules to list as expected by peft
+    # args.lora_target_modules = ast.literal_eval(args.lora_target_modules)
+    # #modify the experiment root with lora details
+    # args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
     
     if args.collect_results:
         collect_results(args)
