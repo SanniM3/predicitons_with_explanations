@@ -528,6 +528,11 @@ def main():
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
 
+
+        #use fp16 to reduce consumed memory
+        training_args.fp16 = True
+        training_args.fp16_full_eval = True
+
         # ###PEFT MODIFICATIONS###
         # # creating model
         print('in input script')
