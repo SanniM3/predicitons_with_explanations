@@ -529,18 +529,8 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = AdaLoraConfig(
-                        init_r=12,
-                        target_r=8,
-                        beta1=0.85,
-                        beta2=0.85,
-                        tinit=200,
-                        tfinal=1000,
-                        deltaT=10,
-                        lora_alpha=32,
-                        lora_dropout=0.1,
-                        task_type=TaskType.SEQ_2_SEQ_LM
-                    )
+        peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=12, target_r=8, lora_alpha=32, target_modules=["q", "v"],
+                lora_dropout=0.01,)
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 
