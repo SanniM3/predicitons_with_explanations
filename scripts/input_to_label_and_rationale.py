@@ -532,6 +532,10 @@ def main():
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 
+        #reduce consumed gpu memory
+        training_args.fp16=True
+        training_args.fp16_full_eval=True
+        
         trainer = Trainer(
             model=model,
             args=training_args,
