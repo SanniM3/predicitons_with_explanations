@@ -3,8 +3,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
 #SBATCH --mem=64000  # memory in Mb
-#SBATCH --time=0-20:00:00
-#SBATCH --array=1
+#SBATCH --time=0-15:00:00
+#SBATCH --array=1-3
 
 
 # Define the parameter values
@@ -89,7 +89,7 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate feb
 # #!/usr/bin/env bash
 # conda activate feb
 echo "Your script for ${FULL_JOB_ID}th job has started running" | mail -s "Script Starting Alert" s2421110@ed.ac.uk
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals sbic --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}" > unifiedqa_lora_${CURRENT_INDEX}.txt 2>&1
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-large --dataset_vals sbic --n_gpus 4 --lora_rank $current_rank --lora_target_modules "${current_module[@]}" > unifiedqa_lora_${CURRENT_INDEX}.txt 2>&1
 # python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 4--lora_rank $current_rank --lora_target_modules "${current_module[@]}" > t5_lora_${CURRENT_INDEX}.txt 2>&1
 python scripts/exp.py --exp_root checkpoints --collect_results --lora_rank $current_rank --lora_target_modules "${current_module[@]}" > out_lora_${CURRENT_INDEX}.txt 2>&1
 # send notification of completion
