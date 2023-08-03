@@ -14,7 +14,7 @@ The following seeds failed for model allenai/unifiedqa-t5-large and format unifi
 []
 Repeat experiments for those seeds and collect results again
 The following seeds failed for model allenai/unifiedqa-t5-large and format unified_qa_what_with_tags:
-[6290, 4864, 4273, 8219, 7356, 51, 4199, 4182, 1331, 2796, 1111, 1967, 1319, 7740, 1335, 9933, 3112, 1349, 8483, 2348, 834, 6895, 2913, 178, 9991, 6924, 2638, 6227, 8384, 2769, 4512, 2051, 9599, 1181, 588, 4791]
+[4864, 2051, 9991, 6924, 6290, 8219, 1181, 4512, 8483, 1319, 3112, 2348, 1967, 4273, 178, 51, 1331, 1335, 4791, 7356, 7740, 8384, 834, 1349, 588, 9933, 2638, 2769, 6227, 4182, 1111, 2913, 4199, 2796, 6895, 9599]
 Repeat experiments for those seeds and collect results again
 The following seeds failed for model t5-base and format standard:
 []
