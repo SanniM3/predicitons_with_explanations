@@ -232,7 +232,7 @@ def main():
         training_args.device,
         training_args.n_gpu,
         bool(training_args.local_rank != -1),
-        training_args.fp16,
+        training_args.bf16,
     )
     logger.info("Save path: %s" % training_args.output_dir)
 
@@ -536,6 +536,10 @@ def main():
         
         with open('trainable_all.txt', "a") as file:
             file.write(model.print_trainable_parameters())
+
+        #reduce consumed gpu memory
+        training_args.bf16=True
+        training_args.bf16_full_eval=True
 
         trainer = Trainer(
             model=model,
