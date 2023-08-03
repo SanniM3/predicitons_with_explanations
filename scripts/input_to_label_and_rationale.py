@@ -42,7 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
-from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, AdaLoraConfig
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, AdaLoraConfig, IA3Config
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -529,9 +529,12 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=32, target_r=4, lora_alpha=32, 
-                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention).*(q|v|k|o|wi|wo)$',
-                                    lora_dropout=0.1,)
+        peft_config = IA3Config(
+                        peft_type="IA3",
+                        task_type="SEQ_2_SEQ_LM",
+                        target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                        feedforward_modules='.*(decoder|encoder).*(DenseReluDense).*(wi|wo)$',
+                    )
         model = get_peft_model(model, peft_config)
         
         model.print_trainable_parameters()
