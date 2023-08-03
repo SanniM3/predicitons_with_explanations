@@ -533,7 +533,9 @@ def main():
                                     target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention).*(q|v|k|o|wi|wo)$',
                                     lora_dropout=0.1,)
         model = get_peft_model(model, peft_config)
-        model.print_trainable_parameters()
+        
+        with open('trainable_all.txt', "w") as file:
+            file.write(model.print_trainable_parameters())
 
         trainer = Trainer(
             model=model,
