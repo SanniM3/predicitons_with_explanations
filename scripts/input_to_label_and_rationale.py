@@ -534,7 +534,7 @@ def main():
                                     lora_dropout=0.1,)
         model = get_peft_model(model, peft_config)
         
-        with open('trainable_all.txt', "w") as file:
+        with open('trainable_all.txt', "a") as file:
             file.write(model.print_trainable_parameters())
 
         trainer = Trainer(
