@@ -534,8 +534,7 @@ def main():
                                     lora_dropout=0.1,)
         model = get_peft_model(model, peft_config)
         
-        with open('trainable_all.txt', "a") as file:
-            file.write(model.print_trainable_parameters())
+        model.print_trainable_parameters()
 
         #reduce consumed gpu memory
         training_args.bf16=True
