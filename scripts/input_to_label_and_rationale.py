@@ -532,7 +532,7 @@ def main():
         peft_config = IA3Config(
                         peft_type="IA3",
                         task_type="SEQ_2_SEQ_LM",
-                        target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                        target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(v|k|wi|wo)$',
                         feedforward_modules='.*(decoder|encoder).*(DenseReluDense).*(wi|wo)$',
                     )
         model = get_peft_model(model, peft_config)
