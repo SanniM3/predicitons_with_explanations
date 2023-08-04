@@ -77,16 +77,16 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out_vt{}'.format(args.virtual_tokens)
+    output_file = 'out_10_kv_ffn'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
-    print(df.to_csv('out_vt{}/results_all.csv'.format(args.virtual_tokens), index=True))
+    print(df.to_csv('out_10_kv_ffn/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out_vt{}/results.csv'.format(args.virtual_tokens), index=True))
+    print(df_avg_seed.to_csv('out_10_kv_ffn/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out_vt{}/results_with_std.csv'.format(args.virtual_tokens), index=True))
+    print(df_avg_seed_with_std.to_csv('out_10_kv_ffn/results_with_std.csv', index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
@@ -337,14 +337,13 @@ if __name__ == '__main__':
                                                                        "esnli"
                                                                        "sensemaking"
                                                                        "cos_e (don't recommend using it)") 
-    parser.add_argument("--virtual_tokens", type=int, default=None, help='Number of virtual tokensnfor prefix tuning') 
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")
     parser.add_argument("--gpt3_max_eval_size", default=18, help="Number of evaluation samples per episode for gpt3")    
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
     args = parser.parse_args()
 
-    #modify the experiment root with prefix tuning details
-    args.exp_root = args.exp_root + '_prefix_lora20qv'
+    # #modify the experiment root with prefix tuning details
+    # args.exp_root = args.exp_root + '_prefix_lora20qv'
     
     if args.collect_results:
         collect_results(args)

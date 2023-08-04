@@ -42,7 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
-from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, PrefixTuningConfig
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, PrefixTuningConfig, IA3Config
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -529,16 +529,16 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=20)
+        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=10)
         model = get_peft_model(model, peft_config_1)
 
         ##1. Lora
-        peft_config_2 = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
-                                    r=8,
-                                    lora_alpha=32,
-                                    target_modules=["q", "v"],
-                                    lora_dropout=0.1,
-                                )
+        peft_config_2 = IA3Config(
+                        peft_type="IA3",
+                        task_type="SEQ_2_SEQ_LM",
+                        target_modules=["k", "v", "w0"],
+                        feedforward_modules=["w0"],
+                    )
         model = get_peft_model(model, peft_config_2)
         model.print_trainable_parameters()
 

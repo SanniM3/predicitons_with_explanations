@@ -53,3 +53,8 @@ python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t
 python scripts/exp.py --exp_root checkpoints --collect_results --virtual_tokens $n_current_token
 # send notification of completion
 echo "Your script for ${FULL_JOB_ID}th job has completed running" | mail -s "Script Completion Alert" s2421110@ed.ac.uk
+
+### cmd line run
+# python scripts/exp.py --exp_root checkpoints_10_kv_ffn --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large --dataset_vals ecqa,sensemaking,sbic --n_gpus 2 &&
+# python scripts/exp.py --exp_root checkpoints_10_kv_ffn --not_dryrun --model_vals t5-base,t5-large --dataset_vals esnli --n_gpus 2 &&
+# python scripts/exp.py --exp_root checkpoints_10_kv_ffn --collect_results
