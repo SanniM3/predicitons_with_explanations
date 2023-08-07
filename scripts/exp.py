@@ -75,6 +75,11 @@ def collect_results(args):
                     print (seeds)
                     print (f"Repeat experiments for those seeds and collect results again")
     
+    #make results directory
+    output_file = 'out_allr4'
+    if not os.path.exists(output_file):
+        os.mkdir(output_file)
+        
     print(df.to_csv('out_allr4/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
