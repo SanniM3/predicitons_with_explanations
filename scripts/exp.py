@@ -80,6 +80,9 @@ def collect_results(args):
     output_file = 'out_kvqo_ffn'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
+    columns_to_convert = ['seed', 'n_shots']
+
+    df[columns_to_convert] = df[columns_to_convert].astype('int64')
     print(df.dtypes)
     print(df.to_csv('out_kvqo_ffn/results_all.csv', index=True))
 
