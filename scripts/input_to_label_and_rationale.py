@@ -233,7 +233,7 @@ def main():
         training_args.device,
         training_args.n_gpu,
         bool(training_args.local_rank != -1),
-        training_args.fp16,
+        training_args.bf16,
     )
     logger.info("Save path: %s" % training_args.output_dir)
 
@@ -529,9 +529,9 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
 
 
-        #use fp16 to reduce consumed memory
-        training_args.fp16 = True
-        training_args.fp16_full_eval = True
+        #use bf16 to reduce consumed memory
+        training_args.bf16 = True
+        training_args.bf16_full_eval = True
 
         # ###PEFT MODIFICATIONS###
         # # creating model
