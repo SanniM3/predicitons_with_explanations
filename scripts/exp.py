@@ -81,6 +81,7 @@ def collect_results(args):
     if not os.path.exists(output_file):
         os.mkdir(output_file)
     print(df['seed'].dtype)
+    print(df['n_shots'].dtype)
     print(df.to_csv('out_kvqo_ffn/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
