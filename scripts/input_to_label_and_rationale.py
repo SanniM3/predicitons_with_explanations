@@ -532,7 +532,7 @@ def main():
         peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
                                 r=4,
                                 lora_alpha=32,
-                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention).*(q|v|k|o|wi|wo)$',
+                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
                                 lora_dropout=0.1,
                             )
         model = get_peft_model(model, peft_config)
