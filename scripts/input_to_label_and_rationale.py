@@ -529,11 +529,10 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=32, target_r=4, lora_alpha=32, 
+        peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=12, target_r=8, lora_alpha=32, 
                                     target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
-                                    lora_dropout=0.1,)
+                                    lora_dropout=0.1, tinit=1000, tfinal=10000, deltaT=100)
         model = get_peft_model(model, peft_config)
-        
         model.print_trainable_parameters()
 
         #reduce consumed gpu memory
