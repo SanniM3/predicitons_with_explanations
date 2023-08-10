@@ -529,9 +529,12 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
+        t_init = 0
+        t_final = 10000
+        total_steps = t_init + 300 + t_final
         peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=12, target_r=8, lora_alpha=32, 
                                     target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
-                                    lora_dropout=0.1, tinit=0, tfinal=10000, deltaT=100)
+                                    lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=100, orth_reg_weight=0.1, total_step=total_steps)
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 

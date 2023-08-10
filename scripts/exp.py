@@ -77,7 +77,7 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out_setting7'
+    output_file = 'out_setting8'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
 
@@ -85,13 +85,13 @@ def collect_results(args):
 
     df[columns_to_convert] = df[columns_to_convert].astype('int64')
     
-    print(df.to_csv('out_setting7/results_all.csv', index=True))
+    print(df.to_csv('out_setting8/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out_setting7/results.csv', index=True))
+    print(df_avg_seed.to_csv('out_setting8/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out_setting7/results_with_std.csv', index=True))
+    print(df_avg_seed_with_std.to_csv('out_setting8/results_with_std.csv', index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
@@ -105,7 +105,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
-                                        'max_steps_vals': [300], 
+                                        'max_steps_vals': [20000], 
                                         'epochs_vals': [2],  # will be ignored because of `max_steps`
                                         'warmup_steps_vals': [0],
                                         'eval_steps_vals': [300], 
