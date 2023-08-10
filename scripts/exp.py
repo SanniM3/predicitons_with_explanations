@@ -105,7 +105,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
-                                        'max_steps_vals': [20000], 
+                                        'max_steps_vals': [2000], 
                                         'epochs_vals': [2],  # will be ignored because of `max_steps`
                                         'warmup_steps_vals': [0],
                                         'eval_steps_vals': [300], 
