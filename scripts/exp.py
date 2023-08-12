@@ -77,16 +77,16 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out_vt{}'.format(args.virtual_tokens)
+    output_file = 'out_kqvo_vt{}'.format(args.virtual_tokens)
     if not os.path.exists(output_file):
         os.mkdir(output_file)
-    print(df.to_csv('out_vt{}/results_all.csv'.format(args.virtual_tokens), index=True))
+    print(df.to_csv('out_kqvo_vt{}/results_all.csv'.format(args.virtual_tokens), index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out_vt{}/results.csv'.format(args.virtual_tokens), index=True))
+    print(df_avg_seed.to_csv('out_kqvo_vt{}/results.csv'.format(args.virtual_tokens), index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out_vt{}/results_with_std.csv'.format(args.virtual_tokens), index=True))
+    print(df_avg_seed_with_std.to_csv('out_kqvo_vt{}/results_with_std.csv'.format(args.virtual_tokens), index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
@@ -344,7 +344,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #modify the experiment root with prefix tuning details
-    args.exp_root = args.exp_root + '_prefix_lora20qv'
+    args.exp_root = args.exp_root + '_prefix_lora10kqvo'
     
     if args.collect_results:
         collect_results(args)

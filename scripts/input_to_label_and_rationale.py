@@ -232,7 +232,7 @@ def main():
         training_args.device,
         training_args.n_gpu,
         bool(training_args.local_rank != -1),
-        training_args.fp16,
+        training_args.bf16,
     )
     logger.info("Save path: %s" % training_args.output_dir)
 
@@ -529,19 +529,23 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=20)
+        peft_config_1 = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=10)
         model = get_peft_model(model, peft_config_1)
 
         ##1. Lora
         peft_config_2 = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
-                                    r=8,
-                                    lora_alpha=32,
-                                    target_modules=["q", "v"],
-                                    lora_dropout=0.1,
-                                )
+                                r=4,
+                                lora_alpha=32,
+                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o)$',
+                                lora_dropout=0.1,
+                            )
         model = get_peft_model(model, peft_config_2)
         model.print_trainable_parameters()
 
+        #reduce consumed gpu memory
+        training_args.bf16=True
+        training_args.bf16_full_eval=True
+        
         trainer = Trainer(
             model=model,
             args=training_args,
