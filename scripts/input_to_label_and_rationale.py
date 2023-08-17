@@ -529,7 +529,7 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        t_init = 300
+        t_init = 500
         t_final = 1000
         total_steps = t_init + 100 + t_final
         peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
