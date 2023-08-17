@@ -540,6 +540,8 @@ def main():
                                 lora_dropout=0.1,
                             )
         model = get_peft_model(model, peft_config_2)
+
+        model.prompt_encoder.default.embedding.weight.requires_grad = True #set prefix to train
         model.print_trainable_parameters()
 
         #reduce consumed gpu memory
