@@ -1,0 +1,9 @@
+task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,19.16190476190476,15.828446151670956
+ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,47.714285714285715,42.47546433025882
+esnli,t5-base,standard,16,76.84657671164418,70.26918981133075
+esnli,t5-large,standard,16,84.67598097502972,77.55864456449525
+sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,56.41428571428571,52.66597618432272
+sbic,allenai/unifiedqa-t5-large,unified_qa_what_with_tags,24,61.68333333333333,59.16127681760561
+sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,54.72380952380953,50.054291338012334
+sensemaking,allenai/unifiedqa-t5-large,unifiedqa_what,24,71.31428571428572,65.65975443678242
