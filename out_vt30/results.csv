@@ -1,9 +1,9 @@
 task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized
-ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,40.46790890269151,32.904757461315846
-ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,57.71992481203007,46.92008548291554
-esnli,t5-base,standard,16,73.80567528735632,61.465819247273934
-esnli,t5-large,standard,16,83.15312682641729,69.26114091411242
-sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,0.2737094837935174,0.23098301400943677
-sbic,allenai/unifiedqa-t5-large,unified_qa_what_with_tags,24,0.14285714285714285,0.12018621819359916
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,40.48095238095238,32.91580014243012
+ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,57.78571428571429,46.973503805342176
+esnli,t5-base,standard,16,73.10344827586206,60.887557695195134
+esnli,t5-large,standard,16,83.65900383141762,69.68614811884146
+sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,0.3,0.25322681793144775
+sbic,allenai/unifiedqa-t5-large,unified_qa_what_with_tags,24,0.04761904761904761,0.03962338396481105
 sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,0.0,0.0
-sensemaking,allenai/unifiedqa-t5-large,unifiedqa_what,24,2.3022774327122155,1.915022925807329
+sensemaking,allenai/unifiedqa-t5-large,unifiedqa_what,24,2.2523809523809524,1.8729260619197572
