@@ -1,0 +1,3 @@
+task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized,seed
+esnli,t5-base,standard,16,56.362889983579635,51.12917515330452,4601.142857142857
+esnli,t5-large,standard,16,84.52380952380952,77.3392098820725,4601.142857142857
