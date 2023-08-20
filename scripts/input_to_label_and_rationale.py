@@ -553,12 +553,28 @@ def main():
             callbacks=callbacks,
         )
 
+
+        # Calculate the average sequence length
+        total_tokens = 0
+        total_sequences = len(trainer.train_dataset)
+
+        for example in trainer.train_dataset:
+            total_tokens += len(example['input_ids'])
+
+        average_sequence_length = total_tokens / total_sequences
+
+        # Append the average sequence length to a file
+        output_file_path = "average_sequence_length.txt"
+        with open(output_file_path, "a") as output_file:
+            output_file.write("Average Sequence Length of {}: {}".format(data_args.task_name, average_sequence_length))
+
+
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
         start_time = time.time()
-        trainer.train()
+        # trainer.train()
         train_time = time.time() - start_time
-        model = trainer.model
+        # model = trainer.model
     else:
         start_time = time.time()
         train_time = time.time() - start_time
