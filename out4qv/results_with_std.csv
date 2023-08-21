@@ -1,9 +1,6 @@
 ,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized
 ,,,,mean,std,mean,std
 task_name,model_type,io_format,n_shots,,,,
-<<<<<<< HEAD
-sbic,allenai/unifiedqa-t5-large,unified_qa_what_with_tags,24,63.34285714285714,3.2992681109644924,60.98457991083463,3.225495128183063
-=======
 ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,40.49523809523809,2.3403393362110507,32.91775614448956,1.9050236474046711
 ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,39.81428571428572,3.8303567266067042,32.52619905159587,3.0897101243806007
 esnli,t5-base,standard,16,72.22701149425286,3.015108258920267,65.94330321269474,2.7962500082179536
@@ -12,4 +9,4 @@ sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,29.02040816326531,7.
 sbic,allenai/unifiedqa-t5-large,unified_qa_what_with_tags,24,63.34285714285714,3.2992681109644924,60.98457991083463,3.225495128183063
 sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,55.71428571428571,2.5555062599997593,50.98884470519565,2.3418766026892466
 sensemaking,allenai/unifiedqa-t5-large,unifiedqa_what,24,68.69047619047619,3.8027171333629166,63.17882688669931,3.494432026420182
->>>>>>> 62322d6369c8c59d49a92a041f2ebf662346fe8b
+
