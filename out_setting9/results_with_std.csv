@@ -1,6 +1,4 @@
-,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized,seed,seed
-,,,,mean,std,mean,std,mean,std
-task_name,model_type,io_format,n_shots,,,,,,
+task_name,model_type,io_format,n_shots,dev_acc,dev_acc_std,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized_std,seed,seed_std
 ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,34.03225806451613,2.9590600604975568,27.663198353233422,2.407598336200579,4571.225806451613,2901.2252774132808
 ecqa,allenai/unifiedqa-t5-large,unifiedqa_matching,48,31.62857142857143,3.462648115646335,26.026551104443413,2.8025853494428885,4633.966666666666,2928.4209907198947
 esnli,t5-base,standard,16,72.04501915708812,3.579131006653675,65.84246440779889,3.3112752423045584,4633.966666666666,2928.4209907198947
