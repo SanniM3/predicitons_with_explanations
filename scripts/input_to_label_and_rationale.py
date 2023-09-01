@@ -601,6 +601,9 @@ def main():
         logger.info("*** Predict on train set***")
         if data_args.generations_filepath is not None:
             assert "train" in data_args.generations_filepath
+        ### Added this if statement since I'm now evaluating model performance on training set
+        if model_args.pretrained_model_file and not training_args.do_train:
+            save_path = model_args.pretrained_model_file
         
         results = evaluate(
                             save_path,
