@@ -601,9 +601,6 @@ def main():
         logger.info("*** Predict on train set***")
         if data_args.generations_filepath is not None:
             assert "train" in data_args.generations_filepath
-        ### Added this if statement since I'm now evaluating model performance on training set
-        if model_args.pretrained_model_file and not training_args.do_train:
-            save_path = model_args.pretrained_model_file
         
         results = evaluate(
                             save_path,
@@ -664,20 +661,34 @@ def main():
         if model_args.pretrained_model_file and not training_args.do_train:
             save_path = model_args.pretrained_model_file
 
+        # results = evaluate(
+        #                     save_path,
+        #                     original_data_splits["validation"],
+        #                     model,
+        #                     tokenizer,
+        #                     "validation",
+        #                     data_args.task_name,
+        #                     training_args.device,
+        #                     data_args.explanation_sep,
+        #                     rationale_only=model_args.rationale_only,
+        #                     generations_file=data_args.generations_filepath,
+        #                     io_format=data_args.io_format
+        #                 )
+
         results = evaluate(
                             save_path,
-                            original_data_splits["validation"],
+                            original_data_splits['train'],
                             model,
                             tokenizer,
-                            "validation",
+                            "train",
                             data_args.task_name,
                             training_args.device,
                             data_args.explanation_sep,
                             rationale_only=model_args.rationale_only,
                             generations_file=data_args.generations_filepath,
                             io_format=data_args.io_format
-                        )
-
+                            )
+        
     if data_args.generations_filepath is None:
         output_eval_file = os.path.join(training_args.output_dir, "eval_results_lm.txt")
     else:
