@@ -283,7 +283,7 @@ def run_exp(args):
 
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
-                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train --dev_predict   \
+                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train --train_predict   \
                     --logging_first_step  --logging_steps 1  --save_total_limit 1  --seed {seed}     --num_train_epochs {epochs}    \
                     {cmd_batch_size} \
                     --early_stopping_patience {early_stopping_patience}   \
