@@ -100,7 +100,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
-                                        'max_steps_vals': [300], 
+                                        'max_steps_vals': [3000], 
                                         'epochs_vals': [2],  # will be ignored because of `max_steps`
                                         'warmup_steps_vals': [0],
                                         'eval_steps_vals': [300], 
@@ -283,7 +283,7 @@ def run_exp(args):
 
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
-                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train --train_predict   \
+                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train --dev_predict   \
                     --logging_first_step  --logging_steps 1  --save_total_limit 1  --seed {seed}     --num_train_epochs {epochs}    \
                     {cmd_batch_size} \
                     --early_stopping_patience {early_stopping_patience}   \
