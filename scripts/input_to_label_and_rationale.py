@@ -674,20 +674,6 @@ def main():
                             generations_file=data_args.generations_filepath,
                             io_format=data_args.io_format
                         )
-
-        # results = evaluate(
-        #                     save_path,
-        #                     original_data_splits['train'],
-        #                     model,
-        #                     tokenizer,
-        #                     "train",
-        #                     data_args.task_name,
-        #                     training_args.device,
-        #                     data_args.explanation_sep,
-        #                     rationale_only=model_args.rationale_only,
-        #                     generations_file=data_args.generations_filepath,
-        #                     io_format=data_args.io_format
-        #                     )
         
     if data_args.generations_filepath is None:
         output_eval_file = os.path.join(training_args.output_dir, "eval_results_lm.txt")
