@@ -529,18 +529,18 @@ def main():
 
         # ###PEFT MODIFICATIONS###
         # # creating model
-        # peft_config = IA3Config(
-        #                 peft_type="IA3",
-        #                 task_type="SEQ_2_SEQ_LM",
-        #                 target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
-        #                 feedforward_modules='.*(decoder|encoder).*(DenseReluDense).*(q|v|k|o|wi|wo)$',
-        #             )
         peft_config = IA3Config(
                         peft_type="IA3",
                         task_type="SEQ_2_SEQ_LM",
-                        target_modules=["k", "v", "w0"],
-                        feedforward_modules=["w0"],
+                        target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                        feedforward_modules='.*(decoder|encoder).*(DenseReluDense).*(q|v|k|o|wi|wo)$',
                     )
+        # peft_config = IA3Config(
+        #                 peft_type="IA3",
+        #                 task_type="SEQ_2_SEQ_LM",
+        #                 target_modules=["k", "v", "w0"],
+        #                 feedforward_modules=["w0"],
+        #             )
         model = get_peft_model(model, peft_config)
         
         model.print_trainable_parameters()

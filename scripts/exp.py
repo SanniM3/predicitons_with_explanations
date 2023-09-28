@@ -77,20 +77,20 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out_default_3000'
+    output_file = 'out_all_3000'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
     columns_to_convert = ['seed', 'n_shots']
 
     df[columns_to_convert] = df[columns_to_convert].astype('int64')
     
-    print(df.to_csv('out_default_3000/results_all.csv', index=True))
+    print(df.to_csv('out_all_3000/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out_default_3000/results.csv', index=True))
+    print(df_avg_seed.to_csv('out_all_3000/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out_default_3000/results_with_std.csv', index=True))
+    print(df_avg_seed_with_std.to_csv('out_all_3000/results_with_std.csv', index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
