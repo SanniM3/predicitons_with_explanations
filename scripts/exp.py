@@ -72,8 +72,10 @@ def collect_results(args):
     # print(seeds_fewshot)
     # seeds_fewshot = seeds_fewshot[:args.num_seeds]
     try:
+        print('in try')
         assert len(df) % len(seeds_fewshot) == 0 
     except AssertionError: 
+        print('in except')
         for model in set(df['model_type'].tolist()):
             df_sub = df[df['model_type']==model]
             for io_format in set(df_sub['io_format'].tolist()):
