@@ -99,7 +99,7 @@ def collect_results(args):
 experiments = {}
 # You can add your own values as a new key and run those experiments with `---experiment_id <your_experiment_key>`
 experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run experiments with different values sequentially 
-                                        'seed_vals': seeds_fewshot, 
+                                        'seed_vals': None, 
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
@@ -371,7 +371,7 @@ if __name__ == '__main__':
     #modify the experiment root with prefix tuning details
     args.exp_root = args.exp_root + '_{}'.format(args.peft_method)
     seeds_fewshot = args.seeds
-    
+
     if args.collect_results:
         collect_results(args)
     else:
@@ -387,7 +387,7 @@ if __name__ == '__main__':
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
         experiments[args.experiment_id]['dataset_vals'] = args.dataset_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['max_steps_vals'] = args.max_steps_vals
-        # experiments[args.experiment_id]['seed_vals'] = args.seeds
+        experiments[args.experiment_id]['seed_vals'] = args.seeds
         start_time = time.time()
         run_exp(args)
         total_time = time.time() - start_time
