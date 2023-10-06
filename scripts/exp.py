@@ -19,7 +19,7 @@ def collect_results(args):
     all_experiment_dirs = glob.glob(f'{args.exp_root}/*/*')
     # print('These are all the experiment directories')
     # print(all_experiment_dirs)
-    seeds_fewshot = seeds_fewshot[:args.num_seeds]
+    
 
     
     results = []
@@ -68,7 +68,8 @@ def collect_results(args):
             results.append(filtered_configs)
 
     print('The number of experiments that have metrics calculated is', str(len(results)), ' out of ', str(len(all_experiment_dirs)), 'experiments.')
-    df = pd.DataFrame.from_records(results) 
+    df = pd.DataFrame.from_records(results)
+    seeds_fewshot = seeds_fewshot[:args.num_seeds]
     try:
         assert len(df) % len(seeds_fewshot) == 0 
     except AssertionError: 
