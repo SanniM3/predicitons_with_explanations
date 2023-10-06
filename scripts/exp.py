@@ -72,16 +72,14 @@ def collect_results(args):
     # print(seeds_fewshot)
     # seeds_fewshot = seeds_fewshot[:args.num_seeds]
     try:
-        print('in try')
-        print(len(seeds_fewshot[:args.num_seeds]))
         assert len(df) % len(seeds_fewshot[:args.num_seeds]) == 0 
     except AssertionError: 
         print('in except')
         for model in set(df['model_type'].tolist()):
             df_sub = df[df['model_type']==model]
             for io_format in set(df_sub['io_format'].tolist()):
-                if len (df_sub[df_sub['io_format']==io_format]) != len(seeds_fewshot):
-                    seeds = [x for x in seeds_fewshot if str(x) not in df_sub[df_sub['io_format']==io_format]["seed"].tolist()]
+                if len (df_sub[df_sub['io_format']==io_format]) != len(seeds_fewshot[:args.num_seeds]):
+                    seeds = [x for x in seeds_fewshot[:args.num_seeds] if str(x) not in df_sub[df_sub['io_format']==io_format]["seed"].tolist()]
                     print(f"The following seeds failed for model {model} and format {io_format}:")
                     print (seeds)
                     print (f"Repeat experiments for those seeds and collect results again")
