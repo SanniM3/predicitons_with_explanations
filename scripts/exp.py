@@ -69,8 +69,8 @@ def collect_results(args):
 
     print('The number of experiments that have metrics calculated is', str(len(results)), ' out of ', str(len(all_experiment_dirs)), 'experiments.')
     df = pd.DataFrame.from_records(results)
-    print(seeds_fewshot)
-    seeds_fewshot = seeds_fewshot[:args.num_seeds]
+    # print(seeds_fewshot)
+    # seeds_fewshot = seeds_fewshot[:args.num_seeds]
     try:
         assert len(df) % len(seeds_fewshot) == 0 
     except AssertionError: 
@@ -376,7 +376,7 @@ if __name__ == '__main__':
     #modify the experiment root with prefix tuning details
     args.exp_root = args.exp_root + '_{}'.format(args.peft_method)
     # seeds_fewshot = args.seeds
-    num_seeds = args.num_seeds
+    # num_seeds = args.num_seeds
 
     if args.collect_results:
         collect_results(args)
