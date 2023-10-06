@@ -42,7 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
-# from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, PrefixTuningConfig, IA3Config
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -238,11 +238,11 @@ def main():
 
     # get git hash and branch where deployed
     #print("get git hash and branch where deployed")
-    repo = git.Repo(search_parent_directories=True)
-    git_hash = repo.head.object.hexsha
-    git_branch = repo.active_branch.name
-    logger.info("Git branch: %s" % git_branch)
-    logger.info("Git hash: %s" % git_hash)
+    # repo = git.Repo(search_parent_directories=True)
+    # git_hash = repo.head.object.hexsha
+    # git_branch = repo.active_branch.name
+    # logger.info("Git branch: %s" % git_branch)
+    # logger.info("Git hash: %s" % git_hash)
 
     model_class = "t5"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
@@ -252,8 +252,8 @@ def main():
         with open(
                 os.path.join(training_args.output_dir, "commandline_args.txt"), "w"
         ) as f:
-            f.write("Git branch: " + git_branch + "\n")
-            f.write("Git hash: " + git_hash + "\n")
+            # f.write("Git branch: " + git_branch + "\n")
+            # f.write("Git hash: " + git_hash + "\n")
             f.write("Command:\n")
             f.write("\n".join(sys.argv[1:]))
 
@@ -528,15 +528,22 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
 
         # ###PEFT MODIFICATIONS###
-        # # creating model
-        # peft_config = LoraConfig(
-        #                 r=8,
-        #                 lora_alpha=32,
-        #                 target_modules=["q", "v"],
-        #                 lora_dropout=0.1,
-        #             )
-        # model = get_peft_model(model, peft_config)
+        if model_args.peft_method == 'prefix_tuning':
+          peft_config = peft_config = PrefixTuningConfig(task_type=TaskType.SEQ_2_SEQ_LM, num_virtual_tokens=int(model_args.virtual_tokens))
+        elif model_args.peft_method == 'ia3':
+          peft_config = IA3Config(
+                          peft_type="IA3",
+                          task_type="SEQ_2_SEQ_LM",
+                          target_modules=["k", "v", "w0"],
+                          feedforward_modules=["w0"],
+                      )
+        model = get_peft_model(model, peft_config)
+        model.print_trainable_parameters()
 
+        #reduce consumed gpu memory
+        training_args.fp16=True
+        training_args.fp16_full_eval=True
+        
         trainer = Trainer(
             model=model,
             args=training_args,
@@ -675,7 +682,7 @@ def main():
                             generations_file=data_args.generations_filepath,
                             io_format=data_args.io_format
                         )
-
+        
     if data_args.generations_filepath is None:
         output_eval_file = os.path.join(training_args.output_dir, "eval_results_lm.txt")
     else:
@@ -694,8 +701,8 @@ def main():
     predict_time = time.time() - start_time
 
     # final logs
-    logger.info("Git branch: %s" % git_branch)
-    logger.info("Git hash: %s" % git_hash)
+    # logger.info("Git branch: %s" % git_branch)
+    # logger.info("Git hash: %s" % git_hash)
     logger.info("Save path: %s" % training_args.output_dir)
     if training_args.do_train:
         logger.info("total train time: %.4f hours" % (train_time / 60.0 / 60.0))

@@ -1,4 +1,5 @@
 import itertools
+import ast
 import os
 import argparse
 import glob
@@ -10,6 +11,9 @@ import subprocess
 # ===========> Code for collecting results from 60 runs 
 def std(x):
     return np.std(x)
+
+def parse_max_steps_vals(value):
+    return [int(val) for val in value.split(',')]
 
 def collect_results(args):
     all_experiment_dirs = glob.glob(f'{args.exp_root}/*/*')
@@ -75,18 +79,22 @@ def collect_results(args):
                     print (seeds)
                     print (f"Repeat experiments for those seeds and collect results again")
     
-    print(df.to_csv('out/results_all.csv', index=True))
+    #make results directory
+    output_file = 'out_{}'.format(args.peft_method)
+    if not os.path.exists(output_file):
+        os.mkdir(output_file)
+    print(df.to_csv('out_{}/results_all.csv'.format(args.peft_method), index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out/results.csv', index=True))
+    print(df_avg_seed.to_csv('out_{}/results.csv'.format(args.peft_method), index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out/results_with_std.csv', index=True))
+    print(df_avg_seed_with_std.to_csv('out_{}/results_with_std.csv'.format(args.peft_method), index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
-seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
-#seeds_fewshot = [588, 4791]
+# seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
+seeds_fewshot = [1111]
 
 experiments = {}
 # You can add your own values as a new key and run those experiments with `---experiment_id <your_experiment_key>`
@@ -95,7 +103,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
-                                        'max_steps_vals': [300], 
+                                        'max_steps_vals': None, 
                                         'epochs_vals': [2],  # will be ignored because of `max_steps`
                                         'warmup_steps_vals': [0],
                                         'eval_steps_vals': [300], 
@@ -183,21 +191,21 @@ def run_exp(args):
                              ],
                     'ecqa': [
                              #'squad',
-                             'record',
+                             #'record',
                              #'t5_fewshot_infilling_more_natural', 
                              #'t5_fewshot_infilling_with_choices',
-                             #'unifiedqa_matching'
+                             'unifiedqa_matching'
                              ],
                    'sensemaking': [
                                    #'t5_fewshot_infilling',
                                    #'t5_fewshot_infilling_bool',  
-                                   'copa_bool', 
+                                   #'copa_bool', 
                                    #'copa_with_question',
                                    #'record',
                                    #'squad_yn',
                                    #'squad_what',
                                    #'unifiedqa_yn', 'unifiedqa_yn_with_choices', 
-                                   #'unifiedqa_what',
+                                   'unifiedqa_what',
                                    #'unifiedqa_what_with_choices',
                                    #'unifiedqa_what_no_tags',
                                    #'unifiedqa_yn_no_tags',
@@ -207,7 +215,7 @@ def run_exp(args):
                    'sbic': [#'t5_fewshot_infilling', 
                             #'t5_fewshot_infilling_bool',
                             #'t5_fewshot_infilling_more_natural',
-                            'cola',
+                            #'cola',
                             #'squad_yn',
                             #'squad_what',
                             #'unifiedqa_unifew', 
@@ -219,7 +227,7 @@ def run_exp(args):
                             #'squad_what_with_tags',
                             #'unified_qa_yn_with_tags',
                             #'unified_qa_yn_with_choices_and_tags',
-                            # 'unified_qa_what_with_tags', 
+                            'unified_qa_what_with_tags', 
                             #'unified_qa_what_with_choices_and_tags'
                             ]}
 
@@ -276,9 +284,22 @@ def run_exp(args):
                 cmd_prefix = "python scripts/input_to_label_and_rationale.py "
                 cmd_batch_size = f" --per_device_train_batch_size {per_device_train_batch_size} --per_device_eval_batch_size 64 --gradient_accumulation_steps 1 "
 
+            if args.peft_method == 'prefix_tuning':
+            	if args.dev_predict:
+            		cmd_training = f" --virtual_tokens {args.virtual_tokens} --dev_predict --peft_method {args.peft_method}"
+            	elif args.train_predict:
+            		cmd_training = f" --virtual_tokens {args.virtual_tokens} --train_predict --peft_method {args.peft_method}"
+            elif args.peft_method == 'ia3':
+            	if args.dev_predict:
+            		cmd_training = f" --dev_predict --peft_method {args.peft_method}"
+            	elif args.train_predict:
+            		cmd_training = f" --train_predict --peft_method {args.peft_method}"
+
+            
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
-                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train --dev_predict   \
+                    --tokenizer_name {tokenizer_name}   --task_name {dataset}  --version v1.0 --do_train  \
+                    {cmd_training} \
                     --logging_first_step  --logging_steps 1  --save_total_limit 1  --seed {seed}     --num_train_epochs {epochs}    \
                     {cmd_batch_size} \
                     --early_stopping_patience {early_stopping_patience}   \
@@ -286,6 +307,7 @@ def run_exp(args):
                     --learning_rate {learning_rate}  --warmup_steps {warmup_steps}  \
                     --io_format {format}  --explanation_sep {explanation_sep}  \
                     --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps}'''
+	        
 
             if args.deepspeed:
                 cmd += " --deepspeed deepspeed_config.json"
@@ -331,12 +353,23 @@ if __name__ == '__main__':
                                                                        "sbic"
                                                                        "esnli"
                                                                        "sensemaking"
-                                                                       "cos_e (don't recommend using it)")  
+                                                                       "cos_e (don't recommend using it)") 
+    parser.add_argument("--virtual_tokens", type=int, default=10, help='Number of virtual tokens for prefix tuning') 
+    parser.add_argument("--max_steps_vals", type=parse_max_steps_vals, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
+    parser.add_argument("--peft_method", type=str, default='prefix_tuning', help="Name of peft method under examination"
+    																			 "We used the following peft methods:"
+    																			 "prefix_tuning"
+    																			 "ia3")
+    parser.add_argument("--dev_predict", default=False, action='store_true', help="Evaluate on dev set")
+    parser.add_argument("--train_predict", default=False, action='store_true', help="Evaluate on train set")
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")
     parser.add_argument("--gpt3_max_eval_size", default=18, help="Number of evaluation samples per episode for gpt3")    
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
     args = parser.parse_args()
 
+    #modify the experiment root with prefix tuning details
+    args.exp_root = args.exp_root + '_{}'.format(args.peft_method)
+    
     if args.collect_results:
         collect_results(args)
     else:
@@ -351,6 +384,7 @@ if __name__ == '__main__':
         experiments[args.experiment_id]['model_vals'] = args.model_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
         experiments[args.experiment_id]['dataset_vals'] = args.dataset_vals.replace(' ','').split(',')
+        experiments[args.experiment_id]['max_steps_vals'] = args.max_steps_vals
         start_time = time.time()
         run_exp(args)
         total_time = time.time() - start_time
