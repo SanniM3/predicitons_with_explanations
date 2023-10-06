@@ -12,7 +12,7 @@ import subprocess
 def std(x):
     return np.std(x)
 
-def parse_max_steps_vals(value):
+def parse_list_args(value):
     return [int(val) for val in value.split(',')]
 
 def collect_results(args):
@@ -93,7 +93,7 @@ def collect_results(args):
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
-seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
+# seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
 # seeds_fewshot = [1111]
 
 experiments = {}
@@ -355,7 +355,8 @@ if __name__ == '__main__':
                                                                        "sensemaking"
                                                                        "cos_e (don't recommend using it)") 
     parser.add_argument("--virtual_tokens", type=int, default=10, help='Number of virtual tokens for prefix tuning') 
-    parser.add_argument("--max_steps_vals", type=parse_max_steps_vals, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
+    parser.add_argument("--max_steps_vals", type=parse_list_args, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
+    parser.add_argument("--seeds", type=parse_list_args, default=None, help="String of random seeds for experiments")
     parser.add_argument("--peft_method", type=str, default='prefix_tuning', help="Name of peft method under examination"
     																			 "We used the following peft methods:"
     																			 "prefix_tuning"
@@ -369,6 +370,7 @@ if __name__ == '__main__':
 
     #modify the experiment root with prefix tuning details
     args.exp_root = args.exp_root + '_{}'.format(args.peft_method)
+    seeds_fewshot = args.seeds
     
     if args.collect_results:
         collect_results(args)
@@ -385,6 +387,7 @@ if __name__ == '__main__':
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
         experiments[args.experiment_id]['dataset_vals'] = args.dataset_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['max_steps_vals'] = args.max_steps_vals
+        # experiments[args.experiment_id]['seed_vals'] = args.seeds
         start_time = time.time()
         run_exp(args)
         total_time = time.time() - start_time
