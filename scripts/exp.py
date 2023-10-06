@@ -17,8 +17,10 @@ def parse_list_args(value):
 
 def collect_results(args):
     all_experiment_dirs = glob.glob(f'{args.exp_root}/*/*')
-    print('These are all the experiment directories')
-    print(all_experiment_dirs)
+    # print('These are all the experiment directories')
+    # print(all_experiment_dirs)
+    seeds_fewshot = seeds_fewshot[:args.num_seeds]
+
     
     results = []
     for exp_dir in all_experiment_dirs:
@@ -93,13 +95,13 @@ def collect_results(args):
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
-# seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
+seeds_fewshot = [7004, 3639, 6290, 9428, 7056, 4864, 4273, 7632, 2689, 8219, 4523, 2175, 7356, 8975, 51, 4199, 4182, 1331, 2796, 6341, 7009, 1111, 1967, 1319, 741, 7740, 1335, 9933, 6339, 3112, 1349, 8483, 2348, 834, 6895, 4823, 2913, 9962, 178, 2147, 8160, 1936, 9991, 6924, 6595, 5358, 2638, 6227, 8384, 2769, 4512, 2051, 4779, 2498, 176, 9599, 1181, 5320, 588, 4791]
 # seeds_fewshot = [1111]
 
 experiments = {}
 # You can add your own values as a new key and run those experiments with `---experiment_id <your_experiment_key>`
 experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run experiments with different values sequentially 
-                                        'seed_vals': None, 
+                                        'seed_vals': seeds_fewshot, 
                                         'dataset_vals': None,
                                         'model_vals': None, 
                                         'early_stopping_patience_vals': [1], 
@@ -149,7 +151,7 @@ def run_exp(args):
         os.mkdir(args.exp_root)
 
     experiment = experiments[args.experiment_id]
-    seed_vals = experiment['seed_vals']
+    seed_vals = experiment['seed_vals'][:args.num_seeds]
     dataset_vals = experiment['dataset_vals']
     model_vals = experiment['model_vals']
     early_stopping_patience_vals = experiment['early_stopping_patience_vals']
@@ -357,6 +359,7 @@ if __name__ == '__main__':
     parser.add_argument("--virtual_tokens", type=int, default=10, help='Number of virtual tokens for prefix tuning') 
     parser.add_argument("--max_steps_vals", type=parse_list_args, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
     parser.add_argument("--seeds", type=parse_list_args, default=None, help="String of random seeds for experiments")
+    parser.add_argument("--num_seeds", type=int, default=1, help="Number of random seeds for experiments")
     parser.add_argument("--peft_method", type=str, default='prefix_tuning', help="Name of peft method under examination"
     																			 "We used the following peft methods:"
     																			 "prefix_tuning"
@@ -370,7 +373,8 @@ if __name__ == '__main__':
 
     #modify the experiment root with prefix tuning details
     args.exp_root = args.exp_root + '_{}'.format(args.peft_method)
-    seeds_fewshot = args.seeds
+    # seeds_fewshot = args.seeds
+    num_seeds = args.num_seeds
 
     if args.collect_results:
         collect_results(args)
@@ -387,7 +391,7 @@ if __name__ == '__main__':
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
         experiments[args.experiment_id]['dataset_vals'] = args.dataset_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['max_steps_vals'] = args.max_steps_vals
-        experiments[args.experiment_id]['seed_vals'] = args.seeds
+        # experiments[args.experiment_id]['seed_vals'] = args.seeds
         start_time = time.time()
         run_exp(args)
         total_time = time.time() - start_time
