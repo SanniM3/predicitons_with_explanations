@@ -69,6 +69,7 @@ def collect_results(args):
 
     print('The number of experiments that have metrics calculated is', str(len(results)), ' out of ', str(len(all_experiment_dirs)), 'experiments.')
     df = pd.DataFrame.from_records(results)
+    print(seeds_fewshot)
     seeds_fewshot = seeds_fewshot[:args.num_seeds]
     try:
         assert len(df) % len(seeds_fewshot) == 0 
