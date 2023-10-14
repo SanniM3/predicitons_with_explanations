@@ -88,6 +88,12 @@ class ModelArguments:
            "help": "Number of virtual tokens for prefix tuning"
         },
     )
+    adalora_warmup: int = field(
+        default=None,
+        metadata={
+           "help": "Number of warmup steps before adalora pruning"
+        },
+    )
     peft_method: str = field(
         default=None,
         metadata={

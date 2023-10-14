@@ -42,7 +42,7 @@ from transformers import (
     set_seed,
     EarlyStoppingCallback
 )
-from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, PrefixTuningConfig, IA3Config
+from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, LoraConfig, TaskType, PrefixTuningConfig, IA3Config, AdaLoraConfig
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
@@ -537,6 +537,14 @@ def main():
                           target_modules=["k", "v", "w0"],
                           feedforward_modules=["w0"],
                       )
+        elif model_args.peft_method == 'adalora':
+            t_init = int(model_args.virtual_tokens)
+            t_final = 1000
+            total_steps = t_init + 100 + t_final
+            peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
+                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                                    lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
+
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
 

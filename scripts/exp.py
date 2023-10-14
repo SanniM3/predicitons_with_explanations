@@ -299,6 +299,11 @@ def run_exp(args):
             		cmd_training = f" --dev_predict --peft_method {args.peft_method}"
             	elif args.train_predict:
             		cmd_training = f" --train_predict --peft_method {args.peft_method}"
+            elif args.peft_method == 'adalora':
+            	if args.dev_predict:
+            		cmd_training = f" --adalora_warmup {args.adalora_warmup} --dev_predict --peft_method {args.peft_method}"
+            	elif args.train_predict:
+            		cmd_training = f" --adalora_warmup {args.adalora_warmup} --train_predict --peft_method {args.peft_method}"
 
             
             cmd = f'''{cmd_prefix} \
@@ -360,13 +365,15 @@ if __name__ == '__main__':
                                                                        "sensemaking"
                                                                        "cos_e (don't recommend using it)") 
     parser.add_argument("--virtual_tokens", type=int, default=10, help='Number of virtual tokens for prefix tuning') 
+    parser.add_argument("--adalora_warmup", type=int, default=500, help='Number of steps to warmup before pruning in adalora begins')
     parser.add_argument("--max_steps_vals", type=parse_list_args, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
     parser.add_argument("--seeds", type=parse_list_args, default=None, help="String of random seeds for experiments")
     parser.add_argument("--num_seeds", type=int, default=1, help="Number of random seeds for experiments")
     parser.add_argument("--peft_method", type=str, default='prefix_tuning', help="Name of peft method under examination"
     																			 "We used the following peft methods:"
     																			 "prefix_tuning"
-    																			 "ia3")
+    																			 "ia3"
+                                                                                 "adalora")
     parser.add_argument("--dev_predict", default=False, action='store_true', help="Evaluate on dev set")
     parser.add_argument("--train_predict", default=False, action='store_true', help="Evaluate on train set")
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")
