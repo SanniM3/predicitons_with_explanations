@@ -5,7 +5,8 @@ import numpy as np
 import torch
 import datasets 
 import json
-import torchprof
+import thop
+from thop import profile
 from feature_conversion_methods import unified_qa_esnli_label_mapping, wt5_esnli_label_mapping, unified_qa_sbic_label_mapping
 
 
@@ -45,9 +46,9 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 
-                with torchprof.Profile(model, use_cuda=False) as prof:
-                    model(input_ids=inpt_tensor)
-                flops = prof.num_flops
+                thop.reset_hooks()
+                flops, params = profile(model, inpt_tensor, verbose=False)
+                print(params)
                 total_flops += flops
                 print(f"Inference FLOPS: {flops:.2f}")
 
