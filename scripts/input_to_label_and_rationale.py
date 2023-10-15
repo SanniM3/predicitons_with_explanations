@@ -541,7 +541,7 @@ def main():
           peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
                                 r=4,
                                 lora_alpha=32,
-                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o)$',
+                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention).*(q|v|k|o)$',
                                 lora_dropout=0.1,
                             )
         elif model_args.peft_method == 'adalora':
