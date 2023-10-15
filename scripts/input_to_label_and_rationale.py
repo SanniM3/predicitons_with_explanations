@@ -549,7 +549,7 @@ def main():
             t_final = 1000
             total_steps = t_init + 100 + t_final
             peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
-                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention).*(q|v|k|o)$',
                                     lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
 
         if model_args.peft_method is not None:
