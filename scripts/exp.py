@@ -304,7 +304,11 @@ def run_exp(args):
             		cmd_training = f" --adalora_warmup {args.adalora_warmup} --dev_predict --peft_method {args.peft_method}"
             	elif args.train_predict:
             		cmd_training = f" --adalora_warmup {args.adalora_warmup} --train_predict --peft_method {args.peft_method}"
-
+            elif args.peft_method == 'lora':
+            	if args.dev_predict:
+            		cmd_training = f" --dev_predict --peft_method {args.peft_method}"
+            	elif args.train_predict:
+            		cmd_training = f" --train_predict --peft_method {args.peft_method}"
             
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
@@ -369,11 +373,12 @@ if __name__ == '__main__':
     parser.add_argument("--max_steps_vals", type=parse_list_args, default=None, help="String of numbers of maximum training steps to perform hyperparameter search on")
     parser.add_argument("--seeds", type=parse_list_args, default=None, help="String of random seeds for experiments")
     parser.add_argument("--num_seeds", type=int, default=1, help="Number of random seeds for experiments")
-    parser.add_argument("--peft_method", type=str, default='prefix_tuning', help="Name of peft method under examination"
+    parser.add_argument("--peft_method", type=str, default=None, help="Name of peft method under examination"
     																			 "We used the following peft methods:"
     																			 "prefix_tuning"
     																			 "ia3"
-                                                                                 "adalora")
+                                                                                 "adalora"
+                                                                                 "lora")
     parser.add_argument("--dev_predict", default=False, action='store_true', help="Evaluate on dev set")
     parser.add_argument("--train_predict", default=False, action='store_true', help="Evaluate on train set")
     parser.add_argument("--use_gpt3", default=False, action='store_true', help="Use gpt3")

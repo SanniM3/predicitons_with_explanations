@@ -537,6 +537,13 @@ def main():
                           target_modules=["k", "v", "w0"],
                           feedforward_modules=["w0"],
                       )
+        elif model_args.peft_method == 'lora':
+          peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
+                                r=4,
+                                lora_alpha=32,
+                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                                lora_dropout=0.1,
+                            )
         elif model_args.peft_method == 'adalora':
             t_init = int(model_args.adalora_warmup)
             t_final = 1000
@@ -545,8 +552,9 @@ def main():
                                     target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
                                     lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
 
-        model = get_peft_model(model, peft_config)
-        model.print_trainable_parameters()
+        if model_args.peft_method is not None:
+            model = get_peft_model(model, peft_config)
+            model.print_trainable_parameters()
 
         #reduce consumed gpu memory
         training_args.fp16=True

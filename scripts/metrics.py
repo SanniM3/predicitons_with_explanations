@@ -34,7 +34,7 @@ def evaluate(
         generations_list = [l.replace("\n", " ").replace(tokenizer.eos_token, " ").strip()for l in lines] # strip newlines & EOS token (if exists)
     else: # decode output words
         generations_list = []
-        total_flops = 0
+        # total_flops = 0
         with open(fname, "w") as w:
             for i, element in tqdm(enumerate(dataset), total=len(dataset)):
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
@@ -46,11 +46,11 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 
-                thop.reset_hooks()
-                flops, params = profile(model, inpt_tensor, verbose=False)
-                print(params)
-                total_flops += flops
-                print(f"Inference FLOPS: {flops:.2f}")
+                # thop.reset_hooks()
+                # flops, params = profile(model, inpt_tensor, verbose=False)
+                # print(params)
+                # total_flops += flops
+                # print(f"Inference FLOPS: {flops:.2f}")
 
 
                 skip_special_tokens = False if "infilling" in io_format else True
@@ -65,7 +65,7 @@ def evaluate(
                 w.write(words + "\n")
                 generations_list.append(words)
 
-            print(f'Total inference FLOPS: {total_flops:.2f}') 
+            # print(f'Total inference FLOPS: {total_flops:.2f}') 
 
     broken_count = 0
 
@@ -231,9 +231,8 @@ def evaluate(
      results[f"{split}_acc"],
      results[f"{split}_bertscore"],
      results[f"{split}_bertscore_correct_pred"],
-     results[f"{split}_bertscore_correct_normalized"],
-     results[f"{split}_total_flops"]
-    ) = (broken_count, accuracy, bertscore, bertscore_correct_prediction, bertscore_correct_normalized, total_flops)
+     results[f"{split}_bertscore_correct_normalized"]
+    ) = (broken_count, accuracy, bertscore, bertscore_correct_prediction, bertscore_correct_normalized)
 
     with open(os.path.join(save_path, f"results_{split}.json"), "w") as fp:
         json.dump(results, fp)
