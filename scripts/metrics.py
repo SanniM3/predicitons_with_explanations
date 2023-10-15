@@ -5,6 +5,7 @@ import numpy as np
 import torch
 import datasets 
 import json
+from thop import profile
 from feature_conversion_methods import unified_qa_esnli_label_mapping, wt5_esnli_label_mapping, unified_qa_sbic_label_mapping
 
 
@@ -32,6 +33,7 @@ def evaluate(
         generations_list = [l.replace("\n", " ").replace(tokenizer.eos_token, " ").strip()for l in lines] # strip newlines & EOS token (if exists)
     else: # decode output words
         generations_list = []
+        total_flops = 0
         with open(fname, "w") as w:
             for i, element in tqdm(enumerate(dataset), total=len(dataset)):
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
@@ -42,6 +44,12 @@ def evaluate(
                     pad_token_id=tokenizer.pad_token_id,
                     eos_token_id=tokenizer.eos_token_id,
                 )
+
+                flops, _ = profile(model, inputs=inpt_tensor)
+                total_flops += flops
+                print(f"Inference FLOPS: {flops:.2f}")
+
+
                 skip_special_tokens = False if "infilling" in io_format else True
                 words = tokenizer.decode(out[0].tolist(), skip_special_tokens=skip_special_tokens)
                 if "infilling" in io_format:
@@ -53,6 +61,8 @@ def evaluate(
                 words = (words.replace("\n", " ").replace(tokenizer.eos_token, " ").strip())
                 w.write(words + "\n")
                 generations_list.append(words)
+
+            print(f'Total inference FLOPS: {total_flops:.2f}') 
 
     broken_count = 0
 
@@ -218,8 +228,9 @@ def evaluate(
      results[f"{split}_acc"],
      results[f"{split}_bertscore"],
      results[f"{split}_bertscore_correct_pred"],
-     results[f"{split}_bertscore_correct_normalized"]
-    ) = (broken_count, accuracy, bertscore, bertscore_correct_prediction, bertscore_correct_normalized)
+     results[f"{split}_bertscore_correct_normalized"],
+     results[f"{split}_total_flops"]
+    ) = (broken_count, accuracy, bertscore, bertscore_correct_prediction, bertscore_correct_normalized, total_flops)
 
     with open(os.path.join(save_path, f"results_{split}.json"), "w") as fp:
         json.dump(results, fp)
