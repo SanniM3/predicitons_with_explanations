@@ -46,11 +46,11 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 
-                # thop.reset_hooks()
-                # flops, params = profile(model, inpt_tensor, verbose=False)
-                # print(params)
-                # total_flops += flops
-                # print(f"Inference FLOPS: {flops:.2f}")
+                thop.reset_hooks()
+                flops, params = profile(model, inpt_tensor, verbose=False)
+                print(params)
+                total_flops += flops
+                print(f"Inference FLOPS: {flops:.2f}")
 
 
                 skip_special_tokens = False if "infilling" in io_format else True
