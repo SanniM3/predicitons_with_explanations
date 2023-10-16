@@ -551,12 +551,16 @@ def main():
                         lora_dropout=0.1,
                         )
         elif model_args.peft_method == 'adalora':
-            t_init = int(model_args.adalora_warmup)
-            t_final = 1000
-            total_steps = t_init + 100 + t_final
-            peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
-                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
-                                    lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
+            # t_init = int(model_args.adalora_warmup)
+            # t_final = 1000
+            # total_steps = t_init + 100 + t_final
+            # peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
+            #                         target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+            #                         lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
+            
+            peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=32, target_r=4, lora_alpha=32,
+                            target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                            lora_dropout=0.1, deltaT=10, orth_reg_weight=0.1, total_step=300)
 
         if model_args.peft_method is not None:
             model = get_peft_model(model, peft_config)
