@@ -538,12 +538,18 @@ def main():
                           feedforward_modules=["w0"],
                       )
         elif model_args.peft_method == 'lora':
-          peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
-                                r=4,
-                                lora_alpha=32,
-                                target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
-                                lora_dropout=0.1,
-                            )
+        #   peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
+        #                         r=4,
+        #                         lora_alpha=32,
+        #                         target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+        #                         lora_dropout=0.1,
+        #                     )
+            peft_config = LoraConfig(task_type=TaskType.SEQ_2_SEQ_LM,
+                        inference_mode=False,
+                        r=128,   # This parameter is given in the command (common numbers are 4, 16, 32, 64, 128)
+                        lora_alpha=32,
+                        lora_dropout=0.1,
+                        )
         elif model_args.peft_method == 'adalora':
             t_init = int(model_args.adalora_warmup)
             t_final = 1000
