@@ -88,12 +88,12 @@ python scripts/exp.py --exp_root <path_to_checkpoints_folder>  --collect_results
 
 If you get the assertion error, check which runs have not been trained properly, repeat evaluating only those seeds, and run the above command again. 
 
-### Human evaluation
+<!-- ### Human evaluation
 
 We sampled and prapered data for human evaluation on Mturk using the following command: 
 ```
 python scripts/samples_for_human_eval.py --output_dir <path_to_checkpoints_folder> --dataset <dataset_name> --peft_method <PEFT method>
-```
+``` -->
 
 <!-- Our samples are available at `human_eval/batches`, crowdworkers' annotation at `human_eval/results`, and templates for Mturk interface at `human_eval/templates`. We followed [these templates](https://github.com/maximek3/e-ViL/tree/main/eViL_Mturk) for related work to produce our. 
 
