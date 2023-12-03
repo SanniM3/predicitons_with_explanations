@@ -37,6 +37,9 @@ from transformers import (
     T5Config,
     T5ForConditionalGeneration,
     T5Tokenizer,
+    LlamaConfig,
+    LlamaForCausalLM,
+    LlamaTokenizer,
     HfArgumentParser,
     TrainingArguments,
     set_seed,
@@ -46,7 +49,7 @@ from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, Lor
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
-from transformers import Trainer
+from transformers import Trainer, AutoTokenizer, AutoModelForCausalLM
 
 from feature_conversion_methods import format_instance
 
@@ -89,9 +92,9 @@ def set_global_logging_level(level=logging.ERROR, prefices=[""]):
 set_global_logging_level(logging.ERROR, ["datasets"])
 
 
-CONFIG_MAPPING = {"t5": T5Config}
-MODEL_MAPPING = {"t5": T5ForConditionalGeneration}
-TOKENIZER_MAPPING = {"t5": T5Tokenizer}
+CONFIG_MAPPING = {"t5": T5Config, "llama": LlamaConfig}
+MODEL_MAPPING = {"t5": T5ForConditionalGeneration, "llama": LlamaForCausalLM}
+TOKENIZER_MAPPING = {"t5": T5Tokenizer, "llama": LlamaTokenizer}
 
 
 def set_other_seeds(seed):
@@ -244,7 +247,7 @@ def main():
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
 
-    model_class = "t5"
+    model_class = "llama"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
     #print("model class specified and task names asserted")
     if training_args.do_train:
@@ -526,6 +529,9 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.EPOCH
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
+        ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
+        tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+        model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
         # ###PEFT MODIFICATIONS###
         # # creating model
@@ -533,7 +539,7 @@ def main():
         t_final = 1000
         total_steps = t_init + 100 + t_final
         peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
-                                    target_modules='.*(decoder|encoder).*(SelfAttention|EncDecAttention|DenseReluDense).*(q|v|k|o|wi|wo)$',
+                                    target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$'
                                     lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
         
         
