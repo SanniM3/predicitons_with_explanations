@@ -24,6 +24,7 @@ if __name__ == '__main__':
     sample_per_label = args.sample // num_labels
 
     episode_dirs = sorted(glob.glob(f'{args.output_dir}/*'))
+    print(episode_dirs)
     for episode_dir in episode_dirs:
         ls = sorted(glob.glob(f'{episode_dir}/*'))
         # assert len(ls) == 2
