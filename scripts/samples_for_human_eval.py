@@ -27,6 +27,7 @@ if __name__ == '__main__':
     print(episode_dirs)
     for episode_dir in episode_dirs:
         ls = sorted(glob.glob(f'{episode_dir}/*'))
+        print(ls)
         # assert len(ls) == 2
         analysis_file = f'{ls[0]}/validation_posthoc_analysis.txt'
         assert os.path.isfile(analysis_file)
