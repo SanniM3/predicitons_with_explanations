@@ -152,7 +152,7 @@ def foo(cmd):
 def run_exp(args):
     if not os.path.isdir(args.exp_root):
         os.mkdir(args.exp_root)
-
+    print('running experiments')
     experiment = experiments[args.experiment_id]
     seed_vals = experiment['seed_vals'][:args.num_seeds]
     dataset_vals = experiment['dataset_vals']
@@ -167,7 +167,7 @@ def run_exp(args):
     fewshot_eval_size_vals = experiment['fewshot_eval_size']
     explanation_sep_vals = experiment['explanation_sep_vals']
     tokenizer_vals = experiment['tokenizer_vals']
-
+    print(f'running on {dataset_vals}')
     # You can uncomment lines to try a specific IO format
     # Formats that we did not comment are those that gave us the best results reported in the paper
     format_dict = {'esnli': [
@@ -322,7 +322,7 @@ def run_exp(args):
                     --io_format {format}  --explanation_sep {explanation_sep}  \
                     --max_steps {max_steps}  --lr_scheduler_type constant  --eval_steps {eval_steps}'''
 	        
-
+            print(f'This command is running {cmd}')
             if args.deepspeed:
                 cmd += " --deepspeed deepspeed_config.json"
 
