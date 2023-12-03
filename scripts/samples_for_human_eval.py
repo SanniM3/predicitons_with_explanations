@@ -26,10 +26,10 @@ if __name__ == '__main__':
     episode_dirs = sorted(glob.glob(f'{args.output_dir}/*'))
     for episode_dir in episode_dirs:
         ls = sorted(glob.glob(f'{episode_dir}/*'))
-        assert len(ls) == 2
+        # assert len(ls) == 2
         analysis_file = f'{ls[0]}/validation_posthoc_analysis.txt'
         assert os.path.isfile(analysis_file)
-        # print(analysis_file)
+        print(analysis_file)
         with open(analysis_file) as f:
             all_lines = [line for line in f]
         i = 0
