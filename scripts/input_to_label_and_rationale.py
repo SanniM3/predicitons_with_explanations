@@ -609,7 +609,6 @@ def main():
         trainer = SFTTrainer(
                     model=model,
                     train_dataset=dataset,
-                    dataset_text_field="text",
                     max_seq_length=None,
                     tokenizer=tokenizer,
                     args=training_args,
