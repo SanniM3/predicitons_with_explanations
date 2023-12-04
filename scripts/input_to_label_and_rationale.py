@@ -605,7 +605,7 @@ def main():
         #     ),
         #     callbacks=callbacks,
         # )
-        # tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token = tokenizer.eos_token
         # tokenizer.padding_side = 'right'
         # tokenizer.padding = True
         # tokenizer.truncation = True
