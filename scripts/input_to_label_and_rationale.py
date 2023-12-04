@@ -278,7 +278,7 @@ def main():
     logger.info("Loading pretrained tokenizer...")
 
     ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', pad_token='[PAD]')
     # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
     # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
     #print("tokenizer for model loaded successfully")
@@ -575,7 +575,7 @@ def main():
         #     ),
         #     callbacks=callbacks,
         # )
-        tokenizer.pad_token = '[PAD]'
+        # tokenizer.pad_token = '[PAD]'
         # tokenizer.padding_side = 'right'
         # tokenizer.padding = True
         # tokenizer.truncation = True
@@ -590,17 +590,17 @@ def main():
                 model=model_class, pad_token=tokenizer.pad_token_id
             ),
         )
-        for step, batch in enumerate(trainer.get_train_dataloader()):
-            inputs = len(batch['input_ids'])
-            targets = len(batch['labels'])
+        # for step, batch in enumerate(trainer.get_train_dataloader()):
+        #     inputs = len(batch['input_ids'])
+        #     targets = len(batch['labels'])
             
-            # Print input and target sequences for investigation
-            print("Input sequence length:", inputs)
-            print("Target sequence length:", targets)
+        #     # Print input and target sequences for investigation
+        #     print("Input sequence length:", inputs)
+        #     print("Target sequence length:", targets)
             
-            # Break after printing a single batch
-            break
-        print(trainer.train_dataset[0])
+        #     # Break after printing a single batch
+        #     break
+        # print(trainer.train_dataset[0])
         
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
