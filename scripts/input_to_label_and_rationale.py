@@ -609,7 +609,7 @@ def main():
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer),
+            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
         )
         print(trainer.train_dataset[0])
 
