@@ -573,7 +573,9 @@ def main():
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=DataCollatorWithPadding(tokenizer=tokenizer, padding=True)
+            data_collator=SequenceCollator(
+                model=model_class, pad_token=tokenizer.pad_token_id
+            ),
         )
 
     # Training. Don't train if it is use_gpt3
