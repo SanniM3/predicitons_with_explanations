@@ -146,36 +146,6 @@ class SequenceCollator:
 from typing import List, Dict
 import torch
 
-class CausalLMCollator:
-    def __init__(self, pad_token):
-        self.pad_token = pad_token
-        self.pad_token_mapping = {
-            "attention_mask": 0,
-            "input_ids": self.pad_token,
-        }
-
-        self.columns = [
-            "input_ids",
-            "attention_mask",
-        ]
-
-    def __call__(self, examples: List[Dict[str, List[int]]]) -> Dict[str, torch.Tensor]:
-        # Re-format inputs for training
-        batch = {}
-        for key in self.columns:
-            tmp_list = [item[key] for item in examples if key in item]
-
-            # Pad lists to max length
-            if tmp_list and isinstance(tmp_list[0], list):
-                max_length = max(len(el) for el in tmp_list)
-                tmp_list = [
-                    el + [self.pad_token_mapping[key]] * (max_length - len(el))
-                    for el in tmp_list
-                ]
-
-            batch[key] = torch.tensor(tmp_list, dtype=torch.long)
-
-        return batch
 
 def main():
     # See all possible arguments in src/transformers/training_args.py
@@ -608,7 +578,7 @@ def main():
         tokenizer.pad_token = '[PAD]'
         # tokenizer.padding_side = 'right'
         # tokenizer.padding = True
-        tokenizer.truncation = True
+        # tokenizer.truncation = True
         # print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
@@ -620,6 +590,16 @@ def main():
                 model=model_class, pad_token=tokenizer.pad_token_id
             ),
         )
+        for step, batch in enumerate(trainer.get_train_dataloader()):
+            inputs = len(batch['input_ids'])
+            targets = len(batch['labels'])
+            
+            # Print input and target sequences for investigation
+            print("Input sequence length:", inputs)
+            print("Target sequence length:", targets)
+            
+            # Break after printing a single batch
+            break
         print(trainer.train_dataset[0])
         
     # Training. Don't train if it is use_gpt3
