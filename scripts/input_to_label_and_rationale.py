@@ -52,6 +52,7 @@ import transformers
 from transformers import Trainer, AutoTokenizer, AutoModelForCausalLM, DataCollatorWithPadding, DataCollatorForLanguageModeling
 
 from feature_conversion_methods import format_instance
+from trl import SFTTrainer
 
 from custom_args import (
     DataTrainingArguments,
@@ -601,18 +602,22 @@ def main():
         #     callbacks=callbacks,
         # )
         tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.padding_side = 'right'
         tokenizer.padding = True
         # print(data_splits['train'][0])
-        trainer = Trainer(
-            model=model,
-            args=training_args,
-            train_dataset=data_splits['train'],
-            eval_dataset=data_splits['validation'],
-            callbacks=callbacks,
-            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
-        )
-        print(trainer.train_dataset[0])
-
+        
+        trainer = SFTTrainer(
+                    model=model,
+                    train_dataset=dataset,
+                    dataset_text_field="text",
+                    max_seq_length=None,
+                    tokenizer=tokenizer,
+                    args=training_args,
+                    data_collator=SequenceCollator(
+                            model=model_class, pad_token=tokenizer.pad_token_id
+                        ),
+                    packing=False,
+                )
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
         start_time = time.time()
