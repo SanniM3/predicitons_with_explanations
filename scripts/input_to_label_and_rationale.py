@@ -611,6 +611,7 @@ def main():
             callbacks=callbacks,
             data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer),
         )
+        print(trainer.train_dataset[0])
 
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
