@@ -608,16 +608,17 @@ def main():
         #reduce consumed gpu memory
         training_args.bf16=True
         training_args.bf16_full_eval=True
-        tokenizer.padding = True
-        tokenizer.truncation = True
+        # tokenizer.padding = True
+        # tokenizer.truncation = True
       
         trainer = Trainer(
             model=model,
             args=training_args,
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
-            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
-            callbacks=callbacks,
+            data_collator=SequenceCollator(
+                model=model_class, pad_token=tokenizer.pad_token_id
+            ),callbacks=callbacks,
         )
         # tokenizer.pad_token = tokenizer.eos_token
         # # tokenizer.padding_side = 'right'
