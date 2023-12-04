@@ -600,14 +600,15 @@ def main():
         #     callbacks=callbacks,
         # )
         tokenizer.pad_token = tokenizer.eos_token
+        print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
             args=training_args,
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=CausalLMCollator(
-                pad_token=tokenizer.pad_token_id
+            data_collator=SequenceCollator(
+                model=model_class, pad_token=tokenizer.pad_token_id
             ),
         )
 
