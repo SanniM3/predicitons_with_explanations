@@ -109,7 +109,6 @@ class SequenceCollator:
     def __init__(self, model, pad_token):
         self.model = model
         self.pad_token_mapping = {
-            "labels": -100,
             "attention_mask": 0,
             "input_ids": pad_token,
         }
@@ -117,7 +116,6 @@ class SequenceCollator:
         self.columns = [
             "input_ids",
             "attention_mask",
-            "labels",
         ]
 
     def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
@@ -634,7 +632,7 @@ def main():
         #         model=model_class, pad_token=tokenizer.pad_token_id
         #     ),
         # )
-        print(trainer.train_dataset[0])
+        # print(trainer.train_dataset[0])
         
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
