@@ -247,7 +247,7 @@ def main():
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
 
-    model_class = "llama"
+    model_class = "t5"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
     #print("model class specified and task names asserted")
     if training_args.do_train:
