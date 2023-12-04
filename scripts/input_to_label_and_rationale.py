@@ -111,7 +111,7 @@ class SequenceCollator:
         self.pad_token_mapping = {
             "labels": -100,
             "attention_mask": 0,
-            "decoder_attention_mask": 0,
+            # "decoder_attention_mask": 0,
             "input_ids": pad_token,
         }
 
@@ -119,7 +119,7 @@ class SequenceCollator:
             "input_ids",
             "attention_mask",
             "labels",
-            "decoder_attention_mask",
+            # "decoder_attention_mask",
         ]
 
     def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
