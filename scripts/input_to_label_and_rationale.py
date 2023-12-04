@@ -135,6 +135,7 @@ class SequenceCollator:
                     ]
 
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
+        print(batch[0])
         return batch
 
 from typing import List, Dict
