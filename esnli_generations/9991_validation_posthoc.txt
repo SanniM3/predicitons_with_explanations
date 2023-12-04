@@ -1,0 +1,1740 @@
+Predicted: neutral | there are many clouds in the blue sky.
+A man and a woman sit on a deck under a blue sky that is about to be overtaken by tumultuous clouds. There are many clouds in the blue sky.
+Correct: entailment | Tumultuous clouds are a form of clouds. [SEP] tumultuous implies loud noise. so many clouds in the sky make loud noise. [SEP] If a blue sky is about to overtaken by tumultuous clouds then as the clouds move there are many clouds in the blue sky. 
+Considered Correct: False
+
+Predicted: entailment | a man is on his cellphone in private.
+A man talks on his cellphone in private. A man is on his cellphone.
+Correct: entailment | A man on his cellphone is talking to it. [SEP] Cellphone is always use to talk in private. [SEP] A man talking on the phone implies that he is in a conversation, regardless of it being private or not. 
+Considered Correct: True
+
+Predicted: entailment | a group of men are searching for something.
+A group of men are searching for something. A group of men are trying to find something.
+Correct: entailment | A  group of men is trying to search for something. [SEP] Men are searching trying to find something. [SEP] Searching for something is a rephrasing of trying to find something. 
+Considered Correct: True
+
+Predicted: entailment | a boy is hula hooping while a man is behind him.
+Young boy with tongue out hula hooping with two hula hoops in a crowded area, man in blue shirt stands behind him. A boy is hula hooping while a man is behind him.
+Correct: entailment | The boy is hula hooping, and the man is standing behind him. [SEP] Both boy are hula hooping with a man behind him. [SEP] Young boy with tongue out is a type of boy, and man in blue shirt is a type of man. 
+Considered Correct: True
+
+Predicted: entailment | the woman is holding something.
+A woman in a kitchen holds a can surrounded by bowls. The woman is holding something.
+Correct: entailment | Holding a can is holding something [SEP] A can surrounded by bowls represents something [SEP] The woman is holding a can and she is in the kitchen 
+Considered Correct: True
+
+Predicted: entailment | a jockey rides a horse a horse is a horse.
+A jockey in blue gallops a chestnut horse on a dirt track past a wooden fence. A jockey rides a horse
+Correct: entailment | A jockey gallops past a wooden fence is riding the horse well. [SEP] A jockey is a person who rides a horse. [SEP] The jockey is the one galloping the horse, therefore he is riding the horse. 
+Considered Correct: True
+
+Predicted: entailment | the dogs are running quickly in this race.
+The greyhounds are running quickly in this race. The dogs are running quickly in this race.
+Correct: entailment | Greyhounds are a type of dogs. [SEP] The only dogs commonly raced are greyhounds, therefore it's a good probability that the dogs racing are greyhounds. [SEP] The greyhounds  that are does , are running quickly in the race. 
+Considered Correct: True
+
+Predicted: entailment | three people on scooters are on scooters.
+Three people, a woman and two men ride scooters amongst the pedestrians of a busy city street. Three people are on scooters.
+Correct: entailment | Three people ride scooters, this is only posdible if they are on scooters. [SEP] Woman and two men are three people, and on scooters is a paraphrase of ride scooters. [SEP] The three people riding the scooter are the woman, and two men. 
+Considered Correct: True
+
+Predicted: entailment | the girl is teaching someone how to knit.
+A girl in a pink shirt is teaching a young man in a striped sweater how to knit. The girl is teaching someone to knit.
+Correct: entailment | A young man is someone. [SEP] If the girl is teaching a young man, she is teaching someone. [SEP] A young man in a striped sweater can also be known as someone. 
+Considered Correct: True
+
+Predicted: entailment | a Jesus shrine is carried in a parade.
+The elaborate Jesus shrine is being carried in a parade. A Jesus shrine is in the parade.
+Correct: entailment | The Jesus shrine is being carried by people in the parade. [SEP] Elaborate Jesus shrine is a type of Jesus shrine. [SEP] For something to be carried in a parade, it must be in the parade. 
+Considered Correct: True
+
+Predicted: entailment | the runner has a torch.
+Torch-bearing runner, about to be photographed by onlooker, enjoys the smiles and shouts of the crowd. The runner has a torch.
+Correct: entailment | Torch-bearing runner is a rephrasing of runner has a torch. [SEP] If a runner is torch-bearing he or she has a torch. [SEP] Torch-bearing runner is a rephrasing of runner has a torch 
+Considered Correct: True
+
+Predicted: entailment | two people are near the water.
+Two people embrace on the end of a dock. Two people are near the water.
+Correct: entailment | Two people are embracing on the end of a dock, which is near the water. [SEP] end of a dock should be near the water. [SEP] In order to be at the end of the dock, the two people must be near the water. 
+Considered Correct: True
+
+Predicted: entailment | a band is at a venue.
+A band places at a venue. A band is at a venue
+Correct: entailment | The band is at a venue because the band places at a venue. [SEP] the band is at a venue because they placed at it. [SEP] The band is playing at a venue. 
+Considered Correct: True
+
+Predicted: entailment | a man is standing outdoors and is passing something to another man.
+A man in a gray shirt, standing outdoors, holds something in his mouth and is passing it to the mouth of another man, who is dressed in a black shirt. A man is standing outdoors.
+Correct: entailment | a "man is standing outdoors" is a less detailed version of the previous sentence [SEP] Both man are standing outdoors. [SEP] Standing outdoors are two men in different colored shirts one grey and one black, are  passing something that they are sharing back and forth. 
+Considered Correct: True
+
+Predicted: entailment | a couple in bathing suits walk on a beach.
+A couple in bathing suits walk on a beach. there is a couple
+Correct: entailment | A couple is on a beach. [SEP] The couple is wearing bathing suits because they are on a beach. [SEP] Both sentences state that there is a couple. 
+Considered Correct: True
+
+Predicted: entailment | a guy playing music while others look away is not a good sign.
+A man wearing shorts is playing an acoustic guitar while a person in the background looks the other way. a guy plays music while others look away
+Correct: entailment | Playing an acoustic guitar is plays music. [SEP] a man playing on an acoustic guitar is a guy playing music [SEP] Slang for a man is a guy.  An acoustic guitar creates music. If he is playing the guitar it is making music.  If others are looking away they are in the background and not in the front with the player. 
+Considered Correct: True
+
+Predicted: neutral | farmers are crouching and preparing to feed their animals in a large field.
+Sheep farmers are crouching and preparing to feed their animals as the sheepdog watches closely by. Farmers prepare to feed their animals in a large field.
+Correct: entailment | Sheep farmers are type of farmers. [SEP] The farmers are preparing to feed their animals. [SEP] The farmers are sheep farmers. 
+Considered Correct: False
+
+Predicted: entailment | a man in a blue shirt is in a lab looking into a microscope.
+A man in a blue shirt is in a lab looking into a microscope. A man looking into a microscope in a lab
+Correct: entailment | A man with a blue shirt ooking into a microscope [SEP] in a lab looking into a microscope is inferred as  into a microscope in a lab. [SEP] A microscope is for looking at things. 
+Considered Correct: True
+
+Predicted: entailment | a woman is surrounded by lots of food.
+A woman smiling as she hold two white dishes of food up, there is also a table full of food on the table. A woman is surrounded by lots of food.
+Correct: entailment | Full of food is a paraphrase of  lots of food. [SEP] A table full of food would mean you would be surrounded by lots of food. [SEP] Setting a table full of food means being surrounded by that food. 
+Considered Correct: True
+
+Predicted: entailment | a skateboard is a skateboard on a folding chair.
+A man jumps onto a skateboard that is sitting on a folding chair. There is a skateboard on a folding chair.
+Correct: entailment | A skateboard sitting on a folding chair must be on a folding chair. [SEP] "sitting on a folding chair." just became on a folding chair since chairs are made for sitting and doesn't need to be specified. I am not sure why the man was omitted entirely [SEP] The man jumps on a skateboard. 
+Considered Correct: True
+
+Predicted: neutral | a policewoman is not participating in a parade.
+A smiling policewoman holding a blue axe and wearing St. Patrick's Day memorabilia walking in front of assembled onlookers. A policewoman is participating ina  parade.
+Correct: entailment | The policewoman's clothing and the crowd watching her imply a St. Patrick's Day parade. [SEP] A woman walking in front of assembled onlookers is participating in a parade. [SEP] Because the first sentence describes a policewoman walking with assembled onlookers wearing memorabilia it can be deduced that she is participating in a parade but not necessarily so. 
+Considered Correct: False
+
+Predicted: entailment | a young man is standing outside a wooden structure and not a young man standing outside a wooden structure.
+A young man wearing a gray shirt standing outside a wooden structure smiling and making a fist with his right hand. A young man is standing outside a wooden structure.
+Correct: entailment | If this young man is outside a wooden structure then he is the same young man wearing a gray shirt. [SEP] "A young man is standing outside a wooden structure' is a rephrasing of "A young man wearing a gray shirt standing outside a wooden structure smiling and making a fist with his right hand". [SEP] A young man is standing outside a wooden structure excludes unnecessary details. 
+Considered Correct: True
+
+Predicted: entailment | a group of people walking down the road, backs facing the camera.
+a group of people walking down road heading away from the camera. Several people walk down the road, backs facing the camera.
+Correct: entailment | Backs facing the camera is heading away from it. [SEP] A group of people are several people.  People heading away from the camera have their backs facing the camera. [SEP] When people walk away from a cameras point-of-view their backs face the camera. 
+Considered Correct: True
+
+Predicted: entailment | the teenager is not a teenager.
+A young man rolling up the sleeves on his sweater. The teenager touches his sweater.
+Correct: entailment | The young man's sleeves on his sweater were too long so he had to roll them up causing him to touch his sweater. [SEP] A teenager touches the sleeves of his sweater. [SEP] A young man is a teenager. 
+Considered Correct: True
+
+Predicted: entailment | a dog plays with a ball at the beach.
+A dog plays with a ball at the beach. A dog plays ball.
+Correct: entailment | Plays with a ball explains what he does when he plays ball. [SEP] Playing "with a ball" is another way of saying playing ball. [SEP] A dog plays with a ball is that the dog plays a ball 
+Considered Correct: True
+
+Predicted: neutral | the man is not doing tricks.
+A crowd on a city street watches a man flipping in the air. The man is doing tricks.
+Correct: entailment | The man "doing tricks" is explained as he is "flipping in the air" [SEP] Flipping in the air is the same as doing tricks. [SEP] A man flipping in the air implies man is doing tricks 
+Considered Correct: False
+
+Predicted: contradiction | the woman in slacks also has her hand raised.
+A woman wearing gray pants, a white blouse and a black vest is jumping with one hand in the air as she goes through an indoor stadium. The jumping lady in slacks also has her hand raised.
+Correct: entailment | A lady is also a woman. Slacks are considered as pants. One hand in the air means it is raised. [SEP] The gray pants of the woman could be called slacks. [SEP] a woman wearing gray pants, a white blouse and a black vest is jumping with one hand in the air besides a jumping lady in slacks also has her hand raised 
+Considered Correct: False
+
+Predicted: entailment | the man in the red cap is rollerskating on a path in front of a building.
+The man in the red cap is rollerskating on a path in front of the white building. The man in skates follows the path in front of a building.
+Correct: entailment | The man skates on a path in front of a building. [SEP] The man is rollerskating in front of a building. [SEP] The man rollerskating is in skates. 
+Considered Correct: True
+
+Predicted: entailment | a soccer ball is being kicked into a goal net.
+View of a soccer ball being kicked into a goal net A soccer ball is going into the net.
+Correct: entailment | Into a goal net is a paraphrase of going into the net. [SEP] If the soccer ball is being kicked into the goal net it is going into the net. [SEP] Going into the net is a rephrasing of being kicked into a goal net. 
+Considered Correct: True
+
+Predicted: entailment | an accordion player is making music.
+An accordion player with a cowboy hat plays his instrument as he looks off into the distance. An accordion player is making music.
+Correct: entailment | Making music is a term commonly used to describe playing an instrument. [SEP] A player that plays his instrument is making music. [SEP] Playing an instrument implies making music. 
+Considered Correct: True
+
+Predicted: entailment | a man in a white shirt is waving his hand under an umbrella.
+A man in a white shirt waves his hand under a white and blue umbrella. A man wearing a white shirt under an umbrella is waving.
+Correct: entailment | Waving and waves his hand mean the same thing, and being in a white shirt is the same as wearing a white shirt. [SEP] a man wearing a white shirt under an umbrella is the same as a man in a white shirt under an umbrella. [SEP] If the man waves his hand, he is waving. 
+Considered Correct: True
+
+Predicted: entailment | a police officer with riot shield stands in front of crowd.
+Police officer with riot shield stands in front of crowd. A police officer stands in front of a crowd.
+Correct: entailment | With riot shields describes how a police officer stands in front of a crowd. [SEP] Police officer with riot shield can be inferred as a police officer. [SEP] The riot sheild is additional detail as to what the police officer is holding while in front of a crowd. 
+Considered Correct: True
+
+Predicted: entailment | a well dressed man standing in front of a piece of artwork.
+A well dressed man standing in front of an abstract fence painting. A well dressed man standing in front of piece of artwork.
+Correct: entailment | An abstract fence painting is artwork. [SEP] An abstract fence painting is a piece of artwork. [SEP] an abstract fence painting is a an example of a piece of artwork. 
+Considered Correct: True
+
+Predicted: entailment | a family sits on a bench near a beach.
+A family sits on a bench near a beach. A family is sitting.
+Correct: entailment | A family sitting on a bench sits on a bench. [SEP] Sitting implies sits. [SEP] family sits is inferred as  sitting. 
+Considered Correct: True
+
+Predicted: entailment | two children on a skateboard are playing outside.
+two young children on a skateboard going across a sidewalk Two kids are playing outside.
+Correct: entailment | Two kids are playing outside on a skateboard. [SEP] The two kids who are playing outside can be referred to be the same because the two young children is on a skateboard going across the sidewalk. [SEP] Since the two children are skateboarding across the sidewalk, they are playing outside since the are on a skateboard which can be a toy and on a sidewalk which is outside. 
+Considered Correct: True
+
+Predicted: entailment | the man is performing.
+A man performs in an outdoor space, with a lot of onlookers. The man is performing.
+Correct: entailment | When s man performs in an outdoor space, he is performing. [SEP] A man performs in an outdoor space is inferred as The man is performing. [SEP] The man is performing because he performs. 
+Considered Correct: True
+
+Predicted: entailment | a man riding a bike is a man in a blue jacket.
+A man in a blue jacket riding a bike A man is on his bike.
+Correct: entailment | Being on a bike implies riding the bike. [SEP] A man is in a blue jacket. [SEP] a man is on his bike is a restatement of the first sentence 
+Considered Correct: True
+
+Predicted: entailment | two women in a parking lot are talking in the middle of the lot.
+Two woman talk in the middle of a parking lot, near two cars, as random people wander nearby. Two women near cars talk in the middle of the lot
+Correct: entailment | Two woman talk in the middle of a parking lot near two cars, and people are wandering nearby. [SEP] Women talk in a parking lot. [SEP] If they're near two cars, they're near cars. 
+Considered Correct: True
+
+Predicted: entailment | the man is walking his dog.
+Young man walking dog The man is with his dog.
+Correct: entailment | young man iswalking with his dog [SEP] Walking dog implies he is with the dog. [SEP] A walking a dog is with his dog. 
+Considered Correct: True
+
+Predicted: entailment | an elder bearded man is in an old building.
+An elder bearded man having a rest in a dilapidated building. An old bearded man is in an old building.
+Correct: entailment | Dilapidated means old. [SEP] A dilapidated building is the same as an old building. [SEP] The building that the old man is in, is old because it is dilapidated. 
+Considered Correct: True
+
+Predicted: entailment | an SUV and a man are going in opposite directions.
+A taxi SUV drives past an urban construction site, as a man walks down the street in the other direction. An SUV and a man are going in opposite directions.
+Correct: entailment | Opposite directions indicates the SUV and man are each going in the other direction. [SEP] An SUV is walking down in the street [SEP] An SUV driving past while a man walks down the street in the other direction means they are going opposite directions. 
+Considered Correct: True
+
+Predicted: entailment | the kid is standing in shallow beach water.
+The kid is wearing a blue jacket and standing in shallow beach water. The kid is at the beach.
+Correct: entailment | Standing in shallow beach water would take place at the beach. [SEP] Beach water is it a beach. [SEP] The kid is at the beach because he is standing in shallow beach water. 
+Considered Correct: True
+
+Predicted: entailment | an audience cheers at a concert.
+An audience cheers at a concert. An audience making noise at a concert.
+Correct: entailment | Cheers are a way of making noise. [SEP] Cheers is a type of making noise.  An audience is at a concert. [SEP] When an audience cheers it is noise. 
+Considered Correct: True
+
+Predicted: entailment | people are camping.
+Two people are sitting under a tent while another stands. People are camping.
+Correct: entailment | Two people sitting under a tent means there are people camping as tent is made during camping. [SEP] people are made a camp [SEP] Two people are people, and under a tent implies camping. 
+Considered Correct: True
+
+Predicted: entailment | there are children playing outside.
+Several children playing outside There are children playing.
+Correct: entailment | Children are playing , both sentences say same thing. [SEP] The children playing outside, were not all of the children playing. [SEP] The children are playing, the second sentence only removed the detail of setting. 
+Considered Correct: True
+
+Predicted: entailment | some people are inside and others are outside.
+While some people look in the barn, others walk on the bridge and some are enjoying cooling off in the water by the beach. Some people are outside.
+Correct: entailment | The beach is outside. [SEP] 'Others' is contrasted with the people in the barn, implying that some people are outside. [SEP] Others are some people, and bridge implies outside. 
+Considered Correct: True
+
+Predicted: entailment | a person in a shirt is standing in a large pool of water.
+People wearing red shirts are standing in a large pool of water as it splashes over and around them. A person in a shirt
+Correct: entailment | There is a group of peolple standing in pool with red shirts on , having a grand time [SEP] Answer: the person refers to people wearing red shirts. [SEP] If the people are wearing shirts then a person there is in a shirt. 
+Considered Correct: True
+
+Predicted: entailment | a man is working behind a watch repair booth on the street.
+Man working behind a watch repair booth on the street. A man is working behind the small business on the street.
+Correct: entailment | The watch repair booth is a small business. [SEP] Watch repair is a small business. [SEP] A watch repair shop is a small business. 
+Considered Correct: True
+
+Predicted: entailment | a skier is doing tricks.
+The skier is doing a flip through some trees A skier is doing tricks.
+Correct: entailment | A flip happens while doing tricks. [SEP] A flip through some trees is one way a skier does tricks. [SEP] Doing a flip is a form of doing tricks. 
+Considered Correct: True
+
+Predicted: entailment | five people playing in a gymnasium is a gymnasium.
+Five people are playing in a gymnasium. five people playing
+Correct: entailment | There are five people playing in both sentences. [SEP] 'Five people playing' is a simpler rephrasing of 'Five people are playing in...", the location has been omitted. [SEP] Five people playing is five people playing. 
+Considered Correct: True
+
+Predicted: entailment | the man is outside.
+A old man sells hardware parts on a dirty sidewalk. The man is outside.
+Correct: entailment | A dirty sidewalk is outside. [SEP] A dirty sidewalk is outside. [SEP] The man is on a dirty sidewalk. Sidewalks are found outdoors, therefore, the man is outside 
+Considered Correct: True
+
+Predicted: entailment | a bride tidies her husband as she holds her own bouquet of flowers.
+A bride adjust her husbands flower on his coat as she holds her own bouquet of flowers. A bride tidies her groom.
+Correct: entailment | A bride adjust her husbands flower on his coat means tidying her groom. [SEP] Adjusting her husbands flower is tidying her groom. [SEP] Adjust and tidies mean the same and the husband is her groom. 
+Considered Correct: True
+
+Predicted: entailment | two football players wearing jerseys are not the same.
+One football player wearing an orange jersey and one wearing a white jersey are set at the starting line. Two football players wearing jerseys.
+Correct: entailment | The players play football. [SEP] One football player and one wearing a white jersey equals two football players. [SEP] If one player is wearing an orange jersey and the other is wearing white, two players are wearing jerseys. 
+Considered Correct: True
+
+Predicted: entailment | a cyclist is biking past spectators
+A cyclist in neon yellow uniform rides past spectators behind a yellow banner reading 'Lotos.' A cyclist is biking past spectators.
+Correct: entailment | The cyclist in uniform rides past spectators is biking [SEP] 'A cyclist is biking past' is a rephrasing of 'A cyclist...rides past'. [SEP] In sentence 1, the cyclist rides past spectators. Because the person is described as a cyclist, it can be inferred that he is riding a bicycle. So it is true that a cyclist is biking past spectators. 
+Considered Correct: True
+
+Predicted: entailment | there are girls wearing red shirts doing flips in the air.
+The girls in the red shirts are doing flips in the air. There are girls wearing red.
+Correct: entailment | " Girls wearing red " infers that they are the " girls in the red shirts ". [SEP] Girls in red shirts are "wearing red." [SEP] Girls in the red shirts is a rephrasing of girls wearing red. 
+Considered Correct: True
+
+Predicted: entailment | two people are sitting in a station.
+Two people are sitting in a station. A couple of people are inside and not standing.
+Correct: entailment | Two people means there are a couple (two) people and they be sitting means they are not standing, in a station means they are inside. [SEP] A couple is sitting inside a station. [SEP] People are inside and not standing means they are sitting. 
+Considered Correct: True
+
+Predicted: entailment | a couple are in the Underground.
+A man in a suit and tie and a woman with luggage join others in waiting in the London Underground. A couple are in the Underground.
+Correct: entailment | A man and a woman form a couple. They are waiting for the train. [SEP] "A couple are in the Underground" implies it's a man in a suit and tie and a woman with luggage in the London Underground. [SEP] A man in a suit and tie and a woman with luggage so there should be a couple. they are i london underground so they should in underground. 
+Considered Correct: True
+
+Predicted: entailment | the two dogs are black.
+Two black dogs running The two dogs are black.
+Correct: entailment | "two black dogs" rephrases 'two dogs are black [SEP] When dogs are black, they can be called black dogs. [SEP] The black dogs are running. 
+Considered Correct: True
+
+Predicted: entailment | dogs are outside.
+brown dogs are running down a trail Brown dogs are outside.
+Correct: entailment | Brown dogs are running down a trail are definitely outside. [SEP] Trails are only found outside. [SEP] dogs are running down a trail so it is outside. 
+Considered Correct: True
+
+Predicted: entailment | two men are performing in a music group.
+Two men performing in a music group. Two men are making music.
+Correct: entailment | A music group is making music. [SEP] The two men are performing in a music group, this implies that they are making music. [SEP] Two men performing in a music group means making music. 
+Considered Correct: True
+
+Predicted: entailment | a man in bermuda shorts stands behind two children on a grassy field.
+A little girl offers a ball to an upset toddler on a grassy field while a man in bermuda shorts stands behind them. A man watches two children on a grassy field.
+Correct: entailment | Girl, toddler are two children, and stands behind them implies watches. [SEP] Little girl offers a ball to an upset toddler are two children, and man in bermuda shorts is a type of man. [SEP] A girl and a toddler are two children. If a man stands behind them, he probably can see what they are doing, and it's possible that he watches them. 
+Considered Correct: True
+
+Predicted: entailment | a man reading in front of a microphone is not a man reading into a microphone.
+A man wearing a suit with a name tag stands reading in front of a microphone as a screen behind him displays a presentation. a man talks into a microphone
+Correct: entailment | Talks into a microphone implies in front of a microphone. [SEP] If the man is reading in front of a microphone, it stands to reason he is talking into the microphone. [SEP] The man talks into the microphone while reading a display. 
+Considered Correct: True
+
+Predicted: contradiction | both of the soccer players want control of the ball.
+Two professional soccer players compete in a stadium on AstroTurf during a soccer match, and one player is controlling the ball while the other is running after him trying to defend it. Both of the soccer players want control of the ball.
+Correct: entailment | All professional soccer players want control of the ball since it's the main goal of the game. [SEP] Two professional soccer players are both of the soccer players, and controlling the ball is a rephrasing of want control of the ball. [SEP] Soccer players want to control the ball. 
+Considered Correct: False
+
+Predicted: entailment | a man in a blue shirt and jeans is walking across the street.
+A Man in a blue shirt and jeans is walking across the street. There is a man outside.
+Correct: entailment | Across the street implies outside. [SEP] Man in a blue shirt is a type of man, and street implies outside. [SEP] If the man is walking across the street, then he is outside. 
+Considered Correct: True
+
+Predicted: contradiction | the women and children are sitting outside while the children are sitting inside.
+Women and children sitting outside in the shade while a group of younger children sitting inside in the shade. The woman and kids and sitting down.
+Correct: entailment | They are sitting outside in the shade. [SEP] "Woman and kids" is a rewording of "women and children." [SEP] The woman and kids are sitting down outside. 
+Considered Correct: False
+
+Predicted: entailment | the football player is chasing the opposing team player.
+One football player holding the ball is chased by another football player from the opposing team A football playing chasing the opposing teams player in a game.
+Correct: entailment | There is a player from an opposing team, therefore they are playing in a game [SEP] One football player is being chased by another football player who is chasing the opposing teams player in a game. [SEP] Opposing teams are playing football. 
+Considered Correct: True
+
+Predicted: neutral | the person is not weaving a fabric.
+A Latin American weaving fabric. The person is making fabic
+Correct: entailment | A Latin American is a person. [SEP] A Latin American is making fabric. [SEP] Latin American is a type of person, and weaving is making fabic. 
+Considered Correct: False
+
+Predicted: entailment | two dogs are inside a fence.
+Two dogs run around inside a fence. Two dogs are inside a fence.
+Correct: entailment | The dogs are inside a fence because they run around inside a fence. [SEP] The two dogs are inside a fence because they are running around inside of the fence. [SEP] Two dogs are around Inside fence 
+Considered Correct: True
+
+Predicted: entailment | two men help an injured player on the field.
+Two men help an injured player on the field. Some men help an injured player on the field.
+Correct: entailment | Two men represent some men. [SEP] Some men implies a number more than one, two men is more than one. [SEP] Two men can be shown as some men. 
+Considered Correct: True
+
+Predicted: entailment | lemons are a good thing!
+Making something tasty hope you like lemons! Preparing food with lemons
+Correct: entailment | You'll hope that someone likes lemons if you're preparing food for them and using lemons [SEP] Making something is the same as preparing. [SEP] The food that they are making is made with lemons. 
+Considered Correct: True
+
+Predicted: entailment | a person is writing something on a newspaper.
+A person writing something on a newspaper. A person is writing.
+Correct: entailment | The person is writing because the person is writing on a newspaper. [SEP] In both cases, the person is writing.  It does not matter on what. [SEP] A person is writing because they are writing it on a newspaper. 
+Considered Correct: True
+
+Predicted: entailment | the woman is not holding a drink but a woman in a striped shirt.
+A woman in a striped shirt posing for the camera while another woman holding a drink looks on. The woman looks on as she holds a drink.
+Correct: entailment | "Woman looks on as she holds a drink" is a rephrasing of "woman holding a drink looks on." [SEP] The woman looks on with her drink because another woman is posing for the camera. [SEP] The woman looks and holds drink 
+Considered Correct: True
+
+Predicted: entailment | two men wearing brown hats are doing work on a yellow house.
+Two men wearing brown hats are doing work on a yellow house. Two guys are doing work on a dwelling.
+Correct: entailment | Guys are men, and dwelling is a synonym of house. [SEP] Two men and two guys are synonymous and doing work on a yellow house is equivalent to doing work on a dwelling as house and dwelling means the same. [SEP] a yellow house is a dwelling, so it is a more general rephrasing. 
+Considered Correct: True
+
+Predicted: entailment | a woman is playing volleyball in a fenced in area.
+A woman dressed in a black shirt with purple bikini bottoms is playing volleyball in a fenced in area. a woman is playing voleyball
+Correct: entailment | "A woman is playing voleyball" is a rephrasing of "a woman... is playing volleyball..." [SEP] Volleyball is played in fenced area. [SEP] a woman is playing volleyball in a fenced in area. 
+Considered Correct: True
+
+Predicted: entailment | a boy sitting down thinking about his future.
+A young indian boy sitting down thinking about his future. A boy thinks.
+Correct: entailment | Boy thinking about his future implies boy thinks. [SEP] A YOUNG INDIAN BOY IS SITTING DOWN AND THINKING ABOUT HIS FUTURE [SEP] They young Indian boy is the boy who thinks. 
+Considered Correct: True
+
+Predicted: entailment | people are enjoying sundown.
+A couple being romantic under the sunset. People are enjoying sundown.
+Correct: entailment | They are enjoying sundown because they are under the sunset. [SEP] Couple are people, and under the sunset is a paraphrase of sundown. [SEP] A couple consists of people. Sunset is sundown. 
+Considered Correct: True
+
+Predicted: contradiction | the people are outside of the restaurant.
+There is a large group of people in front of Papa John's restaurant. The people are outside of the restaurant.
+Correct: entailment | In front of the restaurant is outside of the restaurant. [SEP] The large group of people are outside, in front of the restaurant. [SEP] In the first sentence, the people are standing in front of the restaurant. That would show that they are outside of the restaurant. 
+Considered Correct: False
+
+Predicted: entailment | a crowd watches a person taking off his shirt.
+A man is on the ground taking his shirt off as a crowd watches. The crowd watches a person take off his shirt.
+Correct: entailment | A man is a person. [SEP] A MAN TAKES OFF HIS SHIRT [SEP] The man is the person taking off his shirt. 
+Considered Correct: True
+
+Predicted: entailment | a woman riding a bicycle is a woman in a red and white jacket.
+A woman in a red and white jacket riding a bicycle. a woman rides a bike
+Correct: entailment | Riding means rides and bike is an abbreviation of bicycle. [SEP] A bike is a shortened term for bicycle. [SEP] A bike is a short form of a bicycle. 
+Considered Correct: True
+
+Predicted: entailment | a person is kicking.
+A Korean gentlemen kicks up his leg. A person is kicking.
+Correct: entailment | Kicks up his leg indicates kicking. [SEP] Answer: The person is a Korean gentleman. [SEP] Korean gentlemen is a person, and is kicking is a paraphrase of kicks up. 
+Considered Correct: True
+
+Predicted: entailment | a man in swimming trunks is kicking a ball at the beach.
+A man in swimming trunks kicking a ball at the beach. A man wearing swimming trunks plays around at the beach.
+Correct: entailment | A man in swimming trunks is the same as man wearing swimming trunks and kissing a ball at the beach is equivalent to playing around at the beach. [SEP] kicking a ball is inferred as plays around [SEP] Kicking a ball is a means of play. 
+Considered Correct: True
+
+Predicted: entailment | two men inside a tent are examining the floor.
+Two men inside a tent are examining the floor. men looking at the floor
+Correct: entailment | Two men are looking at the floor from inside of a tent. [SEP] Examining is a form of looking. [SEP] Examining and looking at is the same thing. 
+Considered Correct: True
+
+Predicted: entailment | a woman wading in front of a waterfall is a woman wading in front of a waterfall.
+An extremely wet woman is wading in front of a waterfall. A woman dripping with water walks in front of a waterfall.
+Correct: entailment | The woman is dripping wet with water while she walks in front of the waterfall, she is not swimming. [SEP] A woman dripping with water is extremely wet.  A woman wading in a waterfall must first walk on it. [SEP] When you wade you walk slowly. If you are dripping with water you are wet. 
+Considered Correct: True
+
+Predicted: entailment | a man in a blue polo raises his wineglass to toast.
+A man in a blue polo raises his wineglass to toast. A man holds a wineglass.
+Correct: entailment | If a man raises his wineglass, at first he holds it in his hand in order to raise it. [SEP] A man who wears blue polo holding wineglass. [SEP] If he raises his wineglass, he holds a wineglass. 
+Considered Correct: True
+
+Predicted: entailment | a woman is standing in front of a wall with graffiti.
+A brunette woman is standing in front of a wall with graffiti. A woman is near a graffiti-ed wall.
+Correct: entailment | a wall with graffiti implies a graffiti-ed wall [SEP] Sentence 2 is a rephrasing of Sentence 1, which describes a woman standing near a graffiti-ed wall. [SEP] A woman who is brunette is standing near a graffiti wall. 
+Considered Correct: True
+
+Predicted: entailment | two guys talking about food is a conversation.
+A man in a white button up shirt, and a man in a brown button up shirt discussing something over a table of food. Two guys having a conversation.
+Correct: entailment | Two men are discussing which is the same as having a conversation [SEP] People discussing something are having a conversation. [SEP] Two guys is a rephrasing of a man in a white button up shirt, and a man in a brown button up shirt. Plus, to have a conversation they must be discussing something. 
+Considered Correct: True
+
+Predicted: entailment | a man is angry!
+The dude at the party is raging! A man is angry.
+Correct: entailment | Dude is a slangy way of referring to a man, and raging is slang for very angry. [SEP] Raging and angry are synonymous as well dude and man as part of the description a man is angry. [SEP] 'Dude' is a term commonly used as a synonym for a man, and 'raging' is a amplified term for angry. 
+Considered Correct: True
+
+Predicted: entailment | people laying in massage chairs is not a massage.
+People laying in massage chairs People relaxing in charis.
+Correct: entailment | Massage is usually a relaxation. [SEP] People laying in massage chairs are relaxing in these chairs. [SEP] Massage chairs are relaxing for people. 
+Considered Correct: True
+
+Predicted: entailment | two people are running together in the stadium.
+Taller runner in orange and smaller one in blue run side by side around track in crowded stadium. Two people are running together in the stadium.
+Correct: entailment | Running together is the same as side by side. [SEP] A taller runner and a smaller one is the same as two people. [SEP] If two people are side by side, then they are together. 
+Considered Correct: True
+
+Predicted: entailment | a man and woman and two small children are sitting around Christmas presents.
+A man and woman and two small children are sitting in the floor with wrapped Christmas presents. A man and woman are sitting around Christmas presents.
+Correct: entailment | Sitting in the floor implies sitting around. [SEP] A man and woman sitting around (wrapped) Christmas presents refer to the one with two small children as part of the total description. [SEP] If the children are with presents they are around the presents. 
+Considered Correct: True
+
+Predicted: neutral | some humans are not humans.
+An Asian man attempting to repair a green bicycle outdoors while two other Asian men stand by. Some humans
+Correct: entailment | A man and men are humans. [SEP] The man and other men are humans. [SEP] Bicycle is being repaired outdoors by some humans 
+Considered Correct: False
+
+Predicted: entailment | a boy playing a game at the arcade is playing a game.
+A boy wearing a black shirt is playing a game at the arcade. A boy is playing.
+Correct: entailment | You play games at an arcade so the boy is playing. [SEP] There is both a boy playing a game or something else. [SEP] Boy wearing a black shirt is a type of boy, and playing is a paraphrase of playing a game. 
+Considered Correct: True
+
+Predicted: entailment | two men are near a store.
+Two men clutch each other as they stumble backwards while looking up in front of a store. Some men are near a store.
+Correct: entailment | In front of a store means they are near it. [SEP] There are two men, which can be referred to as some men, and if they're looking up at the front of a store, it follows they are near the store. [SEP] To be in front of a store implies the men are near the store. 
+Considered Correct: True
+
+Predicted: entailment | the man is drinking liquid and not drinking liquid is not a drink.
+A man in a blue plaid shirt and blue jeans, wearing a black helmet, pauses to drink water next to a large blue steel corrugated tube. The man is drinking liquid.
+Correct: entailment | Water is a liquid. [SEP] Water is a liquid. [SEP] Water is a liquid. 
+Considered Correct: True
+
+Predicted: entailment | a player walks around
+Young soccer players, wearing blue and white jerseys, walk around while waiting for their turn or play to begin in a soccer match. a player walks around
+Correct: entailment | Soccer players walking around is another way of stating one or more players walk around [SEP] Wearing jerseys implies the person walking around is a player. [SEP] players, wearing blue and white jerseys, walk around  is inferred as layer walks around 
+Considered Correct: True
+
+Predicted: entailment | an Asian man is giving thumbs up on street.
+Asian man giving thumbs up on street. An Asian man is giving a thumbs up.
+Correct: entailment | "Is giving a thumbs up" is a rephrasing of "giving thumbs up." [SEP] " Giving a thumbs up " is a rewording of " giving thumbs up ". [SEP] The man is giving a thumbs up, so he must be in the street. 
+Considered Correct: True
+
+Predicted: entailment | the rodeo clown is performing physical activity.
+A rodeo clown finds it's way in the action. The rodeo clown is performing physical activity.
+Correct: entailment | A rodeo clown is performing an action, which is a physical activity. [SEP] A rodeo clown is physically in the action. [SEP] Same rodeo clown in both statements 
+Considered Correct: True
+
+Predicted: entailment | a man is making glass.
+The older man in a dark blue shirt is using tools to make glass before putting them into a heated kiln. A man is making glass.
+Correct: entailment | Using tools to make glass before putting them into a heated kiln is a way to explain how to be making glass. [SEP] A man is using tools to make glass. [SEP] making glass is the shorter way of explaining the actions in sentence 1 
+Considered Correct: True
+
+Predicted: entailment | two people in a truck are talking.
+Two construction workers in a truck having a conversation. Two people are talking.
+Correct: entailment | construction workers are people, and "having a conversation" is is a rephrasing of "talking" [SEP] Two construction workers are two people, and are talking implies conversation. [SEP] The 2 construction workers are people. 
+Considered Correct: True
+
+Predicted: entailment | the man is jumping off a height and people clap.
+A young man wearing black jumps off a height while people clap. The man is jumping off something.
+Correct: entailment | A young man jumps of of a height which is the same as jumping off something. [SEP] JUMPING CAN BE DONE ONLY FROM A SPECIFIC HEIGHT [SEP] If the man jumps off of a height, he jumps off something. 
+Considered Correct: True
+
+Predicted: entailment | the man stumbles in rollerskates and a man in a black jersey appears to collide.
+A man in a green jersey and rollerskates stumbles as a man in a black jersey appears to collide with him. The man stumbles stumbles in rollerskates.
+Correct: entailment | A man stumbles while wearing rollerskates. [SEP] A man who is in a jersey and roller-skates who collides with another man in a jersey implies that they are playing in a game. [SEP] The man stumbles in rollerskates is a rewording of a man in rollerskates stumbles. 
+Considered Correct: True
+
+Predicted: entailment | a young child sits on some pillows with a green tray of chopped-up food in front of him.
+A young child sits on some pillows with a green tray of chopped-up food in front of him. A young child sits near a tray of food.
+Correct: entailment | If there is a tray of chopped-up food in front of the child then the child sits near a tray of food. [SEP] A child with a tray of food is near it. [SEP] Sentence two follows 1 because 1 contains sentence two with more detail. A young child sits near a tray of food. 
+Considered Correct: True
+
+Predicted: entailment | a person is getting wet.
+A young boy playing in a bubble playing in water. A person is getting wet.
+Correct: entailment | Playing in water implies getting wet. [SEP] A boy is a person while playing in water implies getting wet. [SEP] A young boy is a type of person, and playing in water implies they'll get wet. 
+Considered Correct: True
+
+Predicted: entailment | a backpack is a backpack and a person wears a backpack.
+An African American wearing a red backpack looks the photographer as he walks past a concrete wall covered in graffiti. a person wears a backpack
+Correct: entailment | African American is a person, and red backpack is a type of backpack. [SEP] An African American is a person. "Wears a backpack" restates "wearing a red backpack." [SEP] AFRICAN AMERICAN PERSON WEARING BACKPACK. 
+Considered Correct: True
+
+Predicted: entailment | a man in a black jacket is talking with two blond women as they stand near a car in the sunshine.
+A man in a black jacket is talking with two blond women as they stand near a car in the sunshine. A man talks.
+Correct: entailment | A man is talking with two women near a car. [SEP] A man talks is part of  a man in a black jacket talking as part of the total description. [SEP] A man talking is a smaller subset of a man in a black jacket talking. 
+Considered Correct: True
+
+Predicted: entailment | bystanders are not able to see a group sweeping in front of them.
+Group sweeping away leakage while bystanders look on. A group sweeps in front of bystanders.
+Correct: entailment | They are in front of bystanders because bystanders look on. [SEP] "A group sweeps" is a rewording of "Group sweeping." [SEP] The group sweeps by because it's sweeping away leakage. 
+Considered Correct: True
+
+Predicted: entailment | the man totes the video games
+A smiling man wearing a football jersey is carrying a stack of video games. The man totes the video games
+Correct: entailment | People are carrying a stack in a tote. [SEP] totes is another way of saying carrying [SEP] Totes means carrying. 
+Considered Correct: True
+
+Predicted: neutral | the skateboarder is performing a heelie kick flip.
+A skateboarder does a trick at a skate park. The skateboarder is performing a heelie kick flip.
+Correct: entailment | A heelie kick flip is a skateboarder trick. [SEP] The skateboarder performing a heelie kick flip is part of the activity of skateboarder doing a trick at a skate park. [SEP] A heelie kick flip is a type of trick - it is a more specific phrasing of trick. 
+Considered Correct: False
+
+Predicted: neutral | two boys standing on top of a diving platform and one captured midair is not a good sign.
+Two boys standing on top of a diving platform and one captured midair. Two boys standing bravely on top of a diving platform
+Correct: entailment | Two boys standing bravely on top of a diving platform is a rephrasing, adding more detail to two boys standing on top of a diving platform. [SEP] Both sentences state that there are two boys standing on a diving platform. [SEP] "Standing bravely on top" is a rephrasing of "standing on top." 
+Considered Correct: False
+
+Predicted: entailment | the boys are outside.
+A boy in a red shirt and a boy in a yellow shirt are jumping on a trampoline outside. The boys are outside.
+Correct: entailment | Two boys are outside and jumping on a trampoline [SEP] Boy in a red shirt and a boy in a yellow shirt are boys. [SEP] A boy in a red shirt and a boy in a yellow shirt means there are at least two boys, and they jumping on a trampoline outside means are outside. 
+Considered Correct: True
+
+Predicted: neutral | the man is not jumping.
+A man poses for a photo in front of a Chinese building by jumping. The man is prepared for his photo.
+Correct: entailment | A person prepares for his photo by posing. [SEP] Posing for a photo means he would be prepared for a phote. [SEP] The man poses for his photo. 
+Considered Correct: False
+
+Predicted: entailment | the man with dreadlocks on a skateboard is doing tricks in the middle of the road.
+Man with dreadlocks on a skateboard in the middle of the street. The man with dreadlocks does skateboard tricks in the middle of the road.
+Correct: entailment | Does skateboard tricks implies on a skateboard. [SEP] Performing skateboard tricks in the middle of the road requires a person on a skateboard in the street. [SEP] Does skateboard tricks implies on a skateboard. 
+Considered Correct: True
+
+Predicted: entailment | the men are painting a wall.
+A group of men are on scaffolds painting a wall. The men are painting.
+Correct: entailment | Men are painting a wall on scaffolds. [SEP] Group of men are men, and painting a wall is a type of painting. [SEP] Men are on the scaffolds painting a wall. 
+Considered Correct: True
+
+Predicted: entailment | the lady needs a ride.
+I think this lady is waiting for a cab. The lady needs a ride.
+Correct: entailment | The lady needs a ride because she is waiting for a cab. [SEP] Waiting for a cab is a paraphrase of needs a ride. [SEP] The cab gives a ride. 
+Considered Correct: True
+
+Predicted: entailment | the girl and the guy are riding bikes.
+A girl and a guy biking down a long strip of road with people jogging in the distance. The boy and girl are riding bikes.
+Correct: entailment | They are riding down the road. [SEP] biking down a long strip of road  is inferred as  riding bikes. [SEP] A girl and a guy biking is the same as boy and girl riding bikes. 
+Considered Correct: True
+
+Predicted: entailment | a room with pictures is a room full of pictures.
+There is a room full of pictures all in the wall and a woman in a coat is looking back over her shoulders strangely. a room with pictures
+Correct: entailment | "A room with pictures" refers to a room full of pictures. [SEP] If a room is full of pictures all in the wall then this can be rephrased more simply as a room with pictures. [SEP] "A room with pictures" can be rephrased as "a room full of pictures". 
+Considered Correct: True
+
+Predicted: neutral | a man is sleeping in his boat out on the open waters.
+A shirtless man sleeps in his blue boat out on the open waters. A man is sleeping through a rainstorm out on his boat.
+Correct: neutral | Sentence 1 never states the weather let alone a rainstorm. [SEP] Open waters do not imply a rainstorm. [SEP] We do not know he is sleeping through a rainstorm. We have no idea what the weather is. 
+Considered Correct: True
+
+Predicted: neutral | the man is not performing in a play.
+A young man with a plain shirt looking down, with a band and dancing people behind him. A man performing in a play looks down at the audiance as the band and dancers move in the background.
+Correct: neutral | Not every person with a band and dancers behind them are in a play. [SEP] The young man may not be performing in a play nor looking at an audiance. [SEP] A man looking down with dancers behind him is not necessarily performing in a play. Not all performances garner an audience. 
+Considered Correct: True
+
+Predicted: neutral | a man is not a boat.
+A man is navigating a boat. A man is steering a large yacht down the lake.
+Correct: neutral | Not every boat is a yacht, just because he is navigating the boat does not mean it is down the lake. [SEP] The man navigating may be different from the man steering. The boat may not be a large yacht and this sentence does not indicate that the boat is on a lake. [SEP] There are many types of boats, doesn't mean it was a large yacht, he could also be navigating in the ocean 
+Considered Correct: True
+
+Predicted: neutral | the performance was not a concert.
+The Rockettes perform on the street in front of Radio City Music Hall, as well as next to a cop car. The performance was exiting.
+Correct: neutral | We cannot tell if the performance was exiting or not. [SEP] Just because the Rockettes perform on the street in front of Radio City Music Hall, as well as next to a cop car does not mean it was exiting. [SEP] Nothing in the first sentence suggests that the performance was exiting. 
+Considered Correct: True
+
+Predicted: entailment | two people are looking at New York City.
+Two people are looking at something in New York City. Two people looking at New York.
+Correct: neutral | People looking at something "in" New York City are not necessarily looking "at" New York. New York could even refer to the state of New York and not the city. [SEP] New York is a state and New York City is a city within the state. [SEP] Looking at New York is too specific according to the information given in sentence 1. They are looking at something, but not necessarily New York. 
+Considered Correct: False
+
+Predicted: neutral | a woman is cleaning something she has spilled.
+Woman in light blue knit hat and light blue zippered jacket kneels in front of a bowl of liquid and small bottle. A woman is cleaning something she has spilled.
+Correct: neutral | Kneeling does not imply cleaning something. [SEP] She may be doing something else than cleaning what she spilled. [SEP] Just because a woman in light blue knit hat and light blue zippered jacket kneels in front of a bowl of liquid and small bottle does not mean she is cleaning something. 
+Considered Correct: True
+
+Predicted: neutral | the person in black leather jacket has bleached blond-hair set in a design with spikes.
+A japanese person with bleached blond-hair set in a design with spikes, wearing a black leather jacket. The biker in black leather has spiky blond hair.
+Correct: neutral | The mans hair isn't spiky because his outfit is, it could be any style. [SEP] Wearing a black leather jacket and spiky hair does not necessarily mean he is a biker. [SEP] Not all biker wear black leather. 
+Considered Correct: True
+
+Predicted: contradiction | a man has a black cap and a black coat, while a woman has a blue scarf and gray coat.
+A man in a black cap and black coat looks down while standing next to a woman wearing a blue scarf and gray coat, whose hair is in her eyes. A man has a light black cap.
+Correct: neutral | A black cap can be dark and not only light. [SEP] Not all black caps are light black caps. [SEP] A man in a black cap doestn imply that its a light black cap. 
+Considered Correct: False
+
+Predicted: neutral | four men are not construction workers.
+four men are wearing red baseball caps and orange and yellow shirts. Four men are on their way to a construction site.
+Correct: neutral | People can wear baseball caps and orange and yellow shirts to many places, not just construction sites. [SEP] Not all caps wearing men go to construction site. [SEP] Not all men are on their way to a construction site. 
+Considered Correct: True
+
+Predicted: neutral | a person is performing tricks in front of a crowd.
+A person on a bike is midair, twisting his body around the handlebars, with graffiti behind him. A person is performing tricks in front of a crowd.
+Correct: neutral | The person on the bike is not necessarily preforming tricks. There is no mention that he is in front of a crowd. [SEP] There may not be a crowd and he may not be performing in front of them. [SEP] There isn't any mention of a crowd, onlookers or other people in the first sentence. 
+Considered Correct: True
+
+Predicted: neutral | a little boy is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside his bedroom if he is playing inside
+A little boy is sitting next to a bed while wearing orange sunglasses and playing with a toy hammer A little boy is playing inside his bedroom
+Correct: neutral | You can not infer he is in his bedroom. [SEP] sitting next to a bed does not mean the little boy is in his bedroom, he could be in his parents' bedroom [SEP] Not all bedrooms are his. 
+Considered Correct: True
+
+Predicted: neutral | a child holds sparklers in the dark.
+A child holds sparklers in the dark. A child holds bright sparklers in the dark.
+Correct: neutral | Sparklers might not have been lit in which case it cannot be claimed that the child is holding bright sparklers. [SEP] Not all sparklers are bright. [SEP] Not all sparklers are bright. 
+Considered Correct: True
+
+Predicted: neutral | two families are having a picnic at the park.
+Two families on a picnic with green grass. Friends are having a picnic at the park.
+Correct: neutral | Just because there are two families on a picnic does not mean they are all friends, and green grass exists in places other than just a park. [SEP] Having a picnic doesn't specifically mean they are at the park [SEP] Just because two families on a picnic with green grass doesn't mean they are at the park. 
+Considered Correct: True
+
+Predicted: contradiction | the helmet is not a helmet and the horse is not a horse.
+girl with helmet riding a brown horse The girl is wearing tall boots.
+Correct: neutral | You can not infer the girl is wearing boots. [SEP] Girl with helmet riding a brown horse says nothing of her footwear or boots [SEP] Not all girls wear tall boots. 
+Considered Correct: False
+
+Predicted: neutral | the river is a dangerous one and the people are wading in a gorge.
+Several people are wading in a river in a deep gorge. Several people are wading ina  dangerous river that may cost them their lives.
+Correct: neutral | People wading in a river in a deep gorge does not infer that the people are wading in a dangerous river that may cost them their lives. [SEP] In the first sentence it does not reference the river as being dangerous. [SEP] A river in a deep gorge may not be dangerous and it may not cost them their lives. 
+Considered Correct: True
+
+Predicted: contradiction | a police officer watches a situation closely.
+A gentleman overlooking a neighborhood situation. A police officer watches a situation closely.
+Correct: neutral | A gentleman may or may not be a police officer. [SEP] A gentleman overlooking a neighborhood situation doesn't have to be a police officer. A person can look at a situation casually or with some other frame of mind, and doesn't have to be looking at the situation closely. [SEP] A gentleman overlooking a neighborhood situation doesn't imply that a police officer watches a situation closely. 
+Considered Correct: False
+
+Predicted: neutral | a policeman is not directing people away from a crime scene.
+A policeman is directing a crowd of people walking. A policeman is keeping people away from a crime scene.
+Correct: neutral | directing doesn't mean keeping people away [SEP] We have no idea if he is keeping people away from a crime scene, police direct traffic and people for a number of reasons. [SEP] Policemen direct crowds in many situations, not only to keep them away from a crime scene. 
+Considered Correct: True
+
+Predicted: neutral | military man sitting on a netted armed vehicle is not a military vehicle.
+Attractive military man with weapons and ammunition sitting on top of a netted armed vehicle. Military man sits on armed vehicle in the Middle East.
+Correct: neutral | You can not infer he is in the military. [SEP] Just because attractive military man with weapons and ammunition sitting on top of a netted armed vehicle, doesn't mean they are in the Middle East. [SEP] Not every military man and armed vehicle is in the Middle East. 
+Considered Correct: True
+
+Predicted: neutral | walking in a big city is not a walking in a big city.
+Reflections of people walking in a big city. A group of workers walk to their downtown jobs.
+Correct: neutral | Not all people walking in a big city work downtown. [SEP] Just because there are reflections of people walking does not mean they are walking to their downtown jobs. [SEP] Walking in a big city does not mean they walk to their downtown jobs. 
+Considered Correct: True
+
+Predicted: neutral | the elephants are not part of a jungle tour.
+Three elephants, each carrying a group of people, walking through the water. The elephants are part of a jungle tour.
+Correct: neutral | Elephants can carry people without being apart of a jungle tour. [SEP] Just because people are riding elephants does not mean they are in a jungle tour. [SEP] Not all elephants are for a jungle tour. 
+Considered Correct: True
+
+Predicted: neutral | a fireman is not a fireman.
+A fireman is on a ladder leaning on a charred and smoking house. a fireman on a ladder is trying to find survivors
+Correct: neutral | You can not infer he is trying to find survivors. [SEP] Leaning on a charred and smoking house does not mean he is trying to find survivors [SEP] Just because leaning on a charred and smoking house does not necessarily mean trying to find survivors. 
+Considered Correct: True
+
+Predicted: neutral | a woman sitting in a bathing suit with three bags and a bottle is not a woman sitting in a bathing suit.
+a woman siting in a black polka dot bathing suit top, and blue high waist underwear bottoms sitting in the sidewalk with three bags and a green bottle. A woman looks odd sitting on the sidewalk with several bags and a bottle while wearing a bathing suit.
+Correct: neutral | Just because she is sitting in the sidewalk doesn't mean she looks odd. [SEP] Just because a woman siting in a black polka dot bathing suit top, and blue high waist underwear bottoms sitting in the sidewalk with three bags and a green bottle, doesn't mean she looks odd. [SEP] A woman siting in a black polka dot bathing suit top, and blue high waist underwear bottoms sitting in the sidewalk with three bags and a green bottle does not necessarily look odd. 
+Considered Correct: True
+
+Predicted: neutral | students watch their school's mascot
+A team in yellow, red, and blue jerseys sit next to a road and watch a tiger mascot. Students watch their school's mascot.
+Correct: neutral | You can not infer it's their school's. [SEP] We have no idea if they are students, they could be anyone. [SEP] All teams are not students.  Watching a mascot does not imply the mascot belongs to their school. 
+Considered Correct: True
+
+Predicted: neutral | a girl holds flowers on the sidewalk
+A little girl wearing a tan sundress with a bow in the back holds a bouquet of flowers on the sidewalk. A girl holds flowers for her mother on the sidewalk
+Correct: neutral | it is unclear if the flowers are in a bouquet. It is unclear that the flowers are for her mother. [SEP] Just because a little girl is holding a bouquet if flowers does not mean that those flowers are for her mother. [SEP] Just because the girl is holding a bouquet of flowers doesn't necessarily mean they are for her mother. 
+Considered Correct: True
+
+Predicted: entailment | a man in an orange vest is waiting at a train station.
+A man in an orange vest is waiting at a train station. A man is sitting outside a train station.
+Correct: neutral | A person waiting at a train station is not necessarily sitting. [SEP] A man is waiting at a train station doesn't mean he is sitting outside a train station. [SEP] The man could be standing or sitting. The fact that he's sitting is new information. 
+Considered Correct: False
+
+Predicted: neutral | the kids are not playing a song.
+A marching band of kids while at a rodeo. The kids are playing a song.
+Correct: neutral | You can not infer they are playing a song. [SEP] Just because a marching band of kids while at a rodeo doesn't mean the kids are playing a song. [SEP] A marching band doesn't imply playing a song. 
+Considered Correct: True
+
+Predicted: neutral | the female has on black shoes and a black shirt.
+A woman in the street with a black shirt and stars with her mouth open. The female has on black shoes.
+Correct: neutral | having a black shirt on doesn't mean her shoes will also be black [SEP] Wearing a black shirt doesn't imply that you are also wearing black shoes. [SEP] Just because a woman in the street with a black shirt and stars with her mouth open, doesn't mean she has black shoes. 
+Considered Correct: True
+
+Predicted: neutral | two jazzwomen improvise together.
+Two white-haired women, both wearing hats, play saxophones while standing in front of a pair of landscape paintings. Two jazzwomen improvise together.
+Correct: neutral | Just because two women wearing hats are playing saxophones does not mean they are jazzwomen, nor that they improvise together. [SEP] Not all women play saxophones are necessarily be jazzwomen. Not all women play saxophones improvise. [SEP] Just because women play saxophones while standing it does not mean they are jazzwomen or that they improvise together. 
+Considered Correct: True
+
+Predicted: entailment | a man is reading documents in a binder.
+A white-haired man in a white shirt looks at information in an orange-red binder. A man is reading documents in a binder.
+Correct: neutral | You can not infer he is reading the documents. [SEP] Just because a man looks at information it does not mean the man is reading documents in a binder. [SEP] just because he look at information in a binder doesn't mean he is reading the same color binder 
+Considered Correct: False
+
+Predicted: neutral | the car is not a wreck.
+An old dusty car is half way in the brown water. Someone wrecked their car a long time ago.
+Correct: neutral | You can not infer the car was wrecked. [SEP] old dusty car doesn't imply it got wrecked long time ago [SEP] Being old and dusty doesn't mean the car is wrecked. 
+Considered Correct: True
+
+Predicted: neutral | the woman walking next to the boy is tall.
+A young boy carries a green, white, and red flag and walks next to a woman. The woman walking next to the boy carrying the flag is tall.
+Correct: neutral | Not all women are tall. [SEP] Not all flags are tall. [SEP] Not all women are tall, just because they're walking next to a young boy. 
+Considered Correct: True
+
+Predicted: neutral | the people are standing in the rain waiting for a bus.
+Two girls and one women stand in the pouring rain. The people are standing in the rain waiting for a bus.
+Correct: neutral | We dont know know the composition of the group of people standing on the pouring rain. [SEP] Just because the 2 girls and 1 woman are waiting in the pouring rain does not mean they are waiting for a bus. [SEP] The word people doesn't necessarily mean two girls and one woman. 
+Considered Correct: True
+
+Predicted: neutral | the boy is ten years old and catches a Frisbee outdoors.
+A young boy wearing a military sunhat catches a Frisbee outdoors. the boy is ten years old
+Correct: neutral | Young boy deosn't necessarily mean he needs to be 10 years old. [SEP] A boy of ten or any age can catch a frisbee [SEP] Young boy implies a wide age range, more than just ten years old. 
+Considered Correct: True
+
+Predicted: neutral | a tall baseball player is not a tall baseball player.
+A baseball player sliding toward second base. A tall baseball player sliding toward second base.
+Correct: neutral | He may be tall or short [SEP] doesn't state whether the baseball player is either tall or short. [SEP] Not all baseball player is tall. 
+Considered Correct: True
+
+Predicted: neutral | the athletes must perform certain moves for the judge.
+An athlete executes a judo throw while a judge watches. The athletes must perform certain moves for the judge.
+Correct: neutral | The athlete may perform different kinds of moves in freestyle o their choice [SEP] We have no idea if they must perform certain moves, they might be able to choose the moves the perform. [SEP] Just because a athlete is performing for a judge does not mean that they must perform certain moves. 
+Considered Correct: True
+
+Predicted: neutral | the rescue diver is not a man.
+A rescue diver just getting out of the dirty water. The rescue diver has rescued a young boy from the muddy river.
+Correct: neutral | Not all rescuers have just rescued a young boy. [SEP] Just because the water is dirty does not mean there is someone that has to be rescued. [SEP] The fact that a rescue diver is getting out of dirty water does not imply that they have just rescued a young boy, or that they are getting out of a muddy river.  The water could be dirty in another way other than muddy, and it may be water other than a river. 
+Considered Correct: True
+
+Predicted: contradiction | the woman is wearing shorts and the man is wearing a shirt.
+A young man in a black shirt and an elderly woman in a pink shirt sitting on a train together. The man is wearing shorts.
+Correct: neutral | The man might not be wearing shorts. [SEP] The man sitting on the train could be wearing long pants in sentence one. [SEP] The sentence never describes anything being worn on the bottom half of either person's body. They could be wearing shorts, pants, underwear, or other possibilities. 
+Considered Correct: False
+
+Predicted: neutral | a dog with a muzzle is not a mean dog.
+A brown dog with a blue muzzle is running on green grass. A mean dog is wearing a muzzle to keep it from attacking cats.
+Correct: neutral | Not all brown dogs running on grass are mean. A dog wearing a muzzle is not necessarily wearing it to keep the dog from attacking cats. [SEP] The dog could be attacking anything or just being trained, it may not be attacking cats ever. [SEP] Just because the dog is wearing a muzzle doesn't mean it's mean or attacking cats. It could be barking too much. 
+Considered Correct: True
+
+Predicted: neutral | the man is not a race car driver.
+A man is taking pictures hanging outside of a red rally car. The man is a race car driver.
+Correct: neutral | A man taking pictures outside of the racing car does not necessarily mean he is a driver. [SEP] A man does not necessarily have to be a race car driver to drive a rally car. [SEP] Hanging outside of a red rally car does not mean that the man is a race car driver. 
+Considered Correct: True
+
+Predicted: neutral | it is not the lady's birthday.
+A lady in a red sweatshirt opening a present. It is the lady's birthday.
+Correct: neutral | Just because a lady is opening a present doesn't mean it is the lady's birthday. [SEP] Just because a lady in a red sweatshirt opening a present, doesn't mean it is the lady's birthday. [SEP] You can not infer  it's her birthday. 
+Considered Correct: True
+
+Predicted: neutral | the men are not dancing to show off for their wives.
+A group of men dancing outside. The men practice the salsa to show off for their wives.
+Correct: neutral | We do not know if they are dancing the salsa or another dance, and we do not know if they are doing it practice or to show off for their wives [SEP] Just because a group of men dancing outside, doesn't mean they practice the salsa. [SEP] It can be other style of dance other than salsa. Just because the men are dancing does not mean they want to show off for their wives. 
+Considered Correct: True
+
+Predicted: neutral | the woman is not a street vendor.
+A woman in a purple shirt buying food from a street vendor. A woman buys some fruit from a street vendor.
+Correct: neutral | You can not infer she buys fruit. [SEP] Just because a woman in a purple shirt buying food from a street vendor does not mean she buys some fruit. [SEP] Food can be any number of items, fruit is a specific item. 
+Considered Correct: True
+
+Predicted: neutral | the woman is not singing in a band.
+A young woman is singing into a microphone. The woman is in a band.
+Correct: neutral | Singing into a microphone does not mean in a band. [SEP] Singing into a microphone does not mean the woman is in a band. [SEP] A woman who is not in a band may sing into a microphone. 
+Considered Correct: True
+
+Predicted: contradiction | the women walking in the area of destitution are not women.
+two women walking in an area of destitution. Two FEMA workers walk down the street of the once beautiful suburban neighborhood, surveying the damage from the storm.
+Correct: neutral | women doesn't mean fema workers [SEP] Not all women are FEMA workers [SEP] Just because an area is destitute doesn't mean that it has been damaged from a storm. 
+Considered Correct: False
+
+Predicted: neutral | the man is not playing a violin
+A man playing a unique violin while looking up at the ceiling. The man is trying to remember which song to play next.
+Correct: neutral | Playing a violin while looking up at the ceiling does not necessarily mean trying to remember which song to play next. [SEP] Just because the man is looking up at the ceiling doesn't mean he's trying to remember anything [SEP] Just because a man playing a unique violin while looking up at the ceiling, doesn't mean the man is trying to remember which song to play next. 
+Considered Correct: True
+
+Predicted: contradiction | a pitcher throws a strike
+A left-handed pitcher wearing the number 40 is throwing a ball to a catcher. he throws a strike
+Correct: neutral | Just because the pitcher is throwing a ball that does not mean he threw a strike. [SEP] There is no mention of a batter in sentence one. For the pitcher to throw a strike, a batter has to swing and miss an oncoming ball. Sentence one states that the ball is being thrown to the catcher, which would indicate that there is no batter on the mound. [SEP] Just because a left-handed pitcher wearing the number 40 is throwing a ball to a catcher doesn't mean he throws a strike. 
+Considered Correct: False
+
+Predicted: neutral | the boy is not waiting to surprise a friend.
+A little boy in a striped shirt is standing behind a tree. The boy is waiting to surprise a friend.
+Correct: neutral | A little boy standing behind a tree is not necessarily doing so in order to surprise a friend. [SEP] Just because a boy is standing behind a tree does not mean he is waiting to surprise a friend. [SEP] The boy is not necessarily waiting to surprise a friend. 
+Considered Correct: True
+
+Predicted: neutral | two people are dressed up as zombies.
+three people posing for the picture with big smiles and blood on the faces of two people Three people posing for a picture with smiles and two are dressed up as zombies.
+Correct: neutral | Not everyone who has blood on their face is dressed as zombies. [SEP] Just because they have blood on their faces does not mean they are dressed as zombies. [SEP] Having blood on their faces does not mean they are dressed as zombies. 
+Considered Correct: True
+
+Predicted: neutral | children are playing with a mortar and pistal.
+children are playing with a mortar and pistil Kids are making mud in a pistal.
+Correct: neutral | Just because children are playing with a mortar and pistil doesn't mean they are making mud. [SEP] The fact that children are playing with a mortar and pistil doesn't imply that they are making mud in the pistil. [SEP] Just because the kids are playing with a mortar and pistil doesn't mean they are playing with mud. 
+Considered Correct: True
+
+Predicted: neutral | the dog is playing with a stick on the beach.
+The brown German shepherd dog is playing with a stick. The dog is playing with a stick on the beach.
+Correct: neutral | A dog playing with a stick is not assumed to be on the beach. [SEP] A dog doesn't need to play with a stick on the beach. [SEP] The dog could be any kind of dog and doesn't mean it is the same dog. 
+Considered Correct: True
+
+Predicted: neutral | the people are coworkers.
+Four people dine at a restaurant. the people are coworkers
+Correct: neutral | They might not be coworkers. [SEP] Just because people dine at a restaurant it does not mean people are coworkers. [SEP] Just being together at a restaurant does not imply that they are coworkers. 
+Considered Correct: True
+
+Predicted: entailment | a person is playing ice hockey with snow in the background.
+A man with a mustache is playing ice hockey with snow in the background. A person is practicing hockey.
+Correct: neutral | Not every person is a man with a mustache. [SEP] Practicing is not implied by playing ice hockey. [SEP] Just because the man is playing hockey does not mean he is practicing. 
+Considered Correct: False
+
+Predicted: neutral | the team is racing a race.
+Race team in black t-shirt service their red and white car. The team is racing a race.
+Correct: neutral | Just because the race team are in black and red car doesn't mean they are racing a race. [SEP] We have no idea if they are in a race, they could be doing it for a number of reasons. [SEP] Not all team that service their red and white car is racing a car. 
+Considered Correct: True
+
+Predicted: neutral | dancing together in the rain is not a dance.
+A man and women are dancing together on the street. A man and woman are dancing together in the rain.
+Correct: neutral | Dancing on the street does not imply that is in the rain. [SEP] Just because the man and woman are on the street, that does not mean that the weather calls for rain. [SEP] Just because on the street does not mean in the rain. 
+Considered Correct: True
+
+Predicted: neutral | the boys are not on a waterslide.
+Three boys wearing life jackets are on top of innertube in the water. Three boys have just been down a waterslide.
+Correct: neutral | Wearing life jackets on an innertube does not mean the boys have gone down a waterslide. [SEP] Three boys wearing life jackets on top of innertube in the water doesn't necessarily mean they  have just been down a waterslide. [SEP] Being on innertubes and wearing life jackets does not mean the boys have been on a waterslide. 
+Considered Correct: True
+
+Predicted: neutral | the men are fighting over a girl.
+Bald man in white and black shorts, punching man with black hair, and red, orange and blue shorts. The men are fighting over a girl.
+Correct: neutral | Punching doesn't imply fighting and nothing says there's a girl. [SEP] Not all fighting between men are fighting over a girl. [SEP] Just because a bald man in white and black shorts, punching man with black hair, and red, orange and blue shorts does not mean they are fighting over a girl. 
+Considered Correct: True
+
+Predicted: contradiction | a man is playing ice hockey with snow in the background.
+A man with a mustache is playing ice hockey with snow in the background. A man is on a frozen lake.
+Correct: neutral | You can not infer the lake is frozen. [SEP] A frozen lake can not be assumed from a man playing ice hockey with snow in the background. [SEP] A man could be playing ice hockey on a manmade outdoor rink, not a frozen lake. 
+Considered Correct: False
+
+Predicted: neutral | the white dog is pulling the rope
+a white dog is tugging on a black rope The white dog is trained to pull the rope.
+Correct: neutral | You can not infer the dog is trained. [SEP] Just because a white dog is tugging on a black rope doesn't mean the dog is trained to pull the rope. [SEP] It can't be assumed the dog is trained to pull the rope. 
+Considered Correct: True
+
+Predicted: neutral | a great man making music is a great man singing.
+man wearing a harmonica playing the guitar and singing A great man making music.
+Correct: neutral | The man playing music might not be great. [SEP] Wearing a harmonica, playing a guitar and singing implies the man is making music but it doesn't indicate that he is a great man [SEP] It is not known if the man is great. 
+Considered Correct: True
+
+Predicted: entailment | children play outside on a playground while their mother is sitting down.
+Three children play with a giant sphere on a playground while an adult sits on a bench reading the newspaper. Some kids are playing outside on a playground while their mother is sitting down.
+Correct: neutral | The adult may be unrelated to the children and might be their father rather than their mother. [SEP] The adult sitting on a bench while the children play does not necessarily mean the adult is their mother. [SEP] There is not mention that the sphere is outside and an adutl may not be their mother. 
+Considered Correct: False
+
+Predicted: entailment | two people hugging is a hug.
+These two people in hats are standing on rocky terrain, with their arms around each other. Two people are hugging.
+Correct: neutral | Hugging isn't the only action done with arms. [SEP] Although their arms are around each other, it does not mean they are hugging. [SEP] two people in hats  standing on rocky terrain, with their arms around each other doesn't mean that Two people are hugging. 
+Considered Correct: False
+
+Predicted: neutral | the tunnel is a green tunnel and the boy is wearing a green shirt.
+A young boy is sitting in a green tunnel The boy is wearing a green shirt
+Correct: neutral | The boy could have been wearing any color shirt instead of a green one. [SEP] A boy sitting in a green tunnel doesn't always wear a green shirt. [SEP] A boy in a tunnel doesn't always has to be on a green shirt. 
+Considered Correct: True
+
+Predicted: neutral | two men are fixing a yellow house.
+Two men wearing brown hats are doing work on a yellow house. Some men are fixing an old lady's house.
+Correct: neutral | house didn't have to be an old lady's [SEP] Just because they are doing work does not necessarily mean they are fixing the house. [SEP] Doing work doesn't have to mean fixing, for example they could be demolishing the house. The first sentence says nothing about who the house belongs to, or mention anything about old lady's. 
+Considered Correct: True
+
+Predicted: contradiction | two girls are walking in car wash parking lot.
+Two girls are walking in car wash parking lot. Two girls drop of their car to be washed.
+Correct: neutral | Just because two girls are walking in a car wash parking lot doesn't mean they drop of their car [SEP] It is not necessary they drop car for wash there [SEP] Walking in the car wash parking lot doesn't mean the girls are will drop of their car to be washed. 
+Considered Correct: False
+
+Predicted: entailment | a child is learning to swim.
+Five people are in a swimming pool 3 ft. deep while there is a child on the side with blue shorts on and read floaties getting ready to jump in. A child is learning to swim.
+Correct: neutral | A child wearing floaties may not be learning to swim. [SEP] Just because the child is in the pool with floaties on does not mean he is learning to swim. [SEP] The child isn't necessarily there learning how to swim just because he is ready to jump in the pool. 
+Considered Correct: False
+
+Predicted: neutral | three girls taking cover under their umbrellas is not a funny thing.
+three girls take cover under their umbrellas. Funny girls taking cover.
+Correct: neutral | Taking cover doesn't make you funny. [SEP] We know nothing about the girls funny personalities. [SEP] Not all girls are funny. 
+Considered Correct: True
+
+Predicted: entailment | a man is making a glass jar.
+The older man in a dark blue shirt is using tools to make glass before putting them into a heated kiln. A man is making a glass jar.
+Correct: neutral | There is no way to infer that the glass being made is a jar. It could be a bowl or plate or anything else. [SEP] A person can make glass into a number of shapes and not just in the shape of a glass jar. [SEP] A man is using tools to make glass before putting them into a heated kiln don't necessarily imply that the man is making a glass jar. 
+Considered Correct: False
+
+Predicted: neutral | a baby in a bib makes a funny face at the camera.
+A baby wearing a bib makes a funny face at the camera. A baby girl in a bib makes a funny face at her mom's camera.
+Correct: neutral | Not all babies are girl. The camera might not be the mom's. [SEP] Just because a baby wearing a bib makes a funny face at the camera it does not mean it is her mom's camera. [SEP] All babies are not girls and the all cameras are not necessarily a mom's. 
+Considered Correct: True
+
+Predicted: neutral | the drums are not playing songs.
+A man in the street is playing drums on old cans. The homeless man is playing songs
+Correct: neutral | Not all street musicians are homeless. [SEP] Not all men are homeless. [SEP] Not every man hanging out in the street is homeless. 
+Considered Correct: True
+
+Predicted: neutral | a group of dancers is not a group of people.
+A group of dancers with green shirts are all holding hands in a circle, one lady has a white shirt. A group of dancers is about to dance for a school competition
+Correct: neutral | group of dancers holding hands in circle doesn't necessarily mean that they are about to dance for a school competition [SEP] These dancers may be standing but not be about to dance. This may not involve a school competition. [SEP] There is no indication that the dancers are preparing for a school competition. 
+Considered Correct: True
+
+Predicted: neutral | the man in jeans is sitting by the river with large fish.
+the man in jeans is sitting by the river with large fish. A man in jeans is sitting by a river with large koi fish.
+Correct: neutral | All large fish don't have to be koi. [SEP] You can not infer there is a koi fish. [SEP] A man is not necessarily the man. 
+Considered Correct: True
+
+Predicted: neutral | a welder is not working on a concrete ruble
+A welder is working outside by some concrete ruble A welder is attaching two pieces of metal to each other
+Correct: neutral | The welder may be taking measurement or be cutting a piece of metal for his work and not attaching anything. [SEP] A welder attaching two pieces of metal to each other doesn't necessarily mean they are working by concrete ruble. [SEP] A welder is not necessarily attaching two pieces together. 
+Considered Correct: True
+
+Predicted: neutral | a skateboarder can go down a railing without going down a wall.
+A skateboarder goes down a railing. A skateboarder finally succeeds in going down a railing after many tries.
+Correct: neutral | The fact that skateboarder  goes down a railing does not imply that he succeeded in doing so only after many tries. [SEP] Goes down a railing doesn't imply skateboarder did it after many tries. [SEP] Sentence 1 doesn't say the skateboarder has ever tried going down a railing before the current time. Therefore we don't know that he's only accomplished this after many tries. 
+Considered Correct: True
+
+Predicted: neutral | the woman is not posing next to her sister on halloween
+A woman with a pink tank top and two different shoes poses for a picture with another woman wearing a purple wig, black cowboy hat, american flag bikini and high heeled boots. A woman poses next to her sister on halloween.
+Correct: neutral | The woman next to her could be anyone other than a sister. [SEP] Two women posing in eccentric outfits does not imply they are siblings nor that it is Halloween. [SEP] We do not know it is her sister on halloween. We do not know they are sisters,  nor do we know why they are dressed up in strange outfits. 
+Considered Correct: True
+
+Predicted: neutral | the crew shells are passing under marker 7 and the nearest shell is in front by a good margin.
+The crew shells are passing under marker 7, with the nearest shell in front by a good margin. a race of some sort is underway
+Correct: neutral | You can not infer there is a race. [SEP] The first sentence could be describing a variety of activities with markers, not necessarily a race. [SEP] There are two shells moving in one direction, but that doesn't necessarily mean the two are in a race or that one is underway. 
+Considered Correct: True
+
+Predicted: neutral | the city is huge.
+Children walk in the city. The city is huge
+Correct: neutral | Just because a place is a city, it doesn't follow that the city is huge -- some cities are small. [SEP] We have no idea if the city is huge or not, it could be a small city. [SEP] Just because children walk in the city it does not mean the city is huge. 
+Considered Correct: True
+
+Predicted: entailment | a mother and her two children are resting.
+A mother and her two children sit down to rest. A mother and her daughters are resting.
+Correct: neutral | The children may be sons or daughters. [SEP] Two children does not necessarily mean both are daughters [SEP] A mother resting with her two children doesn't necessary mean that they are daughters. 
+Considered Correct: False
+
+Predicted: neutral | dance is not a dance.
+A man and woman dance together. A man and woman dance together to their favorite song.
+Correct: neutral | When a man and a woman dance together it need not be for their FAVORITE song. [SEP] Just because the man and woman are dancing together does not mean it is their favorite song. [SEP] Not all songs are a favorite song. 
+Considered Correct: True
+
+Predicted: neutral | the man is not a photographer and he is not a photographer.
+A man poses for a photo in front of a Chinese building by jumping. The man has experience in taking photos.
+Correct: neutral | A man posing for a photo is not assumed to have experience in taking photos. [SEP] Just because a man poses for a photo in front of a Chinese building by jumping does not mean he has experience in taking photos. [SEP] Not everyone has experience taking photos. 
+Considered Correct: True
+
+Predicted: neutral | the man is not going to sell the video games.
+A smiling man wearing a football jersey is carrying a stack of video games. The man is going to sell the video games
+Correct: neutral | Carrying a stack of video games does not imply the man is going to sell them. [SEP] Just because a man is carrying video games does not mean he is going to sell them. [SEP] Carrying video games doesn't imply going to sell. 
+Considered Correct: True
+
+Predicted: neutral | a man is a professional baseball player.
+Guy hitting a baseball in a field of grass outside. A man is a professional baseball player.
+Correct: neutral | There is no indication that he is a professional in the first sentence [SEP] Hitting a baseball in a field of grass doesn't mean you're a baseball player let alone a professional one. [SEP] A guy hitting a baseball on a field is not necessarily a professional player. 
+Considered Correct: True
+
+Predicted: neutral | they are not drinking beer
+Two men and three women are sitting at a rectangular wooden table drinking beer from glasses of various shapes. A group of people having drinks while they discuss a future business plan.
+Correct: neutral | They two men and three when drinking beer are not necessarily discussing a future business plan over beers. [SEP] Two men and three women sitting at a rectangular wooden table drinking beer from glasses of various shapes  doesn't mean they are there to discuss a future business plan. [SEP] A group of people could drink beer together and not be discussing a future business plan. 
+Considered Correct: True
+
+Predicted: neutral | the man is not talking to his kid.
+Man on cellphone walking in front of silver car next to green grass. The man is talking to his kid.
+Correct: neutral | The man doesn't have to be talking to his kid to be on a cellphone. [SEP] Man on cellphone walking in front of silver car next to green grass doesn't mean that the man is talking to his kid. [SEP] The man could have been talking to anyone other than his kid. 
+Considered Correct: True
+
+Predicted: neutral | the man in black and red is not a player.
+Two men playing baseball with the one in the black and red jersey running toward base. The man in black and red is about to score the winning run.
+Correct: neutral | Baseball consists of people running the bases all game, the winning run can only happen once per game. [SEP] Just because he is running toward base, doesn't mean he is about to score the winning run. [SEP] Not every home run scored in a game is the winning run.  Also, not every base on the field is home base. 
+Considered Correct: True
+
+Predicted: neutral | they are not playing on the ground.
+Two male curling players are on ice sweeping the path in front of polished rock, a small crowd watches. Several individual and cleaning the ice so they can play curling iron on the ground
+Correct: neutral | Several could mean more than 2 people and clearing a path doesn't mean they are going to play. [SEP] Just because curling players are cleaning the ice does not mean it is so they can play. [SEP] One cannot know for certain why that they are sweeping the ice so they can play; there may be another reason. 
+Considered Correct: True
+
+Predicted: neutral | a father is carrying a child while holding an umbrella.
+A man is carrying a child while holding a red and blue umbrella. A father carries his child, holding an umbrella to keep the rain away.
+Correct: neutral | The man may not be the father of the child [SEP] Just because the man is carrying a child does not necessarily mean he is the father, holding an umbrella does not necessarily mean someone is trying to keep the rain away [SEP] Just because holding umbrella does not mean to keep the rain away. 
+Considered Correct: True
+
+Predicted: neutral | the roof is high in the air.
+A maroon car with many decals and signs topped with a gray bundle tied to the roof near the drivers door is a man leaning on the car. The roof is high in the air.
+Correct: neutral | A car roof is not high in the air. [SEP] Not all cars have high roofs. [SEP] Although a gray bundle is tied to the roof, it does not mean the roof is high in the air. 
+Considered Correct: True
+
+Predicted: entailment | a man reading a book while working as a street vendor is not a break from his job.
+Man reading a book while working as a street vendor. A man takes a break from his job to read.
+Correct: neutral | The man could be reading while working, that doesn't mean he is taking a break just because he is reading. [SEP] he takes not a break from his job [SEP] You can't take a break while working at the same time. 
+Considered Correct: False
+
+Predicted: neutral | a couple is romantic.
+A couple being romantic under the sunset. A man and a woman touching each other  looking at the sunset.
+Correct: neutral | couple doesn't mean man and woman [SEP] The man and woman may not be looking at the sunset. [SEP] A couple being romantic, doesn't suggest they are touching and looking at the sunset. 
+Considered Correct: True
+
+Predicted: neutral | the man is painting a store sign.
+A man painting in front of a storefront, his paintings are displayed. The man is painting a store sign.
+Correct: neutral | Just because a man is painting in front of a store does not mean that it is a store sign. [SEP] Painting in front of a storefront does not imply the man is painting a store sign. [SEP] We do not know he is painting a store sign. He could be painting anything standing there. 
+Considered Correct: True
+
+Predicted: neutral | the little boy is not swimming in a pool with his arm floaties.
+A little boy learning to swim in a pool with his arm floaties. The little boy is learning to swim at a group lesson teaching children in the community pool.
+Correct: neutral | Just because the boy is learning to swim doesn't mean he is learning in a group lesson. [SEP] No all boys learn to swim at a group lesson. Not all boys learn to swim in the community pool. [SEP] The fact the boy is learning to swim doesn't imply he is doing it in a group lesson teaching children or at a community pool. 
+Considered Correct: True
+
+Predicted: neutral | the boy is not hugging a person in bee costume.
+Small boy hugged by person in bee costume, blurry urban background. The boy is at a birthday party and giving a hug.
+Correct: neutral | The boy isn't necessarily at a birthday party. [SEP] Just because the boy is hugging a person in a costume, it does not necessarily mean he is at a birthday party. [SEP] Small boys in bee costumes are not required to be at birthday parties. 
+Considered Correct: True
+
+Predicted: neutral | the bathing suits are blue.
+Men and women in swimsuits hangout on rocks above water. The bathing suits are blue.
+Correct: neutral | You can not infer the suits are blue. [SEP] Not all bathing suits are blue. [SEP] Swimsuits are not necessarily blue. 
+Considered Correct: True
+
+Predicted: contradiction | a surfer is riding a tsunami wave.
+A surfer is surfing catches a wave. A surfer is riding a tsunami wave.
+Correct: neutral | You can not infer it's a tsunami. [SEP] Not all waves are tsunami waves. [SEP] The wave is just a wave according to sentence one. A tsunami sized wave is not implied. 
+Considered Correct: False
+
+Predicted: neutral | a crowd is watching two shirtless men perform a dramatic performance of MacBeth.
+A crowd is watching 2 shirtless men, one in yellow pants and one in black shorts perfom. A crowd watches two shirtless men stage a dramatic peformance of MacBeth.
+Correct: neutral | men could've been performing anything other than macbeth [SEP] Just because they are performing does not mean that they are performing MacBeth. [SEP] Just because a crowd is watching 2 shirtless men, one in yellow pants and one in black shorts perform does not mean they are doing a dramatic performance of MacBeth. 
+Considered Correct: True
+
+Predicted: neutral | kites are not a flying object.
+A large amount of persons flying kites in a park. a lot of kids are dlying kites on easter.
+Correct: neutral | Just because there is a large amount of people does not mean there are a lot of kids. Just because they are flying kites in the park does not mean that they are flying kites on easter. [SEP] Kids are not only people that fly kites. People can fly kites on days other than Easter. [SEP] A large amount of persons does not mean that it is a lot of kids.  Flying kites does not mean they are flying them on easter. 
+Considered Correct: True
+
+Predicted: neutral | the boys are all wearing yellow t-shirts and smiling.
+Three young boys one is holding a camera and another is holding a green toy all are wearing t-shirt and smiling. The boys are all wearing yellow.
+Correct: neutral | Boys are not assumed to be wearing yellow. [SEP] We know the boys are all wearing t-shirts, but we do not know the color of those t-shirts. [SEP] Just because three young boys one is holding a camera and another is holding a green toy all are wearing t-shirt and smiling doesn't mean they are wearing yellow. 
+Considered Correct: True
+
+Predicted: neutral | the people are not test driving a car.
+Two women and a man are in a sporty red convertible in front of a large group of people on the sidewalk. The people are test driving a car.
+Correct: neutral | You can not infer they are test driving it. [SEP] Two people driving doesn't mean they were test driving, they could've bought the car already [SEP] Just because two women and a man are in a sporty red convertible in front of a large group of people on the sidewalk, doesn't mean they are test driving a car. 
+Considered Correct: True
+
+Predicted: neutral | a person is climbing a cliff wall, over a rocky shore, using a rope.
+A person is climbing a cliff wall, over a rocky shore, using a rope. A man climbs over treacherous rocks to reach the fishing hole.
+Correct: neutral | The person could be a man or a woman and the rocks aren't necessarily treacherous per the first sentence. Also, it doesn't mention where the person is climbing. [SEP] A man can climb a cliff without necessarily going to a fishing hole. [SEP] The man may not be climbing to reach a fishing hole. 
+Considered Correct: True
+
+Predicted: neutral | a man playing his guitar while looking down is not a good sign.
+A man in a red shirt plays his guitar while looking down. A man practicing a song he wrote
+Correct: neutral | You can not infer he wrote the song. [SEP] Just because a man in a red shirt plays his guitar while looking down, doesn't mean he is practicing a song he wrote. [SEP] Not every song is practiced on a guitar. 
+Considered Correct: True
+
+Predicted: neutral | two people walking together are walking together to the park.
+An old man and a child walk together along a pathway near a building. Two people are walking together to the park.
+Correct: neutral | along a pathway doesn't always mean to the park. [SEP] Walking past a building does not mean someone is going to the park. [SEP] People can walk together and not be in a park. 
+Considered Correct: True
+
+Predicted: neutral | the car is not a car and the people are not looking at it.
+Many people standing around a silver car with the hood raised while a young girl in a yellow shirt and blue jeans drinks from a bottle. A group of buyers inspect a car before it goes on the auction block.
+Correct: neutral | Just because the people are around the car does not mean they are buyers. [SEP] Just because people are around a car with the hood raised does not mean it is a group of buyers or the car is going on the auction block. [SEP] Just because people stand around a car does not mean it goes on the auction block, nor does it mean that the car is being inspected. People may stand around something without inspecting it. 
+Considered Correct: True
+
+Predicted: neutral | the men are gangsters.
+Five men are standing in front of a red curtain. the men are gangsters
+Correct: neutral | Standing in front of a red curtain does not imply that the men are gangsters. [SEP] Men in front of a red curtain are rarely gangsters. [SEP] Not all men are gangsters. 
+Considered Correct: True
+
+Predicted: contradiction | four people are waiting for the bus.
+Three adults and one child are waiting outside of a building, perhaps a school. Four people are waiting for the bus.
+Correct: neutral | Just because people are waiting outside a building does not mean they are waiting for the bus. [SEP] Just because three adults and one child are waiting outside of a building, perhaps a school doesn't mean they are waiting for the bus. [SEP] You cannot infer that the four people waiting outside a building are waiting for the bus. 
+Considered Correct: False
+
+Predicted: contradiction | a cop is not handcuffing someone.
+A police officer standing on a train. A cop is handcuffing someone.
+Correct: neutral | just because he is a policeman does not mean he is handcuffing someone. [SEP] Police officers regularly ride trains and patrol trains. Many are usually not arresting or handcuffing people on trains during that time. [SEP] Just because the officer is standing on a train, doesn't mean he is handcuffing somebody. He could be going to work. 
+Considered Correct: False
+
+Predicted: neutral | the dog is swimming to its owner.
+A light colored dog splashes through the water. The dog is swimming to its owner.
+Correct: neutral | The dog is splashing through the water to a person, this does not indicate this person is the dogs owner. [SEP] Splashing through the water is not swimming. [SEP] Splashes through the water does not necessarily mean swimming to its owner. 
+Considered Correct: True
+
+Predicted: neutral | two women are performing yoga together.
+Two women stand on a beach and perform stretches or yoga together, facing towards the water and away from the camera. One lady is teaching another lady how to do a downward dog pose.
+Correct: neutral | The women could be doing separate poses and could be doing a stretch other than downward dog. [SEP] Performing yoga together does not indicate that one person is teaching the other. [SEP] Two women perform yoga together does not imply on one is teaching another. Yoga has many different poses so they are not necessarily the downward dog pose. 
+Considered Correct: True
+
+Predicted: neutral | people are not picking out the items they want.
+A group of people, men, women and children gathered around a table stacked with merchandise. People are picking out the items they want.
+Correct: neutral | We have no idea the people are picking out the items they want or if they are just looking. [SEP] we cannot determine what the people at the table are  picking out the items they want. [SEP] The group of people around the merchandise may not be picking out items they choose to buy. 
+Considered Correct: True
+
+Predicted: neutral | a man works at a pet shop and a man works at an aquarium.
+A man perched on a row of aquariums is using a net to scoop a fish from another aquarium. A man works at a pet shop.
+Correct: neutral | You can not infer he works at a pet shop. [SEP] Just because a man is scooping a fish from another aquarium does not mean he works at a pet store. [SEP] The man may not work at the location. The aquarium may not be at a pet shop. 
+Considered Correct: True
+
+Predicted: entailment | a woman wading in front of a waterfall is a wet woman.
+An extremely wet woman is wading in front of a waterfall. A dripping wet woman walks in front of a waterfall after swimming.
+Correct: neutral | Being wet does not imply the woman just went swimming. [SEP] A wet woman walks in front of waterfall does not mean she just had swimming. [SEP] Being wet while in front of a waterfall doesn't imply swimming in the water. 
+Considered Correct: False
+
+Predicted: entailment | a man is providing entertainment on the sidewalk by playing classical music.
+A man providing entertainment on the sidewalk by playing the violin. A man is entertaining a crowd by playing classical music on the sidewalk
+Correct: neutral | A man providing entertainment on the sidewalk by playing the violin doesn't imply that a crowd is watching it. A man playing violin doesn't imply that he is playing classical music. [SEP] You can play the violin and not play classical music. [SEP] Just because a man providing entertainment on the sidewalk by playing the violin does not mean he is playing classical music on the sidewalk. 
+Considered Correct: False
+
+Predicted: neutral | the peace corp people are not helping the black kid dig a hole
+A couple of peace corp workers are helping a black kid dig. The peace corp people are helping the black kid dig a hole to find gold.
+Correct: neutral | The people could be digging a structure other than a hole. They are not necessarily looking for gold. [SEP] Just because people are helping a kid dig it does not mean they dig a hole or are looking to find gold. [SEP] Dig does not mean they dig to find gold. 
+Considered Correct: True
+
+Predicted: contradiction | the woman has blond hair and the face-paint is glittery.
+A woman in glittery face-paint and a sequined cap parades with several similarly-dressed individuals in shades of orange and brown. The woman has blond hair.
+Correct: neutral | You can not infer her hair is blond. [SEP] Not all women have blond hair. [SEP] Just because a woman in glittery face-paint and a sequined cap parades with several similarly-dressed individuals in shades of orange and brown, doesn't mean the woman has blond hair. 
+Considered Correct: False
+
+Predicted: neutral | the woman is not at the beach.
+A woman prepares to strike a volleyball. The woman is at the beach.
+Correct: neutral | Volleyball can be played indoors, not just at a beach. [SEP] Not all volleyball game are at the beach. [SEP] The woman playing volleyball may not necessarily be at the beach. 
+Considered Correct: True
+
+Predicted: neutral | the people waiting in line are not in middle school.
+Four people, One male in a blue shirt and slacks with three females, one in pink, one in blue, and the other with a white shirt and blue blouse, in line to enter a yellow school bus, while a female in pink hold paper is on the phone. The people waiting in line are in middle school.
+Correct: neutral | People entering a school bus does not imply they are in middle school, or being required to wait. [SEP] Four people in line to enter a yellow school bus doesn't imply that they are in middle school. [SEP] Students in line to enter a yellow school bus does not imply they are in middle school. 
+Considered Correct: True
+
+Predicted: neutral | the girls are not friends but classmates.
+Three girls are standing together in a room, one is listening, one is writing on a wall and the third is talking to them. The girls are classmates.
+Correct: neutral | Only because girls are standing together in a room doesn't necessarily mean they are classmates. [SEP] Just because the girls are standing in a room together and doing activities that does not mean that they are classmates. [SEP] Three girls can be standing by each other doing different activities without knowing each other at all. The room is also not said to be a classroom. So we don't have enough information to figure out they are classmates. 
+Considered Correct: True
+
+Predicted: contradiction | a woman is not sleeping.
+A woman is talking on the phone while standing next to a dog. A woman is sleeping.
+Correct: contradiction | The woman cannot be both standing and talking on the phone while also sleeping. [SEP] If a woman is talking and standing on the phone then the woman is not sleeping. [SEP] A woman cannot be talking while standing and sleeping. 
+Considered Correct: True
+
+Predicted: contradiction | Asian woman is not running a marathon race.
+A Asian women does her hair Asian woman is running a marathon race.
+Correct: contradiction | The woman who does her hair will not be running a marathon at the same time. [SEP] If a woman does her hair she can't be running a marathon at the same time. [SEP] The woman can not be running and doing her hair at the same time 
+Considered Correct: True
+
+Predicted: contradiction | a woman is pushing a bicycle.
+Man standing on a tricycle riding in front of a crowd. A woman is pushing a bicycle.
+Correct: contradiction | A man is different from a woman.Tricycle and bicycle are different. [SEP] The subject can either be a man on a tricycle or a woman pushing a bicycle, but both cannot be true simultaneously. [SEP] A man and a woman belong to different genders. 
+Considered Correct: True
+
+Predicted: contradiction | a child is not looking at some colorful dresses.
+A child is looking at some colorful dresses. A man is looking at some colorful dresses.
+Correct: contradiction | A child is not a man. [SEP] a child is not a man [SEP] Either a man or a child is looking at dresses. 
+Considered Correct: True
+
+Predicted: contradiction | the children are all sitting down.
+A child holds a football and runs from other children. The children are all sitting down.
+Correct: contradiction | A child can't be running from children who are sitting down [SEP] All the children would not be sitting id one child runs. [SEP] The other children that a child who holds a football and runs from could be sitting down or not, but from the information given it is not clear what they are doing when the child runs away. I do not see a contradiction. 
+Considered Correct: True
+
+Predicted: contradiction | a band playing with fans watching is not the same as a band watching a band.
+A band playing with fans watching. A band watches the fans play
+Correct: contradiction | A band playing with fans watching is the opposite of the band watches while fans play. [SEP] The band can either be playing or watching and the fans can either be playing or watching. [SEP] The band cannot be watching fans play if the fans are watching the band play. 
+Considered Correct: True
+
+Predicted: contradiction | a soup bowl prepares a woman.
+A woman prepares ingredients for a bowl of soup. A soup bowl prepares a woman.
+Correct: contradiction | A soup bowl cannot prepare anything. [SEP] A soup bowl can not prepares a woman. [SEP] A woman cannot be preparing soup while that same soup is preparing her. 
+Considered Correct: True
+
+Predicted: neutral | young people are playing water polo.
+A group of young people with instruments are on stage. Young people are playing water polo.
+Correct: contradiction | The people cannot simultaneously be on stage and be playing water polo [SEP] if the young people are on stage they cannot be playing water polo [SEP] Water polo is not played with instruments on stage. 
+Considered Correct: False
+
+Predicted: contradiction | two rugby players are running through a store and one is running through a store and the other is running through a store.
+Rugby player in blue dives to tackle the ball carrier in white. Two rugby players are running through a store.
+Correct: contradiction | The rugby player are tackling, not running through a store. [SEP] Rugby players do not dive and tackle in a store - they do this on a field [SEP] there can only be two or one rugby player 
+Considered Correct: True
+
+Predicted: contradiction | the kids are not home.
+During this vacation children enjoying their games at the park. The kids are home
+Correct: contradiction | The kids cannot be at home and on vacation at the park at the same time. [SEP] The kids cannot be at home if they are enjoying games at the park. [SEP] Kids cannot be enjoying their games at the park and be at  home simultaneously. 
+Considered Correct: True
+
+Predicted: neutral | the man with dreadlocks on a skateboard is not a buzz cut.
+Man with dreadlocks on a skateboard in the middle of the street. The man with a buzz cut falls off the skateboard.
+Correct: contradiction | A person with dreadlocks cannot have a buzz cut as well. And a person on a skateboard isn't currently falling off yet. [SEP] Dreadlocks are a different hairstyle from a buzz cut. [SEP] If someone has dreadlocks they have long hair, not a buzz cut which is shaved. 
+Considered Correct: False
+
+Predicted: contradiction | the mountain is unclimbable for humans.
+A distant person is climbing up a very sheer mountain. The mountain is unclimbable for humans.
+Correct: contradiction | The person in distant cannot be climbing if the mountain is unclimbable. [SEP] The mountain can either be climbed or be unclimbable. [SEP] one cant climb a mountain which is unclimbable  by humans 
+Considered Correct: True
+
+Predicted: contradiction | the man is not playing the violin.
+Man with mustache plays violin. The man is playing the tuba.
+Correct: contradiction | He cannot play violin and tuba. [SEP] A violin is a different instrument from a tuba. [SEP] Man can be playing either the violin or the tuba 
+Considered Correct: True
+
+Predicted: contradiction | a dog carries a snowball in his mouth.
+A long-haired brown and white dog carries a snowball in his mouth. A dog carries a bone.
+Correct: contradiction | A dog who carriers a snowball will most likely not be able to carry a bone also. [SEP] Carrying a snowball and carrying a bone is totally different. [SEP] Dog carries either a snowball or a bone. 
+Considered Correct: True
+
+Predicted: contradiction | an elevator is not a service elevator.
+Several people wait to checkout inside a store with a warehouse looking ceiling. an elevator being serviced
+Correct: contradiction | The subject is either people or an elevator. [SEP] Servicing an elevator requires, at most, two people not several people. People waiting in a store are not also working on an elevator. [SEP] People checkout and elevator being serviced can;t be same. 
+Considered Correct: True
+
+Predicted: contradiction | people are riding bikes down a country lane.
+A city street with people in front of a mountain back drop. Some people are riding bikes down a country lane.
+Correct: contradiction | The people cannot simultaneously be on a city street and a country lane [SEP] A city street doesn't imply it is in the country. [SEP] A city street is not a country lane. 
+Considered Correct: True
+
+Predicted: contradiction | a man is sitting with his dog if he is standing with his dog.
+A man is sitting with his brown and white dog. A man is standing with his dog
+Correct: contradiction | He can either be sitting or standing. [SEP] A man cannot be sitting and standing at the same time. [SEP] The man is either sitting or standing with his dog 
+Considered Correct: True
+
+Predicted: contradiction | women are walking across the street and men are napping.
+One woman walking across the street, another on sidewalk. Men are napping.
+Correct: contradiction | Two women are not men. Walking cannot be taking place at the same time as napping. [SEP] Men are different from women, and while the men are napping the women are walking. [SEP] One woman walking is not men napping. 
+Considered Correct: True
+
+Predicted: contradiction | a woman swinging a tennis racket on an outdoor court is not the same as playing basketball at the park.
+A woman swinging a tennis racket on an outdoor court. A woman is playing basketball at the park.
+Correct: contradiction | A woman cannot be playing both basketball and tennis at the same time. [SEP] you can either play tennis in a court or basketball in the park but not both. [SEP] One sport is tennis, the other is basketball. 
+Considered Correct: True
+
+Predicted: contradiction | a man in a black shirt is not a man in a white shirt.
+A man in a white shirt is standing in a T-shirt booth. A man in a black shirt getting a tattoo.
+Correct: contradiction | Either the shirt is black or white. [SEP] White and black are two different colors.  You would not get a tattoo at a T-shirt booth. [SEP] white not same as black 
+Considered Correct: True
+
+Predicted: contradiction | a child is not a dog.
+A child in green winter clothes is holding his or her hand up while two other children look at him or her. A child plays with a dog in a field.
+Correct: contradiction | The child can't be holding their hand up while they plays with their dog. [SEP] Holding a hand up denotes being in a classroom and not in a field.  People do not usually play with a dog in a classroom. [SEP] The child is either with two other children or with a dog 
+Considered Correct: True
+
+Predicted: contradiction | girls dive into a pool and a pool dives into a pool.
+Two young girls dressed in pink reach into wishing fountain at mall. Girls dive into a pool.
+Correct: contradiction | Wishing fountain is not a pool [SEP] It is not possible to both reach into an fountain and dive into a pool at the same time. A pool and wishing fountain are completely different objects. [SEP] reach not same as dive 
+Considered Correct: True
+
+Predicted: contradiction | the men are not dressed in red jackets and black pants.
+Two men in yellow jackets and black pants have medals. The men are dressed in solid red jackets and blue pants.
+Correct: contradiction | The men can be wearing either yellow jackets or solid red jackets. One cannot be wearing black pants and blue pants at the same time. [SEP] Yellow jackets are different from solid red jackets. [SEP] The men cannot be dressed in  yellow jackets and black pants, and red jackets and blue pants at the same time. 
+Considered Correct: True
+
+Predicted: contradiction | three girls on bikes are not policemen.
+There are three policemen on bikes making sure that the streets are cleared for the president. Three girls sit on bikes
+Correct: contradiction | There can be either three policemen or three girls. [SEP] Three girls would not be the same as three policemen. [SEP] Girls are not policemen 
+Considered Correct: True
+
+Predicted: contradiction | the women are not talking to each other.
+There are three woman conversing at a table with drinks. The women are ignoring each other
+Correct: contradiction | Women are either conversing or ignoring each other. [SEP] Ignoring and conversing are the opposite of each thing [SEP] Women would not be conversing if they are ignoring each other. 
+Considered Correct: True
+
+Predicted: contradiction | a girl is eating at the cafeteria and not standing at a podium.
+A woman stands at a podium with a slide show behind her. A girl is eating at the cafeteria.
+Correct: contradiction | A girl is not a woman. [SEP] The subject is either a girl or a woman. [SEP] A woman is not a girl. 
+Considered Correct: True
+
+Predicted: contradiction | the man is not standing on the sidewalk.
+A young man is caught in midair while doing a skateboard trick in an urban environment. The man is standing on the sidewalk.
+Correct: contradiction | One cannot be standing and in midair at the same time. [SEP] One can't perform a skateboard trick while standing on the sidewalk. [SEP] A man cannot be doing a skateboard trick and be standing on the sidewalk at the same time. 
+Considered Correct: True
+
+Predicted: contradiction | a construction worker is not eating a sandwich during his lunch break.
+A male construction worker hammers a nail. A construction worker is eating a sandwich during his lunch break.
+Correct: contradiction | Hammering a nail and eating a sandwich are two different activities. [SEP] One cannot hammer and be eating at the same time. [SEP] First he hammers then he is eating? 
+Considered Correct: True
+
+Predicted: contradiction | a couple walking together is not a bicycle.
+Several bicycles parked and a couple walking together. Several bicycles lie smashed on the ground and a couple stands holding sledgehammers.
+Correct: contradiction | The bicycles are not smashed if they are parked and the couple can not stand while holding sledgehammers if they are walking together [SEP] The bikes cannot lie smashed and be parked at the same time. Usually one is not holding sledgehammers while walking. [SEP] Parked indicates that the bikes are undamaged and standing upright while smashed indicates they are broken. 
+Considered Correct: True
+
+Predicted: contradiction | a young kid is not a boy if he is not a girl.
+A young boy with blue shorts, at an indoor pool jumping into the water. a young kid eats a bagel in the pool
+Correct: contradiction | It's implied that the kid is the young boy. He can't be eating a bagel in the pool because he's jumping into the water, which means that he isn't actually in the pool yet. [SEP] A boy cannot be eating a bagel in the pool and jumping into the pool at the same time. [SEP] The boy is either jumping into the pool or is already in the pool, he can't be doing both. 
+Considered Correct: True
+
+Predicted: contradiction | these people are not in the desert.
+Two people are surfing in the ocean. These people are in the desert.
+Correct: contradiction | people are either surfing in the ocean or they are in the desert. [SEP] SURFING CAN BE DONE IN THE OCEAN NOT IN THE DESERT [SEP] The people are in the desert. 
+Considered Correct: True
+
+Predicted: contradiction | they are not selling dogs and children.
+Man in gray zippered jacket and red shirt pets a brown dog and holds a young girl in pink shirt, while a woman next to him holds an infant boy and a gray dog. A woman and man are selling dogs and children.
+Correct: contradiction | holds is not selling [SEP] Holding an infant boy and a grey dog cannot be considered selling dogs and children. [SEP] HOLDING THE CHILDREN AND THE DOG DOES NOT MEAN THAT IT SHOULD BE SELLING. 
+Considered Correct: True
+
+Predicted: contradiction | cabbage is a good thing
+A woman holding a red cup with a straw in it sits in front of a man and a woman looking at a book. Cabbage makes a lovely cumberbund.
+Correct: contradiction | A red cup with a straw in it and a book having nothing to do with cabbage. [SEP] either a women is looking at a book or  she makes a cumberbund cannot do both simultaneously [SEP] a women is a human a cabbage is a vegetable 
+Considered Correct: True
+
+Predicted: contradiction | the hiker is not swimming in a pool.
+A hiker pokes his head out of a tent high in the mountains. The hiker is swimming in a pool.
+Correct: contradiction | The hiker has to be either in the pool or in the tent. [SEP] A person cannot poke their head out of a tent and swim at the same time. [SEP] If the hiker is poking his head out of a tent, he can not be swimming. 
+Considered Correct: True
+
+Predicted: contradiction | the girls play with origami and not eat the paper.
+Two girls play with origami. The girls eat the paper
+Correct: contradiction | Play with vs eat [SEP] either a girls would play with origami. or eats the paper [SEP] when you play with origami you dont eat it 
+Considered Correct: True
+
+Predicted: contradiction | a father and son watch television together.
+A man holds wooden boards together as a young boy drives a nail into them. A father and son watch television together.
+Correct: contradiction | A father and son who watch television cannot hold wooden boards and drive a nail into them. [SEP] If one holds wooden boards and one drives a nail into them, they cannot watch television together at the same time. [SEP] If you watch television you are not working on a project driving nails 
+Considered Correct: True
+
+Predicted: contradiction | the dogs are not jumping on snow covered ground.
+Two black dogs on a snow covered ground, the ground appears blue in the background, one dog is jumping with feet off the ground. The dogs are resting indoors.
+Correct: contradiction | Dogs cannot be on a snow covered ground (which would be outside) and inside simultaneously. Jumping with feet off the ground and resting indoors are two different activities. [SEP] Either the dogs are outside on the snow covered ground or the dogs are indoors resting. [SEP] If the ground is covered with snow that means they're outdoors, it doesn't snow indoors. 
+Considered Correct: True
+
+Predicted: contradiction | a girl walking down the street is not walking inside her house.
+A girl all in black and white, and carrying an umbrella, walks down the street, as others watch. A young girl walking inside her house.
+Correct: contradiction | The girl is either walking inside her house or down the street. [SEP] A girl walks down the street can not occur at the same time as walking inside her house. [SEP] She can't be walking down the street and walking inside her house. 
+Considered Correct: True
+
+Predicted: contradiction | the Asian woman is not singing.
+An Asian woman stands along a road where 2 buses have passed holding her bags. The Asian woman is singing.
+Correct: contradiction | The Asian woman either stands or is singing, but not both. [SEP] stands doesn't mean singing [SEP] The woman is said to have been standing, not singing. 
+Considered Correct: True
+
+Predicted: contradiction | a guy rides in his car to work and a bus is parked in a blue bus.
+Blue bus parked with back door opened as man in white shirt walk by it. A guy rides in his car to work.
+Correct: contradiction | A man that rides in his car to work would not walk by the parked bus. [SEP] 1.Bus and car are not the same thing. 2. A man is either walking by the bus or riding to work. [SEP] If a man rides in his car he can't be walking by a Blue bus. 
+Considered Correct: True
+
+Predicted: contradiction | the girl is swinging on a rope over a small pond.
+The girl is swinging on a rope over a small pond. A girl is swinging on a tire swing.
+Correct: contradiction | It is one thing to swing on a rope while another swinging on a tire swing. [SEP] Swinging on a rope vs tire swing is not the same. [SEP] The girl is either swinging on a rope or a tire swing, not both. 
+Considered Correct: True
+
+Predicted: contradiction | the weather is cold and the men are splitting wood.
+Two young men splitting wood with a axe in the snow. The weather is hot
+Correct: contradiction | If it's hot, then there wouldn't be snow. [SEP] It cannot be hot if there is snow. [SEP] There can't be snow if the weather is hot. 
+Considered Correct: True
+
+Predicted: contradiction | people walking in a restaurant are walking in a busy street.
+A busy street full of shops and people holding hands and walking. People sitting in a restaurant.
+Correct: contradiction | One cannot be walking and sitting simultaneously. [SEP] People cannot be walking and sitting in a restaurant at the same time. [SEP] People cannot be walking and sitting at the same time. 
+Considered Correct: True
+
+Predicted: contradiction | the boat is sinking.
+A boat docked on a river. The boat is sinking
+Correct: contradiction | The boat is on a river, it is not sinking underwater. [SEP] Usually a boat would not be sinking if it is docked. [SEP] A docked boat is usually floating, not sinking. 
+Considered Correct: True
+
+Predicted: contradiction | a woman holding a camera is not a man cutting his hair.
+A woman holding a camera. A man cuts his hair.
+Correct: contradiction | woman is referenced and then a man [SEP] A woman is not a man. [SEP] A MAN CUTTING HIS HAIR CANNOT BE SAME AS A WOMAN HOLDING A CAMERA 
+Considered Correct: True
+
+Predicted: contradiction | a woman is not in a winter coat.
+A woman dressed in a light yellow tank top, white pants, and sunglasses looks to her right as she is drinking a bottle of water. A woman is in a winter coat.
+Correct: contradiction | The woman being dressed in a light tank top with pants and sunglasses implies that it's warms outside, which means she isn't wearing a winter coat. [SEP] A light tank top indicates it is warm.  A winter coat indicates it is cold. [SEP] You wear a tank top in the warm weather, and a coat in the cold weather. 
+Considered Correct: True
+
+Predicted: contradiction | the children are not sitting outside playing video games.
+Two children are sitting in the same wooden lawn chair while a green rake is leaning against the same chair. The children are inside playing video games.
+Correct: contradiction | Wooden lawn chairs implies the children are sitting outside rather than inside playing video games. [SEP] Wooden lawn chairs and rakes are usually outside so the children cannot be inside and outside at the same time. [SEP] A lawn chair cannot be inside. 
+Considered Correct: True
+
+Predicted: contradiction | the man is not pushing a woman on the ground.
+A man standing in front of a brick building. The man pushes a women on the ground.
+Correct: contradiction | A man standing in front of a building can not be a man who pushes a women on the ground. [SEP] A man is either standing or pushes a woman on the ground. [SEP] One is either standing or pushing. 
+Considered Correct: True
+
+Predicted: contradiction | the young man is not indoors in a gym.
+A young man in khaki shorts and a yellow shirt stands outside in the sidewalk and waves a Brazilian flag. The young man is indoors in a gymnasium.
+Correct: contradiction | He is either indoors, or he is outside. [SEP] A man cannot be indoors and outdoors at the same time. [SEP] The young man can't be both indoors and outdoors at the same time. 
+Considered Correct: True
+
+Predicted: contradiction | two friends are not fighting at a construction site.
+One man watching another man operate heavy machinery doing road construction. Two friends are fighting at a construction site.
+Correct: contradiction | A man would not be watching the other operate heavy machinery if they are currently fighting. [SEP] There can be either one or two. [SEP] The two people can either be doing the same thing or one watching the other do a different thing 
+Considered Correct: True
+
+Predicted: contradiction | the street vendor is not at home cooking dinner.
+A street vendor in chef's clothing with a food cart, which has gathered people around it. The street vendor is at home cooking dinner.
+Correct: contradiction | The vendor can not be on a street and at home cooking dinner at the same time. [SEP] Cooking dinner at home is usually an individual activity and may or may not include other people whereas the food cart has people gathered around indicating interaction between multiple people. [SEP] The street vendor is either with a food cart, which has gathered people around it or at home cooking dinner. 
+Considered Correct: True
+
+Predicted: contradiction | a pink coat is not a pink jacket.
+A young girl wearing a pink coat plays with a yellow toy golf club. A girl is wearing a blue jacket.
+Correct: contradiction | She cannot be wearing a pink coat and a blue jacket simultaneously [SEP] A girl cannot be wearing a pink coat and a blue jacket at the same time. [SEP] Color of the jacket should be either pink or blue 
+Considered Correct: True
+
+Predicted: neutral | the dogs are not chewing on bones.
+A brown, black, and white dog barking up a tree. The dogs are chewing on delicious bones.
+Correct: contradiction | Dogs barking up a tree can not be chewing on bones. [SEP] A dog cannot be barking up a tree and chewing on delicious bones simultaneously. [SEP] dog barking up a tree is not dogs chewing on delicious bones 
+Considered Correct: False
+
+Predicted: contradiction | a girl inspects a rock while her friend goes off in another direction.
+On a sunny day, in a lush, green field, one small girl inspects a rock while her friend goes off in another direction. A girl sleeps
+Correct: contradiction | A girl can't inspect a rock nor go anywhere while she sleeps. [SEP] A girl can not sleep while she inspects a rock or when she goes off in another direction. [SEP] If a girl sleeps, she neither inspects a rock or goes off in another direction. 
+Considered Correct: True
+
+Predicted: contradiction | the band has no bass player and the tent is not a tent.
+A band which includes an Upright Bass Player is playing in a tent in front of Canadian flags. The band has no bass player.
+Correct: contradiction | Either the band has a bass player or they have no bass player. [SEP] A band with an upright bass player is not the same thing as a man with no bass player. [SEP] If the band has no bass player then the band cannot include an upright bass player. 
+Considered Correct: True
+
+Predicted: contradiction | the monks are not running down the dirt trail.
+Two monks are visiting a big city. The monks are running down the dirt trail.
+Correct: contradiction | A dirt trail is typically not in a big city. [SEP] Monk are visiting not running. [SEP] The monks are either visiting a big city or running down the dirt trail. 
+Considered Correct: True
+
+Predicted: contradiction | players are not cheerleaders.
+Four cheerleaders performing a cheer on court at UCLA. Players sitting at the locker room.
+Correct: contradiction | There are either the players or the cheerleaders. [SEP] There are either four cheerleaders or some players. [SEP] Players can watch the cheerleaders from their room. 
+Considered Correct: True
+
+Predicted: contradiction | two women play basketball if they are not playing pool.
+Two young man are getting ready for a game of pool on a purple pool table, with another young man in the background, holding a drink. two women play basketball
+Correct: contradiction | young men can't be women. [SEP] Two young men are not two women. Pool is not basketball. [SEP] Women and young men are not the same thing. 
+Considered Correct: True
+
+Predicted: contradiction | the elephants are performing in a circus tent.
+Three elephants, each carrying a group of people, walking through the water. The elephants are performing in a circus tent.
+Correct: contradiction | THE ELEPHANTS CANNOT BE WALKING THROUGH WATER IF THEY ARE PERFORMING IN A CIRCUS TENT. [SEP] Elephants carrying people can not be performing while walking through water can not happen in a circus tent. [SEP] The elephants cannot be walking through water and be performing in a circus tent simultaneously. 
+Considered Correct: True
+
+Predicted: contradiction | a man sits merely
+A large group of people walking down a city street. a man sits
+Correct: contradiction | A large group refers to more than one man, and everybody in that group is walking, not sititng. [SEP] A man is one person not a large group.   Sits requires not moving.  Walking requires movement. [SEP] A single man is not a group, and one cannot be simultaneously walking and sitting. 
+Considered Correct: True
+
+Predicted: contradiction | a girl is walking her dog down the street.
+A girl in blue rides a horse over a tall jump. A girl is walking her dog down the street.
+Correct: contradiction | Riding a horse is different activity than walking a dog. [SEP] Either a girl is walking her dog or rides a horse. [SEP] a girl would be eitherrides horse or walking a dog 
+Considered Correct: True
+
+Predicted: contradiction | the corn is grilled corn and not grilled corn.
+Sidewalk vendor dressed in white shirt brown pants sells grilled corn. The corn is chasing the rainbow
+Correct: contradiction | A sidewalk vendor can't be corn. [SEP] One cannot be a sidewalk vendor and a corn. [SEP] Grilled corn can't be chasing the rainbow. 
+Considered Correct: True
+
+Predicted: contradiction | the woman is not playing with a dog in front of a stadium crowd or a group of baseball players.
+A woman is using Frisbees to play with a dog in front of a stadium crowd and a group of baseball players. The woman is standing in line to buy a hot dog.
+Correct: contradiction | A woman wouldn't play with a dog while standing in line. [SEP] The woman is either standing in line to buy a hot dog or she uses  Frisbees to play with a dog [SEP] Hot dog is food while the dog the woman is playing with is an animal. 
+Considered Correct: True
+
+Predicted: contradiction | a family of four is not a family of four and a family of four is not a family of four.
+A young boy wearing safety swimming gear and goggles is in a pool. A family of four plays in the surf.
+Correct: contradiction | A YOUNG BOY IS NOT, HIMSELF, A FAMILY OF FOUR. [SEP] A family is more than just a young boy [SEP] The surf is found in the ocean not in a pool. 
+Considered Correct: True
+
+Predicted: contradiction | there is only one boy present.
+One boy is driving a play tractor while the other boy jumps off the back of the play tractor. There is only one boy present.
+Correct: contradiction | There cannot be the other boy if there is only one boy. [SEP] If there is one boy driving and another boy jumping, there must be more than one boy present. [SEP] There can either be only one boy or two boys, i.e. one boy and the other boy. 
+Considered Correct: True
+
+Predicted: contradiction | a man is walking outside and not inside.
+A man in black pants and a white shirt is walking down the sidewalk in front of a building that has graffiti on it. A man is indoors.
+Correct: contradiction | The former man is outdoors walking down the sidewalk in front of a building while the latter man is indoors . [SEP] A man cannot be indoors and walking down the sidewalk at the same time. [SEP] You cannot be walking on a sidewalk while indoors. 
+Considered Correct: True
+
+Predicted: entailment | the child is in stripe, not in stripe,
+A young child, wearing a pink-polkadotted outfit, smiles at the camera as she lays on a white, shaggy rug. the child is in stripe,
+Correct: contradiction | The outfit is either stripe or pink-polkadotted. [SEP] Pink-Polkadotted is not the same thing as stripes. [SEP] The child can't wear a pink-polkadotted and striped outfit. 
+Considered Correct: False
+
+Predicted: contradiction | a person on a motorcycle is not a couple.
+A person on a motorcycle. a couple on a motorcycle
+Correct: contradiction | A couple means more than one person. [SEP] A person represents one and couple represents two persons. [SEP] A person means only one and a couple means two. 
+Considered Correct: True
+
+Predicted: contradiction | the 2 dogs are running side by side.
+Two yellow dogs are running side by side down a road. the 2 dogs cook pizza
+Correct: contradiction | Dogs cannot be making pizza and running at the same time [SEP] One cannot cook pizza while they are running. [SEP] Two dogs can not cook pizza while running down the road. 
+Considered Correct: True
+
+Predicted: contradiction | a woman is holding one young children with another standing next to her.
+A woman is holding one young children with another standing next to her while a man is sitting by a small campfire. A woman is holding one young chimp with another standing next to her
+Correct: contradiction | The woman can not hold a child and a chimp at the same time [SEP] The woman is either holding a child or a chimp [SEP] A child and a chimp are two completely different things. 
+Considered Correct: True
+
+Predicted: contradiction | balloons are not planes.
+A crowd of people are watching hot air balloons inflate. One person watching a plane prepare for a sky diving trip.
+Correct: contradiction | A crowd is more than one person. [SEP] A crowd is more than one person, and while the the individual is watching a plane, the crowd of people are watching hot air balloons [SEP] The subject cannot be referred to as a crowd and a person simultaneously nor can the subjects be watching hot air balloons and watching a plane at the same time. 
+Considered Correct: True
+
+Predicted: contradiction | a man is not using an ax to chop wood outside of his home.
+A man wearing all white is using an orange chainsaw to cut down a thick tree next to his house. A man is using an ax to chop wood outside of his home.
+Correct: contradiction | Chopping wood with an ax is not the same as using a chainsaw. [SEP] You can either use an ax or a chainsaw. [SEP] You don’t wear all white to chop wood 
+Considered Correct: True
+
+Predicted: contradiction | a dog is not at home sleeping.
+a shepherd breed dog running on the beach A dog is at home sleeping
+Correct: contradiction | A dog cannot be running on the beach and home sleeping at the same time. [SEP] The dog can either run or sleep and only be at one place at a time, the beach or home. [SEP] The dog cannot be home sleeping while running on the beach. 
+Considered Correct: True
+
+Predicted: contradiction | the woman is carrying the flag.
+A young boy carries a green, white, and red flag and walks next to a woman. The woman is carrying the flag.
+Correct: contradiction | Either the young boy or the woman is carrying the flag. [SEP] boy doesn't mean woman [SEP] The woman cannot be carrying the flag if a young boy is carrying it. 
+Considered Correct: True
+
+Predicted: contradiction | the woman is not holding a dog.
+A woman is sitting outside while holding two cats. The women is holding a dog.
+Correct: contradiction | Cats and dogs are different types of animals. [SEP] is the woman holding cats or a dog? [SEP] The woman is either holding two cats or she is holding a dog, but not both. 
+Considered Correct: True
+
+Predicted: contradiction | the dog is eating a banana.
+A woman get some food from under a blue tent. the dog is eating a banana
+Correct: contradiction | On the first sentence there is a woman while on the second sentence there is a dog. [SEP] A woman is human and a dog is an animal. [SEP] The woman is not a dog. 
+Considered Correct: True
+
+Predicted: contradiction | man made objects are not natural objects.
+A lone man standing a rock shore looking downward at a inland body of water with a blue ocean or other large body of water behind him extending into the horizon of a blue sky. No natural objects are shown here - every single thing is man made.
+Correct: contradiction | If no natural objects are shown here then there are no body of water. [SEP] MAN AND MAN MADE ARE NOT THE ONE [SEP] Rock shore, inland body of water and a blue ocean are all natural objects that are shown. 
+Considered Correct: True
+
+Predicted: contradiction | performers sing together on stage
+Performers sing together on stage The performers are singing solo.
+Correct: contradiction | if persons singing together it can't be inferred as solo [SEP] Performers can't be singing solo if they are singing together. [SEP] Performers that sing together on stage cannot be singing solo. 
+Considered Correct: True
+
+Predicted: contradiction | a father is not a father
+A father with a red shirt and beard is cuddling with his two children in a chair. A father drowns his two children, since he hates his life.
+Correct: contradiction | Cuddling shows that he loves his children. Drowns shows hate. [SEP] The father in the first sentence is cuddling his children and the father in the second sentence drowns his two children. [SEP] The father is either cuddling the children or drowns them. 
+Considered Correct: True
+
+Predicted: contradiction | a woman in a long dress is walking through the crowd.
+A man walking in a crowd, draped in a Canadian flag. A girl in a long dress is walking through the crowd.
+Correct: contradiction | A girl is not a man and while the girl is in a long dress the man is draped in a Canadian flag. [SEP] A man is not a girl. [SEP] A man can not be a girl. 
+Considered Correct: True
+
+Predicted: contradiction | women are not standing in front of a new car.
+Two women both dressed in white tops and dark-colored shorts are standing in front of some motorcycles on a city street One woman and one man stand in front of a new car while wearing green sweaters.
+Correct: contradiction | He refers to two women not one woman and a man. They cannot be wearing white tops and green sweaters simultaneously. They cannot be standing in front of some motorcycles and a new car simultaneously. [SEP] One woman and one man can't be two women [SEP] Two women are not one woman and one man. Motorcycles are not a car. If individuals are wearing white tops, they are not wearing green sweaters. 
+Considered Correct: True
+
+Predicted: contradiction | a man is not reading a magazine at the library.
+A man holding his shoe on the beach A man is reading a magazine at the library.
+Correct: contradiction | Holding a shoe and reading a magazine are different actions, and a library is not found at the beach. [SEP] One can't be at the beach doing one activity while doing another at the library. [SEP] A man is holding his shoe on the beach then reading a magazine at a library. He can't be doing both. 
+Considered Correct: True
+
+Predicted: neutral | the man was sick all day and he was kissing a cow.
+One man stops to give a sweet kiss to a cow near a train on an overpass. the man was sick in bed all day
+Correct: contradiction | The location is either in bed or near a train. There wouldn't be a train in bed. [SEP] The man cannot be out on an overpass if he was sick in bed all day. [SEP] one man stop to give a sweet kiss to a cow near a train is outside and cannot be sick in bed all day 
+Considered Correct: False
+
+Predicted: contradiction | the women are not making pizza.
+There are three ladies dress in blue stand cheering. The women are making pizza.
+Correct: contradiction | If the women are making pizza, then they cannot stand cheering. [SEP] Women who are making pizza are not standing and cheering. [SEP] You do not stand cheering while you are making pizza. 
+Considered Correct: True
+
+Predicted: neutral | the man and woman are not walking on the street
+Man and a woman walking on the street The man and woman are making love in the street.
+Correct: contradiction | The man and woman are either walking making love in the street. [SEP] The man and woman would have to be extremely talented exhibitionist to be walking and making love at the same time. [SEP] It is unlikely that the man and woman are making love while walking or vice versa. 
+Considered Correct: False
+
+Predicted: contradiction | the man fell into the swimming pool.
+An indian man walks past a temple on his way to pray. A man fell into the swimming pool.
+Correct: contradiction | If he walks past a temple, there is no way he fell into the swimming pool. [SEP] Walking past a temple and falling into a pool are two different actions [SEP] The man walks now and fell in the past. The actions can't happen simultaneously or it can't be the same person. 
+Considered Correct: True
+
+Predicted: contradiction | a man in a blue shirt is sitting in the rain.
+A man in a beige trench coat is walking in the rain. A man in a blue shirt is sitting in the rain.
+Correct: contradiction | You can either be sitting or walking, but not both [SEP] A man cannot be walking and sitting simultaneously. [SEP] A man cannot be both walking and sitting in the rain simultaneously. 
+Considered Correct: True
+
+Predicted: contradiction | a boy dressed in red is not a boy in blue.
+A little boy in a blue shirt holding a toy. Boy dressed in red lighting things on fire.
+Correct: contradiction | The boy can't be dressed in a red shirt and a blue shirt at the same time, as well as he can't be holding a toy and lighting things on fire at the same time. [SEP] If the shirt is blue, it cannot be red. [SEP] Red and blue are contradictory colors. Holding a toy lacks initiative while lighting things shows initiative. 
+Considered Correct: True
+
+Predicted: contradiction | people are not hiding in bushes to scare children.
+A group of people engaged in some sort of outdoor gathering or ritual. People hiding in bushes to scare little children.
+Correct: contradiction | hiding in bushes is not an outdoor gathering [SEP] Children can be people. [SEP] Gathering and hiding are different things. 
+Considered Correct: True
+
+Predicted: contradiction | the man is not wearing anything.
+A man in a brown hooded sweatshirt outdoors with an upright bass, playing the strings with his fingers. The man isn't wearing anything.
+Correct: contradiction | The man cannot be both wearing a brown hooded sweatshirt and not be wearing anything. [SEP] If a man is in a hooded sweatshirt then the can not be wearing anything. [SEP] The man is either wearing a brown hooded sweatshirt or isn't wearing anything. 
+Considered Correct: True
+
+Predicted: contradiction | a woman is walking through town and not hanging from a blue fabric connected to a tree.
+A woman dangles from a blue fabric connected to a tree. A woman is walking through town.
+Correct: contradiction | The woman is either dangling or walking. [SEP] a women would either be dangels or walking [SEP] If a woman dangles, she cannot be walking. 
+Considered Correct: True
+
+Predicted: contradiction | the children are not sleeping.
+Two children plus two dachshunds get ready for a sleepover. The children are taking a nap
+Correct: contradiction | The group couldn't get ready while taking a nap. [SEP] The first sentence is about two kids and two dogs getting ready for a sleepover. The other children in sentence two are already sleeping. [SEP] The children are not napping because they are getting ready for a sleepover. 
+Considered Correct: True
+
+Predicted: contradiction | children are outside playing soccer and not inside eating good.
+Several children are standing with plates full of food under a shelter, watching a man in a purple shirt serving good. The children are outside playing soccer.
+Correct: contradiction | The children are under a shelter, not outside. Additionally, they're standing with plates full of food which implies that they aren't playing soccer. [SEP] Children can't be playing soccer while standing under a shelter. [SEP] The children can't be both standing under a shelter as well as outside playing soccer. 
+Considered Correct: True
+
+Predicted: contradiction | the man is not sleeping in his boat but in the boat bed.
+A shirtless man sleeps in his blue boat out on the open waters. The man lies wide awake in the bed of his boat trying to fall asleep
+Correct: contradiction | A wide awake man trying to fall asleep cannot be in a state of sleep. [SEP] A man can't be wide awake if he is sleeping. [SEP] sleeps is opposite awake 
+Considered Correct: True
+
+Predicted: contradiction | this people don't know how to ride a bike.
+A group of men riding bicycles in a line. This people don't know how to ride a bike.
+Correct: contradiction | Since the men are riding the bicycles, it is impossible that they don't know how to ride a bike. [SEP] If they are riding bicycles, that means they know how to ride a bike. They can't be riding bikes and not know how to ride. [SEP] The people cannot be riding bikes if they don't know how. 
+Considered Correct: True
+
+Predicted: neutral | the soldier is not drinking tea inside.
+A soldier is holding a gun and crouched down with is mouth covered by a cloth. The solder is sipping tea inside.
+Correct: contradiction | A solder cannot be holding a gun and crouched down while sipping tea. [SEP] The soldier isn't crouched down while sipping tea. [SEP] The soldier cannot be sipping tea if he is holding a gun. 
+Considered Correct: False
+
+Predicted: contradiction | a young asian woman stands with her luggage.
+A young asian woman stands with her luggage. An older woman stands with her luggage.
+Correct: contradiction | The subject is either young or old. [SEP] Young and old are not the same [SEP] It was a younger woman, not an older woman. 
+Considered Correct: True
+
+Predicted: contradiction | the train is not stopping and they are boarding it.
+There are people at the train station waiting for their trains and other trains are whizzing by them. The train has stopped and they are boarding it.
+Correct: contradiction | One cannot say that trains are whizzing by them if the train has stopped. [SEP] waiting doesn't mean boarding [SEP] The people cannot be waiting for their trains if they are already boarding it. 
+Considered Correct: True
+
+Predicted: contradiction | a boy is not alone and a woman is not alone.
+A young boy in a brown shirt and green shorts shares a laugh with an elderly lady wearing a black pants outfit. A boy is sad and alone.
+Correct: contradiction | A boy cannot be alone and with an elderly lady at the same time. [SEP] laugh doesn't mean sad [SEP] The boy cannot be sad if he shares a laugh and cannot be alone if he is with an eldery lady. 
+Considered Correct: True
+
+Predicted: contradiction | the people are not dancing on opposite sides of each other.
+A man and woman stand facing each other, the man holding an instrument and the woman holding a piece of paper. The people are dancing on opposite sides of each other.
+Correct: contradiction | The people implies more then just a man and a woman. [SEP] If people were dancing, they would not be standing [SEP] The people are either dancing or stand ing still. 
+Considered Correct: True
+
+Predicted: contradiction | fish catches man not fish catches man.
+A man sits on the grass trying to get a hole of a fish. Fish catches man.
+Correct: contradiction | A man can either be trying to get a hole of a fish or catching fish. [SEP] A man is trying to fish.  A man can fish, fish cannot catch a man. [SEP] One cannot be trying to get a hole of a fish and get caught by the fish 
+Considered Correct: True
+
+Predicted: contradiction | a bird is not a rat running on a wheel.
+A long-beaked bird in mid-flight. A rat running on a wheel.
+Correct: contradiction | A bird is different from a rat. [SEP] A long-beaked bird is not a rat. An animal in mid-flight cannot be running on a wheel simultaneously. [SEP] A bird and a rat are not the same thing. If the rat/bird is running, it is not in mid-flight. 
+Considered Correct: True
+
+Predicted: contradiction | a dog is sleeping under the porch and not jumping into water.
+A brown dog leaps into water from a rock. A dog is sleeping under the porch.
+Correct: contradiction | A dog who leaps cannot be sleeping. [SEP] A dog can't be leaping and sleeping. [SEP] A dog leaping into water is sleeping under the porch. 
+Considered Correct: True
+
+Predicted: contradiction | two men have a conversation outdoors in front of a house.
+Two elder women have a conversation outdoors in front of a house. Two elder men have a conversation outdoors in front of a house.
+Correct: contradiction | It ie either two elder men or women. [SEP] Elder men are not elder women. [SEP] women and men are complete opposites 
+Considered Correct: True
+
+Predicted: contradiction | a boat is a boat out of water.
+A group of people play a game in the road. a boat out of the water
+Correct: contradiction | A boat cannot used on road [SEP] Out of the water is not on the road. [SEP] People don't typically play games when their boat is out of the water. 
+Considered Correct: True
+
+Predicted: contradiction | two dogs are not lying on the grass.
+a dog chases another dog. Two dogs are lying on the grass.
+Correct: contradiction | Is it a dog or two dogs? [SEP] There can either be one dog or two dogs. [SEP] It is not possible for lying dogs to chase each other. 
+Considered Correct: True
+
+Predicted: contradiction | a young girl in a pink tutu is driving a motorcycle and a young girl in a blue dress is riding in the back seat.
+A man drives a motorcycle, with a woman in an orange sari and a young girl in a blue dress riding in the backseat. A young girl in a pink tutu is driving a motorcycle.
+Correct: contradiction | the woman and the man cannot both be driving the motorcycle [SEP] It can't be a man and a young girl. [SEP] There is no backseat on a motorcycle. It is either a man or a girl driving a motorcycle. 
+Considered Correct: True
+
+Predicted: entailment | man is watering plants and woman in orange shirt is walking by.
+Man waters plants as woman in orange shirt walks by. The man is near water.
+Correct: contradiction | the man waters plants, meaning that he is indoors, he can not be near water. [SEP] Man isn't near water, he's watering the flowers [SEP] You don't need to water plants that are near water.  (There's really no contradiction here.) 
+Considered Correct: False
+
+Predicted: neutral | the balloons are not helium balloons and they are not helium balloons.
+Three adult bystanders and one child looking up toward the sky while standing on the sidewalk. A man and his three children watch the helium balloons float higher in the air.
+Correct: contradiction | On the first sentence there are three adults while on the second sentence there are three children. [SEP] One group has three children, the other one child. These can't be the same group. [SEP] There are either three adults or three children. 
+Considered Correct: False
+
+Predicted: contradiction | a child is hitting a baseball in a baseball field.
+A kid hitting a baseball in a baseball field. A child is hitting cans with a baseball bat.
+Correct: contradiction | The child can be either hitting a baseball or cans. [SEP] One cannot be hitting baseball and cans in a field. [SEP] A Kid cannot be hitting a baseball and also hitting cans simultaneously. 
+Considered Correct: True
+
+Predicted: contradiction | children running around playing tag are not climbing.
+Children standing and climbing near a fountain. Children running around playing tag.
+Correct: contradiction | Standing is being still, and to run is a movement. [SEP] Children cannot be standing and climbing while running and playing. [SEP] The children can't be running if they're standing. 
+Considered Correct: True
+
+Predicted: contradiction | the man was not watching tv.
+A man sits in a chair on the sidewalk in front of a huge display of brightly colored artwork. The man was watching tv
+Correct: contradiction | One is generally not watching tv while one sits in a chair on the sidewalk. [SEP] one either has to watch tv or sit in front of artwork. [SEP] A man watching TV is different from in front of an artwork. 
+Considered Correct: True
+
+Predicted: contradiction | a skateboarder goes down a railing.
+A skateboarder goes down a railing. A skateboarder goes up the hill.
+Correct: contradiction | A skateboarder cannot simultaneously go down and railing and up a hill. [SEP] A skateboarder can not be going up the hill if they go down a railing. [SEP] A skateboarder cannot be both going up a railing that goes down hill. 
+Considered Correct: True
+
+Predicted: contradiction | swimming in the ocean is not swimming in the ocean.
+People shopping at the marketplace. A woman is swimming in the ocean.
+Correct: contradiction | people cannot be a  women [SEP] If you are swimming, then you are in the water. If you are shopping then you are on land. [SEP] There are either multiple people shopping or one person swimming. 
+Considered Correct: True
+
+Predicted: contradiction | the man is not sitting in a chair inside a chair
+A white-haired man with a mustache and glasses in a business suit stands outside at a podium marked with the seal of the US House of Representatives, surrounded by many people, with a columned building behind him. The man is sitting in a chair inside.
+Correct: contradiction | Standing and sitting cannot be done simultaneously. [SEP] A man can't be outside and inside at the same time. [SEP] One cannot be standing and sitting at the same time. The man can be either outside or inside 
+Considered Correct: True
+
+Predicted: neutral | a woman swings a pillow and laughs.
+A woman with red-hair swings a pillow and laughs. A woman makes her bed comfortable
+Correct: contradiction | A woman making her bed comfortable is relaxing, getting ready for bed, while a woman swinging a pillow and laughing is active and playing. [SEP] The woman cannot make her bed comfortable and swing a pillow simultaneously [SEP] when making a bed comfortable a women wont swings a pillow 
+Considered Correct: False
+
