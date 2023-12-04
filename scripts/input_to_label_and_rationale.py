@@ -606,17 +606,15 @@ def main():
         tokenizer.padding = True
         # print(data_splits['train'][0])
         
-        trainer = SFTTrainer(
-                    model=model,
-                    train_dataset=dataset,
-                    max_seq_length=None,
-                    tokenizer=tokenizer,
-                    args=training_args,
-                    data_collator=SequenceCollator(
-                            model=model_class, pad_token=tokenizer.pad_token_id
-                        ),
-                    packing=False,
-                )
+        trainer = trainer = SFTTrainer(
+                                model=model,
+                                train_dataset=dataset,
+                                dataset_text_field="text",
+                                max_seq_length=None,
+                                tokenizer=tokenizer,
+                                args=training_args,
+                                packing=False,
+                            )
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
         start_time = time.time()
