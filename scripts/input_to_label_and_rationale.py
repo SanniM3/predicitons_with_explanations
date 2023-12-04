@@ -137,6 +137,39 @@ class SequenceCollator:
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
         return batch
 
+from typing import List, Dict
+import torch
+
+class CausalLMCollator:
+    def __init__(self, pad_token):
+        self.pad_token = pad_token
+        self.pad_token_mapping = {
+            "attention_mask": 0,
+            "input_ids": self.pad_token,
+        }
+
+        self.columns = [
+            "input_ids",
+            "attention_mask",
+        ]
+
+    def __call__(self, examples: List[Dict[str, List[int]]]) -> Dict[str, torch.Tensor]:
+        # Re-format inputs for training
+        batch = {}
+        for key in self.columns:
+            tmp_list = [item[key] for item in examples if key in item]
+
+            # Pad lists to max length
+            if tmp_list and isinstance(tmp_list[0], list):
+                max_length = max(len(el) for el in tmp_list)
+                tmp_list = [
+                    el + [self.pad_token_mapping[key]] * (max_length - len(el))
+                    for el in tmp_list
+                ]
+
+            batch[key] = torch.tensor(tmp_list, dtype=torch.long)
+
+        return batch
 
 def main():
     # See all possible arguments in src/transformers/training_args.py
@@ -573,8 +606,8 @@ def main():
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=SequenceCollator(
-                model=model_class, pad_token=tokenizer.pad_token_id
+            data_collator=CausalLMCollator(
+                pad_token=tokenizer.pad_token_id
             ),
         )
 
