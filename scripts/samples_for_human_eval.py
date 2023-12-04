@@ -23,10 +23,11 @@ if __name__ == '__main__':
         assert False
     sample_per_label = args.sample // num_labels
 
-    episode_dirs = sorted(glob.glob(f'{args.output_dir}/*'))
+    episode_dirs = sorted(glob.glob(f'{args.output_dir}/{args.dataset}*'))
     print(episode_dirs)
     for episode_dir in episode_dirs:
         ls = sorted(glob.glob(f'{episode_dir}/*'))
+        print('these are the directories')
         print(ls)
         # assert len(ls) == 2
         analysis_file = f'{ls[0]}/validation_posthoc_analysis.txt'
