@@ -606,7 +606,7 @@ def main():
         tokenizer.padding = True
         # print(data_splits['train'][0])
         
-        trainer = trainer = SFTTrainer(
+        trainer = SFTTrainer(
                                 model=model,
                                 train_dataset=dataset,
                                 dataset_text_field="text",
