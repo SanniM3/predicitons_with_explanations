@@ -247,7 +247,7 @@ def main():
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
 
-    model_class = "t5"
+    model_class = "llama"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
     #print("model class specified and task names asserted")
     if training_args.do_train:
@@ -273,12 +273,16 @@ def main():
     tokenizer_name = TOKENIZER_MAPPING[model_class]
     logger.info("Loading pretrained tokenizer...")
 
-    tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
+    ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
     #print("tokenizer for model loaded successfully")
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
-            model = T5ForConditionalGeneration.from_pretrained(model_args.pretrained_model_file)
+            # model = T5ForConditionalGeneration.from_pretrained(model_args.pretrained_model_file)
+            model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
             if model_args.dropout_rate:
                 raise Exception("can't update/specify dropout currently when load pretrained model from directory")
@@ -287,9 +291,11 @@ def main():
             # load pretrained model from HuggingFace
             logger.info("Loading pretrained model")
             if model_args.dropout_rate:
-                model = model_name.from_pretrained(model_args.model_type, dropout_rate=model_args.dropout_rate)
+                # model = model_name.from_pretrained(model_args.model_type, dropout_rate=model_args.dropout_rate)
+                model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', dropout_rate=model_args.dropout_rate)
             else:
-                model = model_name.from_pretrained(model_args.model_type)
+                # model = model_name.from_pretrained(model_args.model_type)
+                model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         else:
             # load model from scratch with no pretrained weights
             config_name = CONFIG_MAPPING[model_class]()
