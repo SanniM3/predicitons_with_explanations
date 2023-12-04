@@ -608,7 +608,7 @@ def main():
         #reduce consumed gpu memory
         training_args.bf16=True
         training_args.bf16_full_eval=True
-
+        print(training_args.batch_size)
         trainer = Trainer(
             model=model,
             args=training_args,
