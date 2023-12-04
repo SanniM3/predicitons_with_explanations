@@ -135,7 +135,7 @@ class SequenceCollator:
                     ]
 
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
-        print(batch[0])
+        print(batch)
         return batch
 
 from typing import List, Dict
@@ -585,7 +585,7 @@ def main():
         #             )
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
-
+        
         #reduce consumed gpu memory
         training_args.bf16=True
         training_args.bf16_full_eval=True
@@ -601,6 +601,7 @@ def main():
         #     callbacks=callbacks,
         # )
         tokenizer.pad_token = tokenizer.eos_token
+        
         print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
