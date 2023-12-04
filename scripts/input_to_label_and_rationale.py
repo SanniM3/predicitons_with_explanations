@@ -135,8 +135,8 @@ class SequenceCollator:
                     ]
 
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
-        print(batch)
-        return batch
+        # print(batch)
+        return batch['input_ids']
 
 from typing import List, Dict
 import torch
@@ -611,7 +611,9 @@ def main():
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
+            data_collator=SequenceCollator(
+                model=model_class, pad_token=tokenizer.pad_token_id
+            ),
         )
         print(trainer.train_dataset[0])
         
