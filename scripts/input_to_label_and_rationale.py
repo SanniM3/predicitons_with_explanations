@@ -111,7 +111,6 @@ class SequenceCollator:
         self.pad_token_mapping = {
             "labels": -100,
             "attention_mask": 0,
-            "decoder_attention_mask": 0,
             "input_ids": pad_token,
         }
 
@@ -119,7 +118,6 @@ class SequenceCollator:
             "input_ids",
             "attention_mask",
             "labels",
-            "decoder_attention_mask",
         ]
 
     def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
@@ -308,7 +306,7 @@ def main():
     logger.info("Loading pretrained tokenizer...")
 
     ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', pad_token = '[PAD]')
     # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
     # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
     #print("tokenizer for model loaded successfully")
