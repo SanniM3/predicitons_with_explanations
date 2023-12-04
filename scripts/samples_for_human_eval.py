@@ -26,6 +26,7 @@ if __name__ == '__main__':
     episode_dirs = sorted(glob.glob(f'{args.output_dir}/{args.dataset}*'))
     print(episode_dirs)
     for episode_dir in episode_dirs:
+        print(episode_dir)
         ls = sorted(glob.glob(f'{episode_dir}/*'))
         print('these are the directories')
         print(ls)
