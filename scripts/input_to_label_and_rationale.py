@@ -585,7 +585,7 @@ def main():
                 param.requires_grad = True
 
         for name, param in model.named_parameters():
-            if '.layer_norm' in name:
+            if 'layernorm' in name:
                 param.requires_grad = True
 
 
