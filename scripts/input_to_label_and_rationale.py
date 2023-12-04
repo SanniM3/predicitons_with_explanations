@@ -608,7 +608,7 @@ def main():
         tokenizer.pad_token = '[PAD]'
         # tokenizer.padding_side = 'right'
         # tokenizer.padding = True
-        # tokenizer.truncation = True
+        tokenizer.truncation = True
         # print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
