@@ -581,7 +581,7 @@ def main():
         model.lm_head.weight.requires_grad = False
 
         for name, param in model.named_parameters():
-            if 'SelfAttention.k' in name:
+            if 'self_attn.q_proj' in name:
                 param.requires_grad = True
 
         for name, param in model.named_parameters():
@@ -611,31 +611,31 @@ def main():
         training_args.bf16=True
         training_args.bf16_full_eval=True
 
-        # trainer = Trainer(
-        #     model=model,
-        #     args=training_args,
-        #     train_dataset=data_splits['train'],
-        #     eval_dataset=data_splits['validation'],
-        #     data_collator=SequenceCollator(
-        #         model=model_class, pad_token=tokenizer.pad_token_id
-        #     ),
-        #     callbacks=callbacks,
-        # )
-        tokenizer.pad_token = tokenizer.eos_token
-        # tokenizer.padding_side = 'right'
-        # tokenizer.padding = True
-        # tokenizer.truncation = True
-        # print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
             args=training_args,
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
-            callbacks=callbacks,
             data_collator=SequenceCollator(
                 model=model_class, pad_token=tokenizer.pad_token_id
             ),
+            callbacks=callbacks,
         )
+        # tokenizer.pad_token = tokenizer.eos_token
+        # # tokenizer.padding_side = 'right'
+        # # tokenizer.padding = True
+        # # tokenizer.truncation = True
+        # # print(data_splits['train'][0])
+        # trainer = Trainer(
+        #     model=model,
+        #     args=training_args,
+        #     train_dataset=data_splits['train'],
+        #     eval_dataset=data_splits['validation'],
+        #     callbacks=callbacks,
+        #     data_collator=SequenceCollator(
+        #         model=model_class, pad_token=tokenizer.pad_token_id
+        #     ),
+        # )
         print(trainer.train_dataset[0])
         
     # Training. Don't train if it is use_gpt3
