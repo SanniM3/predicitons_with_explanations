@@ -566,6 +566,7 @@ def main():
         #     ),
         #     callbacks=callbacks,
         # )
+        tokenizer.pad_token = tokenizer.eos_token
         trainer = Trainer(
             model=model,
             args=training_args,
