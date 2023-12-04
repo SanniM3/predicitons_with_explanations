@@ -539,7 +539,7 @@ def main():
         t_final = 1000
         total_steps = t_init + 100 + t_final
         peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="SEQ_2_SEQ_LM", init_r=8, target_r=4, lora_alpha=32, 
-                                    target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$'
+                                    target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$',
                                     lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
         
         
