@@ -49,7 +49,7 @@ from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, Lor
 from transformers.trainer_utils import EvaluationStrategy
 from transformers.integrations import TensorBoardCallback
 import transformers
-from transformers import Trainer, AutoTokenizer, AutoModelForCausalLM, DataCollatorForCausalLM
+from transformers import Trainer, AutoTokenizer, AutoModelForCausalLM, DataCollatorForLanguageModeling
 
 from feature_conversion_methods import format_instance
 
@@ -572,7 +572,7 @@ def main():
             train_dataset=data_splits['train'],
             eval_dataset=data_splits['validation'],
             callbacks=callbacks,
-            data_collator=DataCollatorForCausalLM(tokenizer=tokenizer)
+            data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
         )
 
     # Training. Don't train if it is use_gpt3
