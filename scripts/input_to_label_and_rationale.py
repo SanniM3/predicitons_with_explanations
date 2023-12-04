@@ -603,6 +603,7 @@ def main():
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = 'right'
         tokenizer.padding = True
+        tokenizer.truncation = True
         # print(data_splits['train'][0])
         trainer = Trainer(
             model=model,
