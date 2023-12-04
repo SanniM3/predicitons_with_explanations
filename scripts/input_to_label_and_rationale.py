@@ -109,13 +109,18 @@ class SequenceCollator:
     def __init__(self, model, pad_token):
         self.model = model
         self.pad_token_mapping = {
+            "labels": -100,
             "attention_mask": 0,
+            "decoder_attention_mask": 0,
             "input_ids": pad_token,
         }
 
         self.columns = [
             "input_ids",
-            "attention_mask",]
+            "attention_mask",
+            "labels",
+            "decoder_attention_mask",
+        ]
 
     def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
         # re-format inputs for training
@@ -135,8 +140,8 @@ class SequenceCollator:
                     ]
 
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
-        # print(batch)
         return batch
+
 
 from typing import List, Dict
 import torch
