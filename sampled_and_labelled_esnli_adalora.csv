@@ -1,0 +1,31 @@
+seed,input,predicted_label,predicted_explanation,explanation_category
+2769,Three young indian children play wiffle ball. Three children are crying.,contradiction,the children are playing wiffle ball.,weak_yes
+1331,A man in a black shirt holding cloth next to a wooded structure as people walk around it. A man holds a fish alone in the woods.,contradiction,a man holding a fish alone in the woods is a man holding cloth.,no
+2498,A man and woman showing a small child how to use a gun. Parents teaching their child the alphabet with crayons,contradiction,parents are not teaching their child the alphabet with crayons.,no
+9428,A couple in bathing suits walk on a beach. the couple are sitting inside,contradiction,the couple are walking on a beach.,weak_yes
+1349,A woman in a striped shirt posing for the camera while another woman holding a drink looks on. Another woman is eating a sandwich.,contradiction,another woman is eating a sandwich and another woman is posing for the camera.,no
+6339,A young girl who is barefoot and with a scarf over her head dips her pen in ink and writes in a notebook. dog chases squirrel,contradiction,dog chases squirrel.,no
+1967,A medium sized brown dog jumping A small dog crouches under a porch.,contradiction,a small dog is not a small dog.,no
+4823,The little girl in the sand is handing a ball to one of the two black dogs. a girl eating her dinner,contradiction,a girl is not a girl eating her dinner.,no
+9599,"A four piece male band which includes two saxophone players, a trumpet player and a trombone player are playing on a stage while two other males are dancing in front of the band. An all-girl band is performing at the jazz fest tonight.",contradiction,an all-girl band is performing tonight.,no
+7009,"A man in a blue shirt, khaki shorts, ball cap and white socks and loafers walking behind a group of people walking down a stone walkway with a water bottle in his left hand. A man in a blue shirt, khaki shorts, ball cap and blue socks and loafers walking behind a group of people walking down a stone walkway with a water bottle in his left hand.",contradiction,a water bottle is a water bottle and not a water bottle.,no
+7056,A girl is laughing while holding some rocks in her right hand. There is a girl laughing,entailment,there is a girl laughing while holding some rocks.,yes
+7356,A skateboarder in the air straddling his upside-down skateboard. A skateboarder is straddling his upside down skateboard and in the air.,entailment,a skateboarder is in the air straddling his upside down skateboard.,yes
+1335,A soccer ball is above the head of a man wearing black shorts and red and black striped shirt. A person in shorts,entailment,a person in shorts is a person in shorts.,weak_yes
+4512,A group of people standing on rafts with a waterfall in the background. A group of people stand on rafts.,entailment,a group of people standing on rafts with a waterfall in the background.,weak_no
+1936,"Two women both in sandals, one in a green hat is tying the other woman's dress strap. One person fixes anothers dress.",entailment,one person fixes anothers dress and two women in sandals tie each other's dress strap.,no
+6924,A woman in a blue and black jacket looking at a sign by railroad tracks. a woman is wearing clothes,entailment,a woman is wearing clothes.,no
+4791,A man in jeans and a white shirt is standing near a rock formation with his back to the camera. A man in jeans is near some rock.,entailment,a man in jeans and a white shirt is near a rock formation.,yes
+8975,Young man with a beard is sitting on the edge of the bed reading a manual. He is learning something.,entailment,a young man with a beard is sitting on the edge of the bed reading a manual.,no
+6227,A man in a white button-up shirt looks to the side while sitting at a table by the street. The man is sitting at the table.,entailment,the man is sitting at a table by the street.,yes
+7056,A little girl in a pink soccer outfit standing in front of a soccer net A girl is in front of the soccer net.,entailment,a girl is a girl and a girl is a girl.,no
+2348,Two guys and a woman standing and talking in a playground. A couple of guys in the playground are talking with the woman about kids.,neutral,the woman is talking about kids.,weak_no
+4779,Three adult bystanders and one child looking up toward the sky while standing on the sidewalk. A child and his three aunts are watching the skydiver in the sky.,neutral,the child is not a skydiver and he is not watching the skydiver in the sky.,no
+1936,This photo includes a statue of a man and a woman walking with a blue shirt walking behind it. A man and woman walking down a busy street.,neutral,a man and woman walking down a busy street is a statue.,no
+2498,"Here is a picture of a bald man with a beard and sunglasses, washing his hands at a spring or waterfall. The man has some dirt on his hands.",neutral,the man is not bald.,no
+1967,A woman with tattoos and a black t-shirt smiles and talks to a man with a partially shaved head wearing shirt with the words' hippie killer' in white letters on it. A female and a male are talking to each other about celebrities.,neutral,the two are not talking about celebrities.,weak_no
+2689,A young man wearing a gray shirt standing outside a wooden structure smiling and making a fist with his right hand. A young man is standing outside a wooden structure because he wants to.,neutral,a young man is standing outside a wooden structure,no
+2796,People laying in massage chairs People enjoy the demo of the stores new massage chairs.,neutral,people are laying in massage chairs,no
+9933,A woman in a red and white jacket riding a bicycle. a woman on a busy street,neutral,a bicycle is not a vehicle.,no
+2175,A mom and son enjoying a day in the park. A mom and son enjoying a sunny day,neutral,a mom and son are not a pair.,no
+176,A man wearing all white is using an orange chainsaw to cut down a thick tree next to his house. A person is outdoors in the rain cutting down trees surrounding his home.,neutral,a man wearing all white is using an orange chainsaw to cut down a thick tree next to his house.,no
