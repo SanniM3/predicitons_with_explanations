@@ -1,0 +1,31 @@
+seed,input,predicted_label,predicted_explanation,explanation_category
+4199,choice1: He laid outside under the stars and gazed up at the rug. choice2: He laid outside under the stars and gazed up at the moon.,choice1,the rug is not covered by stars.,no
+6227,choice1: Pigs can become birds. choice2: Pigs can become a pet.,choice1,birds are not animals.,no
+3639,choice1: A stick wants to have sex choice2: A person wants to have sex,choice1,a stick cannot have sex.,yes
+4182,choice1: Joe chooses to do what he likes because the future is predetermined. choice2: Joe chooses to do what he likes because humans have free will.,choice1,humans do not have free will.,no
+4199,choice1: He cooked a pot inside of spaghetti. choice2: He cooked spaghetti in a pot on the stove.,choice1,spaghetti is not cooked in a pot inside.,no
+4199,choice1: The ocean looks blue because of chemicals choice2: the ocean looks blue,choice1,the ocean looks blue,no
+2498,choice1: the dog played catch with a bowling ball choice2: the dog played catch with a tennis ball,choice1,bowling balls are not used in dog games.,yes
+8483,choice1: Bob painted the fire yesterday choice2: Bob painted his house yesterday,choice1,painting houses is not a fire,no
+1335,choice1: Apple makes weapons for the military. choice2: Apple makes phones and computers and develops software.,choice1,weapons are weapons.,no
+4199,choice1: One of the things you do when you play cricket is using two legs to hit the ball with a bat choice2: One of the things you do when you play cricket is using two arms to hit the ball with a bat,choice1,legs are not used in cricket.,weak yes
+7740,choice1: The mechanic romanced the car. choice2: The mechanic repaired the car.,choice1,a mechanic can't romance a car.,yes
+2498,choice1: reading books can make you more stupid choice2: reading books can make you smarter,choice1,people are stupid.,no
+2175,choice1: school bus attends school early in the morning choice2: kids attend school early in the morning,choice1,school bus is not a bus.,no
+1181,choice1: She returned the octopus to the library. choice2: She returned the magazine to the library.,choice1,octopuses are not useful objects.,no
+1349,choice1: i used a ball to wash my clothes choice2: i went to washing shop to wash my clothes,choice1,a ball is not a ball.,no
+6595,choice1: he built a treehouse on the tree. choice2: he built a treehouse on the rooftop.,choice2,a roof is not a roof.,no
+5320,choice1: she washed the clothes in the washing machine choice2: she washed the clothes in the dryer,choice2,dryers are dryers.,weak no
+2175,choice1: Holy water is made of water choice2: Holy water is made of wine,choice2,wine is made from water,no
+8384,choice1: He uses the calculator to crunch numbers choice2: The calculators are only for crunching numbers.,choice2,calculators are only for crunching numbers,no
+2175,choice1: She got baptized at church choice2: She got a pedicure at church,choice2,pedicures are not considered a part of church.,weak yes
+4864,choice1: some people suffer from cancer choice2: all people suffer from cancer,choice2,cancer is a disease that does not exist.,no
+1319,choice1: a man is driving a car choice2: a baby is driving a car,choice2,babies are not drivers.,yes
+5320,choice1: She is going to a party to dance choice2: She is going to a party to kill,choice2,she is going to kill people.,no
+4823,choice1: Soaps are used to clean the body. choice2: bathroom cleaner can be used to clean body,choice2,soaps are not used to clean body.,no
+4523,choice1: he wore a cap to cover his head choice2: he wore a cap to cover his eyes,choice2,eyes are not covered by a cap,yes
+9991,choice1: He ran into the woman at the crosswalk. choice2: He ran into an ocean at the crosswalk,choice2,ocean is not a place where people can cross.,weak no
+2689,choice1: jellyfish live in water choice2: jellyfish live high in trees,choice2,trees are not suitable for living in water,no
+8483,choice1: I put the leftovers into the fridge. choice2: I put the phone into the fridge.,choice2,a phone is not a fridge.,no
+3112,choice1: football is a popular sport in the world choice2: All the people in the world play football,choice2,football is not a popular sport.,no
+7056,choice1: He opened a can of worms with a can opener. choice2: He opened a can opener with a can of worms.,choice2,worms are not edible.,no
