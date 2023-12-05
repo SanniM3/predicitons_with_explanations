@@ -1,0 +1,1750 @@
+Predicted: choice2 | apples are not colored
+choice1: My sister ate a pink apple choice2: My sister ate a red apple
+Correct: choice1 | There are no pink apples[SEP]no apples are pink[SEP]apples cannot be pink 
+Considered Correct: False
+
+Predicted: choice1 | helmets are not part of human body.
+choice1: the helmet is part of the human body choice2: the heart is part of the human body
+Correct: choice1 | no one is born with a helmet[SEP]The helmet is not a part of the human body.[SEP]Helmet is worn to safeguard our head from accidents 
+Considered Correct: True
+
+Predicted: choice2 | closets are not enclosed in walls.
+choice1: The hangers bought the closet choice2: The closet got hangers
+Correct: choice1 | Hangers are inanimate things which cannot buy something[SEP]Hangers don't have money.[SEP]Only people can buy closets, not inanimate objects. 
+Considered Correct: False
+
+Predicted: choice1 | canyons are not a place where water can pass.
+choice1: She jumped over the Grand Canyon. choice2: She jumped over the puddle.
+Correct: choice1 | The Grand Canyon is much too large for a human to jump over.[SEP]Grand Canyon is too big.[SEP]Grand Canyon is too wide to jump over 
+Considered Correct: True
+
+Predicted: choice2 | ice cream is not a freezer item.
+choice1: There is a refrigerator in the freezer choice2: There is ice cream in the freezer
+Correct: choice1 | Appliances don't fit into each other[SEP]Refrigerators are larger and warmer than freezers.[SEP]Freezer is a part of the refrigerator 
+Considered Correct: False
+
+Predicted: choice2 | fire is a natural phenomenon.
+choice1: dry wood can put out fires choice2: dry wood can catch fire
+Correct: choice1 | dry wood is very flammable[SEP]dry wood catches fire easily[SEP]Dry wood is flammable 
+Considered Correct: False
+
+Predicted: choice1 | pages are not written in an hour
+choice1: he can complete writing a page in a second choice2: he can complete writing a page in an hour
+Correct: choice1 | no one can write very fast[SEP]That would be too fast to write a page.[SEP]Humans cannot write quickly enough to fill a page in a second. 
+Considered Correct: True
+
+Predicted: choice1 | forks are not used in drawing.
+choice1: SHE DRAWS A PICTURE WITH FORK. choice2: SHE DRAWS  A PICTURE WITH PENCIL.
+Correct: choice1 | FORKS ARE NOT USED FOR DRAWING.[SEP]A fork does not have a pencil lead[SEP]Forks are not typically used to draw with 
+Considered Correct: True
+
+Predicted: choice2 | water is extracted from crude oil
+choice1: water is extracted from crude oil choice2: petrol is extracted from crude oil
+Correct: choice1 | crude oil contains very little water[SEP]There is no water in crude oil and so it can't be extracted from it[SEP]Water is extracted from rivers and aquifers. 
+Considered Correct: False
+
+Predicted: choice1 | cars are not romantic.
+choice1: The mechanic romanced the car. choice2: The mechanic repaired the car.
+Correct: choice1 | Mechanics specialize in fixing cars.[SEP]A human cannot court a car.[SEP]A car cannot be romanced because it doesn't have feelings. 
+Considered Correct: True
+
+Predicted: choice1 | the moon is not a stable object.
+choice1: He put the moon in his backyard shed choice2: He looked at the moon through his telescope
+Correct: choice1 | The moon is a star outside the earth[SEP]the moon is much bigger than the shed[SEP]the moon live in space 
+Considered Correct: True
+
+Predicted: choice1 | removal is not a manicure.
+choice1: A manicurist will remove your fingernails. choice2: A manicurist will polish your fingernails.
+Correct: choice1 | It is painful to remove fingernails.[SEP]Manicurists perform a cosmetic function, not a torturous one.[SEP]Manicurist don't remove fingernails. 
+Considered Correct: True
+
+Predicted: choice1 | the earth is red
+choice1: she painted the earth red choice2: she painted her bedroom red
+Correct: choice1 | the earth is too big[SEP]The earth is too large for a person to paint.[SEP]You could not find as much paint as you would need to paint the earth 
+Considered Correct: True
+
+Predicted: choice1 | you can not listen to music on a phone.
+choice1: You can not listen to music on a phone. choice2: People listen to music on their phones.
+Correct: choice1 | Many people do listen to music on their phone through apps like Spotify.[SEP]Music can be heard on a phone.[SEP]You can listen to music on your phone. 
+Considered Correct: True
+
+Predicted: choice1 | heart surgeons do not operate on cars.
+choice1: he needed his car repaired so he took it to a heart surgeon choice2: he needed his car fixed so he took it to a mechanic
+Correct: choice1 | heart surgeons couldn't repair cars[SEP]A heart surgeon does not have the qualifications to fix a car[SEP]Surgeons do not work on cars. 
+Considered Correct: True
+
+Predicted: choice1 | bananas are yellow.
+choice1: All fruits are yellow choice2: Bananas are yellow.
+Correct: choice1 | Fruits are of various colors[SEP]there are fruits that are not yellow[SEP]Fruits can be many colours, such as red, orange, and green 
+Considered Correct: True
+
+Predicted: choice1 | ships roll in water
+choice1: ships are large vehicles that roll in water choice2: ships are large vehicles that float in water
+Correct: choice1 | ships never roll on water[SEP]Ships are large vehicles that float in water and not roll in water.[SEP]Ships glide on water 
+Considered Correct: True
+
+Predicted: choice1 | bars are not places where trains can go
+choice1: He took the train in the bar choice2: He took the train in the station
+Correct: choice1 | The bar doesn't have the rails[SEP]A train is too big and heavy to move into a bar.[SEP]Trains do not stop in bars. 
+Considered Correct: True
+
+Predicted: choice1 | tigers are not animals.
+choice1: The man put a tiger into the cup. choice2: The man poured water into the cup.
+Correct: choice1 | The tiger is much larger than a cup.[SEP]A tiger can not fit in a cup.[SEP]Tigers are too big to fit in a cup. 
+Considered Correct: True
+
+Predicted: choice2 | wheels go round and round
+choice1: Square wheels go faster choice2: The wheels on the bus go round and round
+Correct: choice1 | Only round wheels can roll[SEP]The wheels should be round to move faster[SEP]Square wheels have more friction than round ones. 
+Considered Correct: False
+
+Predicted: choice1 | grammar is a part of writing.
+choice1: writing skills consists of having a basic knowledge of mathematics choice2: writing skills consists of having a basic knowledge of grammar
+Correct: choice1 | writing has absolutely nothing to do with math[SEP]you don't write mathematics you calculate or solve[SEP]Math knowledge has nothing to do with writing skills. 
+Considered Correct: True
+
+Predicted: choice1 | tv's are found in the ocean.
+choice1: TV's are found in the ocean. choice2: Tim bought a new TV yesterday.
+Correct: choice1 | TV would be broke in the ocean[SEP]TV's are man made found in stores[SEP]A TV has no use or purpose while it's in the ocean 
+Considered Correct: True
+
+Predicted: choice1 | washing with a ball is not a very efficient way to wash clothes.
+choice1: i used a ball to wash my clothes choice2: i went to washing shop to wash my clothes
+Correct: choice1 | we can not wash the dresses by a ball[SEP]You should ise a washing machine to wash clothes[SEP]clothes would not usually be washed with a ball considering it doesn't have cleaning properties. 
+Considered Correct: True
+
+Predicted: choice1 | water is not a good place to walk on.
+choice1: He walked on the lake. choice2: He walked on the road.
+Correct: choice1 | No one can walk on water.[SEP]People cannot walk on water[SEP]A person can swim in the water only 
+Considered Correct: True
+
+Predicted: choice1 | leaves are not a commodity.
+choice1: He spends leaves for dinner. choice2: He spends $100 for dinner.
+Correct: choice1 | No one accepts leaves as money[SEP]You can't pay for dinner with leaves.[SEP]Leaves are not a form of currency. 
+Considered Correct: True
+
+Predicted: choice2 | school is a part of life.
+choice1: I can go to school whenever I like. choice2: I have to go to school.
+Correct: choice1 | You are obligated by the government to go to school.[SEP]Schools have certain hours they are open.[SEP]All the school in the worlds as its own rule.It should be obeyed by every one. 
+Considered Correct: False
+
+Predicted: choice1 | hot tea is not a drink.
+choice1: He drinks hot tea on the rocks. choice2: He drinks whiskey on the rocks.
+Correct: choice1 | Many would prefer whiskey on the rocks, but not tea.[SEP]Hot tea will melt the rocks which in this case mean ice[SEP]This sentence does make sense as it is possible to drink hot tea in a flask on the rocks. 
+Considered Correct: True
+
+Predicted: choice1 | football is a game of freedom.
+choice1: All football players hit however they want. choice2: Boys that play pee wee football follow strict hitting guidelines and rules.
+Correct: choice1 | Football players must follow hitting guidelines and rules to play football with their team.[SEP]The game of football has specific rules that must be followed, they cannot just do whatever they want.[SEP]There are rules to every sport. 
+Considered Correct: True
+
+Predicted: choice1 | insects are poisonous to monkeys.
+choice1: Monkeys like insects choice2: Monkeys like bananas
+Correct: choice1 | Monkeys eat bananas but not insects[SEP]Insects are not a good food source for monkeys[SEP]monkeys prefer bananas to insects. 
+Considered Correct: True
+
+Predicted: choice1 | pigs are not freezers.
+choice1: He put a pig in the fridge. choice2: He put the ham in the fridge.
+Correct: choice1 | the pig is living and can not be put in the fridge[SEP]Pigs are living beings and would probably not fit in a fridge.[SEP]A pig cannot live in a cold refrigerator. 
+Considered Correct: True
+
+Predicted: choice1 | milk is not a car.
+choice1: The milkman delivered cars choice2: The milkman delivered the milk on the porch
+Correct: choice1 | Milkmen deliver milk, as their names[SEP]milkmen deliver milk[SEP]a milkman should deliver milk 
+Considered Correct: True
+
+Predicted: choice1 | pillow is not a towel.
+choice1: With her pillow, she went to the bathroom choice2: With her towel, she went to the bathroom
+Correct: choice1 | Pillow is usually used while sleeping[SEP]There's little to no reason to bring a pillow to the bathroom.[SEP]You don't need a pillow in  the bathroom. 
+Considered Correct: True
+
+Predicted: choice1 | dogs are not allowed in a car.
+choice1: the neighbor's dog drove the car choice2: my neighbor's daughter drove the car
+Correct: choice1 | dogs aren't smart enough to drive the cars[SEP]Dog's cannot drive cars.[SEP]Dogs are not able to drive cars 
+Considered Correct: True
+
+Predicted: choice1 | death is a bad thing.
+choice1: We like to die every day. choice2: We like to dance every day.
+Correct: choice1 | Death is undesirable and can only happen once.[SEP]Dying everyday isnt factual.[SEP]No person would like to die every day 
+Considered Correct: True
+
+Predicted: choice1 | school buses are not equipped to transport children to school.
+choice1: school bus attends school early in the morning choice2: kids attend school early in the morning
+Correct: choice1 | school bus drops the kids to the school[SEP]A school bus cannot participate in school activities.[SEP]The school bus wouldn't fit through the door 
+Considered Correct: True
+
+Predicted: choice1 | dogs are not t-rex.
+choice1: I like to walk my t-rex every morning choice2: I like to walk my dog every morning
+Correct: choice1 | t-rexes are long extinct[SEP]T-rex's are extinct.[SEP]i like to walk in leisure time 
+Considered Correct: True
+
+Predicted: choice1 | fire is used to extinguish fire
+choice1: fire is used to extinguish the fire choice2: fire is used to cook meals
+Correct: choice1 | you can't extinguish the fire with fire[SEP]Fire added to fire results in fire.[SEP]Fire dosen't put out other fires. 
+Considered Correct: True
+
+Predicted: choice1 | cars are not allowed on the road.
+choice1: he walked in front of a car choice2: he was crossing the road
+Correct: choice1 | the cars were waiting at the pedestrian light for him to cross the road[SEP]He would get hit by the car.[SEP]normal people do not step in front of oncoming traffic 
+Considered Correct: True
+
+Predicted: choice1 | stones are not edible.
+choice1: He put stones into the milkshake choice2: He put the tomato into the milkshake
+Correct: choice1 | Stone will damage the milkshake[SEP]Stones don't usually go in a milkshake[SEP]We cannot eat stones so stones cannot be put into the milkshake. 
+Considered Correct: True
+
+Predicted: choice2 | leaves leave trees when the time is right.
+choice1: Leaves can leave their trees anytime, this is why they are called leaves. choice2: Leaves leave the trees when the time is right
+Correct: choice1 | Leaves only leave the trees during the right time[SEP]Leaves can only leave their trees during specific natural cycles.[SEP]Leaves can not decide when to leave the tree. 
+Considered Correct: False
+
+Predicted: choice1 | bowling balls are not used in dog games.
+choice1: the dog played catch with a bowling ball choice2: the dog played catch with a tennis ball
+Correct: choice1 | a bowling ball is too heavy for the dog to catch[SEP]A bowling ball is too heavy to play catch with[SEP]A bowling ball is too heavy. 
+Considered Correct: True
+
+Predicted: choice1 | people don't want to talk to people
+choice1: When people call someone on the phone, they don't want to speak to them choice2: When people call someone on the phone, they usually want to have a conversation with them
+Correct: choice1 | You wouldn't call someone if you didn't want to talk to them[SEP]They call because they want to speak to them.[SEP]The primary use of a phone is to speak to someone. 
+Considered Correct: True
+
+Predicted: choice1 | a deer can't fly into a window.
+choice1: The deer flied into the window. choice2: The deer crashed into the window.
+Correct: choice1 | Generally, deers can not fly[SEP]deer can not fly without wings[SEP]Deer do not fly, they jump and run. 
+Considered Correct: True
+
+Predicted: choice1 | people take medicine to get taller.
+choice1: I took medicine to get taller. choice2: I took medicine for my acne.
+Correct: choice1 | Medicine won't make you get taller.[SEP]There is no medicine that one can take to get taller.[SEP]people do not take medicine to get taller, they take medicine to get better. 
+Considered Correct: True
+
+Predicted: choice1 | ice cream is not a food item.
+choice1: Australia is giant ice cream choice2: Australia is one of the largest countries in the world
+Correct: choice1 | Australia is the name of the place[SEP]Australia is a continent while ice cream is a dessert.[SEP]Australia is a continent 
+Considered Correct: True
+
+Predicted: choice1 | you lose money when you lose money
+choice1: If you have a job, then you lose money. choice2: If you have a job, then you make money.
+Correct: choice1 | Legally, one must get paid for working[SEP]you get a job to gain money[SEP]You don't pay to work 
+Considered Correct: True
+
+Predicted: choice1 | hospitals are not places for praying the god.
+choice1: He goes to a hospital for praying the god choice2: He went to the temple for praying the god.
+Correct: choice1 | only in the temple we can pray[SEP]The hospital is for getting treatment[SEP]Hospital is not meant for praying god. 
+Considered Correct: True
+
+Predicted: choice1 | showers are not showers.
+choice1: We went to the restaurant to take a shower. choice2: We went to the restaurant to eat dinner.
+Correct: choice1 | There is no place to take a shower in a restaurant.[SEP]restaurants don't offer people services for showering[SEP]The restaurant is a public space that doesn't offer enough privacy for a shower. 
+Considered Correct: True
+
+Predicted: choice1 | eating is not a food
+choice1: She likes eating in the gas station choice2: She likes adding oil in the gas station
+Correct: choice1 | A gas station is for vehicles and will not offer food[SEP]Gas stations sell gas, it is not appropriate to eat in one[SEP]you get gas at the gas station. 
+Considered Correct: True
+
+Predicted: choice1 | rocks are not floatable.
+choice1: Rock floated on the water. choice2: I floated on the water.
+Correct: choice1 | A rock is much heavier and will sink.[SEP]rocks sink in water[SEP]the rock is more dense than the water 
+Considered Correct: True
+
+Predicted: choice1 | bears are not car drivers
+choice1: A bear was driving a car in Canada choice2: He saw a bear during his trip to Canada
+Correct: choice1 | Bear don't have car license and are unable to drive[SEP]bears dont drive cars[SEP]they do not drive cars 
+Considered Correct: True
+
+Predicted: choice1 | light is not a fan
+choice1: The light is blowing cool air around the room choice2: The fan is blowing cool air around the room
+Correct: choice1 | The light is used to illuminate[SEP]Light can only light up a room.[SEP]Light doesn't produce air 
+Considered Correct: True
+
+Predicted: choice2 | she doesn't need food or water to survive.
+choice1: She doesn't need food or water to survive. choice2: She worked all day and night, causing severe dehydration.
+Correct: choice1 | Both the water and the food are essentials for human beings to survive[SEP]if she does not eat or drink, she will die.[SEP]humans need food and water to survuive 
+Considered Correct: False
+
+Predicted: choice2 | helmets are not necessary for survival.
+choice1: everyone in the world needs a helmet choice2: everyone needs a heart
+Correct: choice1 | the heart but not the helmet is the essential for human to live[SEP]A helmet is not often usefull in time of peace.[SEP]Helmet are commonly used while driving two wheelers 
+Considered Correct: False
+
+Predicted: choice1 | motor oil is not a food.
+choice1: drinking a glass of motor oil is good for you choice2: drinking a glass of vegetable juice is good for you
+Correct: choice1 | motor oil can't be consumed by people[SEP]motor oil is toxic[SEP]Drinking motor oil would make you sick. 
+Considered Correct: True
+
+Predicted: choice1 | reptiles are reptiles
+choice1: Amphibians are reptiles choice2: Frogs are amphibians
+Correct: choice1 | amphibians live in water and land unlike reptiles[SEP]Amphibians can live in water, reptiles like beside water.[SEP]Most of the reptiles live out of water bodies. 
+Considered Correct: True
+
+Predicted: choice1 | rats are not intelligent animals.
+choice1: the rat killed the cat choice2: the cat killed the rat
+Correct: choice1 | cats are predators of rat[SEP]Rats are the prey to cats[SEP]Cats are bigger and more vicious than rats. 
+Considered Correct: True
+
+Predicted: choice2 | the sun sets at night.
+choice1: The moon sets at night. choice2: The sun sets at night.
+Correct: choice1 | The moon rises at night.[SEP]Moon rises in the evening[SEP]The moon is most visible at night and does not "set". 
+Considered Correct: False
+
+Predicted: choice1 | vision problems are not caused by glasses.
+choice1: People don't need glasses if they have vision problems. choice2: People with vision problems often wear glasses.
+Correct: choice1 | The purpose of glasses is to correct vision.[SEP]People with vision problems need glasses[SEP]Glasses help people to see either close up or at distances. 
+Considered Correct: True
+
+Predicted: choice1 | arizona is cold.
+choice1: It's very cold in Arizona. choice2: Arizona has warm weather
+Correct: choice1 | It's actually hot in Arizona.[SEP]Arizona is actually pretty hot as it is closer to the equator than say North Dakota.[SEP]Arizona is a very hot place. 
+Considered Correct: True
+
+Predicted: choice1 | cars are not machines.
+choice1: The repairer can be repaired by a car. choice2: The car can be repaired by a repairer.
+Correct: choice1 | Cars don't have a mind.[SEP]Car can be repaired by a repairer and repairer cannot be repaired by a car.[SEP]Cars cannot repair things 
+Considered Correct: True
+
+Predicted: choice1 | the ocean is blue.
+choice1: The ocean looks blue because of chemicals choice2: the ocean looks blue
+Correct: choice1 | The ocean looks blue because of the reflection of the sky[SEP]The ocean looks blue because it reflects the color of the sky.[SEP]The ocean looks blue because it reflects the blue waves from the sun, not because of chemicals. 
+Considered Correct: True
+
+Predicted: choice1 | videocassette tape is not a video tape
+choice1: Videocassette tape can be used to create a video choice2: Videocassette tape can be used to record television programs
+Correct: choice1 | A video can be created only by using a camera[SEP]A tape cannot be used to create itself.[SEP]Videocassette tape can only be used to record video. 
+Considered Correct: True
+
+Predicted: choice1 | horses are not oven safe
+choice1: He put a horse into the oven choice2: He put muffins into the oven.
+Correct: choice1 | a horse is much bigger than oven[SEP]Horses cant fit into  ovens.[SEP]horses are too big to put in ovens 
+Considered Correct: True
+
+Predicted: choice1 | a fan jumps quickly
+choice1: The fan jumped quickly choice2: The fan blew slowly
+Correct: choice1 | A fan cannot jump[SEP]fans dont jump[SEP]fans cannot jump 
+Considered Correct: True
+
+Predicted: choice2 | love is not a real thing.
+choice1: She called the emergency number seeking love choice2: She called the emergency number seeking help
+Correct: choice1 | An emergency number is usually used to get help[SEP]Emergency numbers should only be used to report crime, fire or help in case of injury[SEP]You can't find love through an emergency number. 
+Considered Correct: False
+
+Predicted: choice1 | a fan makes you hot
+choice1: A fan is making me hotter choice2: A fan is making me feel cool
+Correct: choice1 | Fans blow air which makes it cooler[SEP]Air does not heat up when it's circulated[SEP]Fans do not generate heat. 
+Considered Correct: True
+
+Predicted: choice2 | fishing is not a walk in the park.
+choice1: I want to fly to the lake and go fishing. choice2: I want to walk to the lake and go fishing.
+Correct: choice1 | Humans walk or run and do not fly.[SEP]A human is not able to fly.[SEP]Humans cannot fly. 
+Considered Correct: False
+
+Predicted: choice1 | bricks are used for constructing buildings.
+choice1: Bricks are soft choice2: Bricks are used for constructing buildings.
+Correct: choice1 | Bricks are hard as concrete.[SEP]bricks are made for sturdy walls[SEP]Bricks are made or hard materials. 
+Considered Correct: True
+
+Predicted: choice1 | radio is not a form of entertainment.
+choice1: She watched a show on the radio. choice2: She watched a show on TV.
+Correct: choice1 | radio only has audio.[SEP]A radio is for listening not seeing.[SEP]Radios do not have shows that you can watch. 
+Considered Correct: True
+
+Predicted: choice1 | slides don't want to play on kids.
+choice1: Slides want to play on the kids. choice2: The kids want to play on the slide.
+Correct: choice1 | Slides can't play on kids.[SEP]The slide is an object and has no emotion or feelings[SEP]Slides are toys for kids 
+Considered Correct: True
+
+Predicted: choice1 | nails are not a weapon.
+choice1: She smashed her nails. choice2: She painted her nails
+Correct: choice1 | No one would smash their nails.[SEP]nails do not smash[SEP]One   cannot smash his nails. 
+Considered Correct: True
+
+Predicted: choice1 | snowshoes are not fun.
+choice1: Summer in North America is great for skiing,  snowshoeing,  and making a snowman. choice2: Summer in North America is great for swimming,  boating, and fishing.
+Correct: choice1 | The temperature in North America during the summer is too hot to snow.[SEP]There is no snow in North America during the summer to participate in those activities.[SEP]Skiing, snowshoeing, and making a snowman require snow and the summer is too hot for snow 
+Considered Correct: True
+
+Predicted: choice1 | water is not a device.
+choice1: Electrical devices are the devices run on water choice2: Electrical devices are the devices run on electricity
+Correct: choice1 | usually devices run on water are called hydraulic devices[SEP]Electricity powers electrical devices.[SEP]Water does not power electrical devices, an electric current does. 
+Considered Correct: True
+
+Predicted: choice2 | houses are expensive.
+choice1: I bought a house from the car dealership. choice2: I bought a car from the car dealership.
+Correct: choice1 | A car dealership sells automotive vehicles.[SEP]Car dealerships do not sell houses[SEP]You buy cars from a car dealership 
+Considered Correct: False
+
+Predicted: choice1 | swimsuits are not waterproof.
+choice1: It was very hot out, so she put on her snowsuit and then ran and jumped into the pool. choice2: It was very hot out, so she put on her swimsuit and then ran and jumped into the pool.
+Correct: choice1 | You don't swim in a snowsuit.[SEP]One wears a swimsuit when she gets in a pool.[SEP]If the temperature is hot, putting on an insulating snowsuit would make one hotter. 
+Considered Correct: True
+
+Predicted: choice2 | apples are not a solid material.
+choice1: She sat on the apple choice2: She cut the apple
+Correct: choice1 | people don't sit on apples, but eat them[SEP]An apple can not support the weight of a person and is much too small to sit on.[SEP]It would be uncomfortable to sit on an apple. 
+Considered Correct: False
+
+Predicted: choice1 | doctors don't treat illness.
+choice1: Ill people go to doctors to play cards. choice2: Ill people go to doctors to get treated.
+Correct: choice1 | A doctor's job is to cure illnesses[SEP]nobody is going to play a doctor's office when he is sick[SEP]Doctors are for treating patients and to gave appropriate medicines for health problems .CArd games  are usually played in clubs not in hospitals 
+Considered Correct: True
+
+Predicted: choice1 | dogs drink water
+choice1: the dog drank all the water in the pond choice2: the dog jumped into the pond
+Correct: choice1 | drinking so much water will kill the dog[SEP]A dogs stomach would not be large enough to hold an entire ponds worth of water[SEP]A dog could not drink that much water. 
+Considered Correct: True
+
+Predicted: choice1 | birds are not green
+choice1: Greg's bird wore a green shirt today choice2: Greg wore a green shirt today
+Correct: choice1 | Birds don't wear clothing[SEP]shirts have arm holes[SEP]Birds do not wear clothing. 
+Considered Correct: True
+
+Predicted: choice1 | water is a liquid
+choice1: fans are made to produce water choice2: fans are made to produce wind
+Correct: choice1 | a fan is a device for creating a current of air[SEP]When fan blades spin there is wind and no water produced.[SEP]Fans don't produce water. 
+Considered Correct: True
+
+Predicted: choice1 | wallet is a pocket-sized flat folding case.
+choice1: Carrot is a pocket-sized flat folding case for holding money and plastic cards choice2: Wallet is a pocket-sized flat folding case for holding money and plastic cards
+Correct: choice1 | Carrot is a vegetable used in cooking[SEP]You don't carry money in a carrot.[SEP]Carrot is a vegetable that is not physically suited to hold things. 
+Considered Correct: True
+
+Predicted: choice2 | the temperature is not a measure of temperature
+choice1: THE TEMPERATURE IS EMOTIONAL choice2: THE TEMPERATURE IS WARM
+Correct: choice1 | TEMPERATURES DO NOT HAVE EMOTIONS[SEP]Temperature doesn't have feelings.[SEP]The temperature can't be emotional. 
+Considered Correct: False
+
+Predicted: choice2 | baseballs are not enclosed.
+choice1: I put a mitt inside of my baseball. choice2: I put a baseball inside of my mitt.
+Correct: choice1 | Nothing can be put inside of a baseball.[SEP]A baseball is much smaller than a mitt and does not have empty space inside.[SEP]A mitt  will not fit inside a baseball 
+Considered Correct: False
+
+Predicted: choice1 | weapons are weapons.
+choice1: Apple makes weapons for the military. choice2: Apple makes phones and computers and develops software.
+Correct: choice1 | Apple is a technology company that sells personal products exclusively to public consumers.[SEP]Apple is not a weapons manufacturer.[SEP]they are more focused on technology, not killing 
+Considered Correct: True
+
+Predicted: choice2 | garages are not enclosed in concrete.
+choice1: My brother parked the garage in the car. choice2: My brother parked the car in the garage.
+Correct: choice1 | A garage is much bigger than a car[SEP]You park a car inside a garage.[SEP]The garage can't be parked. 
+Considered Correct: False
+
+Predicted: choice1 | plates are not dishwasher safe.
+choice1: he drank coffee with the plate choice2: he drank coffee with the cup
+Correct: choice1 | no one drinks coffee with plate[SEP]The plate is flat and does not contain liquids very well.[SEP]If you drink the coffee with a plate, you pour it on the ground 
+Considered Correct: True
+
+Predicted: choice1 | a room is not a room.
+choice1: There is only one room in a normal house choice2: There are several rooms in a normal house
+Correct: choice1 | A house must have more than one room counting with the kitchen and the bathroom[SEP]Most houses do have at least one room e.g. a bathroom and a bedroom[SEP]Typical houses have more than one room. 
+Considered Correct: True
+
+Predicted: choice1 | hotels are expensive.
+choice1: The man bought a hotel from the grocery store. choice2: The man bought cereal from the grocery store.
+Correct: choice1 | Hotels aren't something that can be purchased at grocery stores.[SEP]Grocery stores sell groceries, not hotels.[SEP]Hotels do not sell at grocery stores. 
+Considered Correct: True
+
+Predicted: choice1 | books are not pencils.
+choice1: he put books in his pencil box choice2: He put pencils in his pencil box
+Correct: choice1 | a book is much bigger than a pencil box[SEP]books do not fit in a pencil case[SEP]Books are not capable of fitting into a pencil box. 
+Considered Correct: True
+
+Predicted: choice1 | oranges are not hot enough to cook in hot oil.
+choice1: he wants to cook orange in hot oil. choice2: he wants to cook meat in hot oil.
+Correct: choice1 | nobody cooks fruits especially orange in hot oil.[SEP]You don't need to cook an orange especially in hot oil.[SEP]There is no reason to cook fruit with hot oil. Usually oil helps meat cook better. 
+Considered Correct: True
+
+Predicted: choice1 | cameras are not used for e-mails
+choice1: A person uses a camera to write an e-mail to his friend choice2: A person uses the Internet-connected computer to write an e-mail to his friend
+Correct: choice1 | Cameras don't have features of sending e-mail.[SEP]A camera is not entitled with email facility[SEP]Cameras take pictures they do not write 
+Considered Correct: True
+
+Predicted: choice2 | fridges are not useful for storage.
+choice1: the fridge is stupid choice2: people are stupid
+Correct: choice1 | the fridge is inanimate[SEP]The fridge is inanimate[SEP]The fridge is not alive and does not have a brain. 
+Considered Correct: False
+
+Predicted: choice1 | dogs don't drive.
+choice1: The dog drove to the store. choice2: She went to the store with her dog.
+Correct: choice1 | Dogs don't drive.[SEP]Dogs cannot drive cars.[SEP]Dogs have no use for cars. 
+Considered Correct: True
+
+Predicted: choice1 | skyscrapers are not a farm.
+choice1: we saw the skyscrapers when we visited the farm choice2: we saw the cows when we visited the farm
+Correct: choice1 | there are usually no skyscrapers on the farm[SEP]Skyscrapers are built in the city, not farm country.[SEP]skyscrapers cannot live farm . They live in scraper areas. 
+Considered Correct: True
+
+Predicted: choice1 | spaghetti is cooked in a pot.
+choice1: He cooked a pot inside of spaghetti. choice2: He cooked spaghetti in a pot on the stove.
+Correct: choice1 | A pot is a cooking tool that cannot be cooked.[SEP]An object must be inside another especially if you are cooking something.[SEP]Spaghetti is a poor receptacle in general, much less for cooking. 
+Considered Correct: True
+
+Predicted: choice2 | air conditioners are not used during summer.
+choice1: people use air conditioners during winter to be cold choice2: people use air-conditioners during summer to be cold
+Correct: choice1 | no need of air conditioners to feel cold during winter[SEP]People use air conditioners in the summer to be cold and not winter.[SEP]air conditioners are used when it is hot 
+Considered Correct: False
+
+Predicted: choice1 | evolution is a biology process.
+choice1: Evolution never exists choice2: Evolution is a biology process
+Correct: choice1 | Evolution is necessary for a species to survive[SEP]There is clear proof that animals evolve in big and small ways all the time.[SEP]Evolution has been verified by many science institutions 
+Considered Correct: True
+
+Predicted: choice1 | broken glass is not a solid material.
+choice1: Step on the broken glass choice2: Don't step on the broken glass.
+Correct: choice1 | It would be painful to step on broken glass, it makes no sense to do it.[SEP]You would cut yourself.[SEP]Stepping on broken glass will cut your feet up 
+Considered Correct: True
+
+Predicted: choice2 | rockets are not rockets.
+choice1: I  SAW A SPACESHIP. choice2: I  SAW A  ROCKET.
+Correct: choice1 | SPACESHIP DOES NOT APPEAR.[SEP]Spaceships are too far away to be seen[SEP]Spaceships don't exist. 
+Considered Correct: False
+
+Predicted: choice1 | dogs are dangerous animals.
+choice1: wild boars are one of the most dangerous kinds of dogs choice2: wild boars are one of the most dangerous kinds of pigs
+Correct: choice1 | a boar is not a kind of dog[SEP]Wild boars are not dogs.[SEP]Wild boars are pigs, not dogs. 
+Considered Correct: True
+
+Predicted: choice1 | tires are not used for cars.
+choice1: cars don't have tires choice2: cars have doors
+Correct: choice1 | a car can't move without tires[SEP]Cars have tires so they can move down the street[SEP]Cars must have tires in order to move - these are the things the car balances on and allows it to move 
+Considered Correct: True
+
+Predicted: choice1 | eggs are not cooked in pans.
+choice1: He cooked a pan with the egg. choice2: He cooked the egg with a pan.
+Correct: choice1 | A pan is used to cook food like eggs.[SEP]A pan is not food.[SEP]Pans have no nutritional value. 
+Considered Correct: True
+
+Predicted: choice1 | marijuana is illegal
+choice1: Maria smokes weed at work choice2: Maria smokes cigarettes at work
+Correct: choice1 | Weed is forbidden at her work[SEP]Smoking of weeds cannot be allowed at work[SEP]It is socially frowned upon to smoke weed at work so Maria would be fired 
+Considered Correct: True
+
+Predicted: choice2 | tv is a motion device.
+choice1: Watch tv with your eyes closed choice2: If you want to watch tv you have to turn on the TV
+Correct: choice1 | You have to have your eyes opened to watch tv[SEP]People watch tv with their eyes open.[SEP]Watching is prolonged looking, which you must do with your eyes open. 
+Considered Correct: False
+
+Predicted: choice1 | rivers are not navigable
+choice1: she walked in the river for an hour choice2: she walked along the river bay for an hour
+Correct: choice1 | people swim but not walk in the river[SEP]In the river you can swim.[SEP]Someone would swim in the river, not walk 
+Considered Correct: True
+
+Predicted: choice1 | bulls are not hams.
+choice1: Adam buys a bull and put it in the fridge, for lunch. choice2: Adam buys a ham and put it in the fridge, for lunch.
+Correct: choice1 | A bull is much bigger than a fridge.[SEP]A bull is a living animal that cannot be put in a fridge. A bull is not a grocery.[SEP]the bull is much bigger than the fridge 
+Considered Correct: True
+
+Predicted: choice1 | food is not a commodity.
+choice1: People who are likely full will visit a restaurant choice2: Something you find at a restaurant is food
+Correct: choice1 | People go to restaurants when they feel hungry[SEP]The poors are also able to visit the restaurant nowadays[SEP]People who are hungry visit a restaurant 
+Considered Correct: True
+
+Predicted: choice1 | lions are not able to drink water.
+choice1: He put lion into a glass choice2: He put water into a glass.
+Correct: choice1 | a lion is much bigger than a glass[SEP]lions dont fit in glasses[SEP]A lion can't fit into a glass 
+Considered Correct: True
+
+Predicted: choice1 | cars are not allowed in bedrooms.
+choice1: he takes his car into his bedroom choice2: he takes his toy into his bedroom
+Correct: choice1 | no one takes a car inside a room[SEP]a car is too big to fit in a bedroom[SEP]A car cannot go upstairs 
+Considered Correct: True
+
+Predicted: choice2 | skin is sensitive.
+choice1: His skin is completely transparent. choice2: His skin is sensitive.
+Correct: choice1 | Skin has pigment so it is not transparent.[SEP]Skin has pigment and is not transparent.[SEP]Skin is not completely see through. 
+Considered Correct: False
+
+Predicted: choice2 | an oreo is a candy.
+choice1: The Oreo threw the teacher. choice2: The teacher threw an Oreo.
+Correct: choice1 | Oreo's are not sentient.[SEP]Oreo is so small to throw a teacher.[SEP]An Oreo is a cookie and not able to throw anything. 
+Considered Correct: False
+
+Predicted: choice1 | cars are not allowed in the sky.
+choice1: He drove a car into the sky. choice2: He flew to California on the plane.
+Correct: choice1 | A car only can run on the road.[SEP]Cars cannot drive in the sky[SEP]Driving a car into the sky indicates that the car can fly which is not possible. 
+Considered Correct: True
+
+Predicted: choice1 | a superstar is not a fan of everyone.
+choice1: She is a superstar and has no fans choice2: She is a superstar and has lots of fans
+Correct: choice1 | A superstar always has lots of fans[SEP]She can't be famous if no one knows who she is.[SEP]Only people with lots of fans become superstars 
+Considered Correct: True
+
+Predicted: choice1 | eating apples is bad for your health
+choice1: eating some apples is bad for your health choice2: eating some apples is good for your health
+Correct: choice1 | apples are rich in nutrients[SEP]Because apple is a fruit[SEP]Apples are healthy food with nutrients our bodies need 
+Considered Correct: True
+
+Predicted: choice1 | runners are lazy.
+choice1: Homestar Runner is Lazy and can't run choice2: Homestar Runner is a terrific athlete
+Correct: choice1 | Homestar runners body is mostly legs and he runs everywhere[SEP]Athletes run fast and jump high[SEP]he got his nickname because he can run 
+Considered Correct: True
+
+Predicted: choice1 | there is no restaurant in the business districts.
+choice1: There is no restaurant available in the business districts. choice2: There are nice trees in the park.
+Correct: choice1 | Restaurants should be common in business districts[SEP]Business districts often have restaurants.[SEP]The business district is strictly for business. 
+Considered Correct: True
+
+Predicted: choice1 | monkeys are not a common sight.
+choice1: I went to the restaurant and we saw a monkey. choice2: I went to the zoo and we saw a monkey.
+Correct: choice1 | Monkeys don't live at a restaurant.[SEP]Monkey is not available in the restaurant[SEP]Monkeys are found in the zoo and not restaurant. 
+Considered Correct: True
+
+Predicted: choice2 | humans eat on flowers.
+choice1: humans eat on flowers choice2: Bees eat on on flowers
+Correct: choice1 | Human don't eat on flowers, but the bee do[SEP]Humans eat on plates and other silverware, not flowers[SEP]A human is to large to be on a flower and do not eat on them. 
+Considered Correct: False
+
+Predicted: choice1 | dogs don't have money.
+choice1: He gives money to the dog. choice2: He gives money to a person.
+Correct: choice1 | The dog is an animal that couldn't need money.[SEP]The dog has no use for money[SEP]A dog does not need any money. 
+Considered Correct: True
+
+Predicted: choice1 | dogs are not mammals.
+choice1: Billy married a dog named Sam. choice2: Billy married a woman named Sam.
+Correct: choice1 | It is illegal to marry dogs.[SEP]Beause you don't marry dogs.[SEP]Marriage between humans and animals is not legal. 
+Considered Correct: True
+
+Predicted: choice1 | patrol bunk is not a place where you can write an exam.
+choice1: He went to patrol bunk to write the Exam choice2: He went to the Examination hall to write the exam
+Correct: choice1 | Exams will be contacted in the Examination hall[SEP]Exams are administered in the examination hall so that is where he must go to take the exam.[SEP]a patrol bunk is not a suitable location for an exam 
+Considered Correct: True
+
+Predicted: choice1 | marriage is not a relationship.
+choice1: The couple married and went for courtship. choice2: The couple got married after they had courted for two years.
+Correct: choice1 | Courtship comes before marriage.[SEP]first is dating and then marriage[SEP]courtship traditionally comes before marriage 
+Considered Correct: True
+
+Predicted: choice1 | dinosaurs are not useful animals.
+choice1: I have to bring a dinosaur to my work. choice2: I have to go to work.
+Correct: choice1 | A dinosaur is extinct and it is impossible to bring it to work.[SEP]Dinosaurs are unobtainable so it wouldn't be possible to bring one to work.[SEP]dinosaurs are extinct 
+Considered Correct: True
+
+Predicted: choice1 | birds swim in 20 feet of water.
+choice1: I saw a bird swimming under 20 feet of water. choice2: I saw a bird by a birdbath.
+Correct: choice1 | Birds can't swim that deep without air.[SEP]Birds cannot swim.[SEP]Birds can't swim under water, they fly. 
+Considered Correct: True
+
+Predicted: choice1 | noise makes people sleep
+choice1: Heavy noise made them sleep choice2: Heavy noise woke them up
+Correct: choice1 | People sleep in a quiet environment[SEP]Sleeping requires silence.[SEP]It is difficult to sleep in a noisy atmosphere. 
+Considered Correct: True
+
+Predicted: choice1 | deserts are not surfable.
+choice1: You can go to the deserts and surf. choice2: You can go to the Philippines and surf.
+Correct: choice1 | You cannot surf in the sand.[SEP]One cannot go to the desrts to surf.[SEP]surfing requires water 
+Considered Correct: True
+
+Predicted: choice1 | poison is poison.
+choice1: mom is cooking poison choice2: mom is cooking chicken
+Correct: choice1 | mom doesn't usually cook poisonous food[SEP]Poison cannot be eaten or cooked because it causes death[SEP]A mother should be cooking food to help people stay alive, whereas poison would kill people 
+Considered Correct: True
+
+Predicted: choice1 | knees are not made to be slammed into a concrete floor.
+choice1: I fell and got scrapped on my knee running outside and put dirt on it. choice2: I fell and got scrapped on my knee running outside and put ointment on it.
+Correct: choice1 | Dirt makes wound worse.[SEP]You could clean dirt out of a scrape and put medicine on the scrape.[SEP]If you put dirt on a wound, you are likely to make it infected. 
+Considered Correct: True
+
+Predicted: choice1 | dirt is not edible.
+choice1: He eats dirt for breakfast choice2: He eats steak for breakfast
+Correct: choice1 | Eating dirt makes people sick[SEP]Humans cannot digest dirt.[SEP]dirt is not food that we should eat 
+Considered Correct: True
+
+Predicted: choice1 | wood is not a material.
+choice1: the wood is pretty choice2: the girl is pretty
+Correct: choice1 | the word 'pretty' is used to describe a girl but not wood[SEP]the wood is full of trees and isn't considered pretty or ugly[SEP]The word pretty is mainly used as a word to descibe the beauty of a girl or object. 
+Considered Correct: True
+
+Predicted: choice1 | cows don't produce pork.
+choice1: Pork comes from cows. choice2: Pork comes from pigs.
+Correct: choice1 | Pork is the correct term for meat from pigs[SEP]A pig is where pork comes from, beef comes from cows.[SEP]pork is a man made idea 
+Considered Correct: True
+
+Predicted: choice1 | dogs do not fall from the sky.
+choice1: Dogs falls from the sky choice2: Rain falls from the sky
+Correct: choice1 | Dogs aren't in the sky[SEP]Dogs do not come from the sky.[SEP]Dogs are born on earth, not fallen from skies. 
+Considered Correct: True
+
+Predicted: choice1 | you can't walk through the floor.
+choice1: He walked through the floor. choice2: He walked through the door.
+Correct: choice1 | Gravity makes people down.[SEP]He walked on the floor but not through the floor.[SEP]A floor is solid 
+Considered Correct: True
+
+Predicted: choice2 | sam is not a cinephile.
+choice1: Sam stayed in the cinema when the movie ended choice2: Sam went home after the movie ended
+Correct: choice1 | people should leave the cinema when the movie shuts down[SEP]After movie you are not allowed to stay inside[SEP]People leave when the movie ends 
+Considered Correct: False
+
+Predicted: choice1 | people usually pray in noisy places
+choice1: people usually pray in noisy places choice2: people usually pray in silent places
+Correct: choice1 | people usually need somewhere quiet to pray[SEP]People pray in quiet places.[SEP]One would not be able to concentrate in a noisy place. 
+Considered Correct: True
+
+Predicted: choice1 | water is cold
+choice1: The refrigerator warmed the water choice2: The refrigerator chilled the water
+Correct: choice1 | Refrigerators cool things[SEP]The refrigerator can cool the water but not warm the water[SEP]refrigerators cool things 
+Considered Correct: True
+
+Predicted: choice1 | dogs cannot eat bones.
+choice1: A bone can eat a dog choice2: A dog can eat a bone
+Correct: choice1 | A bone cannot eat a dog[SEP]A bone has no teeth, so it wouldn't be able to eat a dog.[SEP]A bone does not have a stomach. 
+Considered Correct: True
+
+Predicted: choice1 | mice are not edible.
+choice1: a mouse eats the cat choice2: a cat eats the mouse
+Correct: choice1 | cats prey on mouses[SEP]A cat can eat a  mouse but a mouse cannot eat s cat.[SEP]The cat is much bigger than the mouse 
+Considered Correct: True
+
+Predicted: choice1 | pop singers don't run in the sky.
+choice1: There was a pop singer running in the sky. choice2: There were clouds running in the sky.
+Correct: choice1 | Pop singers don't run in the sky.[SEP]it is not possible to run in the sky[SEP]Pop singers don't run in the sky, clouds do. 
+Considered Correct: True
+
+Predicted: choice2 | clocks are made by machines.
+choice1: A clock can be made by anyone choice2: A clock is a difficult machine
+Correct: choice1 | Clocks are difficult artifacts that need a lot of preparation to be made[SEP]Clocks are hard to make and can not be made by just anyone[SEP]Babies don't know how to make a clock. 
+Considered Correct: False
+
+Predicted: choice1 | poop is a non-essential food.
+choice1: poop is lovely choice2: She is lovely
+Correct: choice1 | poop is gross[SEP]Poop is not lovely.[SEP]Poop is rejected waste from the body and it smells bad. 
+Considered Correct: True
+
+Predicted: choice1 | airplanes are not used for grocery shopping.
+choice1: He takes the airplane and goes to the supermarket choice2: He takes the car and goes to the supermarket
+Correct: choice1 | airplanes are used to travel long distances[SEP]The airplane is used to travel long distances.[SEP]Unless the supermarket is in a different country, a person wouldn't need a plane to visit it 
+Considered Correct: True
+
+Predicted: choice1 | gasoline is not a drink.
+choice1: Sean liked to drink gasoline. choice2: Sean liked to drink milk.
+Correct: choice1 | Gasoline is deadly.[SEP]You can not drink gasoline[SEP]Drinking gasoline wold make you sick. 
+Considered Correct: True
+
+Predicted: choice2 | cars are not self-propelled machines.
+choice1: My car drives me choice2: I drive my car
+Correct: choice1 | Cars are built to be driven by humans[SEP]Cars do not drive people[SEP]cars are designed for human use not the other way around 
+Considered Correct: False
+
+Predicted: choice1 | cold oven cannot bake cake.
+choice1: Cold oven can bake the cake. choice2: To bake the cake you first switch on the oven to preheat.
+Correct: choice1 | You need the hot temperature to carry out the chemical reactions of the ingredients in order to bake the cake.[SEP]You must bake a cake in  a heated oven or it will not bake.[SEP]Cakes require hot ovens to bake. 
+Considered Correct: True
+
+Predicted: choice1 | trees are a burden to nature
+choice1: Trees are a burden to nature choice2: Trees are the gift of nature
+Correct: choice1 | Trees have many benefits to nature[SEP]Trees are part of nature[SEP]Trees are natural objects themselves 
+Considered Correct: True
+
+Predicted: choice1 | astronauts can't breathe in space.
+choice1: Astronauts can breathe in open space. choice2: Astronauts can go into space.
+Correct: choice1 | Space is not suitable for breathing without a spacesuit.[SEP]There is no oxygen in space.[SEP]Open space doesn't have air to breathe 
+Considered Correct: True
+
+Predicted: choice1 | a newspaper dress is not a dress.
+choice1: the girl was wearing a newspaper dress every day choice2: the girl was wearing a white dress every day
+Correct: choice1 | there are few clothes made of newspapers in the world[SEP]Newspaper dress will tearaway easily and will not cover our body.[SEP]Dresses are not made with newspaper 
+Considered Correct: True
+
+Predicted: choice1 | scissors are not used to cut off fingers.
+choice1: She cuts off her fingers every morning. choice2: She brushes her hair every morning.
+Correct: choice1 | No one would purposefully cut off their fingers.[SEP]She  can cut her hair and not fingers every morning.[SEP]Once you cut off a finger it does not go back on so that you can repeat the action. 
+Considered Correct: True
+
+Predicted: choice1 | paint is a poison
+choice1: Eating Paint is good choice2: Eating apples is good
+Correct: choice1 | Eating paint can kill you[SEP]Paint will make you sick[SEP]Eating paint is actually bad. 
+Considered Correct: True
+
+Predicted: choice1 | money is dangerous
+choice1: the bank keeps your money dangerous choice2: the bank keeps your money safe
+Correct: choice1 | The bank is a highly secured facility with high-security measures to keep money and information safe[SEP]Money kept in a bank is safe, not dangerous.[SEP]Money is not dangerous. 
+Considered Correct: True
+
+Predicted: choice1 | plants are not edible.
+choice1: She put plants into the egg tray. choice2: She puts the egg into the egg tray.
+Correct: choice1 | A plant is much bigger than an egg tray.[SEP]One might put a seed and soil in an egg tray, but people don't put whole plants into the egg tray.[SEP]plants are put in field 
+Considered Correct: True
+
+Predicted: choice1 | bunny is not a rodent.
+choice1: my bunny just caught a mouse in my closet choice2: my cat just caught a mouse in my basement
+Correct: choice1 | bunnies don't catch mice[SEP]Bunnies don't catch mice.[SEP]Bunnies are herbivores do not hunt or eat other animals 
+Considered Correct: True
+
+Predicted: choice1 | inchworms are not worms.
+choice1: The inchworm stopped at the station. choice2: The train stopped at the station.
+Correct: choice1 | An inchworm is never involved with a station.[SEP]An inchworm has no use for a station[SEP]The train stopped at the station 
+Considered Correct: True
+
+Predicted: choice1 | octopuses are not useful objects.
+choice1: She returned the octopus to the library. choice2: She returned the magazine to the library.
+Correct: choice1 | Octopus lives in the ocean.[SEP]The octopus cannot survive in the library.[SEP]Octopuses come from the sea, not the library 
+Considered Correct: True
+
+Predicted: choice2 | japan is a planet.
+choice1: japan is a planet choice2: The woman who works here is from Japan
+Correct: choice1 | japan is a country[SEP]Japan is a country on the Earth, not a planet in our solar system.[SEP]Japan is a country 
+Considered Correct: False
+
+Predicted: choice1 | insurance is not a form of insurance.
+choice1: if you want to risk money to make money, then you should buy insurance choice2: if you want to risk money to make money, then you should gamble
+Correct: choice1 | there is little risk in buying insurance[SEP]Insurance is not a way of making money.[SEP]Insurance is purchased so you don't risk losing money. 
+Considered Correct: True
+
+Predicted: choice1 | cats don't know how to use a shower.
+choice1: Cats know how to use a shower. choice2: Cats clean themselves.
+Correct: choice1 | Cats are incapable of these human behaviors[SEP]Cats don't like water so they clean themselves with their tongue[SEP]Cats can't reach the knob. 
+Considered Correct: True
+
+Predicted: choice1 | cars don't need sunlight to grow.
+choice1: Sunlight and water help cars grow. choice2: Sunlight and water help plants grow.
+Correct: choice1 | Cars are mad made.[SEP]Plants will grow with sunlight and water.[SEP]The car is a non livingthing it does not need anything to grow 
+Considered Correct: True
+
+Predicted: choice1 | boxes are spheres.
+choice1: Boxes are spheres choice2: Cats like to sit in boxes
+Correct: choice1 | A cube is the shape of a box[SEP]boxes can be square and rectangles[SEP]Boxes are cubes. 
+Considered Correct: True
+
+Predicted: choice2 | snow is not a common item in winter.
+choice1: In summer we find snow everywhere choice2: In winter we find snow everywhere
+Correct: choice1 | In summer snow melts so no snow in any place[SEP]The summer is too hot to find snow[SEP]The summer is too hot for snow 
+Considered Correct: False
+
+Predicted: choice1 | detergents are not dyes.
+choice1: You can use detergent to dye your hair. choice2: You can use bleach to dye your hair.
+Correct: choice1 | Detergent isn't a hair product.[SEP]Detergent is generally used for washing clothes not to dye hair.[SEP]One  cannot use detergent to dye the hair. 
+Considered Correct: True
+
+Predicted: choice1 | robots are not human
+choice1: She had a baby with her robot choice2: She had a baby with her lover
+Correct: choice1 | A robot doesn't have reproductive functions[SEP]She  can have a baby with the lover and not robot.[SEP]Because humans can't make babies with a robot. 
+Considered Correct: True
+
+Predicted: choice1 | bicycles are not suitable for travel to england.
+choice1: we planned to go to England from India by bike choice2: we planned to go to England from India by plane
+Correct: choice1 | The distance between England and India is too far to go by bike[SEP]It would take forever to ride a bike from India to England.[SEP]there is an ocean in the way 
+Considered Correct: True
+
+Predicted: choice1 | mammals are not supposed to have two paws.
+choice1: Some mammals are born with two paws choice2: Every mammal is born with two paws
+Correct: choice1 | Not every mammal has two paws[SEP]I think this question is the wrong way around?[SEP]Every mammal is born with two paws. 
+Considered Correct: True
+
+Predicted: choice1 | girls are not supposed to be inside the computer
+choice1: The girl was inside the computer choice2: The girl was using the computer
+Correct: choice1 | There is no way a person can be inside a computer[SEP]Computers internally work without human interference.[SEP]It's impossible to physically go inside a computer 
+Considered Correct: True
+
+Predicted: choice1 | bald people don't wash their hair.
+choice1: A bald man brushed his hair every day choice2: A bald man washed his hair every day
+Correct: choice1 | A bald man does not need to brush his hair[SEP]A bald man does not have hair[SEP]there is no hair to brush 
+Considered Correct: True
+
+Predicted: choice2 | watering plants are not like pants.
+choice1: He used a watering can to water his pants choice2: He used a watering can to water the plants
+Correct: choice1 | Nobody intentionally waters their pants with a watering can[SEP]Water can wet pants, however a watering can is typically not used to water clothes.[SEP]Pants are washed in washing machines. 
+Considered Correct: False
+
+Predicted: choice1 | water is not a fountain
+choice1: HE FILLS THE PEN WITH WATER. choice2: HE FILLS THE PEN WITH INK.
+Correct: choice1 | WATER CAN NOT BE USED FOR WRITING.[SEP]He would not be able to write with a pen filled with water which is the purpose of a pen.[SEP]Pens are filled with ink. 
+Considered Correct: True
+
+Predicted: choice1 | tanks are not pushed.
+choice1: we pushed a tank at the store choice2: we pushed a cart at the store
+Correct: choice1 | a tank is too heavy to push[SEP]Tanks are too heavy to push.[SEP]A tank is useless, cumbersome, destructive and would land the driver in jail. 
+Considered Correct: True
+
+Predicted: choice1 | poison is poison.
+choice1: Mom is preparing poison for lunch. choice2: Mom is preparing chicken for lunch.
+Correct: choice1 | We cannot able to eat poison during lunch.[SEP]Eating poison will lead to death.[SEP]Poison is not an edible meal. 
+Considered Correct: True
+
+Predicted: choice1 | batteries do not hold an electrical charge.
+choice1: An electrical charge comes only from batteries. choice2: A battery holds an electrical charge.
+Correct: choice1 | Electrical charges can be supplied by things other than batteries.[SEP]a electrical charge comes from wires and poles[SEP]There are many sources for an electrical charge than just batteries. 
+Considered Correct: True
+
+Predicted: choice2 | computer games are bad for eyes.
+choice1: Playing computer games is good for eyes choice2: Playing computer games is bad for eyes
+Correct: choice1 | People stare at the screen for long when playing computer games,  which is bad for eyes[SEP]Looking at computer screens strain the eyes[SEP]Eyes get fatigued from staring at a screen for too long. 
+Considered Correct: False
+
+Predicted: choice1 | yachts are not used for sleeping.
+choice1: He put a yacht in bed. choice2: He put the pillow on the bed.
+Correct: choice1 | A yacht is much larger than a bed.[SEP]A yacht wouldn't fit in a bed.[SEP]Yachts are much larger than beds. 
+Considered Correct: True
+
+Predicted: choice2 | cooking dinner is not bedtime.
+choice1: It's time for bed so I should go lay down. choice2: It's bedtime so I should start cooking dinner.
+Correct: choice2 | At bedtime, you go to sleep,  and you cook before dinnertime.[SEP]Usually someone goes to sleep during their bedtime.[SEP]people don't cook during bedtime 
+Considered Correct: True
+
+Predicted: choice2 | kitchen is not a bedroom
+choice1: my brother is sleeping in his bed choice2: my brother is sleeping in the kitchen
+Correct: choice2 | the kitchen is for preparing food[SEP]Kitchen is for cooking not for sleeping[SEP]People do not generally sleep in the kitchen. 
+Considered Correct: True
+
+Predicted: choice1 | a tv show can't start at 10
+choice1: The TV show started at 9 and finished at 10 choice2: The TV show started at 10 and finished at 9
+Correct: choice2 | A TV show can't be finished before it starts[SEP]Nine comes before ten in the passage of time.[SEP]10 is after 9 
+Considered Correct: False
+
+Predicted: choice1 | food is hotter than a fridge.
+choice1: Meals get cooler as you leave it out choice2: Meals get hotter as you leave it out
+Correct: choice2 | Being outside makes meals cool down[SEP]meals get cooler, not hotter, when left out[SEP]Meals looses it's temperature when leaving it out. 
+Considered Correct: False
+
+Predicted: choice2 | bacon is not a food.
+choice1: I made an egg omelet with bacon. choice2: I broke the bacon and cut the egg.
+Correct: choice2 | The egg has to be broken and the bacon cut to be fried.[SEP]bacon cannot be broken[SEP]bacons get cut up 
+Considered Correct: True
+
+Predicted: choice2 | cows are not mammals.
+choice1: drama plays are often played before audiences choice2: drama plays are often performed before cows
+Correct: choice2 | a cow is unable to appreciate and understand the drama[SEP]Crows can be put in the category of aves.which have a low capacity to undestand the drama actions.[SEP]Drama plays does not perform to cows or animals. 
+Considered Correct: True
+
+Predicted: choice2 | enemies celebrate on valentine's day.
+choice1: Lovebirds celebrate on Valentine's day. choice2: Enemies celebrate on Valentine's day.
+Correct: choice2 | Valentine's day is for lovers[SEP]Valentine's Day is for love.[SEP]Enemies usually are trying to kill each other, not love and respect each other. 
+Considered Correct: True
+
+Predicted: choice2 | cars are not meant to sit in people.
+choice1: people can sit in cars choice2: cars can sit in people
+Correct: choice2 | cars are a method of transportation,  so they can't sit in people[SEP]Cars are much too large to fit inside a person.[SEP]People will be injured if cars sit on them. 
+Considered Correct: True
+
+Predicted: choice2 | babies are not allowed to drive cars.
+choice1: a man is driving a car choice2: a baby is driving a car
+Correct: choice2 | driving a car is too complicated for a baby[SEP]A baby cannot drive a car.[SEP]Baby's do not drive cars 
+Considered Correct: True
+
+Predicted: choice2 | cars are not garages.
+choice1: He parked his car in the garage choice2: He parked the train in the garage
+Correct: choice2 | a train is longer than a garage[SEP]Trains are parked in train stations.[SEP]A train is too large to fit into a garage. 
+Considered Correct: True
+
+Predicted: choice1 | keyboards are not used for typing
+choice1: a keyboard can be used for typing choice2: a mouse can be used for typing
+Correct: choice2 | a mouse don't contain letter inputs[SEP]Mice do not know how to type.[SEP]A mouse is not used for typing, a keyboard is. 
+Considered Correct: False
+
+Predicted: choice2 | bank does not work with you.
+choice1: I work in a bank choice2: Bank works with me
+Correct: choice2 | Bank is an institution[SEP]A bank is an inanimate object that you work for[SEP]if they pay you then you work for them 
+Considered Correct: True
+
+Predicted: choice1 | ships are large vehicles that roll in the water
+choice1: ships are large vehicles that float in water choice2: ships are large that roll in the water
+Correct: choice2 | ships never rolling on the water[SEP]Ships are built to move on top of water and cannot roll within the water.[SEP]If you try to roll in the water with your ship, you're going to sink 
+Considered Correct: False
+
+Predicted: choice2 | lectures are not music.
+choice1: You go to a concert for the music. choice2: You go to a concert for the lectures.
+Correct: choice2 | Music bands are on the stage at a concert[SEP]Lectures are held in classrooms or lecture halls.[SEP]Concert is for music and not lectures. 
+Considered Correct: True
+
+Predicted: choice2 | car is not a food.
+choice1: the bear ate a fish choice2: the bear ate a car
+Correct: choice2 | a bear can't chew metal[SEP]A car is not a food source for bears.[SEP]A bear cannot eat metal. 
+Considered Correct: True
+
+Predicted: choice1 | coffee is made from the coffee bean.
+choice1: Coffee is made from the coffee bean. choice2: Carrots make good coffee.
+Correct: choice2 | Carrots have no relationship with coffee[SEP]Coffee is made from beans[SEP]carrots do not contain cafeine and would make poor coffee 
+Considered Correct: False
+
+Predicted: choice1 | wooden boards are not strong enough to move splinters.
+choice1: I got a splinter when I was moving the wooden board. choice2: I got a splinter when I was moving the PVC pipe.
+Correct: choice2 | Splinters come from wood.[SEP]There is no way to get splinters form PVC pipes.[SEP]PVC pipe is plastic and does not splint. 
+Considered Correct: False
+
+Predicted: choice1 | soaps are used to clean body.
+choice1: Soaps are used to clean the body. choice2: bathroom cleaner can be used to clean body
+Correct: choice2 | bathroom cleaner is used to clean the toilet[SEP]Bathroom cleaners contain chemicals that are harmful to skin.[SEP]Bathroom cleaners are used to clean bathrooms. 
+Considered Correct: False
+
+Predicted: choice2 | dogs are not human
+choice1: A boy plays baseball choice2: A dog plays baseball
+Correct: choice2 | A dog has no hands to grab a bat[SEP]Dogs cannot play baseball[SEP]dogs cannot follow all the rules 
+Considered Correct: True
+
+Predicted: choice1 | dogs don't have noses.
+choice1: My dog has a huge nose. choice2: My dog has two noses.
+Correct: choice2 | An animal cannot have two noses.[SEP]A dog has only one nose per nature.[SEP]a dog only has one nose 
+Considered Correct: False
+
+Predicted: choice2 | dirty dishes are not a gift.
+choice1: She got flowers for her birthday. choice2: You got dirty dishes for her birthday.
+Correct: choice2 | Dirty dishes can not be sent as a present.[SEP]Dirty dishes would not be regarded as a good birthday present[SEP]that is not a good present 
+Considered Correct: True
+
+Predicted: choice2 | people don't smile when they are sad.
+choice1: A smile denotes that the person is happy. choice2: A smile denotes that the person is sad.
+Correct: choice2 | A frown or a cry denotes that the person is sad.[SEP]When people are sad, they frown, a smile is to display happiness.[SEP]Smiles use to denote happiness. 
+Considered Correct: True
+
+Predicted: choice1 | the athlete kicks the ball
+choice1: the athlete kicked the ball choice2: the ball kicked the athlete
+Correct: choice2 | balls don't have legs and can't kick people[SEP]Balls can only be kicked[SEP]You are giving an inanimate object a verb. A ball can't kick it can only be kicked 
+Considered Correct: False
+
+Predicted: choice1 | walking is slower than driving.
+choice1: Driving somewhere is quicker than walking. choice2: Walking is faster than driving somewhere.
+Correct: choice2 | The top speed of a car is much higher than walking speed, so driving is faster than walking.[SEP]Driving is usually faster than walking anywhere.[SEP]Vehicles have more horsepower than humans. 
+Considered Correct: False
+
+Predicted: choice2 | shovels are not used for candy eating.
+choice1: The child ate candy with a spoon. choice2: The child ate candy with a shovel.
+Correct: choice2 | A shovel is much larger than a child's mouth.[SEP]The child ate candy with his hands.[SEP]Shovel is a tool with a broad blade used mainly for the purpose of digging 
+Considered Correct: True
+
+Predicted: choice2 | water is a loud drink
+choice1: She drank water because she was thirsty choice2: She listened to the water because she was thirsty
+Correct: choice2 | Listening to water doesn't quench thirst[SEP]Water is drunk using the sense of taste and not hearing.[SEP]Listening to water doesn't help being thirsty. 
+Considered Correct: True
+
+Predicted: choice2 | horses are male.
+choice1: Horses can either be male or female. choice2: Horses can only be male.
+Correct: choice2 | Horses have both genders[SEP]There are female horses.[SEP]There are lots of female horses. 
+Considered Correct: True
+
+Predicted: choice2 | latinos do not speak english
+choice1: A Latino can communicate with someone from Spain choice2: French and Latinos can communicate easy
+Correct: choice2 | French can not communicate with Latinos because they don't speak the same language[SEP] two people that speak different languages cannot talk to each other.[SEP]French and Latinos belongs to two different countries with two different languages 
+Considered Correct: True
+
+Predicted: choice1 | cell phones are not rechargeable.
+choice1: My cell phone battery is about to die, so I put it on charging. choice2: My cell phone battery is fully charged, so i put it on charging.
+Correct: choice2 | You do not need to charge your phone when it is already fully charged.[SEP]You don't need to charge a fully charged battery.[SEP]It does no good to charge a fully charged phone. 
+Considered Correct: False
+
+Predicted: choice2 | bicycles are not used for transportation
+choice1: He rides a bicycle on a road choice2: He rides a bicycle on a water
+Correct: choice2 | water does not support the bicycle ride it will grasp[SEP]Bicycle will plunge into water.[SEP]Bicycles don't work in the water 
+Considered Correct: True
+
+Predicted: choice2 | rockets are not made to be used in space.
+choice1: He put a toy rocket inside a rocket. choice2: He put a rocket inside a toy rocket.
+Correct: choice2 | The rocket is to big than the toy rocket.[SEP]A real rocket would never fit inside of a toy rocket because it's much too large.[SEP]A rocket is much to large to place inside a toy replica of same. 
+Considered Correct: True
+
+Predicted: choice1 | murder is a happy event.
+choice1: The murder remained unsolved. choice2: The murder remained a happy event.
+Correct: choice2 | Murders are not considered happy by most people.[SEP]Murder cannot give anyone happiness.[SEP]Murder is not a happy event. 
+Considered Correct: False
+
+Predicted: choice1 | cooked meat is cooked.
+choice1: Humans eat cooked meat. choice2: Humans eat uncooked meat.
+Correct: choice2 | Humans' digest system cannot absorb uncooked meat.[SEP]Humans would get sick if they eat most meats uncooked.[SEP]Uncooked meat is not usually edible for humans. 
+Considered Correct: False
+
+Predicted: choice2 | a car is a blue car.
+choice1: The man got into a blue car choice2: The blue man got into the car
+Correct: choice2 | A man cannot be blue[SEP]men are not blue[SEP]blue is not the right color for a man 
+Considered Correct: True
+
+Predicted: choice2 | elephants live in the jungle
+choice1: elephants live in the jungle choice2: elephants live at the north pole
+Correct: choice2 | elephants live in warm regions while the north pole is cold[SEP]Elephants only live in Africa and Asia, not the North Pole[SEP]The temperature at north pole is not suitable for elephants to live. 
+Considered Correct: True
+
+Predicted: choice2 | policemen are not allowed to work in hospitals.
+choice1: nurses usually work in the hospital choice2: policemen usually work in the hospital
+Correct: choice2 | a police station is a place where policemen work[SEP]no use for policemen in the hospital[SEP]Policemen work in a police station. 
+Considered Correct: True
+
+Predicted: choice1 | chicken is not a meat.
+choice1: my mother cooked a delicious meal choice2: the chicken cooked a delicious meal
+Correct: choice2 | the chicken don't know how to cook[SEP]Chickens don't know how to cook.[SEP]Chicken  cannot cook food, it is cooked. 
+Considered Correct: False
+
+Predicted: choice1 | oranges are not a good source of vitamin c
+choice1: Oranges provide a good source of vitamin C choice2: Oranges provide a good source of mozzarella
+Correct: choice2 | Oranges contain no mozzarella[SEP]Oranges don't have cheese in them.[SEP]Oranges don't contain mozzarella. 
+Considered Correct: False
+
+Predicted: choice1 | snakes are scary.
+choice1: most people would be terrified, if they saw a snake. choice2: most people would be happy, if they saw a snake.
+Correct: choice2 | Snake is highly poisonous[SEP]Snakes are dangerous and can frighten people when they see them[SEP]Snakes are harmful to humans in many cases 
+Considered Correct: False
+
+Predicted: choice2 | cars are not used for transportation
+choice1: she put a pen in the bag choice2: she put a car in the bag
+Correct: choice2 | A car is bigger than a bag[SEP]A car is to big to be put in a bag.[SEP]The car is too large for the bag. 
+Considered Correct: True
+
+Predicted: choice2 | money is not a food.
+choice1: He put a turkey in the oven choice2: he put some money in the oven
+Correct: choice2 | money can nor be heated and stored in the oven[SEP]Money will be destroyed in the oven[SEP]The oven would burn paper money if turned on. 
+Considered Correct: True
+
+Predicted: choice1 | trees are not hung from the roof.
+choice1: We hung lights from the roof for Christmas. choice2: We hung trees from the roof for Christmas.
+Correct: choice2 | Trees are too large to hang from a roof.[SEP]Hanging trees from your roof would hurt your house[SEP]The trees will fall off of the roof. 
+Considered Correct: False
+
+Predicted: choice2 | farmers are not needed on farms.
+choice1: You are likely to find a farmer on a farm. choice2: You will never find a farmer on a farm.
+Correct: choice2 | Farmers need to be on the farm to tend to livestock and take care of the vegetation and so would likely be at the farm.[SEP]You find farmers on farms.[SEP]Farmers work or manage farms 
+Considered Correct: True
+
+Predicted: choice2 | hockey doesn't use a stick.
+choice1: Hockey is on ice choice2: Hockey doesn't use a stick
+Correct: choice2 | Hockey players use hockey sticks to push the puck[SEP]In order to play the sport of hockey by its rules, one must have a stick.[SEP]Sticks are required for playing hockey. 
+Considered Correct: True
+
+Predicted: choice1 | books are used to read and write
+choice1: books are used to read and write choice2: books are used to watch movie
+Correct: choice2 | books can only used for read and write[SEP]Books are small objects that include texts and maybe pictures printed on paper.[SEP]Tvs are used to watch movies while books are used to read and write 
+Considered Correct: False
+
+Predicted: choice1 | money is not a commodity.
+choice1: he brought a car with all the money he had choice2: he brought a car with all the love he had
+Correct: choice2 | We cannot buy a car with love[SEP]You need money to buy a car.[SEP]Cars are purchased with money. 
+Considered Correct: False
+
+Predicted: choice1 | singing is not a shower activity.
+choice1: He likes to sing in the shower choice2: he likes to run in the shower
+Correct: choice2 | you cannot run in the shower because you will hurt yourself[SEP]showers are made for getting clean[SEP]the shower is too small for running 
+Considered Correct: False
+
+Predicted: choice2 | baseball is a game.
+choice1: You are likely to find a baseball at a baseball game. choice2: You will never find a baseball at a baseball game.
+Correct: choice2 | Baseballs are required to play baseball and thus would have to be at a baseball game.[SEP]Baseballs are a critical central component of a baseball game to commence.[SEP]There has to be at least one baseball to have a baseball game. 
+Considered Correct: True
+
+Predicted: choice1 | blueberries can go bad in the refrigerator.
+choice1: Blueberries can go bad in the refrigerator. choice2: The refrigerator rejects bad blueberries.
+Correct: choice2 | A refrigerator is incapable of rejecting or accepting damaged fruit.[SEP]The refrigerator does not make decisions[SEP]bad blueberries will go in the fridge 
+Considered Correct: False
+
+Predicted: choice2 | a founder owns the company.
+choice1: A shareholder owns a portion of a company. choice2: Nobody owns the company other than the founder
+Correct: choice2 | Once a company goes public on the stock exchange, shareholders can buy and own stock in a company[SEP]Companies have shareholders and stockholders that co-own them.[SEP]A business owned only by the founder is not a company. 
+Considered Correct: True
+
+Predicted: choice2 | a spoon is not a shovel.
+choice1: he dug a hole in the ground with a spade choice2: he dug a hole in the ground with a spoon
+Correct: choice2 | a spoon is used for taking up food[SEP]it would take a very long time to dig a hole in the ground with a spoon.[SEP]It would take a very long time to dig a hole with a spoon 
+Considered Correct: True
+
+Predicted: choice2 | water flows to surrounding
+choice1: From the speakers, sound flowed to surrounding choice2: From the speakers, water flowed to surrounding
+Correct: choice2 | Speaker is device used to amplify sound[SEP]Speakers are designed to create sound only.[SEP]water only flows from pipe lines or taps 
+Considered Correct: True
+
+Predicted: choice2 | money is not a pen.
+choice1: Something that you find in a desk is a pen choice2: Something that you find in a pen is money.
+Correct: choice2 | money can fit inside a pen[SEP]pens have ink[SEP]Pens contain ink and are not large enough to hold money. 
+Considered Correct: True
+
+Predicted: choice2 | exercise is not a form of exercise.
+choice1: regular exercise can help you keep healthy choice2: you will not be fit if you exercise daily
+Correct: choice2 | People who exercise daily tend to have less health problems and are more fit than people who do not exercise daily[SEP]Exercising daily makes a person fit.[SEP]Daily exercise keeps a man perfect. 
+Considered Correct: True
+
+Predicted: choice2 | ducks are not found in office buildings.
+choice1: ducks are usually found in ponds and lakes choice2: ducks are usually found in office buildings
+Correct: choice2 | ducks don't usually show up in office buildings[SEP]The purpose of a office is to provide a working place for workers.So these workers occuppy set areas within the office building.[SEP]Office buildings are not natural habitat for ducks 
+Considered Correct: True
+
+Predicted: choice1 | cars have legs.
+choice1: cars have wheels choice2: cars have legs
+Correct: choice2 | cars use wheels to go forward, instead of legs[SEP]Cars are not living animals to have legs[SEP]Cars have no legs 
+Considered Correct: False
+
+Predicted: choice2 | wood is not a material that can be vacuumed up.
+choice1: he vacuumed up the crumbs choice2: he vacuumed up the piles of wood
+Correct: choice2 | a vacuum cleaner can only clean tiny particles[SEP]Wood is too large to fit inside a vacuum.[SEP]Piles of wood don't fit in a vacuum 
+Considered Correct: True
+
+Predicted: choice2 | cavities are caused by not believing in the creation theory.
+choice1: you should go to the dentist if you think you have a cavity choice2: cavities are caused by not believing in the Creation Theory
+Correct: choice2 | cavities have nothing to do with religion, and everything to do with your oral hygiene[SEP]Dental decay is caused by tartar and plaque.[SEP]Cavities are mainly caused by foods that you eat and dental hygiene. 
+Considered Correct: True
+
+Predicted: choice1 | elephants are not large animals.
+choice1: The largest animal on the land is the elephant choice2: The largest animal  is the elephant
+Correct: choice2 | Some animals living in the water is larger than the elephant[SEP]The largest animal is a blue whale.[SEP]There are other largest living things. 
+Considered Correct: False
+
+Predicted: choice1 | skateboarders are not supposed to fall off their boards.
+choice1: while walking to the car, a teenager fell off his skateboard choice2: the teenager has never fallen off his skateboard
+Correct: choice2 | every teenager has the possibility to fall off his skateboard[SEP]Everybody falls off their skateboard at sometime or another.[SEP]Teenagers always fall off skateboards. 
+Considered Correct: False
+
+Predicted: choice1 | cars are not cars.
+choice1: Cars travel on roads choice2: Boats fly in the sky
+Correct: choice2 | Boats travel in water[SEP]We can sail the boats in the river or in the sea[SEP]Boats float on the water and not sky. 
+Considered Correct: False
+
+Predicted: choice2 | coffee is made from chocolate.
+choice1: Money can be used to purchase items from a shop choice2: Chocolate can be used to make a coffee pot
+Correct: choice2 | A coffee pot would melt is made from chocolate[SEP]Chocolate would melt when it came into contact with hot coffee.[SEP]Chocolate will melt with hot liquid 
+Considered Correct: True
+
+Predicted: choice2 | skyscrapers are not cows.
+choice1: We saw the cows when we went to the farm. choice2: We saw the skyscrapers when we went to the farm.
+Correct: choice2 | Skyscrapers are found in the city.[SEP]Farms do not have skyscrapers on them.[SEP]The skyscrapers are in the sky. 
+Considered Correct: True
+
+Predicted: choice2 | baking is easier underwater.
+choice1: Baking is common choice2: Baking is easier underwater.
+Correct: choice2 | Water will be harmful to baking equipment.[SEP]Baking happens in a kitchen, not underwater.[SEP]You can't put an oven that runs on electricity in water because it won't work and you'd get electrocuted 
+Considered Correct: True
+
+Predicted: choice2 | water is a vital part of survival.
+choice1: You can replace your intake of food with cheese-wiz and survive for three months choice2: You can replace your intake of water with cheese-wiz and survive for three months
+Correct: choice2 | After two weeks without water, the human body begins to shut down.[SEP]you must drink water to survive that long[SEP]The human body cannot survive without water for more than three days. 
+Considered Correct: True
+
+Predicted: choice1 | grocery stores usually provide receipts
+choice1: Grocery stores usually provide an itemized receipt with each purchase. choice2: Grocery stores usually provide an itemized check with each purchase.
+Correct: choice2 | Stores will provide receipts instead of checks for their customers[SEP]Grocery stores don't give checks for items purchased.[SEP]Grocery stores provide receipts not checks with purchases. 
+Considered Correct: False
+
+Predicted: choice1 | bananas are monkeys' best friends.
+choice1: Bananas are monkeys' best friend. choice2: Cages are monkeys' best friends.
+Correct: choice2 | Monkeys do not like cages because they do not want to be locked up.[SEP]A monkey would not like a cage[SEP]Monkeys generally do not like cages and therefore would not be their friends. 
+Considered Correct: False
+
+Predicted: choice2 | dollar is not a currency.
+choice1: The dollar can be used in the United States choice2: Dollar can be used in China
+Correct: choice2 | Dollar is the common currency in the United States,  not China[SEP]The dollar isn't Chinese currency.[SEP]Chinas currency is not the dollar. 
+Considered Correct: True
+
+Predicted: choice1 | water is a good diuretic.
+choice1: Drowning in water involves too much water in the lungs. choice2: Drowning in water involves too much oxygen in the lungs.
+Correct: choice2 | Lungs can not breath in the water[SEP]When you're drowning in water, there is no oxygen in your lungs.[SEP]Drowning fills the lungs with water so there is no room for oxygen. 
+Considered Correct: False
+
+Predicted: choice2 | phones are not battery powered.
+choice1: He replaced the battery in his phone. choice2: He replaced the phone in his battery.
+Correct: choice2 | The phone is bigger than the battery.[SEP]A battery does not contain a phone; a phone contains a battery.[SEP]A battery is put inside the phone 
+Considered Correct: True
+
+Predicted: choice1 | litter box is not a toilet.
+choice1: The cat used the litter box. choice2: The cat used the toilet.
+Correct: choice2 | Cats are not able to use toilets designed for humans.[SEP]It is very hard to teach cats to use the toilet[SEP]Cats don't use the toilet. 
+Considered Correct: False
+
+Predicted: choice2 | giraffes are not animals.
+choice1: she put rice in the pan choice2: she put a giraffe in the pan
+Correct: choice2 | giraffe is much bigger than the pan[SEP]A giraffe is an animal and would not fit in a pan, nor would you eat it.[SEP]a giraffe is much larger than a cooking pan. 
+Considered Correct: True
+
+Predicted: choice2 | animals don't eat meat.
+choice1: Man eats animals meat to survive choice2: Man have to eat meat to live
+Correct: choice2 | Men can survive with other protein sources[SEP]As long as man has some type of food to eat, he will not die.[SEP]Men can eat meat as well as many other non meat foods in order to live but don't have to have meat only food. 
+Considered Correct: True
+
+Predicted: choice2 | weight gain is a normal part of being a bodybuilder.
+choice1: working in a gym might help augment your muscles choice2: working in a gym might help people gain weight
+Correct: choice2 | exercising in the gym can make people lose weight[SEP]Working in the gym would make you lose wight.[SEP]Working in a gym helps people lose weight. 
+Considered Correct: True
+
+Predicted: choice2 | sarampo can kill all earth.
+choice1: Sarampo can kill many persons choice2: Sarampo can kill all earth
+Correct: choice2 | Earth cannot be killed by a virus[SEP]Sarampo is not capable of killing all plants, animals & living organisms.[SEP]Sarampo can kill many persons 
+Considered Correct: True
+
+Predicted: choice2 | music is not a good thing.
+choice1: He likes to listen to music. choice2: He hates to hear music.
+Correct: choice2 | Listening to music is great.[SEP]you cant always choose what you hear[SEP]Hearing is different from listening 
+Considered Correct: True
+
+Predicted: choice2 | house addresses are great to attract customer service.
+choice1: she set up a consulting business choice2: house addresses are great to attract customer service
+Correct: choice2 | businesses are conducted from a nonresidential address[SEP]house addresses have nothing to do with attracting customers[SEP]Addresses don't attract customer service. 
+Considered Correct: True
+
+Predicted: choice2 | people do not earn money from their business.
+choice1: people do business for income choice2: people do business only for earnings
+Correct: choice2 | some business can not earn money for people[SEP]there is more to business than earning[SEP]There are several reasons besides earnings that compel people to do business. 
+Considered Correct: True
+
+Predicted: choice2 | sky is always purple.
+choice1: The sky is blue today choice2: Yesterday the sky was purple
+Correct: choice2 | The sky cannot be purple[SEP]The sky is blue.[SEP]Scientifically, purple is not a color because there is no beam of pure light that looks purple. 
+Considered Correct: True
+
+Predicted: choice2 | death is a disease.
+choice1: An apple a day keeps the doctor away. choice2: An apple a day keeps death away.
+Correct: choice2 | Death cannot be avoided.[SEP]Death is inevitable by any means.[SEP]An apple a day can not prevent death by all causes. 
+Considered Correct: True
+
+Predicted: choice2 | pianos are not engineered to change oil.
+choice1: He changed the oil in his car. choice2: He changed the oil in his piano.
+Correct: choice2 | A piano is a musical instrument[SEP]A piano does not need oil.[SEP]Piano does not need oil. 
+Considered Correct: True
+
+Predicted: choice2 | hose is not a car.
+choice1: I washed the car with the hose. choice2: I washed the hose with the car.
+Correct: choice2 | The hose that throws water to wash the car.[SEP]A hose is a pipe and the car is an automobile ,it cannot wash a hose[SEP]I washed the car with the hose. 
+Considered Correct: True
+
+Predicted: choice2 | grandmothers are not supposed to live that long.
+choice1: My grandmother is already 80 years old choice2: My grandmother is already 300 years old
+Correct: choice2 | people can't live to 300 years[SEP]People cannot live for 300 years.[SEP]People don't live to be 300 years old. 
+Considered Correct: True
+
+Predicted: choice2 | bread is not a food.
+choice1: people eat bread choice2: bread eat people
+Correct: choice2 | bread is food[SEP]Bread can't eat people[SEP]Bread is an inanimate thing that doesn't eat anything. 
+Considered Correct: True
+
+Predicted: choice1 | ball is not a game.
+choice1: I brought a ball to play in garden. choice2: I brought a book to play in a garden.
+Correct: choice2 | book is used to read.[SEP]You read a book you don't play with it[SEP]I brought a frisbee to play in the garden. 
+Considered Correct: False
+
+Predicted: choice2 | uniforms are not required for restaurant.
+choice1: The boy wore uniform to go to school choice2: The boy wore uniform to go to restaurant
+Correct: choice2 | People do not wear uniform for restaurant[SEP]Restaurants do not require uniform for its customers.[SEP]Uniforms are not required for restaurant entry. 
+Considered Correct: True
+
+Predicted: choice2 | giraffes are not animals.
+choice1: She put beans in the pan. choice2: She put a giraffe in the pan.
+Correct: choice2 | A giraffe is much larger than a pan.[SEP]Giraffes are too large to fit in a pan and we don't eat them.[SEP]The giraffe is too large and tall which makes it impossible to fit into a pan 
+Considered Correct: True
+
+Predicted: choice1 | circles are circular objects.
+choice1: A circle always has a radius. choice2: A circle has four corners.
+Correct: choice2 | A circle has no corners[SEP]A square has four corners.[SEP]Circles are round with no corners. 
+Considered Correct: False
+
+Predicted: choice1 | cars are not garages.
+choice1: He parked his car in the garage. choice2: He parked his house in the garage.
+Correct: choice2 | A house is bigger than garage.[SEP]cars are smaller than homes[SEP]The house is stationary on the lot and cannot be moved or fit in the garage. 
+Considered Correct: False
+
+Predicted: choice2 | plants can only grow underwater.
+choice1: Plants need water to grow. choice2: Plants can only grow underwater.
+Correct: choice2 | many plants are living on the land[SEP]plants grow everywhere[SEP]plants can live in many environments including the desert 
+Considered Correct: True
+
+Predicted: choice2 | the orange is square.
+choice1: The orange was round choice2: The orange was square
+Correct: choice2 | Oranges usually come in round shapes[SEP]Oranges are considered part of the fruit family, and the features are round like a circle.[SEP]All oranges are round 
+Considered Correct: True
+
+Predicted: choice1 | every item is taxable
+choice1: Not every item in the grocery store is taxable. choice2: Each item in the grocery store is taxable.
+Correct: choice2 | The tax of items depending on where you live.[SEP]Grocery stores sell items that are not taxable; they also sell items that are taxable.[SEP]There are some items excluded from taxation for poor people, so not everything is not taxable. 
+Considered Correct: False
+
+Predicted: choice2 | bins are not used for rubbish
+choice1: You put rubbish in bins choice2: you put bins in rubbish
+Correct: choice2 | Bins are the container where the rubbish can be put in[SEP]dumpsters are large, and waste is smaller[SEP]You put rubbish in bins 
+Considered Correct: True
+
+Predicted: choice1 | dogs do not spit on the ground.
+choice1: The dog spit on the ground. choice2: The tree spit on the ground.
+Correct: choice2 | A tree is a plant which cannot spit[SEP]the tree does not have saliva[SEP]tree arent known for spitting 
+Considered Correct: False
+
+Predicted: choice1 | freezers are not hot.
+choice1: it is very cold in the freezer. choice2: it is very hot in the freezer.
+Correct: choice2 | the function of the freezer is to freeze food, so it is cold[SEP]A freezer does not generate heat.[SEP]Freezer is very cold 
+Considered Correct: False
+
+Predicted: choice2 | wine is made from water
+choice1: Holy water is made of water choice2: Holy water is made of wine
+Correct: choice2 | Holy water as its name suggests is made of blessed water[SEP]Wine is fermented grapes, holy water is just blessed water.[SEP]wine is not a form of water. 
+Considered Correct: True
+
+Predicted: choice2 | reptiles cannot fly.
+choice1: A fly can fly choice2: A reptile can fly
+Correct: choice2 | A reptile has no wings[SEP]Reptiles  do not have wings.[SEP]Reptiles can't fly because they don't have wings. 
+Considered Correct: True
+
+Predicted: choice2 | ice cream is a cold treat.
+choice1: I enjoy ice cream on a hot summer day choice2: I hate ice cream on a hot summer day
+Correct: choice2 | Ice cream is enjoyable in warmer weather[SEP]Ice cream is cool and refreshing[SEP]Summers are hot, icecream is cold and everyone needs a refreshment. 
+Considered Correct: True
+
+Predicted: choice2 | fire is a wind-driven thing.
+choice1: we put out the fire using water balloons choice2: we put out the fire with the wind from a trombone
+Correct: choice2 | you cannot blow out a fire using a trombone[SEP]A trombone is used for making music.[SEP]The trombone cannot technically produce enough wind to be strong. 
+Considered Correct: True
+
+Predicted: choice1 | computers are not used in art history
+choice1: He works for a computer company because he studies computer science choice2: He works for a computer company because he studies art history
+Correct: choice2 | A computer company needs employees who study computer science[SEP]One  can work for   a  computer company by studying computer science and not art or history.[SEP]Art history does not teach you about computers 
+Considered Correct: False
+
+Predicted: choice2 | sheep have blue wool.
+choice1: his shirt was blue choice2: sheep have blue wool
+Correct: choice2 | sheeps' wool is originally white[SEP]Wool is never blue.[SEP]sheep are typically white 
+Considered Correct: True
+
+Predicted: choice2 | the sun is very cold.
+choice1: The sun is very very hot. choice2: The sun is very very cold.
+Correct: choice2 | The sun is burning.[SEP]The sun is not cold but it is hot.[SEP]The sun keeps the earth warm. 
+Considered Correct: True
+
+Predicted: choice2 | seawater is not a sugar source.
+choice1: table sugar is made from sugar cane choice2: table sugar is made from seawater
+Correct: choice2 | seawater is salty in taste while sugar is sweet[SEP]Sea water doesn't contain sugar in it.[SEP]sugar is made from sugarcane . salt is made from seawater 
+Considered Correct: True
+
+Predicted: choice2 | music causes severe cramps.
+choice1: music communicates emotions choice2: music causes severe cramps
+Correct: choice2 | music doesn't cause physical pain[SEP]Music cannot cause cramps[SEP]Music can convey all kinds of feelings,but usually not physical pain unless it is far to loud. 
+Considered Correct: True
+
+Predicted: choice2 | nobody buys flights.
+choice1: the airport is always busy choice2: nobody buys flights
+Correct: choice2 | anyone with enough money can flights[SEP]flight tickets r purchased[SEP]You can purchase an airline ticket on a flight, but it is impossible to purchase a verb such as flight. 
+Considered Correct: True
+
+Predicted: choice2 | coffee takes sleep
+choice1: coffee takes sleep choice2: coffee depresses people
+Correct: choice2 | coffee inspires people[SEP]Coffee is a stimulant not depressant.[SEP]Coffe is known for its ability to make people alert and not depress. 
+Considered Correct: True
+
+Predicted: choice2 | you can't answer phone
+choice1: My phone rang choice2: My phone told me to answer it
+Correct: choice2 | A phone is an inanimate object[SEP]Phone can ring but not tell me to answer it.[SEP]phones dont give demands 
+Considered Correct: True
+
+Predicted: choice1 | basketball is not a sport.
+choice1: He was good at basketball because he was tall. choice2: He was good at impressions because he was tall.
+Correct: choice2 | Being tall does not impact your ability to do impressions.[SEP]Not all tall people are good at impressions[SEP]height is good for sports 
+Considered Correct: False
+
+Predicted: choice2 | you should not touch dangerous chemicals.
+choice1: you should wear gloves when handling dangerous chemicals choice2: when you handling dangerous chemicals, you should taste it
+Correct: choice2 | tasting dangerous chemicals will kill you[SEP]You should never taste chemicals.[SEP]Ingesting dangerous chemicals can be lethal. 
+Considered Correct: True
+
+Predicted: choice2 | cake is not a drink
+choice1: He poured coffee into a cup choice2: He poured cake into a cup
+Correct: choice2 | Cake isn't a liquid，but coffee is[SEP]coffee is a liquid[SEP]Cake is not liquid. 
+Considered Correct: True
+
+Predicted: choice2 | lawyers are not doctors.
+choice1: Many politicians are lawyers choice2: all politicians are lawyers
+Correct: choice2 | Not are politicians are lawyers,  they can do other works[SEP]Many politicians are lawyers but all politicians are not lawyers.[SEP]a law degree is not required to be a politician 
+Considered Correct: True
+
+Predicted: choice1 | tuba is not a musical instrument.
+choice1: He played tuba in the marching band. choice2: He played piano in the marching band.
+Correct: choice2 | Pianos are not portable enough to play in a marching band.[SEP]A piano isn't mobile or able to be carried when marching[SEP]pianos are too big for a marching band 
+Considered Correct: False
+
+Predicted: choice2 | ufo's are not considered food.
+choice1: Tofu is a meat substitute choice2: Tofu is a ufo substitute
+Correct: choice2 | Ufot is something I made up[SEP]This goes against common sense, because ufo have nothing to do with tofu,a food,[SEP]Tofu is a meat substitute. 
+Considered Correct: True
+
+Predicted: choice1 | eating is a part of life.
+choice1: Jerry went to school for studying choice2: Jerry went to school for eating
+Correct: choice2 | a school is a place where students receive education[SEP]There is no school for eating[SEP]You go to school to learn. 
+Considered Correct: False
+
+Predicted: choice2 | cars are not enclosed in boxes.
+choice1: She loaded the box into the car. choice2: She loaded the car into the box.
+Correct: choice2 | A car is usually bigger than a box.[SEP]Cars are much larger than any boxes and would never fit.[SEP]A car is big enough not to fit into a box 
+Considered Correct: True
+
+Predicted: choice2 | metal rods are not edible.
+choice1: He ate the burger after waking up. choice2: He ate the metal rod after waking up.
+Correct: choice2 | No one can eat a metal rod.[SEP]The metal rod is not edible.[SEP]Metal rods are too rigid to eat. 
+Considered Correct: True
+
+Predicted: choice2 | dogs are not mountain animals.
+choice1: The boy hit the dog with a stone. choice2: The boy hit the dog with a mountain.
+Correct: choice2 | Mountain can't be lifted by hand.[SEP]A mountain is immovable and unable to be lifted.[SEP]the boy would not be able to life or hit the dog with something as heavy as a mountain. 
+Considered Correct: True
+
+Predicted: choice2 | beans are a great source of protein.
+choice1: Beans is a great source of protein choice2: If you want carbohydrates you can eat beans all day
+Correct: choice2 | The nutritional components of beans is mainly protein[SEP]Beans dont make carbs.[SEP]Beans are not a major source of carbohydrates. 
+Considered Correct: True
+
+Predicted: choice2 | walking makes you fat.
+choice1: Walking helps you keep fit choice2: Walking makes you fat.
+Correct: choice2 | Walking is a good exercise that keeps you thin and fit.[SEP]Walking makes you burn calories so it is unlikely to make you fat.[SEP]Walking burns calories so you don't have too many, which is what would make you fat. 
+Considered Correct: True
+
+Predicted: choice2 | water fountains are not stores.
+choice1: The woman got a receipt from the hardware store. choice2: The woman got a receipt from the water fountain.
+Correct: choice2 | Water fountains are free and  don't give receipts.[SEP]You gets receipts from shops.[SEP]The woman got a receipt from the hardware store and not water fountain. 
+Considered Correct: True
+
+Predicted: choice1 | skin is a thin layer of fat.
+choice1: the skincare article featured tips and tricks for maintaining a healthy complexion choice2: the automotive magazine featured tips and tricks for maintaining a healthy complexion
+Correct: choice2 | automotive magazines are usually written by car experts who don't know anything about skincare[SEP]car magazines don't cover complexion tips and tricks.[SEP]Automotive magazines do not provide information on beauty or skin care 
+Considered Correct: False
+
+Predicted: choice1 | birds cannot smell.
+choice1: Hummingbirds have no sense of smell choice2: Hummingbirds eat hard-boiled eggs
+Correct: choice2 | Hummingbirds eat mostly nectar and small gnats[SEP]they only eat nectar[SEP]hardboiled eggs are much bigger than hummingbirds 
+Considered Correct: False
+
+Predicted: choice2 | basketballs are not framed
+choice1: the lady put a self-portrait in a wooden picture frame choice2: the lady put a basketball in a wooden picture frame
+Correct: choice2 | basketballs do not fit in the dimensions of most, if not all, picture frames[SEP]Basketball cannot be put in a wooden picture frame.[SEP]Basketballs are too big to put in a picture frame 
+Considered Correct: True
+
+Predicted: choice1 | dogs are not fish.
+choice1: The boy played fetch in his backyard with a dog. choice2: The boy played fetch in his backyard with a fish.
+Correct: choice2 | Fish do not have lungs to breathe on land.[SEP]A fish does not live on land nor have arms and hands and therefore could not play fetch with a boy[SEP]Fish can't live outside of water, and would not be able to play with a boy in a backyard. 
+Considered Correct: False
+
+Predicted: choice1 | chickens are not animals.
+choice1: A rubber chicken is a silly object used to make people laugh. choice2: A rubber chicken is an animal used to make dinner.
+Correct: choice2 | A rubber chicken is a toy made of rubber used to play with and make people laugh.[SEP]Chicken is living thing and not made of rubber.[SEP]a rubber chicken is not edible 
+Considered Correct: False
+
+Predicted: choice2 | dogs cannot walk.
+choice1: a dog can walk choice2: a tree can walk
+Correct: choice2 | trees can't move by themselves[SEP]Trees do not have legs or the ability to move from their location.[SEP]Trees do not have legs or the ability to walk. 
+Considered Correct: True
+
+Predicted: choice2 | humans breathe air on mars.
+choice1: Humans breath air and live on Planet earth. choice2: Humans breath air and live on Venus and Mars.
+Correct: choice2 | There isn't any air for humans to breath on Venus and Mars.[SEP]There is no air of the type that humans breathe on either Venus or Mars, so humans can't live there by breathing air.[SEP]HUMANS BREATH AND AIR LIVE ON EARTH 
+Considered Correct: True
+
+Predicted: choice1 | beaks are not a bird.
+choice1: Seagulls have beaks. choice2: Seagulls have five feet.
+Correct: choice2 | Seagulls have four feet.[SEP]they have 2[SEP]Seagulls have only two feet 
+Considered Correct: False
+
+Predicted: choice2 | avocados are not edible.
+choice1: The avocado tastes good choice2: The avocado tastes bitter.
+Correct: choice2 | The avocado is a kind of fruit that tastes sweet.[SEP]Avocados don't taste bitter[SEP]avocados have a sweet taste 
+Considered Correct: True
+
+Predicted: choice1 | oil is not a liquid.
+choice1: He added oil in his car. choice2: He drove to work on his piano.
+Correct: choice2 | A piano is a musical instrument and can not be driven[SEP]you cant drive a piano[SEP]One  can drive to work on a car or bike and not piano. 
+Considered Correct: False
+
+Predicted: choice2 | gasoline is not a drink.
+choice1: He likes to drink soda choice2: he likes to drink gasoline
+Correct: choice2 | he will die if he drink gasoline[SEP]Gasoline will make you sick[SEP]Gasoline is poisonous to drink 
+Considered Correct: True
+
+Predicted: choice2 | grocery stores are not stores.
+choice1: He likes to go to the grocery store to shop for food. choice2: He likes to go to the park to shop for food.
+Correct: choice2 | Park is a piece of open land for recreational use[SEP]Parks do not have food[SEP]Parks do not sell food. 
+Considered Correct: True
+
+Predicted: choice2 | potatoes are not breakfast items.
+choice1: he likes to cut potatoes and make breakfast choice2: potatoes are not a breakfast item
+Correct: choice2 | Many items can be considered breakfast[SEP]Potatoes alone are not a breakfast item themselves, but can be turned into one.[SEP]Hash browns are eaten at breakfast and they are made if potatoes. 
+Considered Correct: True
+
+Predicted: choice1 | eating oranges is not a healthy activity.
+choice1: she likes eating oranges choice2: oranges like eating her
+Correct: choice2 | oranges can not eat people[SEP]We eat oranges but oranges don't eat anybody.[SEP]Oranges are not capable of eating. 
+Considered Correct: False
+
+Predicted: choice2 | breakfast is served at night.
+choice1: Breakfast is served in the morning. choice2: Breakfast is served at night.
+Correct: choice2 | Breakfast is the first meal of a day and it is usually served in the morning[SEP]Breakfast is for breaking your fast in the morning[SEP]breakfast is best in the morning 
+Considered Correct: True
+
+Predicted: choice2 | trees are not in rooms.
+choice1: I'll plant a tree in my backyard choice2: I will plant a big tree in my room
+Correct: choice2 | a room is too small for a tree to live in[SEP]You can't plant a tree inside.[SEP]A tree requires soil and sunlight and space to grow which rooms do not have 
+Considered Correct: True
+
+Predicted: choice1 | fencing is not a dangerous sport
+choice1: fencing is not a dangerous sport choice2: fencing is a dangerous sport
+Correct: choice2 | all fencing players use protection[SEP]Fencing is not dangerous because you wear protection.[SEP]Fencing is  a dangerous sport. 
+Considered Correct: False
+
+Predicted: choice2 | glasses are not a shoe.
+choice1: I like to wear shoes on my feet choice2: I want to wear glasses on my feet
+Correct: choice2 | people often wear glasses on the face[SEP]feet do not require glasses[SEP]You wear glasses on your face. 
+Considered Correct: True
+
+Predicted: choice2 | tigers are not animals.
+choice1: She left her baby in the car choice2: She left a tiger in the car
+Correct: choice2 | A tiger is bigger than a car[SEP]A tiger does not belong in a car[SEP]tigers dont hang around cars 
+Considered Correct: True
+
+Predicted: choice2 | flowers are not a part of human body.
+choice1: he smelled a flower in his nose choice2: he smelled a flower in his finger
+Correct: choice2 | the finger is nor a correct organ to smell anything.[SEP]Smelling is not a function of a finger[SEP]a flower does not have nostrils to smell 
+Considered Correct: True
+
+Predicted: choice2 | trains are not movable objects.
+choice1: He picked up the stick with his right hand. choice2: He picked up the train.
+Correct: choice2 | A train is too heavy to be picked up by a human.[SEP]trains weight more than sticks[SEP]Trains are very heavy. 
+Considered Correct: True
+
+Predicted: choice2 | airplanes are not designed to carry babies.
+choice1: Babies love to crawl on the ground choice2: babies love to crawl on top of airplanes
+Correct: choice2 | Nobody can crawl on top of airplanes[SEP]That would be dangerous.[SEP]A baby wouldnt be able to get on top. 
+Considered Correct: True
+
+Predicted: choice2 | babies are born in a womb.
+choice1: the mother gave birth to a baby boy choice2: the father gave birth to a baby boy
+Correct: choice2 | men don't get pregnant[SEP]Men don't give birth.[SEP]Males do not get pregnant. 
+Considered Correct: True
+
+Predicted: choice2 | hen mooes like a cow.
+choice1: On Monday morning, the hen clucked. choice2: On Monday morning, the hen mooed like a cow.
+Correct: choice2 | Hens do not moo like cows.[SEP]It is impossible for a hen to moo like a cow[SEP]Hen's don't moo,cows do. 
+Considered Correct: True
+
+Predicted: choice1 | dolls are inanimate objects
+choice1: dolls are inanimate objects choice2: dolls are living things
+Correct: choice2 | dolls are toys which don't have animation and energy in action or expression[SEP]Dolls are inanimate objects which means they are not living[SEP]Dolls are not alive. 
+Considered Correct: False
+
+Predicted: choice1 | running is a marathon and you are tired.
+choice1: THE EFFECT OF RUNNING A MARATHON IS BEING VERY TIRED choice2: THE EFFECT OF RUNNING A MARATHON IS VERY ENERGETIC
+Correct: choice2 | MARATHON IS A LONG DISTANCE RUNNING SO IT WILL BE  VERY TIRED[SEP]marathons bring with physical wear[SEP]Maraton is emotionally a positive experience 
+Considered Correct: False
+
+Predicted: choice2 | dogs are expensive.
+choice1: I saved enough money to buy a dog. choice2: I spent enough money to buy a dog.
+Correct: choice2 | You cannot buy a dog without money.[SEP]You spent the money, so now you don't have it to buy a dog.[SEP]One must save money not spend it. 
+Considered Correct: True
+
+Predicted: choice2 | picture is on floor
+choice1: He hung a picture on the wall. choice2: He hung a picture on the floor.
+Correct: choice2 | You can hang a picture on the wall, you are unable to hang a picture on the floor.[SEP]To hang an object it must be off the floor, so you cannot hang an object on the floor[SEP]Pictures can be laid on the floor or hung on the wall according to physics. 
+Considered Correct: True
+
+Predicted: choice2 | trees cannot live on the ground.
+choice1: Trees can sometimes live in saltwater choice2: Trees can not live on the ground
+Correct: choice2 | some kinds of trees can also live in the water[SEP]Trees mostly live on land.[SEP]Trees require ground to grow 
+Considered Correct: True
+
+Predicted: choice2 | feathers are hard.
+choice1: A pillow is soft. choice2: Feathers in a pillow are hard.
+Correct: choice2 | Feathers are always soft.[SEP]Feathers are soft, as people want pillows to be soft[SEP]Feathers are soft. 
+Considered Correct: True
+
+Predicted: choice2 | socks are worn on hands.
+choice1: socks are worn on feet choice2: socks are always worn on hands
+Correct: choice2 | Wearing socks keeps the feet dry and gloves are usually worn on hands.[SEP]Socks are made to be worn on your feet.[SEP]Socks are the wrong shape for hands 
+Considered Correct: True
+
+Predicted: choice2 | humans can live forever.
+choice1: smoking is bad for humans choice2: humans can live forever
+Correct: choice2 | humans are mortal[SEP]Humans are mortal.[SEP]Forever is a long time for humans. 
+Considered Correct: True
+
+Predicted: choice1 | trash is not valuable.
+choice1: He threw the trash in dust bin choice2: he threw the gold in dust bin
+Correct: choice2 | Gold is valuable and no one will throw them[SEP]It is the best way for saveing gold.[SEP]Gold is worth a lot of money and would not be knowingly thrown away. 
+Considered Correct: False
+
+Predicted: choice2 | dentists don't check teeth at restaurants.
+choice1: Every Sunday my grandpa goes to the clinic to check his teeth. choice2: Every Sunday my grandpa goes to a restaurant to check his teeth.
+Correct: choice2 | There is no service for teeth in the restaurant.[SEP]A dentist checks teeth.[SEP]A restaurant is not equipped to check people's teeth. 
+Considered Correct: True
+
+Predicted: choice2 | cars are not used for books
+choice1: He takes a book on the bookshelf choice2: He takes a car on the bookshelf
+Correct: choice2 | A car is much bigger than a bookshelf[SEP]A car can not fit on a bookshelf[SEP]A car is too big and heavy to be on a bookshelf 
+Considered Correct: True
+
+Predicted: choice2 | a wall is a barrier.
+choice1: he walked through the door choice2: he walked through the wall
+Correct: choice2 | the wall generally doesn't have holes[SEP]It is impossible to walk through a wall that does not have a hole in it.[SEP]People can't walk through walls. 
+Considered Correct: True
+
+Predicted: choice2 | hunting in desert is not a sport.
+choice1: He went hunting the deer in the forest choice2: He went hunting the deer in the desert.
+Correct: choice2 | deer won't live in desert.[SEP]Hunting for deer in the desert wont work, they live in the forest[SEP]deers don't live in deserts 
+Considered Correct: True
+
+Predicted: choice2 | camels are not a hat.
+choice1: He put a hat on his head. choice2: He put a camel on his head.
+Correct: choice2 | A camel is much bigger than ahead.[SEP]A camel would be too big and heavy for a mans head.[SEP]Camels are much bigger than our heads 
+Considered Correct: True
+
+Predicted: choice2 | freezers are not microwave safe.
+choice1: She put the frozen burrito in the microwave. choice2: She put the freezer in the microwave.
+Correct: choice2 | Freezers are usually bigger than the microwaves[SEP]A freezer wont fit into a microwave.[SEP]A freezer is much larger than the inside of a microwave. 
+Considered Correct: True
+
+Predicted: choice2 | ceiling fans spread light in darkroom.
+choice1: the light bulb is spreading light in the darkroom. choice2: the ceiling fan is spreading light in the darkroom.
+Correct: choice2 | a ceiling fan has no modules to light.[SEP]fan is not designed to emit light[SEP]A ceiling fan's function is to make things cooler so it is unlikely to spread light. 
+Considered Correct: True
+
+Predicted: choice2 | cereal is only for breakfast.
+choice1: cereal is breakfast food choice2: cereal is only for breakfast
+Correct: choice2 | cereal is a popular breakfast meal but can be eaten anytime[SEP]Cereal is for any time of day.[SEP]Cereal can be eaten any time of day. 
+Considered Correct: True
+
+Predicted: choice1 | phones are not used to make phone calls
+choice1: Cell phones can be used to make phone calls choice2: Cell phones can be eaten as a light snack
+Correct: choice2 | Cell phones are designed to allow users to make phone calls[SEP]cell phones are not food[SEP]You can't eat a cell phone. 
+Considered Correct: False
+
+Predicted: choice2 | diamonds are not valuable
+choice1: a diamond is a precious gem choice2: a boulder is a precious gem
+Correct: choice2 | boulders are common and cheap[SEP]not every stone is precious[SEP]Precious gems are a category of stones, under which boulders do not fall 
+Considered Correct: True
+
+Predicted: choice2 | a game is not a real thing.
+choice1: We played a fun game today. choice2: I eat a play with friends today
+Correct: choice2 | people can watch but not eat a play[SEP]It's not possible to eat a play.[SEP]We cannot eat play with friends. 
+Considered Correct: True
+
+Predicted: choice2 | a computer is not a pan.
+choice1: Tommy used a pan to cook dinner choice2: Tommy used a computer to cook dinner
+Correct: choice2 | a computer would break if it was used to make dinner[SEP]Tommy used a pan to cook dinner and not computer.[SEP]Computers are not used to prepare food. 
+Considered Correct: True
+
+Predicted: choice2 | oceans are not safe places to crosswalk.
+choice1: He ran into the woman at the crosswalk. choice2: He ran into an ocean at the crosswalk
+Correct: choice2 | There are no crosswalks in the ocean.[SEP]People do not build crosswalks on oceans, so you would never find an ocean at the crosswalk[SEP]Crosswalks cross over streets 
+Considered Correct: True
+
+Predicted: choice2 | the moon is not a mashing machine.
+choice1: She put the clothes inside the washing machine. choice2: She put the moon inside the mashing machine.
+Correct: choice2 | Ordinary people can't get the moon[SEP]The moon is an extremely large star, a person could not hold it, much less put it in a washing machine.[SEP]The moon is too large to be put anywhere. 
+Considered Correct: True
+
+Predicted: choice2 | phones are not freezer safe.
+choice1: I put the leftovers into the fridge. choice2: I put the phone into the fridge.
+Correct: choice2 | You never put electronic devices inside the fridge.[SEP]One cannot put the phone in the fridge.[SEP]Food and drinks are what belong in a fridge, the phone belongs on the table. 
+Considered Correct: True
+
+Predicted: choice2 | trees are usually shy.
+choice1: Girls are usually shy choice2: Trees are usually shy
+Correct: choice2 | Trees don't have brain and emotions[SEP]Trees do not have emotions[SEP]Trees have no emotions and feelings, so they cannot feel shy. 
+Considered Correct: True
+
+Predicted: choice2 | doritos are made from potatoes.
+choice1: Doritos are a good party snack. choice2: Doritos are made from potatoes, that is why they are bad for a party.
+Correct: choice2 | Doritos are made from corn.[SEP]Potato chips are a typical party snack.[SEP]Potato chips are made from potatoes, Doritos are made from corn, both are good at a party. 
+Considered Correct: True
+
+Predicted: choice2 | horses are not a sport
+choice1: he likes to play tennis at the gym choice2: he likes to ride horses at the gym
+Correct: choice2 | big animals are forbidden into the gym[SEP]A gym provide fitness machines not horses[SEP]Riding a horse must be in the open and not in the gym. 
+Considered Correct: True
+
+Predicted: choice2 | ostrich is not a food.
+choice1: He put muffins in the oven. choice2: He put ostrich in the oven.
+Correct: choice2 | An ostrich is much bigger than the oven.[SEP]the ostrich is too big to go in an oven[SEP]One cannot put a ostrich in oven. 
+Considered Correct: True
+
+Predicted: choice2 | suicide is a mental illness.
+choice1: I am going to commit suicide right now. choice2: I'll ask a friend to help me to commit suicide right now.
+Correct: choice2 | committing suicide doesn't need assistance[SEP]Helping for committing suicide is crime[SEP]One who commits suicide doesn't take help from anybody. 
+Considered Correct: True
+
+Predicted: choice2 | eating at the gym is not a healthy activity.
+choice1: I was sick after I ate at the restaurant. choice2: I was sick after I ate at the gym.
+Correct: choice2 | Food is not served at the gym.[SEP]People do not eat at the gym.[SEP]You don't go to the gym to eat 
+Considered Correct: True
+
+Predicted: choice2 | clothes are made in workshops.
+choice1: You will find good clothes in the supermarket choice2: you will find clothes in a workshop
+Correct: choice2 | it's impossible to find clothes in a workshop[SEP]Workshops do not sell clothes, just tools and hardware[SEP]Clothing isn't sold in workshops. 
+Considered Correct: True
+
