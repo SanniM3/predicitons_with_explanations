@@ -123,6 +123,14 @@ class SequenceCollator:
     def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
         # re-format inputs for training
         batch = {}
+
+        max_length = None
+        for example in examples:
+            for key in example.keys():
+                if key in self.columns:
+                    if max_length is None or max_length < len(example[key]):
+                        max_length = len(example[key])
+
         for key in examples[0].keys():
             if key in self.columns:
                 tmp_list = []
@@ -131,7 +139,7 @@ class SequenceCollator:
 
                 # pad lists to max length
                 if isinstance(tmp_list[0], list):
-                    max_length = max(map(len, tmp_list))
+                    # max_length = max(map(len, tmp_list))
                     tmp_list = [
                         el + [self.pad_token_mapping[key]] * (max_length - len(el))
                         for el in tmp_list
