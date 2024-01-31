@@ -618,7 +618,17 @@ def main():
         training_args.bf16_full_eval=True
         # tokenizer.padding = True
         # tokenizer.truncation = True
-      
+        def process_data_split(data_split):
+          for idx, sample in enumerate(data_split):
+            sample_input_ids = sample["input_ids"]
+            label_input_ids = sample["labels"] + [tokenizer.eos_token_id]
+            data_split[idx]['input_ids'] = sample_input_ids + label_input_ids
+            data_split[idx]['labels'] = [-100] * len(sample_input_ids) + label_input_ids
+            data_split[idx]['attention_mask'] = [1] * len(data_split[idx]['input_ids'])
+          return data_split
+        data_splits['train'] = process_data_split(data_splits['train'])
+        data_splits['validation'] = process_data_split(data_splits['validation'])
+
         trainer = Trainer(
             model=model,
             args=training_args,
