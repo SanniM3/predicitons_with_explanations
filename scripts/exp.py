@@ -123,23 +123,27 @@ NUM_WORKERS = None  # the number of GPUs
 queue = Queue()
 
 def foo(cmd):
+    print(f'initial command is:{cmd}')
     gpu_id = queue.get()
     # run processing on GPU <gpu_id>
     ident = current_process().ident
     print('{}: starting process on GPU {}'.format(ident, gpu_id))
     if 'deepspeed' in cmd:
         # cmd starts with PYTHONPATH=. deepspeed
-
+        
         # Each GPU needs it's own port as deepspeed runs in distributed mode, and each GPU runs it's own server.
         port = 29600 + gpu_id
 
         # need to insert --include localhost:gpu_id after deepspeed.
-        cmd_with_include = cmd.replace(" deepspeed ", f" deepspeed --master_port {port} --include localhost:{gpu_id} ")
+        # cmd_with_include = cmd.replace("deepspeed ", f"deepspeed --master_port {port} --include localhost:{gpu_id} ")
+        cmd_with_include = cmd.replace("deepspeed scripts/input_to_label_and_rationale.py ", f"deepspeed --master_port {port} --include localhost:{gpu_id} scripts/input_to_label_and_rationale.py ")
         # deepspeed sets CUDA_VISIBLE_DEVICES based on the --include flag, and if we set it here then things break
         cmd_with_cuda = cmd_with_include
+        print(f'-------using deepspeed---------Command is{cmd_with_cuda}')
     else:
         cmd_with_cuda = "CUDA_VISIBLE_DEVICES=%d %s" % (gpu_id, cmd)
-        print (cmd_with_cuda)
+        print(f'-------not using deepspeed---------Command is{cmd_with_cuda}')
+        print(cmd_with_cuda)
     completed = subprocess.call(cmd_with_cuda, shell=True) #, shell=True)
     print('{}: finished'.format(ident))
     queue.put(gpu_id)
@@ -306,6 +310,7 @@ def run_exp(args):
                 cmd += f" --use_gpt3  --gpt3_max_eval_size {args.gpt3_max_eval_size}"
                 cmd = f'OPENAI_KEY={args.openai_key} {cmd}'
             commands.append(cmd)
+    print(f'final commands------{commands[0]}')
 
     if args.not_dryrun:
         pool = Pool(processes=NUM_WORKERS)
