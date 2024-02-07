@@ -132,7 +132,7 @@ def foo(cmd):
         # cmd starts with PYTHONPATH=. deepspeed
         
         # Each GPU needs it's own port as deepspeed runs in distributed mode, and each GPU runs it's own server.
-        port = 29600 + gpu_id
+        port = 29700 + gpu_id
 
         # need to insert --include localhost:gpu_id after deepspeed.
         # cmd_with_include = cmd.replace("deepspeed ", f"deepspeed --master_port {port} --include localhost:{gpu_id} ")
