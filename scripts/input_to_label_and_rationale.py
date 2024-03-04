@@ -619,20 +619,21 @@ def main():
         # tokenizer.padding = True
         # tokenizer.truncation = True
         def process_data_split(data_split):
-          for idx, sample in enumerate(data_split):
-            sample_input_ids = sample["input_ids"]
-            label_input_ids = sample["labels"] + [tokenizer.eos_token_id]
-            data_split[idx]['input_ids'] = sample_input_ids + label_input_ids
-            data_split[idx]['labels'] = [-100] * len(sample_input_ids) + label_input_ids
-            data_split[idx]['attention_mask'] = [1] * len(data_split[idx]['input_ids'])
+          sample_input_ids = data_split["input_ids"]
+          label_input_ids = data_split["labels"]
+          data_split['input_ids'] = sample_input_ids + label_input_ids
+          data_split["labels"] = [tokenizer.pad_token_id] * len(sample_input_ids) + label_input_ids
+          data_split['attention_mask'] = [1] * len(data_split['input_ids'])
           return data_split
-        data_splits['train'] = process_data_split(data_splits['train'])
-        data_splits['validation'] = process_data_split(data_splits['validation'])
+        
+        
+        train_data_splits = data_splits['train'].map(process_data_split)
+        # eval_data_splits = data_splits['validation'].map(process_data_split) #only format of training should have labels appended. 
 
         trainer = Trainer(
             model=model,
             args=training_args,
-            train_dataset=data_splits['train'],
+            train_dataset=train_data_splits,
             eval_dataset=data_splits['validation'],
             data_collator=SequenceCollator(
                 model=model_class, pad_token=tokenizer.pad_token_id
@@ -670,8 +671,8 @@ def main():
     if training_args.do_eval:
         start_time = time.time()
         logger.info("*** Evaluate on train set***")
-        logger.info(len(data_splits['train']))
-        train_output = trainer.evaluate(data_splits['train'])
+        logger.info(len(train_data_splits))
+        train_output = trainer.evaluate(train_data_splits)
         perplexity = math.exp(train_output["eval_loss"])
         results["perplexity_train"] = perplexity
 
