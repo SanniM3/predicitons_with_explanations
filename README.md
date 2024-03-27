@@ -17,8 +17,9 @@ Code associated with the [Few-Shot Self-Rationalization with Natural Language Pr
 1. Clone the repository
 
 ```
-git clone https://github.com/allenai/feb
-cd feb
+git clone https://github.com/SanniM3/predicitons_with_explanations.git
+cd predicitons_with_explanations
+git checkout llama_sparsefit
 ```
 
 2. [Download and install Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
@@ -26,7 +27,7 @@ cd feb
 3. Create and activate a Conda environment. 
 
 ```
-conda create -n feb python=3.7
+conda create -n feb python=3.10.12
 conda activate feb
 ```
 
@@ -34,7 +35,7 @@ conda activate feb
 
 ```
 pip install -r requirements.txt
-
+pip install --upgrade deepspeed
 python -m spacy download en_core_web_sm
 
 wandb offline
@@ -108,8 +109,8 @@ The same command with concrete values:
 
 ```
 mkdir checkpoints
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4
-python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4
+python scripts/exp.py --exp_root checkpoints --not_dryrun --deepspeed --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4
+python scripts/exp.py --exp_root checkpoints --not_dryrun --deepspeed --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4
 ```
 
 
