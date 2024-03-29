@@ -35,7 +35,7 @@ def evaluate(
         with open(fname, "w") as w:
             for i, element in tqdm(enumerate(dataset), total=len(dataset)):
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
-                print(f'INPUT {tokenizer.decode(inpt_tensor)')
+                print(f'INPUT {tokenizer.decode(inpt_tensor)}')
                 print(f'Input length {len(inpt_tensor)}')
                 inpt_tensor_length = len(inpt_tensor)
                 out = model.generate(
