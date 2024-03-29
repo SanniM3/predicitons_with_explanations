@@ -35,6 +35,8 @@ def evaluate(
         with open(fname, "w") as w:
             for i, element in tqdm(enumerate(dataset), total=len(dataset)):
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
+                print(f'INPUT {tokenizer.decode(inpt_tensor)')
+                print(f'Input length {len(inpt_tensor)}')
                 inpt_tensor_length = len(inpt_tensor)
                 out = model.generate(
                     input_ids=inpt_tensor,
@@ -43,6 +45,8 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 skip_special_tokens = False if "infilling" in io_format else True
+                print(f'OUTPUT without removed input tensor {tokenizer.decode(out[0].tolist())}')
+                print(f'OUTPUT after removing input tensor {tokenizer.decode(out[0].tolist()[inpt_tensor_length:])}')
                 words = tokenizer.decode(out[0].tolist()[inpt_tensor_length:], skip_special_tokens=skip_special_tokens) #started decoding after the input sequence
                 if "infilling" in io_format:
                     words = words.replace("<extra_id_1>", f" {explanation_sep}")
