@@ -43,7 +43,7 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 skip_special_tokens = False if "infilling" in io_format else True
-                words = tokenizer.decode(out[0].tolist()[inpt_tensor:], skip_special_tokens=skip_special_tokens)#started decoding after the input sequence
+                words = tokenizer.decode(out[0].tolist()[inpt_tensor_length:], skip_special_tokens=skip_special_tokens) #started decoding after the input sequence
                 if "infilling" in io_format:
                     words = words.replace("<extra_id_1>", f" {explanation_sep}")
                     words = words.replace(tokenizer.pad_token,'')
