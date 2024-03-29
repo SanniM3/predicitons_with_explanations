@@ -35,7 +35,7 @@ def evaluate(
         with open(fname, "w") as w:
             for i, element in tqdm(enumerate(dataset), total=len(dataset)):
                 inpt_tensor = torch.tensor(element["input_ids"], device=device).reshape(1, -1)
-                
+                inpt_tensor_length = len(inpt_tensor)
                 out = model.generate(
                     input_ids=inpt_tensor,
                     max_length=100,
@@ -43,7 +43,7 @@ def evaluate(
                     eos_token_id=tokenizer.eos_token_id,
                 )
                 skip_special_tokens = False if "infilling" in io_format else True
-                words = tokenizer.decode(out[0].tolist(), skip_special_tokens=skip_special_tokens)
+                words = tokenizer.decode(out[0].tolist()[inpt_tensor:], skip_special_tokens=skip_special_tokens)#started decoding after the input sequence
                 if "infilling" in io_format:
                     words = words.replace("<extra_id_1>", f" {explanation_sep}")
                     words = words.replace(tokenizer.pad_token,'')
