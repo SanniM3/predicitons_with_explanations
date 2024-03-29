@@ -626,10 +626,13 @@ def main():
           data_split['attention_mask'] = [1] * len(data_split['input_ids'])
           return data_split
         
-        
-        train_data_splits = data_splits['train'].map(process_data_split)
-        # eval_data_splits = data_splits['validation'].map(process_data_split) #only format of training should have labels appended. 
+        if data_args.task_name == 'esnli':
+          train_data_splits = data_splits['train'].map(process_data_split)
+          # eval_data_splits = data_splits['validation'].map(process_data_split) #only format of training should have labels appended. 
+        else:
+          train_data_splits = [process_data_split(sample) for sample in data_splits['train']]
 
+        
         trainer = Trainer(
             model=model,
             args=training_args,
