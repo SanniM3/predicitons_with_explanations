@@ -1,2 +1,6 @@
 task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized,seed
+<<<<<<< HEAD
 sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,71.23809523809524,62.69938585587911,6590.5
+=======
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,24.979591836734695,21.97642215782282,5552.142857142857
+>>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
