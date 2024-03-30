@@ -1,5 +1,14 @@
 ,dev_acc,dev_bertscore_correct_normalized,model_type,task_name,seed,n_shots,io_format
 <<<<<<< HEAD
+0,36.7816091954023,32.46766642249864,t5-base,esnli,9428,16,standard
+1,44.252873563218394,39.27416863112614,t5-base,esnli,2175,16,standard
+2,43.103448275862064,37.92672422768056,t5-base,esnli,4864,16,standard
+3,38.793103448275865,34.356700945859664,t5-base,esnli,7004,16,standard
+4,34.48275862068966,30.250591827535082,t5-base,esnli,4523,16,standard
+5,41.37931034482759,36.654492185033604,t5-base,esnli,2689,16,standard
+6,42.241379310344826,37.33573088358189,t5-base,esnli,7056,16,standard
+=======
+<<<<<<< HEAD
 0,75.14285714285714,65.6773339339665,allenai/unifiedqa-t5-base,sensemaking,7632,24,unifiedqa_what
 1,72.28571428571429,63.58168683733259,allenai/unifiedqa-t5-base,sensemaking,4273,24,unifiedqa_what
 2,60.57142857142858,53.271670954568044,allenai/unifiedqa-t5-base,sensemaking,4864,24,unifiedqa_what
@@ -22,3 +31,4 @@
 12,26.285714285714285,23.280159779957362,allenai/unifiedqa-t5-base,ecqa,7632,48,unifiedqa_matching
 13,25.142857142857146,22.066618953432357,allenai/unifiedqa-t5-base,ecqa,4273,48,unifiedqa_matching
 >>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
+>>>>>>> 3f10652eeec5e45abed35d48b785ce1c7fe6493b
