@@ -1,4 +1,12 @@
 ,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized,seed,seed
 ,,,,mean,std,mean,std,mean,std
 task_name,model_type,io_format,n_shots,,,,,,
+<<<<<<< HEAD
 esnli,t5-base,standard,16,40.14778325123153,3.3111567865477465,35.466582160473656,2.9973023100595917,5391.285714285715,2400.7729537609766
+=======
+<<<<<<< HEAD
+sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,71.23809523809524,9.497105418908882,62.69938585587911,8.431381702072079,6590.5,1722.1463110510288
+=======
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,24.979591836734695,3.1348958268281506,21.97642215782282,2.7548550578040123,5552.142857142857,2660.5746387130853
+>>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
+>>>>>>> 3f10652eeec5e45abed35d48b785ce1c7fe6493b
