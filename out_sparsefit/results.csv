@@ -1,2 +1,2 @@
 task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized,seed
-esnli,t5-base,standard,16,0.0,0.0,4073.25
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,24.979591836734695,21.97642215782282,5552.142857142857
