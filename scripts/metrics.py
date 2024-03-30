@@ -40,7 +40,7 @@ def evaluate(
                 inpt_tensor_length = len(element["input_ids"])
                 out = model.generate(
                     input_ids=inpt_tensor,
-                    max_length=100,
+                    max_length=300,
                     pad_token_id=tokenizer.pad_token_id,
                     eos_token_id=tokenizer.eos_token_id,
                 )
