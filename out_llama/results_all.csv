@@ -1,0 +1,4 @@
+,dev_acc,dev_bertscore_correct_normalized,model_type,task_name,seed,n_shots,io_format
+0,19.428571428571427,17.203638298170908,allenai/unifiedqa-t5-base,ecqa,7004,48,unifiedqa_matching
+1,12.571428571428573,11.005857382501874,allenai/unifiedqa-t5-base,ecqa,3639,48,unifiedqa_matching
+2,11.428571428571429,10.097083125795637,allenai/unifiedqa-t5-base,ecqa,9428,48,unifiedqa_matching

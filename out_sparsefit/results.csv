@@ -1,2 +1,14 @@
 task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized,seed
+<<<<<<< HEAD
 sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,58.76190476190476,51.506169395787374,6380.166666666667
+=======
+<<<<<<< HEAD
+esnli,t5-base,standard,16,40.14778325123153,35.466582160473656,5391.285714285715
+=======
+<<<<<<< HEAD
+sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,71.23809523809524,62.69938585587911,6590.5
+=======
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,24.979591836734695,21.97642215782282,5552.142857142857
+>>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
+>>>>>>> 3f10652eeec5e45abed35d48b785ce1c7fe6493b
+>>>>>>> d4f97107a43969e45f2cfc6fa220ecaff0a36cf1

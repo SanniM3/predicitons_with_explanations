@@ -1,7 +1,43 @@
 ,dev_acc,dev_bertscore_correct_normalized,model_type,task_name,seed,n_shots,io_format
+<<<<<<< HEAD
 0,58.857142857142854,50.31277409621647,allenai/unifiedqa-t5-base,sbic,6290,24,unified_qa_what_with_tags
 1,59.71428571428572,52.81115537030356,allenai/unifiedqa-t5-base,sbic,4864,24,unified_qa_what_with_tags
 2,58.285714285714285,51.728061420576914,allenai/unifiedqa-t5-base,sbic,7004,24,unified_qa_what_with_tags
 3,63.714285714285715,56.16700085571834,allenai/unifiedqa-t5-base,sbic,7056,24,unified_qa_what_with_tags
 4,56.85714285714286,50.210000208445955,allenai/unifiedqa-t5-base,sbic,9428,24,unified_qa_what_with_tags
 5,55.14285714285714,47.808024423463,allenai/unifiedqa-t5-base,sbic,3639,24,unified_qa_what_with_tags
+=======
+<<<<<<< HEAD
+0,36.7816091954023,32.46766642249864,t5-base,esnli,9428,16,standard
+1,44.252873563218394,39.27416863112614,t5-base,esnli,2175,16,standard
+2,43.103448275862064,37.92672422768056,t5-base,esnli,4864,16,standard
+3,38.793103448275865,34.356700945859664,t5-base,esnli,7004,16,standard
+4,34.48275862068966,30.250591827535082,t5-base,esnli,4523,16,standard
+5,41.37931034482759,36.654492185033604,t5-base,esnli,2689,16,standard
+6,42.241379310344826,37.33573088358189,t5-base,esnli,7056,16,standard
+=======
+<<<<<<< HEAD
+0,75.14285714285714,65.6773339339665,allenai/unifiedqa-t5-base,sensemaking,7632,24,unifiedqa_what
+1,72.28571428571429,63.58168683733259,allenai/unifiedqa-t5-base,sensemaking,4273,24,unifiedqa_what
+2,60.57142857142858,53.271670954568044,allenai/unifiedqa-t5-base,sensemaking,4864,24,unifiedqa_what
+3,73.42857142857143,65.08236524036953,allenai/unifiedqa-t5-base,sensemaking,7056,24,unifiedqa_what
+4,58.857142857142854,51.69695404597691,allenai/unifiedqa-t5-base,sensemaking,9428,24,unifiedqa_what
+5,87.14285714285714,76.88630412306104,allenai/unifiedqa-t5-base,sensemaking,6290,24,unifiedqa_what
+=======
+0,26.285714285714285,23.064939515931265,allenai/unifiedqa-t5-base,ecqa,6290,48,unifiedqa_matching
+1,21.714285714285715,19.087608763149806,allenai/unifiedqa-t5-base,ecqa,2689,48,unifiedqa_matching
+2,23.714285714285715,20.852692331586564,allenai/unifiedqa-t5-base,ecqa,2175,48,unifiedqa_matching
+3,23.142857142857142,20.319167409624374,allenai/unifiedqa-t5-base,ecqa,9428,48,unifiedqa_matching
+4,28.57142857142857,25.115296942847117,allenai/unifiedqa-t5-base,ecqa,7056,48,unifiedqa_matching
+5,26.571428571428573,23.29119006225041,allenai/unifiedqa-t5-base,ecqa,8219,48,unifiedqa_matching
+6,23.142857142857142,20.319478733198984,allenai/unifiedqa-t5-base,ecqa,4199,48,unifiedqa_matching
+7,30.857142857142854,27.304390719958715,allenai/unifiedqa-t5-base,ecqa,7356,48,unifiedqa_matching
+8,30.0,26.24058050768716,allenai/unifiedqa-t5-base,ecqa,4523,48,unifiedqa_matching
+9,21.714285714285715,19.173067723001754,allenai/unifiedqa-t5-base,ecqa,4864,48,unifiedqa_matching
+10,20.285714285714285,17.834433232034957,allenai/unifiedqa-t5-base,ecqa,51,48,unifiedqa_matching
+11,22.285714285714285,19.720285534858704,allenai/unifiedqa-t5-base,ecqa,8975,48,unifiedqa_matching
+12,26.285714285714285,23.280159779957362,allenai/unifiedqa-t5-base,ecqa,7632,48,unifiedqa_matching
+13,25.142857142857146,22.066618953432357,allenai/unifiedqa-t5-base,ecqa,4273,48,unifiedqa_matching
+>>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
+>>>>>>> 3f10652eeec5e45abed35d48b785ce1c7fe6493b
+>>>>>>> d4f97107a43969e45f2cfc6fa220ecaff0a36cf1
