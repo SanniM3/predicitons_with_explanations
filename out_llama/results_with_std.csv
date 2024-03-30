@@ -1,0 +1,4 @@
+,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized,seed,seed
+,,,,mean,std,mean,std,mean,std
+task_name,model_type,io_format,n_shots,,,,,,
+ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,14.476190476190476,3.532807045903124,12.768859602156141,3.1577327546181855,6690.333333333333,2373.7340953770613
