@@ -579,13 +579,13 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
-        #SPARSEFIT CHANGES
-        # Make trainable only key terms in self-attention layers.
-        # if 'attention.k' in model_args.bias_terms:
-        for param in model.parameters():
-            param.requires_grad = True
-        # Activate language model head
-        model.lm_head.weight.requires_grad = True
+        # #SPARSEFIT CHANGES
+        # # Make trainable only key terms in self-attention layers.
+        # # if 'attention.k' in model_args.bias_terms:
+        # for param in model.parameters():
+        #     param.requires_grad = False
+        # # Deactivate language model head
+        # model.lm_head.weight.requires_grad = False
 
         # for name, param in model.named_parameters():
         #     if 'self_attn.q_proj' in name:
@@ -594,25 +594,25 @@ def main():
         # for name, param in model.named_parameters():
         #     if 'layernorm' in name:
         #         param.requires_grad = True
-
+        
 
         # ###PEFT MODIFICATIONS###
         # creating model
-        # t_init = 500
-        # t_final = 1000
-        # total_steps = t_init + 100 + t_final
-        # peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="CAUSAL_LM", init_r=8, target_r=4, lora_alpha=32, 
-        #                             target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$',
-        #                             lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
+        t_init = 500
+        t_final = 1000
+        total_steps = t_init + 100 + t_final
+        peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="CAUSAL_LM", init_r=8, target_r=4, lora_alpha=32, 
+                                    target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$',
+                                    lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
         
-        # # peft_config = IA3Config(
-        # #                 peft_type="IA3",
-        # #                 task_type="SEQ_2_SEQ_LM",
-        # #                 target_modules=["k_proj", "v_proj", "w0"],
-        # #                 feedforward_modules=["w0"],
-        # #             )
-        # model = get_peft_model(model, peft_config)
-        # model.print_trainable_parameters()
+        # peft_config = IA3Config(
+        #                 peft_type="IA3",
+        #                 task_type="SEQ_2_SEQ_LM",
+        #                 target_modules=["k_proj", "v_proj", "w0"],
+        #                 feedforward_modules=["w0"],
+        #             )
+        model = get_peft_model(model, peft_config)
+        model.print_trainable_parameters()
         
         #reduce consumed gpu memory
         training_args.bf16=True
