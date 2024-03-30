@@ -580,12 +580,12 @@ def main():
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
         #SPARSEFIT CHANGES
-        # # Make trainable only key terms in self-attention layers.
-        # # if 'attention.k' in model_args.bias_terms:
-        # for param in model.parameters():
-        #     param.requires_grad = False
-        # # Deactivate language model head
-        # model.lm_head.weight.requires_grad = False
+        # Make trainable only key terms in self-attention layers.
+        # if 'attention.k' in model_args.bias_terms:
+        for param in model.parameters():
+            param.requires_grad = True
+        # Activate language model head
+        model.lm_head.weight.requires_grad = True
 
         # for name, param in model.named_parameters():
         #     if 'self_attn.q_proj' in name:
