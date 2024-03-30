@@ -1,4 +1,4 @@
 ,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized,seed,seed
 ,,,,mean,std,mean,std,mean,std
 task_name,model_type,io_format,n_shots,,,,,,
-esnli,t5-base,standard,16,0.0,0.0,0.0,0.0,4073.25,2852.7371220461237
+esnli,t5-base,standard,16,40.14778325123153,3.3111567865477465,35.466582160473656,2.9973023100595917,5391.285714285715,2400.7729537609766
