@@ -1,5 +1,13 @@
 ,dev_acc,dev_bertscore_correct_normalized,model_type,task_name,seed,n_shots,io_format
 <<<<<<< HEAD
+0,58.857142857142854,50.31277409621647,allenai/unifiedqa-t5-base,sbic,6290,24,unified_qa_what_with_tags
+1,59.71428571428572,52.81115537030356,allenai/unifiedqa-t5-base,sbic,4864,24,unified_qa_what_with_tags
+2,58.285714285714285,51.728061420576914,allenai/unifiedqa-t5-base,sbic,7004,24,unified_qa_what_with_tags
+3,63.714285714285715,56.16700085571834,allenai/unifiedqa-t5-base,sbic,7056,24,unified_qa_what_with_tags
+4,56.85714285714286,50.210000208445955,allenai/unifiedqa-t5-base,sbic,9428,24,unified_qa_what_with_tags
+5,55.14285714285714,47.808024423463,allenai/unifiedqa-t5-base,sbic,3639,24,unified_qa_what_with_tags
+=======
+<<<<<<< HEAD
 0,36.7816091954023,32.46766642249864,t5-base,esnli,9428,16,standard
 1,44.252873563218394,39.27416863112614,t5-base,esnli,2175,16,standard
 2,43.103448275862064,37.92672422768056,t5-base,esnli,4864,16,standard
@@ -32,3 +40,4 @@
 13,25.142857142857146,22.066618953432357,allenai/unifiedqa-t5-base,ecqa,4273,48,unifiedqa_matching
 >>>>>>> 58a075a46ba2d11233208ac1eabe82a23eebd2d4
 >>>>>>> 3f10652eeec5e45abed35d48b785ce1c7fe6493b
+>>>>>>> d4f97107a43969e45f2cfc6fa220ecaff0a36cf1
