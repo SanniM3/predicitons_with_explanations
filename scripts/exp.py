@@ -141,12 +141,12 @@ def foo(cmd):
         cmd_with_cuda = cmd_with_include
         print(f'-------using deepspeed---------Command is{cmd_with_cuda}')
     else:
-        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=%d %s" % (gpu_id, cmd)
+        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=0,1,2,3 %s" % (cmd)
         print(f'-------not using deepspeed---------Command is{cmd_with_cuda}')
         print(cmd_with_cuda)
     completed = subprocess.call(cmd_with_cuda, shell=True) #, shell=True)
     print('{}: finished'.format(ident))
-    queue.put(gpu_id)
+    # queue.put(gpu_id)
 # queing stuff done 
 
 def run_exp(args):
