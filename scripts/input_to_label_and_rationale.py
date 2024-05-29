@@ -584,7 +584,7 @@ def main():
             param.requires_grad = True
         # Deactivate language model head
         model.lm_head.weight.requires_grad = True
-        print{f'Total number of parameters {sum(p.numel() for p in model.parameters())'}
+        print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
             
         # #SPARSEFIT CHANGES
         # # Make trainable only key terms in self-attention layers.
