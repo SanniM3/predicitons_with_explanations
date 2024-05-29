@@ -111,7 +111,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'fewshot_eval_size': [350],
                                         'explanation_sep_vals': ['" because "'],
                                         'tokenizer_vals': None,
-                                        'per_device_train_batch_size_vals': [4], 
+                                        'per_device_train_batch_size_vals': [1], 
                                         'learning_rate_vals' : [3e-5],
                                     }
 
@@ -310,7 +310,7 @@ def run_exp(args):
                 cmd += f" --use_gpt3  --gpt3_max_eval_size {args.gpt3_max_eval_size}"
                 cmd = f'OPENAI_KEY={args.openai_key} {cmd}'
             commands.append(cmd)
-    print(f'final commands------{commands[0]}')
+    # print(f'final commands------{commands[0]}')
 
     if args.not_dryrun:
         # pool = Pool(processes=NUM_WORKERS)
