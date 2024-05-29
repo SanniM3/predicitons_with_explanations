@@ -1,7 +1,7 @@
-transformers
-peft
+transformers==4.37.2
+peft==0.8.2
 thop
-datasets
+datasets==2.17.1
 torch --extra-index-url https://download.pytorch.org/whl/cu113
 wandb
 tensorflow
@@ -17,5 +17,5 @@ bert-score==0.3.9
 tabulate
 pandas
 jsonlines
-deepspeed==0.5.1
+deepspeed==0.13.4
 statsmodels
