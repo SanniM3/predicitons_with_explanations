@@ -365,9 +365,9 @@ if __name__ == '__main__':
             raise ValueError('We support only `t5_unifiedqa_fewshot` as `experiment_id`.')
         
         NUM_WORKERS = args.n_gpus
-        # initialize the queue with the GPU ids
-        for gpu_ids in range(NUM_WORKERS):
-            queue.put(gpu_ids)
+        # # initialize the queue with the GPU ids
+        # for gpu_ids in range(NUM_WORKERS):
+        #     queue.put(gpu_ids)
         
         experiments[args.experiment_id]['model_vals'] = args.model_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
