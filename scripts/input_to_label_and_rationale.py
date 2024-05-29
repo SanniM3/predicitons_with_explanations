@@ -70,6 +70,7 @@ import pandas as pd
 import jsonlines
 from copy import deepcopy 
 
+from deepspeed import DeepSpeedEngine, deepspeed_config 
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
 import re
@@ -580,11 +581,13 @@ def main():
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
         #FULL-FT DEBUG
-        for param in model.parameters():
-            param.requires_grad = True
-        # Deactivate language model head
-        model.lm_head.weight.requires_grad = True
-        print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
+        config = deepspeed_config()
+        config["train_batch_size"] = 4
+        config["gradient_accumulation_steps"] = 4
+        config["optimizer"]["params"]["lr"] = 3e-5
+        config["scheduler"]["params"]["num_training_steps"] = 300
+
+        engine = DeepSpeedEngine(config=config)
             
         # #SPARSEFIT CHANGES
         # # Make trainable only key terms in self-attention layers.
@@ -649,6 +652,8 @@ def main():
             data_collator=SequenceCollator(
                 model=model_class, pad_token=tokenizer.pad_token_id
             ),callbacks=callbacks,
+            optimizers = engine.optimizers,
+            lr_scheduler=engine.lr_scheduler,
         )
         # tokenizer.pad_token = tokenizer.eos_token
         # # tokenizer.padding_side = 'right'
