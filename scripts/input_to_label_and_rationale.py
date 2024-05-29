@@ -579,6 +579,13 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
+        #FULL-FT DEBUG
+        for param in model.parameters():
+            param.requires_grad = True
+        # Deactivate language model head
+        model.lm_head.weight.requires_grad = True
+        print{f'Total number of parameters {sum(p.numel() for p in model.parameters())'}
+            
         # #SPARSEFIT CHANGES
         # # Make trainable only key terms in self-attention layers.
         # # if 'attention.k' in model_args.bias_terms:
