@@ -111,23 +111,23 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'fewshot_eval_size': [350],
                                         'explanation_sep_vals': ['" because "'],
                                         'tokenizer_vals': None,
-                                        'per_device_train_batch_size_vals': [1], 
+                                        'per_device_train_batch_size_vals': [4], 
                                         'learning_rate_vals' : [3e-5],
                                     }
 
 
 # Assuming you have args.n_gpus only for this project and no queing system, the following queues jobs on the available gpus for you 
 # this is from https://stackoverflow.com/questions/53422761/distributing-jobs-evenly-across-multiple-gpus-with-multiprocessing-pool
-# from multiprocessing import Pool, current_process, Queue
-# NUM_WORKERS = None  # the number of GPUs
-# queue = Queue()
+from multiprocessing import Pool, current_process, Queue
+NUM_WORKERS = None  # the number of GPUs
+queue = Queue()
 
 def foo(cmd):
     print(f'initial command is:{cmd}')
-    # gpu_id = queue.get()
-    # # run processing on GPU <gpu_id>
-    # ident = current_process().ident
-    # print('{}: starting process on GPU {}'.format(ident, gpu_id))
+    gpu_id = queue.get()
+    # run processing on GPU <gpu_id>
+    ident = current_process().ident
+    print('{}: starting process on GPU {}'.format(ident, gpu_id))
     if 'deepspeed' in cmd:
         # cmd starts with PYTHONPATH=. deepspeed
         
@@ -141,13 +141,13 @@ def foo(cmd):
         cmd_with_cuda = cmd_with_include
         print(f'-------using deepspeed---------Command is{cmd_with_cuda}')
     else:
-        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=0,1 %s" % (cmd)
+        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=%d %s" % (gpu_id, cmd)
         print(f'-------not using deepspeed---------Command is{cmd_with_cuda}')
         print(cmd_with_cuda)
     completed = subprocess.call(cmd_with_cuda, shell=True) #, shell=True)
-#     print('{}: finished'.format(ident))
-#     queue.put(gpu_id)
-# # queing stuff done 
+    print('{}: finished'.format(ident))
+    queue.put(gpu_id)
+# queing stuff done 
 
 def run_exp(args):
     if not os.path.isdir(args.exp_root):
@@ -287,7 +287,7 @@ def run_exp(args):
             else:
                 # cmd_prefix = "PYTHONPATH=. python input_to_label_and_rationale.py "
                 cmd_prefix = "python scripts/input_to_label_and_rationale.py "
-                cmd_batch_size = f" --per_device_train_batch_size {per_device_train_batch_size} --per_device_eval_batch_size 1 --gradient_accumulation_steps 4 "
+                cmd_batch_size = f" --per_device_train_batch_size {per_device_train_batch_size} --per_device_eval_batch_size 64 --gradient_accumulation_steps 1 "
 
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
@@ -310,15 +310,13 @@ def run_exp(args):
                 cmd += f" --use_gpt3  --gpt3_max_eval_size {args.gpt3_max_eval_size}"
                 cmd = f'OPENAI_KEY={args.openai_key} {cmd}'
             commands.append(cmd)
-    # print(f'final commands------{commands[0]}')
+    print(f'final commands------{commands[0]}')
 
     if args.not_dryrun:
-        # pool = Pool(processes=NUM_WORKERS)
-        # list(pool.imap_unordered(foo, commands))
-        # pool.close()
-        # pool.join()
-        for cmd in commands:
-            foo(cmd)
+        pool = Pool(processes=NUM_WORKERS)
+        list(pool.imap_unordered(foo, commands))
+        pool.close()
+        pool.join()
     else: 
         for cmd in commands:
             print (cmd)
@@ -365,9 +363,9 @@ if __name__ == '__main__':
             raise ValueError('We support only `t5_unifiedqa_fewshot` as `experiment_id`.')
         
         NUM_WORKERS = args.n_gpus
-        # # initialize the queue with the GPU ids
-        # for gpu_ids in range(NUM_WORKERS):
-        #     queue.put(gpu_ids)
+        # initialize the queue with the GPU ids
+        for gpu_ids in range(NUM_WORKERS):
+            queue.put(gpu_ids)
         
         experiments[args.experiment_id]['model_vals'] = args.model_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
