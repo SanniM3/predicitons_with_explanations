@@ -141,7 +141,7 @@ def foo(cmd):
         cmd_with_cuda = cmd_with_include
         print(f'-------using deepspeed---------Command is{cmd_with_cuda}')
     else:
-        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=1,2,3,4,5 %s" % (cmd)
+        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=0,1 %s" % (cmd)
         print(f'-------not using deepspeed---------Command is{cmd_with_cuda}')
         print(cmd_with_cuda)
     completed = subprocess.call(cmd_with_cuda, shell=True) #, shell=True)
