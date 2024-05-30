@@ -69,6 +69,8 @@ import random
 import pandas as pd 
 import jsonlines
 from copy import deepcopy 
+import torch
+import torch.nn
 
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
@@ -580,6 +582,7 @@ def main():
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
         #FULL-FT DEBUG
+        model = torch.nn.DataParallel(model)
         for param in model.parameters():
             param.requires_grad = True
         # Deactivate language model head
