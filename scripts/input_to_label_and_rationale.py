@@ -582,7 +582,7 @@ def main():
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
         #FULL-FT DEBUG
-        model = torch.nn.DataParallel(model)
+        # model = torch.nn.DataParallel(model)
         # for param in model.parameters():
         #     param.requires_grad = True
         # # Deactivate language model head
