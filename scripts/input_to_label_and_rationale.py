@@ -583,10 +583,10 @@ def main():
 
         #FULL-FT DEBUG
         model = torch.nn.DataParallel(model)
-        for param in model.parameters():
-            param.requires_grad = True
-        # Deactivate language model head
-        model.lm_head.weight.requires_grad = True
+        # for param in model.parameters():
+        #     param.requires_grad = True
+        # # Deactivate language model head
+        # model.lm_head.weight.requires_grad = True
         print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
             
         # #SPARSEFIT CHANGES
