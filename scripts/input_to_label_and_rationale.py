@@ -581,29 +581,29 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
-        #FULL-FT DEBUG
-        # model = torch.nn.DataParallel(model)
-        # for param in model.parameters():
-        #     param.requires_grad = True
-        # # Deactivate language model head
-        # model.lm_head.weight.requires_grad = True
-        print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
+        # #FULL-FT DEBUG
+        # # model = torch.nn.DataParallel(model)
+        # # for param in model.parameters():
+        # #     param.requires_grad = True
+        # # # Deactivate language model head
+        # # model.lm_head.weight.requires_grad = True
+        # print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
             
-        # #SPARSEFIT CHANGES
-        # # Make trainable only key terms in self-attention layers.
-        # # if 'attention.k' in model_args.bias_terms:
-        # for param in model.parameters():
-        #     param.requires_grad = False
-        # # Deactivate language model head
-        # model.lm_head.weight.requires_grad = False
+        #SPARSEFIT CHANGES
+        # Make trainable only key terms in self-attention layers.
+        # if 'attention.k' in model_args.bias_terms:
+        for param in model.parameters():
+            param.requires_grad = False
+        # Deactivate language model head
+        model.lm_head.weight.requires_grad = False
 
-        # for name, param in model.named_parameters():
-        #     if 'self_attn.q_proj' in name:
-        #         param.requires_grad = True
+        for name, param in model.named_parameters():
+            if 'self_attn.q_proj' in name:
+                param.requires_grad = True
 
-        # for name, param in model.named_parameters():
-        #     if 'layernorm' in name:
-        #         param.requires_grad = True
+        for name, param in model.named_parameters():
+            if 'layernorm' in name:
+                param.requires_grad = True
         
 
         # ###PEFT MODIFICATIONS###
