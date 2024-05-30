@@ -69,8 +69,6 @@ import random
 import pandas as pd 
 import jsonlines
 from copy import deepcopy 
-import torch
-import torch.nn
 
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
@@ -581,14 +579,6 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
-        # #FULL-FT DEBUG
-        # # model = torch.nn.DataParallel(model)
-        # # for param in model.parameters():
-        # #     param.requires_grad = True
-        # # # Deactivate language model head
-        # # model.lm_head.weight.requires_grad = True
-        # print(f'Total number of parameters {sum(p.numel() for p in model.parameters())}')
-            
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
@@ -626,7 +616,6 @@ def main():
         
         #reduce consumed gpu memory
         training_args.bf16=True
-        training_args.tf32=True
         training_args.bf16_full_eval=True
         # tokenizer.padding = True
         # tokenizer.truncation = True
