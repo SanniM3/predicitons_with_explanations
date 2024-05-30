@@ -623,6 +623,7 @@ def main():
         
         #reduce consumed gpu memory
         training_args.bf16=True
+        training_args.tf32=True
         training_args.bf16_full_eval=True
         # tokenizer.padding = True
         # tokenizer.truncation = True
