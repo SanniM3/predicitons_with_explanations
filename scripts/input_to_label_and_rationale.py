@@ -210,8 +210,8 @@ def main(rank, world_size):
     )
 
     model_args, data_args, training_args, unused_args = parser.parse_args_into_dataclasses(return_remaining_strings=True)
-    if unused_args != []:
-        raise ValueError(f"Received unused arguments: {unused_args}")
+    # if unused_args != []:
+    #     raise ValueError(f"Received unused arguments: {unused_args}")
     # make sure only one dataset split pick if manually specifying evaluation file
 
     if model_args.use_gpt3:
