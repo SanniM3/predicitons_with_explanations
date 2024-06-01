@@ -77,7 +77,7 @@ def collect_results(args):
                     print (f"Repeat experiments for those seeds and collect results again")
     
     #make results directory
-    output_file = 'out_llama'
+    output_file = 'out_llama_full'
     if not os.path.exists(output_file):
         os.mkdir(output_file)
 
@@ -85,13 +85,13 @@ def collect_results(args):
 
     df[columns_to_convert] = df[columns_to_convert].astype('int64')
     
-    print(df.to_csv('out_llama/results_all.csv', index=True))
+    print(df.to_csv('out_llama_full/results_all.csv', index=True))
 
     df_avg_seed = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).mean() #key error would occur when the results that was converted to df was empty
-    print(df_avg_seed.to_csv('out_llama/results.csv', index=True))
+    print(df_avg_seed.to_csv('out_llama_full/results.csv', index=True))
 
     df_avg_seed_with_std = df.groupby(['task_name', 'model_type', 'io_format', 'n_shots']).agg(['mean', std]) 
-    print(df_avg_seed_with_std.to_csv('out_llama/results_with_std.csv', index=True))
+    print(df_avg_seed_with_std.to_csv('out_llama_full/results_with_std.csv', index=True))
 
 
 # ===========> Code for running models with 60 seeds; eval on dev sets will be done jointly with training and results recorded in logger.log that we will use to collect results 
@@ -118,36 +118,18 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
 
 # Assuming you have args.n_gpus only for this project and no queing system, the following queues jobs on the available gpus for you 
 # this is from https://stackoverflow.com/questions/53422761/distributing-jobs-evenly-across-multiple-gpus-with-multiprocessing-pool
-from multiprocessing import Pool, current_process, Queue
-NUM_WORKERS = None  # the number of GPUs
-queue = Queue()
+# from multiprocessing import Pool, current_process, Queue
+# NUM_WORKERS = None  # the number of GPUs
+# queue = Queue()
 
-def foo(cmd):
-    print(f'initial command is:{cmd}')
-    gpu_id = queue.get()
-    # run processing on GPU <gpu_id>
-    ident = current_process().ident
-    print('{}: starting process on GPU {}'.format(ident, gpu_id))
-    if 'deepspeed' in cmd:
-        # cmd starts with PYTHONPATH=. deepspeed
-        
-        # Each GPU needs it's own port as deepspeed runs in distributed mode, and each GPU runs it's own server.
-        port = 29800 + gpu_id
-
-        # need to insert --include localhost:gpu_id after deepspeed.
-        # cmd_with_include = cmd.replace("deepspeed ", f"deepspeed --master_port {port} --include localhost:{gpu_id} ")
-        cmd_with_include = cmd.replace("deepspeed scripts/input_to_label_and_rationale.py ", f"deepspeed --master_port {port} --include localhost:{gpu_id} scripts/input_to_label_and_rationale.py ")
-        # deepspeed sets CUDA_VISIBLE_DEVICES based on the --include flag, and if we set it here then things break
-        cmd_with_cuda = cmd_with_include
-        print(f'-------using deepspeed---------Command is{cmd_with_cuda}')
+def foo(cmd, gpu_list):
+    os.environ['CUDA_VISIBLE_DEVICES'] = ','.join(map(str, gpu_list))
+    print(f'Executing command on GPUs {gpu_list}: {cmd}')
+    completed = subprocess.call(cmd, shell=True)
+    if completed == 0:
+        print(f'Command completed successfully on GPUs {gpu_list}')
     else:
-        cmd_with_cuda = "CUDA_VISIBLE_DEVICES=%d %s" % (gpu_id, cmd)
-        print(f'-------not using deepspeed---------Command is{cmd_with_cuda}')
-        print(cmd_with_cuda)
-    completed = subprocess.call(cmd_with_cuda, shell=True) #, shell=True)
-    print('{}: finished'.format(ident))
-    queue.put(gpu_id)
-# queing stuff done 
+        print(f'Command failed with exit code {completed} on GPUs {gpu_list}')
 
 def run_exp(args):
     if not os.path.isdir(args.exp_root):
@@ -311,12 +293,10 @@ def run_exp(args):
                 cmd = f'OPENAI_KEY={args.openai_key} {cmd}'
             commands.append(cmd)
     print(f'final commands------{commands[0]}')
-
+    gpu_list = list(range(args.n_gpus))
     if args.not_dryrun:
-        pool = Pool(processes=NUM_WORKERS)
-        list(pool.imap_unordered(foo, commands))
-        pool.close()
-        pool.join()
+        for cmd in commands:
+            foo(cmd, gpu_list)
     else: 
         for cmd in commands:
             print (cmd)
@@ -362,10 +342,6 @@ if __name__ == '__main__':
         if args.experiment_id != 't5_unifiedqa_fewshot':
             raise ValueError('We support only `t5_unifiedqa_fewshot` as `experiment_id`.')
         
-        NUM_WORKERS = args.n_gpus
-        # initialize the queue with the GPU ids
-        for gpu_ids in range(NUM_WORKERS):
-            queue.put(gpu_ids)
         
         experiments[args.experiment_id]['model_vals'] = args.model_vals.replace(' ','').split(',')
         experiments[args.experiment_id]['tokenizer_vals'] = [model.replace('allenai/unifiedqa-','') for model in experiments['t5_unifiedqa_fewshot']['model_vals']]
