@@ -29,6 +29,8 @@ import gpt3
 import logging
 import math
 import os
+import torch
+import torch.nn as nn
 from typing import List, Dict, Any, NewType
 
 InputDataClass = NewType("InputDataClass", Any)
@@ -579,6 +581,13 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
+        #DDP modification
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        model.to(device)
+
+        # Wrap the model with DataParallel
+        if torch.cuda.device_count() > 1:
+            model = nn.DataParallel(model)
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
