@@ -111,7 +111,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'fewshot_eval_size': [350],
                                         'explanation_sep_vals': ['" because "'],
                                         'tokenizer_vals': None,
-                                        'per_device_train_batch_size_vals': [4], 
+                                        'per_device_train_batch_size_vals': [2], 
                                         'learning_rate_vals' : [3e-5],
                                     }
 
@@ -269,7 +269,7 @@ def run_exp(args):
             else:
                 # cmd_prefix = "PYTHONPATH=. python input_to_label_and_rationale.py "
                 cmd_prefix = "python scripts/input_to_label_and_rationale.py "
-                cmd_batch_size = f" --per_device_train_batch_size {per_device_train_batch_size} --per_device_eval_batch_size 64 --gradient_accumulation_steps 1 "
+                cmd_batch_size = f" --per_device_train_batch_size 2 --per_device_eval_batch_size 2 --gradient_accumulation_steps 4 "
 
             cmd = f'''{cmd_prefix} \
                     --output_dir {output_dir}  --model_type {model}   \
