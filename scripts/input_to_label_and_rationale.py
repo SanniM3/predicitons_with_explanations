@@ -28,6 +28,10 @@ https://github.com/huggingface/transformers/blob/master/examples/language-modeli
 import gpt3
 import logging
 import math
+import torch
+import torch.nn as nn
+import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
 import os
 from typing import List, Dict, Any, NewType
 
@@ -73,6 +77,13 @@ from copy import deepcopy
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
 import re
+
+def setup(rank, world_size):
+    # Initialize the process group
+    dist.init_process_group("nccl", rank=rank, world_size=world_size)
+
+def cleanup():
+    dist.destroy_process_group()
 
 def set_global_logging_level(level=logging.ERROR, prefices=[""]):
     """
@@ -183,7 +194,8 @@ class CausalLMCollator:
 
         return batch
 
-def main():
+def main(rank, world_size):
+    setup(rank, world_size)
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
@@ -579,6 +591,10 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
+        #distributed training setup
+        device = torch.device(f"cuda:{rank}")
+        model.to(device)
+        model = DDP(model, device_ids=[rank])
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
@@ -589,13 +605,14 @@ def main():
 
         for name, param in model.named_parameters():
             if 'self_attn.q_proj' in name:
+                print('made sparsefit changes')
                 param.requires_grad = True
 
         for name, param in model.named_parameters():
             if 'layernorm' in name:
                 param.requires_grad = True
         
-
+        
         # ###PEFT MODIFICATIONS###
         # # creating model
         # t_init = 500
@@ -825,4 +842,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    world_size = torch.cuda.device_count()
+    torch.multiprocessing.spawn(main, args=(world_size,), nprocs=world_size, join=True)
+    # main()
