@@ -1,8 +1,4 @@
 ,,,,dev_acc,dev_acc,dev_bertscore_correct_normalized,dev_bertscore_correct_normalized,seed,seed
 ,,,,mean,std,mean,std,mean,std
 task_name,model_type,io_format,n_shots,,,,,,
-<<<<<<< HEAD
-sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,63.785714285714285,3.9402424042286586,56.955710713352474,3.200376735263486,6590.25,2063.009982404351
-=======
-ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,14.476190476190476,3.532807045903124,12.768859602156141,3.1577327546181855,6690.333333333333,2373.7340953770613
->>>>>>> 6bff7328933192502a17a716341a4bc3573f418e
+esnli,t5-base,standard,16,40.104166666666664,4.0312783405872485,34.31519327963563,3.496444011353479,4795.65625,2876.7884938044954
