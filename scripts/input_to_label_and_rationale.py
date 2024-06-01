@@ -28,10 +28,6 @@ https://github.com/huggingface/transformers/blob/master/examples/language-modeli
 import gpt3
 import logging
 import math
-import torch
-import torch.nn as nn
-import torch.distributed as dist
-from torch.nn.parallel import DistributedDataParallel as DDP
 import os
 from typing import List, Dict, Any, NewType
 
@@ -78,13 +74,6 @@ logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
 import re
 
-def setup(rank, world_size):
-    # Initialize the process group
-    dist.init_process_group("nccl", rank=rank, world_size=world_size)
-
-def cleanup():
-    dist.destroy_process_group()
-
 def set_global_logging_level(level=logging.ERROR, prefices=[""]):
     """
     Override logging levels of different modules based on their name as a prefix.
@@ -113,7 +102,9 @@ def set_other_seeds(seed):
     #torch.backends.cudnn.deterministic = True
     os.environ['PYTHONHASHSEED'] = str(seed)
 
-
+# inspired by DefaultDataCollator from:
+# https://github.com/huggingface/transformers/blob/master/src/transformers/data/data_collator.py
+# modified to perform batch-level padding.
 class SequenceCollator:
     def __init__(self, model, pad_token):
         self.model = model
@@ -192,18 +183,33 @@ class CausalLMCollator:
 
         return batch
 
-def main(rank, world_size):
-    setup(rank, world_size)
+def main():
+    # See all possible arguments in src/transformers/training_args.py
+    # or by passing the --help flag to this script.
+    # We now keep distinct sets of args, for a cleaner separation of concerns.
+    #print("input_to_label_and_rationale main function")
     og_start_time = time.time()
+
+    #parser = HfArgumentParser(
+    #    (ModelArguments, DataTrainingArguments, TrainingArguments)
+    #)
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, TrainingArguments)
     )
 
     model_args, data_args, training_args, unused_args = parser.parse_args_into_dataclasses(return_remaining_strings=True)
-    training_args.local_rank = os.environ['LOCAL_RANK']
-    # if unused_args != []:
-    #     raise ValueError(f"Received unused arguments: {unused_args}")
+    if unused_args != []:
+        raise ValueError(f"Received unused arguments: {unused_args}")
     # make sure only one dataset split pick if manually specifying evaluation file
+
+    if model_args.use_gpt3:
+        assert training_args.do_train
+        assert not training_args.do_eval
+        assert data_args.generations_filepath is None
+        if data_args.gpt3_max_eval_size is not None:
+            assert data_args.gpt3_max_eval_size <= data_args.fewshot_eval_size
+            assert data_args.gpt3_max_eval_size % 2 == 0
+            assert data_args.gpt3_max_eval_size % 3 == 0
 
     if data_args.generations_filepath is not None:
         training_args.do_train = False
@@ -228,7 +234,7 @@ def main(rank, world_size):
             )
         
 
-    if rank==0 and training_args.do_train:
+    if training_args.do_train:
         # create a save directory and a logfile
         training_args.output_dir = os.path.join(
             training_args.output_dir, datetime.now().strftime("%m%d%y_%H%M%S")
@@ -255,7 +261,7 @@ def main(rank, world_size):
         # don't overwrite existing logfile or create new directory
         training_args.output_dir = model_args.pretrained_model_file
         handlers = [logging.StreamHandler()]
-    dist.barrier() #ensure all process wait until the main process finishes setting up logging and directories
+
     # Setup logging
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -309,6 +315,9 @@ def main(rank, world_size):
 
     ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
     tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', pad_token = '[PAD]')
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
+    #print("tokenizer for model loaded successfully")
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
@@ -539,7 +548,20 @@ def main(rank, world_size):
             logger.info(split)
             logger.info(len(data_splits[split]))
 
-   
+    
+    # I did this to do some manual checks, but we don't need it
+    # TODO (Ana): remove this
+    '''
+    if data_args.n_shots > 0: 
+        import jsonlines 
+        with jsonlines.open(os.path.join(training_args.output_dir,'train.json'), 'w') as writer:
+            for item in original_data_splits['train']:
+                writer.write(item)
+        with jsonlines.open(os.path.join(training_args.output_dir,'validation.json'), 'w') as writer:
+            for item in original_data_splits['validation']:
+                writer.write(item)
+    '''
+
     if data_args.generations_filepath is None:
         callbacks = [TensorBoardCallback()]
         if data_args.early_stopping_patience > 0:
@@ -553,12 +575,10 @@ def main(rank, world_size):
             training_args.evaluation_strategy = EvaluationStrategy.EPOCH
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
-        
+        ### Change model to llama (To-DO: make this more dynamic like t5 and gpt3, remove token)
+        # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+        # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
 
-        #distributed training setup
-        device = torch.device(f"cuda:{rank}")
-        model.to(device)
-        model = DDP(model, device_ids=[rank])
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
@@ -569,13 +589,30 @@ def main(rank, world_size):
 
         for name, param in model.named_parameters():
             if 'self_attn.q_proj' in name:
-                print('made sparsefit changes')
                 param.requires_grad = True
 
         for name, param in model.named_parameters():
             if 'layernorm' in name:
                 param.requires_grad = True
         
+
+        # ###PEFT MODIFICATIONS###
+        # # creating model
+        # t_init = 500
+        # t_final = 1000
+        # total_steps = t_init + 100 + t_final
+        # peft_config = AdaLoraConfig(peft_type="ADALORA", task_type="CAUSAL_LM", init_r=8, target_r=4, lora_alpha=32, 
+        #                             target_modules='.*(self_attn|mlp).*(q_proj|v_proj|k_proj|o_proj|up_proj|gate_proj|down_proj)$',
+        #                             lora_dropout=0.1, tinit=t_init, tfinal=t_final, deltaT=10, orth_reg_weight=0.1, total_step=total_steps)
+        
+        # # peft_config = IA3Config(
+        # #                 peft_type="IA3",
+        # #                 task_type="SEQ_2_SEQ_LM",
+        # #                 target_modules=["k_proj", "v_proj", "w0"],
+        # #                 feedforward_modules=["w0"],
+        # #             )
+        # model = get_peft_model(model, peft_config)
+        # model.print_trainable_parameters()
         
         #reduce consumed gpu memory
         training_args.bf16=True
@@ -606,6 +643,22 @@ def main(rank, world_size):
                 model=model_class, pad_token=tokenizer.pad_token_id
             ),callbacks=callbacks,
         )
+        # tokenizer.pad_token = tokenizer.eos_token
+        # # tokenizer.padding_side = 'right'
+        # # tokenizer.padding = True
+        # # tokenizer.truncation = True
+        # # print(data_splits['train'][0])
+        # trainer = Trainer(
+        #     model=model,
+        #     args=training_args,
+        #     train_dataset=data_splits['train'],
+        #     eval_dataset=data_splits['validation'],
+        #     callbacks=callbacks,
+        #     data_collator=SequenceCollator(
+        #         model=model_class, pad_token=tokenizer.pad_token_id
+        #     ),
+        # )
+        # print(trainer.train_dataset[0])
         
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
@@ -769,9 +822,7 @@ def main(rank, world_size):
     logger.info(
         "TOTAL SCRIPT TIME: %.4f hours" % ((time.time() - og_start_time) / 60.0 / 60.0)
     )
-    cleanup()
+
 
 if __name__ == "__main__":
-    world_size = torch.cuda.device_count()
-    torch.multiprocessing.spawn(main, args=(world_size,), nprocs=world_size, join=True)
-    # main()
+    main()
