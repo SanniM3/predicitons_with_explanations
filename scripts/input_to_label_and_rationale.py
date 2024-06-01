@@ -585,9 +585,9 @@ def main():
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)
 
-        # Wrap the model with DataParallel
-        if torch.cuda.device_count() > 1:
-            model = nn.DataParallel(model)
+        # # Wrap the model with DataParallel
+        # if torch.cuda.device_count() > 1:
+        #     model = nn.DataParallel(model)
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
