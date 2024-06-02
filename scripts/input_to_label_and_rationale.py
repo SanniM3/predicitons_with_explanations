@@ -316,15 +316,15 @@ def main():
     logger.info("Loading pretrained tokenizer...")
 
     ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
-    tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', pad_token = '[PAD]')
-    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+    tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], pad_token = '[PAD]')
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
     # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
     #print("tokenizer for model loaded successfully")
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
             # model = T5ForConditionalGeneration.from_pretrained(model_args.pretrained_model_file)
-            model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+            model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
 
             if model_args.dropout_rate:
                 raise Exception("can't update/specify dropout currently when load pretrained model from directory")
@@ -334,10 +334,10 @@ def main():
             logger.info("Loading pretrained model")
             if model_args.dropout_rate:
                 # model = model_name.from_pretrained(model_args.model_type, dropout_rate=model_args.dropout_rate)
-                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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', dropout_rate=model_args.dropout_rate)
+                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], dropout_rate=model_args.dropout_rate)
             else:
                 # model = model_name.from_pretrained(model_args.model_type)
-                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
         else:
             # load model from scratch with no pretrained weights
             config_name = CONFIG_MAPPING[model_class]()
@@ -578,31 +578,29 @@ def main():
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
         ### Change model to llama (To-DO: make this more dynamic like t5 and gpt3, remove token)
-        # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
-        # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token='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')
+        # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
+        # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
 
         #DDP modification
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)
 
-        # # Wrap the model with DataParallel
-        # if torch.cuda.device_count() > 1:
-        #     model = nn.DataParallel(model)
+        
         #SPARSEFIT CHANGES
         # Make trainable only key terms in self-attention layers.
         # if 'attention.k' in model_args.bias_terms:
-        # for param in model.parameters():
-        #     param.requires_grad = False
-        # # Deactivate language model head
-        # model.lm_head.weight.requires_grad = False
+        for param in model.parameters():
+            param.requires_grad = False
+        # Deactivate language model head
+        model.lm_head.weight.requires_grad = False
 
-        # for name, param in model.named_parameters():
-        #     if 'self_attn.q_proj' in name:
-        #         param.requires_grad = True
+        for name, param in model.named_parameters():
+            if 'self_attn.q_proj' in name:
+                param.requires_grad = True
 
-        # for name, param in model.named_parameters():
-        #     if 'layernorm' in name:
-        #         param.requires_grad = True
+        for name, param in model.named_parameters():
+            if 'layernorm' in name:
+                param.requires_grad = True
         
 
         # ###PEFT MODIFICATIONS###
