@@ -242,8 +242,8 @@ def main():
             training_args.output_dir, datetime.now().strftime("%m%d%y_%H%M%S")
         )
         training_args.logging_dir = training_args.output_dir
-        assert not os.path.exists(training_args.output_dir)
-        os.makedirs(training_args.output_dir)
+        # assert not os.path.exists(training_args.output_dir)
+        os.makedirs(training_args.output_dir, exist_ok=True)
         #print("output directory created at", str(training_args.output_dir))
         if (
                 os.path.exists(training_args.output_dir)
@@ -586,21 +586,21 @@ def main():
         model.to(device)
 
         
-        #SPARSEFIT CHANGES
-        # Make trainable only key terms in self-attention layers.
-        # if 'attention.k' in model_args.bias_terms:
-        for param in model.parameters():
-            param.requires_grad = False
-        # Deactivate language model head
-        model.lm_head.weight.requires_grad = False
+        # #SPARSEFIT CHANGES
+        # # Make trainable only key terms in self-attention layers.
+        # # if 'attention.k' in model_args.bias_terms:
+        # for param in model.parameters():
+        #     param.requires_grad = False
+        # # Deactivate language model head
+        # model.lm_head.weight.requires_grad = False
 
-        for name, param in model.named_parameters():
-            if 'self_attn.q_proj' in name:
-                param.requires_grad = True
+        # for name, param in model.named_parameters():
+        #     if 'self_attn.q_proj' in name:
+        #         param.requires_grad = True
 
-        for name, param in model.named_parameters():
-            if 'layernorm' in name:
-                param.requires_grad = True
+        # for name, param in model.named_parameters():
+        #     if 'layernorm' in name:
+        #         param.requires_grad = True
         
 
         # ###PEFT MODIFICATIONS###
