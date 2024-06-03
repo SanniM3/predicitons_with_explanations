@@ -268,7 +268,7 @@ def run_exp(args):
                 cmd_batch_size = f" --per_device_train_batch_size 1 --per_device_eval_batch_size 1 --gradient_accumulation_steps {per_device_train_batch_size} "
             else:
                 # cmd_prefix = "PYTHONPATH=. python input_to_label_and_rationale.py "
-                cmd_prefix = "CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 scripts/input_to_label_and_rationale.py "
+                cmd_prefix = "CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node 2 scripts/input_to_label_and_rationale.py "
                 cmd_batch_size = f" --per_device_train_batch_size 1 --per_device_eval_batch_size 1 --gradient_accumulation_steps 8 "
 
             cmd = f'''{cmd_prefix} \
