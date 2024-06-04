@@ -6,7 +6,7 @@ import torch
 import datasets 
 import json
 from feature_conversion_methods import unified_qa_esnli_label_mapping, wt5_esnli_label_mapping, unified_qa_sbic_label_mapping
-
+from accelerate import FullyShardedDataParallel as FSDP
 
 def evaluate(
     save_path,
@@ -41,8 +41,9 @@ def evaluate(
                 inpt_tensor_length = len(element["input_ids"])
                 if len(generations_list)==0:
                     out = model(input_ids=inpt_tensor, attention_mask=None)
-                with torch.no_grad():   
-                    out = unwrap_model.generate(
+                # with torch.no_grad(): 
+                with FSDP.summon_full_params(model, writeback=False, recurse=False):  
+                    out = model.generate(
                         input_ids=inpt_tensor,
                         max_length=300,
                         pad_token_id=tokenizer.pad_token_id,
