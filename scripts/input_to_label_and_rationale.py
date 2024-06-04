@@ -71,6 +71,7 @@ import random
 import pandas as pd 
 import jsonlines
 from copy import deepcopy 
+from accelerate import Accelerator
 
 logger = logging.getLogger(__name__)
 transformers.logging.set_verbosity_info()
@@ -190,6 +191,7 @@ def main():
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
     #print("input_to_label_and_rationale main function")
+    accelerator = Accelerator()
     og_start_time = time.time()
 
     #parser = HfArgumentParser(
@@ -673,6 +675,7 @@ def main():
         trainer.train()
         train_time = time.time() - start_time
         model = trainer.model
+        unwrap_model = accelerator.unwrap_model(model)
     else:
         start_time = time.time()
         train_time = time.time() - start_time
@@ -787,7 +790,7 @@ def main():
         results = evaluate(
                             save_path,
                             original_data_splits["validation"],
-                            model,
+                            unwrap_model,
                             tokenizer,
                             "validation",
                             data_args.task_name,
