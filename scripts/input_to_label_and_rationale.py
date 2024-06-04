@@ -581,9 +581,9 @@ def main():
         # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
         # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
 
-        #DDP modification
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        model.to(device)
+        # #DDP modification
+        # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # model.to(device)
 
         
         # #SPARSEFIT CHANGES
