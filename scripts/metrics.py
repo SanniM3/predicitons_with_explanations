@@ -6,7 +6,7 @@ import torch
 import datasets 
 import json
 from feature_conversion_methods import unified_qa_esnli_label_mapping, wt5_esnli_label_mapping, unified_qa_sbic_label_mapping
-from accelerate import FullyShardedDataParallel as FSDP
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 
 def evaluate(
     save_path,
