@@ -684,7 +684,7 @@ def main():
     if trainer.is_fsdp_enabled:
         print('testcompiling full checkpoints')
         trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
-        accelerator.config.use_orig_params = False #setting this to false for metric calculation
+        # accelerator.config.use_orig_params = False #setting this to false for metric calculation
         unwrap_model = accelerator.unwrap_model(model)
     results = {}
     if training_args.do_eval:
@@ -820,7 +820,7 @@ def main():
                     writer.write("%s = %s\n" % (key, str(results[key])))
 
     predict_time = time.time() - start_time
-    accelerator.config.use_orig_params = True #resetting this to True for proper training
+    # accelerator.config.use_orig_params = True #resetting this to True for proper training
     # final logs
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
