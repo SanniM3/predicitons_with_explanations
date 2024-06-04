@@ -40,14 +40,14 @@ def evaluate(
                 # print(f'Input length {len(element["input_ids"])}')
                 inpt_tensor_length = len(element["input_ids"])
                 if len(generations_list)==0:
-                    model(**element)
-                     
-                out = unwrap_model.generate(
-                    input_ids=inpt_tensor,
-                    max_length=300,
-                    pad_token_id=tokenizer.pad_token_id,
-                    eos_token_id=tokenizer.eos_token_id,
-                )
+                    out = model(input_ids=inpt_tensor, attention_mask=None)
+                with torch.no_grad():   
+                    out = unwrap_model.generate(
+                        input_ids=inpt_tensor,
+                        max_length=300,
+                        pad_token_id=tokenizer.pad_token_id,
+                        eos_token_id=tokenizer.eos_token_id,
+                    )
                 skip_special_tokens = False if "infilling" in io_format else True
                 # print(f'OUTPUT without removed input tensor {tokenizer.decode(out[0].tolist())}')
                 # print(f'OUTPUT after removing input tensor {tokenizer.decode(out[0].tolist()[inpt_tensor_length:])}')
