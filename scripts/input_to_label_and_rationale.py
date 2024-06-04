@@ -245,15 +245,15 @@ def main():
         # assert not os.path.exists(training_args.output_dir)
         os.makedirs(training_args.output_dir, exist_ok=True)
         #print("output directory created at", str(training_args.output_dir))
-        if (
-                os.path.exists(training_args.output_dir)
-                and os.listdir(training_args.output_dir)
-                and training_args.do_train
-                and not training_args.overwrite_output_dir
-        ):
-            raise ValueError(
-                f"Output directory ({training_args.output_dir}) already exists and is not empty. Use --overwrite_output_dir to overcome."
-            )
+        # if (
+        #         os.path.exists(training_args.output_dir)
+        #         and os.listdir(training_args.output_dir)
+        #         and training_args.do_train
+        #         and not training_args.overwrite_output_dir
+        # ):
+        #     raise ValueError(
+        #         f"Output directory ({training_args.output_dir}) already exists and is not empty. Use --overwrite_output_dir to overcome."
+        #     )
         handlers = [
             logging.FileHandler(os.path.join(training_args.output_dir, "logger.log")),
             logging.StreamHandler(),
