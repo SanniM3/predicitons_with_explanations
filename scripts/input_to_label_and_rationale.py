@@ -195,9 +195,9 @@ def main():
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
     #print("input_to_label_and_rationale main function")
-    fsdp_plugin = FullyShardedDataParallelPlugin(use_orig_params=True)
-    accelerator = Accelerator(fsdp_plugin=fsdp_plugin)
-    # accelerator = Accelerator()
+    # fsdp_plugin = FullyShardedDataParallelPlugin(use_orig_params=True)
+    # accelerator = Accelerator(fsdp_plugin=fsdp_plugin)
+    accelerator = Accelerator()
     og_start_time = time.time()
 
     #parser = HfArgumentParser(
@@ -690,9 +690,7 @@ def main():
     if trainer.is_fsdp_enabled:
         print('testcompiling full checkpoints')
         trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
-        # accelerator.config.use_orig_params = False #setting this to false for metric calculation
-        fsdp_plugin = FullyShardedDataParallelPlugin(use_orig_params=False)
-        accelerator = Accelerator(fsdp_plugin=fsdp_plugin)
+        # accelerator.fsdp_plugin.use_orig_params = False #setting this to false for metric calculation
         unwrap_model = accelerator.unwrap_model(model)
     results = {}
     if training_args.do_eval:
