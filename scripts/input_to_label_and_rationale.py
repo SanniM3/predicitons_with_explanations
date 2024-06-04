@@ -679,7 +679,7 @@ def main():
 
     # Evaluation
     if trainer.is_fsdp_enabled:
-        #compile full checkpoint
+        print('testcompiling full checkpoints')
         trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
     results = {}
     if training_args.do_eval:
