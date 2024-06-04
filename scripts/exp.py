@@ -112,7 +112,7 @@ experiments['t5_unifiedqa_fewshot'] = { # Values are lists because you can run e
                                         'explanation_sep_vals': ['" because "'],
                                         'tokenizer_vals': None,
                                         'per_device_train_batch_size_vals': [2], 
-                                        'learning_rate_vals' : [3e-4],
+                                        'learning_rate_vals' : [3e-5],
                                     }
 
 
