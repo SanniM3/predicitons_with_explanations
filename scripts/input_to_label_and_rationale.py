@@ -678,6 +678,9 @@ def main():
         train_time = time.time() - start_time
 
     # Evaluation
+    if trainer.is_fsdp_enabled:
+        #compile full checkpoint
+        trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
     results = {}
     if training_args.do_eval:
         start_time = time.time()
