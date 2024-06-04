@@ -12,6 +12,7 @@ def evaluate(
     save_path,
     dataset,
     model,
+    unwrap_model,
     tokenizer,
     split,
     task,
@@ -38,7 +39,10 @@ def evaluate(
                 # print(f'INPUT {tokenizer.decode(element["input_ids"])}')
                 # print(f'Input length {len(element["input_ids"])}')
                 inpt_tensor_length = len(element["input_ids"])
-                out = model.generate(
+                if len(generations_list)==0:
+                    model(**element)
+                     
+                out = unwrap_model.generate(
                     input_ids=inpt_tensor,
                     max_length=300,
                     pad_token_id=tokenizer.pad_token_id,

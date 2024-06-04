@@ -790,6 +790,7 @@ def main():
         results = evaluate(
                             save_path,
                             original_data_splits["validation"],
+                            model,
                             unwrap_model,
                             tokenizer,
                             "validation",
