@@ -242,8 +242,8 @@ def main():
             training_args.output_dir, datetime.now().strftime("%m%d%y_%H%M%S")
         )
         training_args.logging_dir = training_args.output_dir
-        # assert not os.path.exists(training_args.output_dir)
-        os.makedirs(training_args.output_dir, exist_ok=True)
+        assert not os.path.exists(training_args.output_dir)
+        os.makedirs(training_args.output_dir)
         #print("output directory created at", str(training_args.output_dir))
         if (
                 os.path.exists(training_args.output_dir)
