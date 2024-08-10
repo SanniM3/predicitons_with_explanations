@@ -1,5 +1,5 @@
 
-This code is associated with the [SparseFit: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations](https://arxiv.org/abs/2305.13235) paper, presented at the ACL Main Conference 2024 paper. Our work extends the research presented in [Few-Shot Self-Rationalization with Natural Language Prompts](https://aclanthology.org/2022.findings-naacl.31.pdf). We have used their [codebase](https://github.com/allenai/feb) as a foundation for this project. 
+This code is associated with the [SparseFit: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations](https://arxiv.org/abs/2305.13235) paper, presented at the ACL Main Conference 2024. Our work extends the research presented in [Few-Shot Self-Rationalization with Natural Language Prompts](https://aclanthology.org/2022.findings-naacl.31.pdf). We have used their [codebase](https://github.com/allenai/feb) as a foundation for this project. 
 ## Citation 
 
 ```
