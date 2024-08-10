@@ -194,15 +194,9 @@ def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
-    #print("input_to_label_and_rationale main function")
-    # fsdp_plugin = FullyShardedDataParallelPlugin(use_orig_params=True)
-    # accelerator = Accelerator(fsdp_plugin=fsdp_plugin)
     accelerator = Accelerator()
     og_start_time = time.time()
 
-    #parser = HfArgumentParser(
-    #    (ModelArguments, DataTrainingArguments, TrainingArguments)
-    #)
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, TrainingArguments)
     )
@@ -252,7 +246,6 @@ def main():
         training_args.logging_dir = training_args.output_dir
         # assert not os.path.exists(training_args.output_dir)
         os.makedirs(training_args.output_dir, exist_ok=True)
-        #print("output directory created at", str(training_args.output_dir))
         # if (
         #         os.path.exists(training_args.output_dir)
         #         and os.listdir(training_args.output_dir)
@@ -267,7 +260,6 @@ def main():
             logging.StreamHandler(),
         ]
     else:
-        #print("not in training mode, so existing logfile not overwritten")
         # don't overwrite existing logfile or create new directory
         training_args.output_dir = model_args.pretrained_model_file
         handlers = [logging.StreamHandler()]
@@ -289,8 +281,6 @@ def main():
     )
     logger.info("Save path: %s" % training_args.output_dir)
 
-    # get git hash and branch where deployed
-    #print("get git hash and branch where deployed")
     repo = git.Repo(search_parent_directories=True)
     git_hash = repo.head.object.hexsha
     git_branch = repo.active_branch.name
@@ -299,9 +289,7 @@ def main():
 
     model_class = "llama"
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
-    #print("model class specified and task names asserted")
     if training_args.do_train:
-        # write command and args to file
         with open(
                 os.path.join(training_args.output_dir, "commandline_args.txt"), "w"
         ) as f:
@@ -314,59 +302,50 @@ def main():
     set_seed(training_args.seed)
     set_other_seeds(training_args.seed)
 
-    # Load pretrained model and tokenizer
-    #
-    # Distributed training:
-    # The .from_pretrained methods guarantee that only one local process can concurrently
-    # download model & vocab.
-
+    
     tokenizer_name = TOKENIZER_MAPPING[model_class]
     logger.info("Loading pretrained tokenizer...")
 
-    ### Change model to llama (make this more dynamic like t5 and gpt3, remove token)
-    tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], pad_token = '[PAD]', torch_dtype=torch.bfloat16)
-    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
-    # tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
-    #print("tokenizer for model loaded successfully")
+    
+    if model_class == "llama":
+        tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], pad_token = '[PAD]', torch_dtype=torch.bfloat16)
+    else:
+        tokenizer = tokenizer_name.from_pretrained(model_args.tokenizer_name)#, cache_dir=model_args.cache_dir)
     if data_args.generations_filepath is None:
         model_name = MODEL_MAPPING[model_class]
         if model_args.pretrained_model_file:
-            # model = T5ForConditionalGeneration.from_pretrained(model_args.pretrained_model_file)
-            model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16)
-
+            if model_class == "llama":
+                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16)
+            else:
+                model = model_name.from_pretrained(model_args.pretrained_model_file)
+            
             if model_args.dropout_rate:
                 raise Exception("can't update/specify dropout currently when load pretrained model from directory")
 
         elif model_args.pretrained:
-            # load pretrained model from HuggingFace
             logger.info("Loading pretrained model")
             if model_args.dropout_rate:
-                # model = model_name.from_pretrained(model_args.model_type, dropout_rate=model_args.dropout_rate)
-                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16, dropout_rate=model_args.dropout_rate)
+                if model_class == "llama":
+                    model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16, dropout_rate=model_args.dropout_rate)
+                else:
+                    model = model_name.from_pretrained(model_args.model_type, dropout_rate=model_args.dropout_rate)
+                
             else:
-                # model = model_name.from_pretrained(model_args.model_type)
-                model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16)
+                if model_class == "llama":
+                    model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'], torch_dtype=torch.bfloat16)
+                else:
+                    model = model_name.from_pretrained(model_args.pretrained_model_file)
+                
         else:
-            # load model from scratch with no pretrained weights
             config_name = CONFIG_MAPPING[model_class]()
-            # TODO (Sarah): NOTE THIS ONLY DOES T5-BASE; PASS IN ARGS HERE^
             logger.info(
                 "Training new model from scratch using default config (NOTE: SMALL MODELS ONLY FOR NOW)"
             )
             if model_args.dropout_rate:
                 raise Exception("sure you want to train a model from scratch?")
             model = model_name.from_config(config_name)
-        model.resize_token_embeddings(len(tokenizer))
-        # ###PEFT MODIFICATIONS###
-        # peft_config = LoraConfig(
-        #                 r=8,
-        #                 lora_alpha=32,
-        #                 target_modules=["q", "v"],
-        #                 lora_dropout=0.1,
-        #             )
-        # model = get_peft_model(model, peft_config)
+        model.resize_token_embeddings(len(tokenizer))        
     else:
-        #print('no model loaded')
         model = None
 
     
@@ -463,12 +442,7 @@ def main():
             data_splits[split_mapping[split]] = []
             if not training_args.do_train:
                 continue
-            # print(os.getcwd())
-            # print(data_args.data_path)
-            # cwd, 'data', os.path.basename(data_args)
             data_path = os.path.join(os.getcwd(), data_args.data_path.lstrip('../'), f"SBIC.v2.{split}.modified.csv")
-            # data_path = os.path.join(os.getcwd(), data_args.data_path, f"SBIC.v2.{split}.modified.csv")
-            # print(data_path)
             df = pd.read_csv(data_path)
 
             if data_args.n_shots > 0: # This condition could probably be removed; we used n_shots=0 to experiment with training with the entire train set
@@ -559,8 +533,6 @@ def main():
             logger.info(len(data_splits[split]))
 
     
-    # I did this to do some manual checks, but we don't need it
-    # TODO (Ana): remove this
     '''
     if data_args.n_shots > 0: 
         import jsonlines 
@@ -585,18 +557,10 @@ def main():
             training_args.evaluation_strategy = EvaluationStrategy.EPOCH
         else:
             training_args.evaluation_strategy = EvaluationStrategy.STEPS
-        ### Change model to llama (To-DO: make this more dynamic like t5 and gpt3, remove token)
-        # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
-        # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ['HF_TOKEN'])
-
-        # #DDP modification
-        # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        # model.to(device)
-
+        
         
         # # SPARSEFIT CHANGES
         # # Make trainable only key terms in self-attention layers.
-        # # if 'attention.k' in model_args.bias_terms:
         # for param in model.parameters():
         #     param.requires_grad = False
         # # Deactivate language model head
@@ -642,38 +606,35 @@ def main():
           data_split['attention_mask'] = [1] * len(data_split['input_ids'])
           return data_split
         
-        if data_args.task_name == 'esnli':
-          train_data_splits = data_splits['train'].map(process_data_split)
-          # eval_data_splits = data_splits['validation'].map(process_data_split) #only format of training should have labels appended. 
-        else:
-          train_data_splits = [process_data_split(sample) for sample in data_splits['train']]
+        if model_class == "llama":
+            if data_args.task_name == 'esnli':
+                train_data_splits = data_splits['train'].map(process_data_split)
+                # eval_data_splits = data_splits['validation'].map(process_data_split) #only format of training should have labels appended. 
+            else:
+                train_data_splits = [process_data_split(sample) for sample in data_splits['train']]
 
         
-        trainer = Trainer(
-            model=model,
-            args=training_args,
-            train_dataset=train_data_splits,
-            eval_dataset=data_splits['validation'],
-            data_collator=SequenceCollator(
-                model=model_class, pad_token=tokenizer.pad_token_id
-            ),callbacks=callbacks,
-        )
-        # tokenizer.pad_token = tokenizer.eos_token
-        # # tokenizer.padding_side = 'right'
-        # # tokenizer.padding = True
-        # # tokenizer.truncation = True
-        # # print(data_splits['train'][0])
-        # trainer = Trainer(
-        #     model=model,
-        #     args=training_args,
-        #     train_dataset=data_splits['train'],
-        #     eval_dataset=data_splits['validation'],
-        #     callbacks=callbacks,
-        #     data_collator=SequenceCollator(
-        #         model=model_class, pad_token=tokenizer.pad_token_id
-        #     ),
-        # )
-        # print(trainer.train_dataset[0])
+            trainer = Trainer(
+                model=model,
+                args=training_args,
+                train_dataset=train_data_splits,
+                eval_dataset=data_splits['validation'],
+                data_collator=SequenceCollator(
+                    model=model_class, pad_token=tokenizer.pad_token_id
+                ),callbacks=callbacks,
+            )
+        else:
+            trainer = Trainer(
+                model=model,
+                args=training_args,
+                train_dataset=data_splits['train'],
+                eval_dataset=data_splits['validation'],
+                callbacks=callbacks,
+                data_collator=SequenceCollator(
+                    model=model_class, pad_token=tokenizer.pad_token_id
+                ),
+            )
+        
         
     # Training. Don't train if it is use_gpt3
     if training_args.do_train and not model_args.use_gpt3:
@@ -688,9 +649,7 @@ def main():
 
     # Evaluation
     if trainer.is_fsdp_enabled:
-        print('testcompiling full checkpoints')
         trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
-        # accelerator.fsdp_plugin.use_orig_params = False #setting this to false for metric calculation
         unwrap_model = accelerator.unwrap_model(model)
     results = {}
     if training_args.do_eval:
@@ -720,9 +679,8 @@ def main():
         eval_time = time.time() - start_time
 
     if data_args.generations_filepath is None:
-        # get folder where to save predictions
         save_path = trainer.state.best_model_checkpoint
-        if save_path is None:  # early stopping is disabled, no checkpoints saved
+        if save_path is None:  
             save_path = training_args.output_dir
         model.eval()
     else:
@@ -826,7 +784,6 @@ def main():
                     writer.write("%s = %s\n" % (key, str(results[key])))
 
     predict_time = time.time() - start_time
-    # accelerator.config.use_orig_params = True #resetting this to True for proper training
     # final logs
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
