@@ -250,8 +250,9 @@ def run_exp(args):
         n_shot_vals = n_shots_dict[dataset]
         for format_n_shots_params in itertools.product(format_vals, n_shot_vals):
             format, n_shots = format_n_shots_params
-            if ('unified' in model and 'unified' not in format) or ('unified' not in model and 'unified' in format):
-                continue
+            if 't5' in model: #only perform unified format check for t5 models
+                if ('unified' in model and 'unified' not in format) or ('unified' not in model and 'unified' in format):
+                    continue
             run_name = '-'.join([str(v) for v in hparams if not isinstance(v, dict)]).replace('/', '-').replace('.', '').replace(' ','')
             run_name += '-'.join([format, str(n_shots)])
 
@@ -292,7 +293,7 @@ def run_exp(args):
                 cmd += f" --use_gpt3  --gpt3_max_eval_size {args.gpt3_max_eval_size}"
                 cmd = f'OPENAI_KEY={args.openai_key} {cmd}'
             commands.append(cmd)
-    print(f'final commands------{commands[0]}')
+    
     gpu_list = list(range(args.n_gpus))
     if args.not_dryrun:
         for cmd in commands:
@@ -318,7 +319,8 @@ if __name__ == '__main__':
                                                                      "t5-3b"
                                                                      "allenai/unifiedqa-t5-base"
                                                                      "allenai/unifiedqa-t5-large"
-                                                                     "allenai/unifiedqa-t5-3b")
+                                                                     "allenai/unifiedqa-t5-3b"
+                                                                     "meta-llama/Llama-2-7b-hf")
     parser.add_argument("--dataset_vals", type=str, default=None, help="A string of datasets for train/eval separeted by comma, e.g., 'ecqa,sensemaking'"
                                                                        "We used the following datasets for our experiments:"
                                                                        "ecqa"
@@ -331,10 +333,6 @@ if __name__ == '__main__':
     parser.add_argument("--openai_key", type=str, help="Openai key")                                                     
     args = parser.parse_args()
 
-    # #change target modules to list as expected by peft
-    # args.lora_target_modules = ast.literal_eval(args.lora_target_modules)
-    # #modify the experiment root with lora details
-    # args.exp_root = args.exp_root + 'r{}{}'.format(args.lora_rank, ''.join(args.lora_target_modules))
     
     if args.collect_results:
         collect_results(args)
