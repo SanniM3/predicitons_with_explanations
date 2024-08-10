@@ -15,6 +15,11 @@ class ModelArguments:
             "help": "HF pretrained model"
         },
     )
+    model_class: str = field(
+        metadata={
+            "help": "Name of model class (e.g. t5, llama)"
+        },
+    )
     pretrained: bool = field(
         default=True,
         metadata={

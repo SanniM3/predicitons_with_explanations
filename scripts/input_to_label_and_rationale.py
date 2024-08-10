@@ -70,7 +70,8 @@ from tqdm import trange
 import random 
 import pandas as pd 
 import jsonlines
-from copy import deepcopy 
+from copy import deepcopy
+from typing import List, Dict
 from accelerate import Accelerator
 
 logger = logging.getLogger(__name__)
@@ -102,6 +103,7 @@ set_global_logging_level(logging.ERROR, ["datasets"])
 CONFIG_MAPPING = {"t5": T5Config, "llama": LlamaConfig}
 MODEL_MAPPING = {"t5": T5ForConditionalGeneration, "llama": LlamaForCausalLM}
 TOKENIZER_MAPPING = {"t5": T5Tokenizer, "llama": LlamaTokenizer}
+model_class = "llama"
 
 
 def set_other_seeds(seed):
@@ -113,6 +115,45 @@ def set_other_seeds(seed):
 # https://github.com/huggingface/transformers/blob/master/src/transformers/data/data_collator.py
 # modified to perform batch-level padding.
 class SequenceCollator:
+    def __init__(self, model, pad_token):
+        self.model = model
+        self.pad_token_mapping = {
+            "labels": -100,
+            "attention_mask": 0,
+            "decoder_attention_mask": 0,
+            "input_ids": pad_token,
+        }
+
+        self.columns = [
+            "input_ids",
+            "attention_mask",
+            "labels",
+            "decoder_attention_mask",
+        ]
+
+    def __call__(self, examples: List[Dict[str, InputDataClass]]) -> Dict[str, torch.Tensor]:
+        # re-format inputs for training
+        batch = {}
+        for key in examples[0].keys():
+            if key in self.columns:
+                tmp_list = []
+                for item in examples:
+                    tmp_list.append(item[key])
+
+                # pad lists to max length
+                if isinstance(tmp_list[0], list):
+                    max_length = max(map(len, tmp_list))
+                    tmp_list = [
+                        el + [self.pad_token_mapping[key]] * (max_length - len(el))
+                        for el in tmp_list
+                    ]
+
+                batch[key] = torch.tensor(tmp_list, dtype=torch.long)
+        return batch
+
+
+
+class CausalLMCollator:
     def __init__(self, model, pad_token):
         self.model = model
         self.pad_token_mapping = {
@@ -155,41 +196,6 @@ class SequenceCollator:
                 batch[key] = torch.tensor(tmp_list, dtype=torch.long)
         return batch
 
-
-from typing import List, Dict
-import torch
-
-class CausalLMCollator:
-    def __init__(self, pad_token):
-        self.pad_token = pad_token
-        self.pad_token_mapping = {
-            "attention_mask": 0,
-            "input_ids": self.pad_token,
-        }
-
-        self.columns = [
-            "input_ids",
-            "attention_mask",
-        ]
-
-    def __call__(self, examples: List[Dict[str, List[int]]]) -> Dict[str, torch.Tensor]:
-        # Re-format inputs for training
-        batch = {}
-        for key in self.columns:
-            tmp_list = [item[key] for item in examples if key in item]
-
-            # Pad lists to max length
-            if tmp_list and isinstance(tmp_list[0], list):
-                max_length = max(len(el) for el in tmp_list)
-                tmp_list = [
-                    el + [self.pad_token_mapping[key]] * (max_length - len(el))
-                    for el in tmp_list
-                ]
-
-            batch[key] = torch.tensor(tmp_list, dtype=torch.long)
-
-        return batch
-
 def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
@@ -202,6 +208,7 @@ def main():
     )
 
     model_args, data_args, training_args, unused_args = parser.parse_args_into_dataclasses(return_remaining_strings=True)
+    
     # if unused_args != []:
     #     raise ValueError(f"Received unused arguments: {unused_args}")
     # make sure only one dataset split pick if manually specifying evaluation file
@@ -287,7 +294,8 @@ def main():
     logger.info("Git branch: %s" % git_branch)
     logger.info("Git hash: %s" % git_hash)
 
-    model_class = "llama"
+    # model_class = "llama"
+    model_class = model_args.model_class
     assert data_args.task_name in {"cos_e", "esnli", "sbic", "sensemaking", "ecqa"}
     if training_args.do_train:
         with open(
@@ -619,7 +627,7 @@ def main():
                 args=training_args,
                 train_dataset=train_data_splits,
                 eval_dataset=data_splits['validation'],
-                data_collator=SequenceCollator(
+                data_collator=CausalLMCollator(
                     model=model_class, pad_token=tokenizer.pad_token_id
                 ),callbacks=callbacks,
             )
