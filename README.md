@@ -1,14 +1,16 @@
 
-Code associated with the [Few-Shot Self-Rationalization with Natural Language Prompts](https://arxiv.org/abs/2111.08284) NAACL Findings 2022 paper
-
+This code is associated with the [SparseFit: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations](https://arxiv.org/abs/2305.13235) paper, presented at the ACL Main Conference 2024 paper. Our work extends the research presented in [Few-Shot Self-Rationalization with Natural Language Prompts](https://aclanthology.org/2022.findings-naacl.31.pdf). We have used their [codebase](https://github.com/allenai/feb) as a foundation for this project. 
 ## Citation 
 
 ```
-@inproceedings{marasovic-beltagy-et-al-2022-feb,
-    title = "Few-Shot Self-Rationalization with Natural Language Prompts",
-    author = "Marasovi{\'c}, Ana and Beltagy, Iz and Downey, Doug and Peters, Matthew E.",
-    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2022",
-    url= "https://arxiv.org/abs/2111.08284",
+@misc{solano2023sparsefitfewshotpromptingsparse,
+      title={SPARSEFIT: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations}, 
+      author={Jesus Solano and Oana-Maria Camburu and Pasquale Minervini},
+      year={2023},
+      eprint={2305.13235},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2305.13235}, 
 }
 
 ```
@@ -19,7 +21,6 @@ Code associated with the [Few-Shot Self-Rationalization with Natural Language Pr
 ```
 git clone https://github.com/SanniM3/predicitons_with_explanations.git
 cd predicitons_with_explanations
-git checkout llama_sparsefit
 ```
 
 2. [Download and install Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
@@ -97,7 +98,7 @@ python scripts/preprocess_data.py --dataset ecqa --dataset_path <path to `ECQA-D
 
 ### T5/UnfifiedQA
 
-We run our experiments on Google Cloud with N gpus allocated only for this project. All our experiments are done by jointly training models and evaluating them on the dev set. The command below will train and evaluate given models on chosen datasets with 60 random seeds: 
+The command below will train and evaluate given models on chosen datasets with 60 random seeds: 
 
 ```
 python scripts/exp.py --exp_root <path_to_checkpoints_folder> --not_dryrun --model_vals <a string of models to evaluate separated by comma> --dataset_vals <a string of datasets to evaluate on, separated by comma> --n_gpus <number of available GPUs>
@@ -109,8 +110,8 @@ The same command with concrete values:
 
 ```
 mkdir checkpoints
-python scripts/exp.py --exp_root checkpoints --not_dryrun --deepspeed --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4
-python scripts/exp.py --exp_root checkpoints --not_dryrun --deepspeed --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals t5-base,t5-large,t5-3b --dataset_vals esnli --n_gpus 4
+python scripts/exp.py --exp_root checkpoints --not_dryrun --model_vals allenai/unifiedqa-t5-base,allenai/unifiedqa-t5-large,allenai/unifiedqa-t5-3b --dataset_vals ecqa,sensemaking,sbic --n_gpus 4
 ```
 
 
@@ -132,16 +133,12 @@ python scripts/exp.py --exp_root <path_to_checkpoints_folder>  --collect_results
 If you get the assertion error, check which runs have not been trained properly, repeat evaluating only those seeds, and run the above command again. 
 
 ### Human evaluation
+We use the NLEs associated with the first 30 correctly predicted samples in each validation set in the training for human evaluation. To make the
+evaluation more robust, 30 samples were chosen to be balanced in the number of classes.
 
-We sampled and prapered data for human evaluation on Mturk using the following command: 
-```
-python scripts/samples_for_human_eval.py --output_dir <path_to_checkpoints_folder> --dataset <dataset_name>
-```
-
-Our samples are available at `human_eval/batches`, crowdworkers' annotation at `human_eval/results`, and templates for Mturk interface at `human_eval/templates`. We followed [these templates](https://github.com/maximek3/e-ViL/tree/main/eViL_Mturk) for related work to produce our. 
-
-To get results of explanation plausibility (per crowdworkers) and Fleiss' Kappa, run: 
+To get the generations from which to sample from, run:
 
 ```
-python scripts/compute_kappa.py --input_file <a file in human_eval/results/>
+bash get_generations.sh
 ```
+
