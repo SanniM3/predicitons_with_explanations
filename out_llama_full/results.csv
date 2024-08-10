@@ -1,5 +1,0 @@
-task_name,model_type,io_format,n_shots,dev_acc,dev_bertscore_correct_normalized,seed
-ecqa,allenai/unifiedqa-t5-base,unifiedqa_matching,48,11.142857142857142,9.458971900599344,5321.5
-esnli,t5-base,standard,16,34.91379310344828,28.619417051474255,5321.5
-sbic,allenai/unifiedqa-t5-base,unified_qa_what_with_tags,24,63.857142857142854,57.419477513858254,5321.5
-sensemaking,allenai/unifiedqa-t5-base,unifiedqa_what,24,63.71428571428571,55.928978673049386,5321.5
