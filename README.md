@@ -3,15 +3,23 @@ This code is associated with the [SparseFit: Few-shot Prompting with Sparse Fine
 ## Citation 
 
 ```
-@misc{solano2023sparsefitfewshotpromptingsparse,
-      title={SPARSEFIT: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations}, 
-      author={Jesus Solano and Oana-Maria Camburu and Pasquale Minervini},
-      year={2023},
-      eprint={2305.13235},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2305.13235}, 
-}
+@inproceedings{solano-etal-2024-sparsefit,
+    title = "{S}parse{F}it: Few-shot Prompting with Sparse Fine-tuning for Jointly Generating Predictions and Natural Language Explanations",
+    author = "Solano, Jesus  and
+      Sanni, Mardhiyah  and
+      Camburu, Oana-Maria  and
+      Minervini, Pasquale",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.113",
+    pages = "2053--2077",
+    }
 
 ```
 ## Installation
